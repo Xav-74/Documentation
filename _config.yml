@@ -1,0 +1,42 @@
+---
+langs: [fr_FR, en_US]
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "/" # the base hostname & protocol for your site
+sass:
+  sass_dir: assets/css
+  style: compressed
+markdown: kramdown
+permalink: /404.html
+kramdown:
+  input: GFM
+  hard_wrap: false
+highlighter: rouge
+gems:
+  - jekyll-paginate
+  - jekyll-seo-tag
+exclude:
+  - vendor
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
+title: "Documentations des plugins et widgets de Xav-74"
+description: "Ceci est la documentation des plugins et widgets créés par Xav-74 pour la solution domotique Jeedom."
+author: "Xav-74"
+image: https://doc.jeedom.com/images/logo.png
+twitter:
+  username: Jeedom_domotic
+social:
+  name: Jeedom
+  links:
+    - https://twitter.com/Jeedom_domotic
+    - https://www.facebook.com/Jeedom-249936178537210/
+    - https://github.com/jeedom
+community: https://community.jeedom.com
+market: https://market.jeedom.com
+blog: https://blog.jeedom.com
+doc: https://doc.jeedom.com
+help: "help"
+archive: "widget_archive"
+widget: "widget"
+img: "images"
+plugin: "https://market.jeedom.com/index.php?v=d&p=market_display&id="
