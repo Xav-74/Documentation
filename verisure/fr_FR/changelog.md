@@ -12,6 +12,23 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2020-10-13
+
+Ajout des fonctions suivantes :
+ - Prise en charge des alarmes Verisure présnetes en Belgique et Europe du Nord. La commande "Demandes Images" n'est pas encore fonctionnelle pour ce type de matériel
+ - Possibilité de masquer certaines commandes sur le widget (Demandes images, activation en mode nuit, activation en mode jour, activation en mode extérieur)
+ - Mise à jour des icônes du rapport d'activité
+
+Corrections suivantes :
+ - Bug d'affichage Homebridge en mode Nuit et mode Jour (Domicile)
+ - Bug d'affichage du rapport d'activité lors de l'activation en mode nuit via une télécommande
+
+
+# 2020-09-04
+
+Externalisation de la documentation du plugin
+
+
 # 2020-08-22
 
 Corrections suivantes :

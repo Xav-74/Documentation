@@ -11,10 +11,11 @@ pluginId: verisure
 # Présentation 
 
 Ce plugin Jeedom vous permet d'interagir avec votre alarme Verisure Europe (Securitas Direct) au même titre que l'application officielle "My Verisure".
-Il est compatible avec les alarmes Verisure de dernière génération :
+Il est compatible avec 2 générations de matériels Verisure :
 
 
-![Alarme Verisure](../images/alarm_verisure.png)
+![Alarme Verisure type 1](../images/alarm_verisure.png)
+![Alarme Verisure type 2](../images/alarm_verisure_2.png)
 
 
 **NOTE : CE PLUGIN N'EST EN AUCUN CAS ASSOCIÉ OU LIÉ AUX SOCIÉTÉS DU GROUPE SECURITAS DIRECT - VERISURE.**
@@ -62,13 +63,16 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 -   **Visible** : rend votre équipement visible sur le dashboard
 
--   **Numéro d'installation** : indiquez votre numéro d'installation Vérisure
+-   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Vérisure
 
--   **Identifiant** : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site : [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr)
+-   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site : [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr)
 
--   **Mot de passe** : indiquez votre mot de passe
+-   **Mot de passe** (alarme type 1 & 2) : indiquez votre mot de passe
 
--   **Pays** : choisissez le pays dans lequel est installée votre alarme (pays supporté à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal)
+-   **Code Alarme** (alarme type 2) : indiquez le code PIN de votre alarme (4 ou 6 digits)
+
+-   **Pays** (alarme type 1): choisissez le pays dans lequel est installée votre alarme (pays supporté à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supporté à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
+
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des smartplugs installés à votre domicile (ID, nom et type).
 
@@ -115,29 +119,32 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 	- **1** : alarme déclenchée
 
 -   **Mode Alarme** : permet de connaitre le mode d'activation de l'alarme
-	- **Mode total** : l'alarme est activée en mode total
-	- **Mode nuit** : l'alarme est activée en mode nuit
-	- **Mode jour** : l'alarme est activée en mode jour
-	- **Mode extérieur** : l'alarme est activée en mode extérieur
+	- **Mode total** : l'alarme est activée en mode total (alarme type 1 & 2)
+	- **Mode nuit** : l'alarme est activée en mode nuit (alarme type 1)
+	- **Mode jour** : l'alarme est activée en mode jour (alarme type 1)
+	- **Mode extérieur** : l'alarme est activée en mode extérieur (alarme type 1)
+	- **Mode partiel** : l'alarme est activée en mode partiel (alarme type 2)
 
 **Attention** : dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
 
 
 ## Action
 
--   **Mode Total** : active l'alarme en mode total
+-   **Mode Total** : active l'alarme en mode total (alarme type 1 & 2)
 
--   **Mode Nuit** : active l'alarme en mode nuit
+-   **Mode Nuit** : active l'alarme en mode nuit (alarme type 1)
 
--   **Mode Jour** : active l'alarme en mode jour
+-   **Mode Jour** : active l'alarme en mode jour (alarme type 1)
 
--   **Mode Extérieur** : active l'alarme en mode extérieur
+-   **Mode Extérieur** : active l'alarme en mode extérieur (alarme type 1)
 
--   **Désactivation** : désactive de l'alarme, quel que soit le mode
+-   **Mode Partiel** : active l'alarme en mode partiel (alarme type 2)
 
--   **Rafraichir** : met à jour du statut de l'Alarme
+-   **Désactivation** : désactive de l'alarme, quel que soit le mode (alarme type 1 & 2)
 
--   **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran.
+-   **Rafraichir** : met à jour du statut de l'Alarme (alarme type 1 & 2)
+
+-   **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 uniquement pour le moment)
 
 > **Tip**
 >
@@ -157,7 +164,7 @@ Dans HomeKit, la fonction alarme est gérée suivant 4 modes : “Désactivée�
 ![HomeKit](../images/homekit.png)
 
 La correspondance des modes est la suivante :
--   **Domicile** 	--> Mode Jour
+-   **Domicile** 	--> Mode Jour / Mode Partiel
 -   **A distance**	--> Mode Total
 -   **Nuit** 		--> Mode Nuit
 -   **Désactivée**	--> Désactivation
@@ -168,21 +175,23 @@ Les autres modes (Extérieur,...) ne sont pas pris en compte dans HomeKit.
 # Dashboard
 
 Le plugin inclut un dashboard qui permet de :
--   Connaitre le statut de l'alarme
--   Connaitre l'état de l'alarme
--   Connaitre le mode e l'alarme
--   Activer le mode total de l'alarme
--   Activer le mode nuit de l'alarme
--   Activer le mode jour de l'alarme
--   Activer le mode extérieur de l'alarme
--   Désactiver l'alarme
--   Rafraichir le statut de l'alarme
--   Demander la prise d'une photo depuis un capteur de mouvement compatible
+-   Connaitre le statut de l'alarme (alarme type 1 & 2)
+-   Connaitre l'état de l'alarme (alarme type 1 & 2)
+-   Connaitre le mode e l'alarme (alarme type 1 & 2)
+-   Activer le mode total de l'alarme (alarme type 1 & 2)
+-   Activer le mode nuit de l'alarme (alarme type 1)
+-   Activer le mode jour de l'alarme (alarme type 1)
+-   Activer le mode extérieur de l'alarme (alarme type 1)
+-   Activer le mode partiel de l'alarme (alarme type 2)
+-   Désactiver l'alarme (alarme type 1 & 2)
+-   Rafraichir le statut de l'alarme (alarme type 1 & 2)
+-   Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 uniquement pour le moment)
 
 **Attention** : les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
 
 
-![Dashboard](../images/Dashboard_verisure.png)
+![Dashboard type 1](../images/Dashboard_verisure.png)
+![Dashboard type 2](../images/Dashboard_verisure_2.png)
 
 
 # Rafraichissement
