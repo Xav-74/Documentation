@@ -65,13 +65,13 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 -   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Vérisure
 
--   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site : [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
+-   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
 
 -   **Mot de passe** (alarme type 1 & 2) : indiquez votre mot de passe
 
 -   **Code Alarme** (alarme type 2) : indiquez le code PIN de votre alarme (4 ou 6 digits)
 
--   **Pays** (alarme type 1): choisissez le pays dans lequel est installée votre alarme (pays supporté à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supporté à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
+-   **Pays** (alarme type 1): choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
 
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des smartplugs installés à votre domicile (ID, nom et type).
@@ -186,7 +186,7 @@ Le plugin inclut un dashboard qui permet de :
 -   Désactiver l'alarme (alarme type 1 & 2)
 -   Rafraichir le statut de l'alarme (alarme type 1 & 2)
 -   Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 uniquement pour le moment)
--   Afficher les informations de certains smartplugs comme la températoure, ou l'état d'ouverture (!! UNIQUEMENT alarme type 2 !!)
+-   Afficher les informations de certains smartplugs comme la température, ou l'état d'ouverture (!!! UNIQUEMENT alarme type 2 !!!)
 
 **Attention** : les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
 
