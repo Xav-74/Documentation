@@ -15,8 +15,8 @@ pluginId: verisure
 # 2020-10-13
 
 Ajout des fonctions suivantes :
- - Prise en charge des alarmes Verisure présnetes en Belgique et Europe du Nord. La commande "Demandes Images" n'est pas encore fonctionnelle pour ce type de matériel
- - Possibilité de masquer certaines commandes sur le widget (Demandes images, activation en mode nuit, activation en mode jour, activation en mode extérieur)
+ - Prise en charge des alarmes Verisure présentes en Belgique et Europe du Nord. La commande "Demande Images" n'est pas encore fonctionnelle pour ce type de matériel
+ - Possibilité de masquer certaines commandes sur le widget (Demande images, activation en mode nuit, activation en mode jour, activation en mode extérieur)
  - Mise à jour des icônes du rapport d'activité
 
 Corrections suivantes :
