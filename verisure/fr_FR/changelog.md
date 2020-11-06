@@ -14,7 +14,7 @@ pluginId: verisure
 
 # 2020-11-06
 
-Corrections suite aux modifications des API Verisure (authentification et paramètres des requêtes)
+Correctifs suite aux modifications des API Verisure (authentification et paramètres des requêtes)
 
 
 # 2020-10-13
