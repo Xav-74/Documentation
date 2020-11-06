@@ -12,6 +12,11 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2020-11-06
+
+Corrections suite aux modifications des API Verisure (authentification et paramètres des requêtes)
+
+
 # 2020-10-13
 
 Ajout des fonctions suivantes :

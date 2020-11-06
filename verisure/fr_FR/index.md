@@ -63,6 +63,8 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 -   **Visible** : rend votre équipement visible sur le dashboard
 
+-   **Type d'alarme** : choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne,...) / type 2 = Europe du Nord (Belgique, UK,...))
+
 -   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Vérisure
 
 -   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
