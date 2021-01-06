@@ -127,6 +127,8 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 	- **Mode extérieur** : l'alarme est activée en mode extérieur (alarme type 1)
 	- **Mode partiel** : l'alarme est activée en mode partiel (alarme type 2)
 
+-   **Qualité réseau** : permet d'estimer la qualité du réseau 3G/4G des alarmes type 1 (basée sur le résultat des 25 dernières requêtes)
+
 **Attention** : dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
 
 
@@ -188,7 +190,14 @@ Le plugin inclut un dashboard qui permet de :
 -   Désactiver l'alarme (alarme type 1 & 2)
 -   Rafraichir le statut de l'alarme (alarme type 1 & 2)
 -   Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 uniquement pour le moment)
--   Afficher les informations de certains smartplugs comme la température, ou l'état d'ouverture (!!! UNIQUEMENT alarme type 2 !!!)
+-   Afficher les informations de certains smartplugs comme la température, l'humidité, ou l'état d'ouverture (!!! UNIQUEMENT alarme type 2 !!!)
+-   Afficher le niveau de la qualité du réseau 3G/4G de l'alarme (alarme type 1)
+    - icone 5 barres : aucune requête en erreur sur les 25 dernières
+	- icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières
+	- icone 3 barres : de 3 à 7 requêtes en erreur sur les 25 dernières
+	- icone 2 barres : de 8 à 17 requêtes en erreur sur les 25 dernières
+	- icone 1 barre : de 18 à 24 requêtes en erreur sur les 25 dernières
+	- icone 0 barre : 25 requêtes en erreur sur les 25 dernières
 
 **Attention** : les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
 

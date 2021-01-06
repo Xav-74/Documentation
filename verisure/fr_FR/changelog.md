@@ -12,6 +12,18 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2021-01-06
+
+Ajout des fonctions suivantes :
+ - Ajout d'une commande info "Qualité du réseau" pour les alarmes type 1. Cet indicateur est basé sur le nombre de requête réussie lors de la connexion au cloud Verisure
+ - Ajout de l'affichage sur le dashboard du niveau d'humidité des smartplugs compatibles pour les alamres de type 2
+
+Corrections suivantes :
+ - Nouvelle présentation de la liste des objets (conforme au core v4.1)
+ - Bug sur la timezone (UTC) du rapport d'activité des alarmes type 2 (basé dorénaavnt sur la timezone de Jeedom) 
+ - Correction des erreurs dans le log hhtp_error lors de l'affichage du rapport d'activité des alarmes type 1
+
+
 # 2020-11-06
 
 Correctifs suite aux modifications des API Verisure (authentification et paramètres des requêtes)
