@@ -16,7 +16,7 @@ pluginId: verisure
 
 Ajout des fonctions suivantes :
  - Ajout d'une commande info "Qualité du réseau" pour les alarmes type 1. Cet indicateur est basé sur le nombre de requête réussie lors de la connexion au cloud Verisure
- - Ajout de l'affichage sur le dashboard du niveau d'humidité des smartplugs compatibles pour les alamres de type 2
+ - Ajout de l'affichage sur le dashboard du niveau d'humidité des smartplugs compatibles pour les alarmes type 2
 
 Corrections suivantes :
  - Nouvelle présentation de la liste des objets (conforme au core v4.1)
