@@ -20,7 +20,7 @@ Ajout des fonctions suivantes :
 
 Corrections suivantes :
  - Nouvelle présentation de la liste des objets (conforme au core v4.1)
- - Bug sur la timezone (UTC) du rapport d'activité des alarmes type 2 (basé dorénaavnt sur la timezone de Jeedom) 
+ - Bug sur la timezone (UTC) du rapport d'activité des alarmes type 2 (basé dorénavant sur la timezone de Jeedom) 
  - Correction des erreurs dans le log hhtp_error lors de l'affichage du rapport d'activité des alarmes type 1
 
 
