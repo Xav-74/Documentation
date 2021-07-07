@@ -12,6 +12,16 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2021-07-07
+
+Ajout des fonctions suivantes :
+ - Ajout des commandes infos / actions pour les devices des alarmes type 2 (température, humidité, état/on/off des prises connectées, ouverture/fermeture des capteurs)
+ - Affichage d'une erreur dans le centre de notification Jeedom lors de l'activation de l'alarme avec une porte et / ou fenêtre restées ouvertes
+ 
+ Corrections suivantes :
+ - Modifications et correctifs des logs
+
+
 # 2021-01-06
 
 Ajout des fonctions suivantes :

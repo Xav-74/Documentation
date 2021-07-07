@@ -65,7 +65,7 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 -   **Type d'alarme** : choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne, ...) / type 2 = Europe du Nord (Belgique, UK, ...))
 
--   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Vérisure
+-   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Verisure **en supprimant le 0 si celui-ci commence par 0**
 
 -   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
 
@@ -176,6 +176,19 @@ La correspondance des modes est la suivante :
 Les autres modes (Extérieur,...) ne sont pas pris en compte dans HomeKit.
 
 
+## Devices alarme type 2
+
+Pour les alarmes de type 2 (et uniquement type 2 !), le plugin va créer les commandes associées aux devices de l'alarme :
+-  **Prise connectée**      --> état / on / off
+-  **Capteurs compatibles** --> température / humidité
+-  **Capteur d'ouverture**  --> état (ouvert / fermé)
+
+Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est de créer ensuite un virtuel pour chaque capteur. Vous pourrez ainsi récupérer les informations d'ouverture / fermeture / température / humidité des différents capteurs ou encore piloter à distance les prises connectées Versiure.
+
+> **Tip**
+>Attention, les états ne remontent pas en temps réel (impossible à l'heure actuel à cause de Versiure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas éxecuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.** 
+
+
 # Dashboard
 
 Le plugin inclut un dashboard qui permet de :
@@ -228,6 +241,8 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 Les prochaines versions verront arriver les features suivantes :
 
 -   Gestion du déclenchement de l'alarme (sur utilisation de reception d'un SMS ?)
+-   Possibilité de personaliser le cron (5, 10, 15, 30...)
+-   Prise en charge des demandes d'images pour les alarmes type 2
 
 > **Tip**
 >
