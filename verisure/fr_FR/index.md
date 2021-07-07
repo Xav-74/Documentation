@@ -186,6 +186,7 @@ Pour les alarmes de type 2 (et uniquement type 2 !), le plugin va créer les com
 Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est de créer ensuite un virtuel pour chaque capteur. Vous pourrez ainsi récupérer les informations d'ouverture / fermeture / température / humidité des différents capteurs ou encore piloter à distance les prises connectées Versiure depuis Jeedom.
 
 > **Tip**
+>
 >Attention, les états ne remontent pas en temps réel (impossible à l'heure actuel à cause de Versiure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas éxecuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.** 
 
 
