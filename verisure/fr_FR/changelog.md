@@ -19,6 +19,7 @@ Ajout des fonctions suivantes :
  - Sécurisation : cryptage du mot de passe des équipements en BDD Jeedom 
  - Ajout d'un tooltip concernant le numéro d'installation sur la page principale d'un équipement
  - Onglet "Notifications Verisure" : ajout du scénario de notifications SMS
+ - Modifications mineures de l'interface
  
 Corrections suivantes :
  - Correction d'erreurs présentes dans le log http.error de Jeedom (si variable SESSIONID vide)
