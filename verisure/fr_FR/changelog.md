@@ -12,6 +12,18 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-01-31
+
+Ajout des fonctions suivantes :
+ - Test et validation du plugin pour la version 4.2 du core de Jeedom
+ - Sécurisation : cryptage du mot de passe des équipements en BDD Jeedom 
+ - Ajout d'un tooltip concernant le numéro d'installation sur la page principale d'un équipement
+ - Onglet "Notifications Verisure" : ajout du scénario de notifications SMS
+ 
+Corrections suivantes :
+ - Correction d'erreurs présentes dans le log http.error de Jeedom (si variable SESSIONID vide)
+
+
 # 2021-07-07
 
 Ajout des fonctions suivantes :

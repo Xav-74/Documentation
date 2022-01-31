@@ -65,7 +65,7 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 -   **Type d'alarme** : choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne, ...) / type 2 = Europe du Nord (Belgique, UK, ...))
 
--   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Verisure **en supprimant le 0 si celui-ci commence par 0**
+-   **Numéro d'installation** (alarme type 1) : indiquez votre numéro d'installation Verisure. **Attention ! Ce numéro doit être rigoureusement identique à celui affiché sur votre application My Verisure. Si votre numéro d'installation commence par un 0 mais que celui-ci n'est pas présent dans l'application, supprimez-le !**
 
 -   **Identifiant** (alarme type 1 & 2) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
 
@@ -102,7 +102,7 @@ Les API Verisure ne permettent pas les remontées d'informations et notification
 
 Cet onglet décrit en détail comment paramétrer Jeedom (scénarios) pour palier à ce manque pour :
 -   les **notifications Mail** pour l'activation/désactivation de l'alarme au travers du plugin [Mail Listener](https://www.jeedom.com/market/index.php?v=d&p=market&author=Lunarok&&name=maillistener) de Lunarok !
--   les **notifications SMS** pour la détection d'intrusion (dev en cours)
+-   les **notifications SMS** pour l'activation/désactivation de l'alarme au travers du plugin [SMS](https://www.jeedom.com/market/index.php?v=d&p=market_display&id=16) de Jeedom SAS !
 
 
 # Commandes
@@ -241,9 +241,9 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 
 Les prochaines versions verront arriver les features suivantes :
 
--   Gestion du déclenchement de l'alarme (sur utilisation de reception d'un SMS ?)
 -   Possibilité de personaliser le cron (5, 10, 15, 30...)
 -   Prise en charge des demandes d'images pour les alarmes type 2
+-   Traduction du plugin en anglais
 
 > **Tip**
 >
