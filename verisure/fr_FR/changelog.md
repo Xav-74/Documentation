@@ -12,6 +12,12 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-02-02
+ 
+Corrections suivantes :
+ - Correction du bug d'affichage du widget type 2 en v4.2 si le user connecté n'est pas admin
+
+
 # 2022-01-31
 
 Ajout des fonctions suivantes :
