@@ -135,7 +135,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 # Dashboard
 
-Le plugin inclut un widegt personnalisé qui permet d'afficher l'ensemble des informations du véhicules.
+Le plugin inclut un widegt personnalisé qui permet d'afficher l'ensemble des informations du véhicule.
 
 
 ![Widget](../images/Widget_myBMW.png)
