@@ -40,7 +40,7 @@ La configuration des équipements MyBMW est accessible à partir du menu Plugin 
 ![Ajout véhicule](../images/Plugin_myBMW.png)
 
 
-Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajoutée vous vous retrouvez avec :
+Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajouté vous vous retrouvez avec :
 
 -   **Nom de l’équipement** : nom de votre véhicule
 
@@ -58,7 +58,7 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 
 -   **Marque** : indiquez la marque de votre véhicule (BMW ou Mini)
 
--   **VIN** : indiquez le numéro VIN ou Vehicle Idenitification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
+-   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
 
 -   **Widget personalisé** : cochez la case pour afficher le widget personalisé du plugin sur le dashboard. Dans le cas contraire, vous obtiendrez une tuile brute avec l'ensemble des commandes.
 
@@ -111,10 +111,10 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Etat de la charge** (uniquement sur véhicule électrique ou hybride)
 -   **Etat de la prise** (uniquement sur véhicule électrique ou hybride)
 -   **Charge restante** (uniquement sur véhicule électrique ou hybride)
--   **Km restant** (moteur électrqiue, hybride et/ou thermique)
+-   **Km restant** (moteur électrique, hybride et/ou thermique)
 -   **Carburant restant** (uniquement sur véhicule thermique ou hybride)
--   **Messages** : remonte les messages affichés dans le véhicule (contrôle et servcies)
--   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latittude,longitude"
+-   **Messages** : remonte les messages affichés dans le véhicule (contrôle et services)
+-   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
 
 
@@ -162,7 +162,7 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 
 Les prochaines versions verront arriver les features suivantes :
 
--   Ajout des fonctions de démaarage et d'arrêt de la charge des véhicules éléectriques de la marque
+-   Ajout des fonctions de démarrage et d'arrêt de la charge des véhicules électriques de la marque
 -   Ajout de la fonction de récupération en temps réel de la position du véhicule
 -   ...
 -   Traduction du plugin en anglais
