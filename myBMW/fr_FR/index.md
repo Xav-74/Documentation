@@ -60,7 +60,7 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
 
--   **Widget personalisé** : cochez la case pour afficher le widget personalisé du plugin sur le dashboard. Dans le cas contraire, vous obtiendrez une tuile brute avec l'ensemble des commandes.
+-   **Widget personnalisé** : cochez la case pour afficher le widget personnalisé du plugin sur le dashboard. Dans le cas contraire, vous obtiendrez une tuile brute avec l'ensemble des commandes.
 
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
@@ -77,7 +77,7 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 
 # Données brutes
 
-Pour facilité le debug en cas de problème, vous avez la possibilité de récupérer les données brutes de votre véhicule en cliquant sur le bouton **Données brutes**. Attention, avant de les copier sur le forum par exemple, pensez à masquer les informations sensibles comme le numéro de VIN par exemple !
+Pour faciliter le debug en cas de problème, vous avez la possibilité de récupérer les données brutes de votre véhicule en cliquant sur le bouton **Données brutes**. Attention, avant de les copier sur le forum par exemple, pensez à masquer les informations sensibles comme le numéro de VIN par exemple !
 
 
 # Commandes
@@ -135,7 +135,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 # Dashboard
 
-Le plugin inclut un widegt personnalisé qui permet d'afficher l'ensemble des informations du véhicule.
+Le plugin inclut un widget personnalisé qui permet d'afficher l'ensemble des informations du véhicule.
 
 
 ![Widget](../images/Widget_myBMW.png)
