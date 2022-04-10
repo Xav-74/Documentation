@@ -116,6 +116,15 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Messages** : remonte les messages affichés dans le véhicule (contrôle et services)
 -   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
+-   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
+-   **Statut Verrouiller**
+-   **Statut Déverrouiller**
+-   **Statut Ventiler**
+-   **Statut Stop Ventiler**
+-   **Statut Appel de phares**
+-   **Statut Klaxonner**
+-   **Statut Rechercher**
+-   **Statut Envoi POI**
 
 
 ## Action
@@ -126,11 +135,17 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 -   **Déverrouiller** : permet de déverrouiller la voiture à distance
 
--   **Climatiser** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
+-   **Ventiler (Start)** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
+
+-   **Ventiler (Stop)** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
 
 -   **Appel de phares** : déclenche un appel de phare
 
 -   **Klaxonner** : déclenche un avertissement sonore
+
+-   **Rechercher** : localise le véhicule en temps réel et l'affiche sur une carte googlemaps
+
+-   **Envoi POI** : envoi d'un point d'intérêt (POI) dans le centre de messages du véhicule en saisissant le nom, la latitude et la longitude du lieu
 
 
 # Dashboard
@@ -163,7 +178,6 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 Les prochaines versions verront arriver les features suivantes :
 
 -   Ajout des fonctions de démarrage et d'arrêt de la charge des véhicules électriques de la marque
--   Ajout de la fonction de récupération en temps réel de la position du véhicule
 -   ...
 -   Traduction du plugin en anglais
 
