@@ -12,6 +12,16 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-04-24
+
+Ajout des fonctions suivantes :
+ - Demandes d'images pour les alarmes type 2
+ 
+Corrections suivantes :
+ - Correction de la hauteur automatique du widget si plusieurs alarmes sur le dashboard
+ - Correction d'une erreur dans la fonction SetEqLogic()
+
+
 # 2022-02-02
  
 Corrections suivantes :

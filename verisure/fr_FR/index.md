@@ -242,7 +242,6 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 Les prochaines versions verront arriver les features suivantes :
 
 -   Possibilité de personaliser le cron (5, 10, 15, 30...)
--   Prise en charge des demandes d'images pour les alarmes type 2
 -   Traduction du plugin en anglais
 
 > **Tip**
