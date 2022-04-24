@@ -12,6 +12,14 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-04-24
+
+Ajout des fonctions suivantes :
+ - Prise en charge du mode "Secured" au niveau du widget (verrouillage)
+ - Ajout de la possibilité d'historiser les commandes dans l'onglet Equipement\Commandes
+ - Prise en charge de l'affichage d’une info historisée en fond de tuile (core v4.2)
+ 
+
 # 2022-04-11
 
 Ajout des fonctions suivantes :
