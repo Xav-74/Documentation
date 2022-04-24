@@ -148,7 +148,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 -   **Rafraichir** : met à jour du statut de l'Alarme (alarme type 1 & 2)
 
--   **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 uniquement pour le moment)
+-   **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 & 2)
 
 > **Tip**
 >
