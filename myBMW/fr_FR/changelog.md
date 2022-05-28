@@ -17,6 +17,7 @@ pluginId: myBMW
 Corrections suivantes :
  - Modification des API BMW Connected Drive (x-user-agent)
  - Bugfix url image du véhicule si jeedom n'est pas installé à la racine
+ - Conversion miles -> kms pour la distance totale
 
 
 # 2022-04-24
