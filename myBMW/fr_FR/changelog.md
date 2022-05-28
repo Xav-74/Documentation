@@ -12,6 +12,13 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-05-28
+
+Corrections suivantes :
+ - Modification des API BMW Connected Drive (x-user-agent)
+ - Bugfix url image du véhicule si jeedom n'est pas installé à la racine
+
+
 # 2022-04-24
 
 Ajout des fonctions suivantes :
