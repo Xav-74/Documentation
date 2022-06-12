@@ -12,6 +12,22 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-06-12
+
+Ajout des fonctions suivantes :
+ - Prise en charge des nouvelles API Mini
+ - Fusion des API BMW et Mini et optimisation du code
+ - Prise en charge de la langue française au niveau des informations retournées (unités et messages du véhicule)
+ - Passage des logs de « debug » à « error » si la requête n’aboutit pas
+ - Utilisation du logicalID des équipements en prévision de futurs développements
+
+Corrections suivantes :
+ - Bugfix de la fonction CreateCmd
+ - Correction des kms restants des moteurs combustion (soustraction des kms restants des moteurs électriques)
+ - Affichage de la dernière connexion à « inconnue » si la valeur retourne 01/01/1970
+ - Correction du problème d’affichage des messages si ceux-ci contiennent un « ’ »
+
+
 # 2022-05-28
 
 Corrections suivantes :
