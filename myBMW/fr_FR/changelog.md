@@ -16,7 +16,7 @@ pluginId: myBMW
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini v2
- - Ajout des tooltips sur le widegt pour connaître l'état des portes / fenêtres
+ - Ajout des tooltips sur le widget pour connaître l'état des portes / fenêtres
 
 Corrections suivantes :
  - Bugfix refresh token
