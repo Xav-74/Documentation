@@ -12,6 +12,16 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-07-25
+
+Ajout des fonctions suivantes :
+ - Prise en charge des nouvelles API BMW et Mini v2
+ - Ajout des tooltips sur le widegt pour connaître l'état des portes / fenêtres
+
+Corrections suivantes :
+ - Bugfix refresh token
+
+
 # 2022-06-12
 
 Ajout des fonctions suivantes :
