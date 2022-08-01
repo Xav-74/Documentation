@@ -12,6 +12,15 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-08-01
+
+Ajout des fonctions suivantes :
+ - Ajout d'icônes pour la gestion des messages de contrôle du véhicule (huile, freins, pression des pneus, contrôle du véhicule)
+
+Corrections suivantes :
+ - Bugfix synchronisation si équipement non sauvegardé (save auto)
+
+
 # 2022-07-25
 
 Ajout des fonctions suivantes :
