@@ -12,13 +12,23 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-09-02
+
+Ajout des fonctions suivantes :
+ - Ajout des nouvelles commandes infos « Toutes les portes » et « Toutes les fenêtres »
+ - Nouveau widget « Flat Design » : vous pouvez sélectionner le widget souhaité sur la page de l’équipement (compatible thème dark / light). Ce widget est personnalisable (voir la doc).
+
+Corrections suivantes :
+ - Modification du timeout sur le refresh du token pour éviter les erreurs de connexion
+
+
 # 2022-08-01
 
 Ajout des fonctions suivantes :
- - Ajout d'icônes pour la gestion des messages de contrôle du véhicule (huile, freins, pression des pneus, contrôle du véhicule)
+ - Ajout d'icônes pour la gestion des messages de contrôle du véhicule (huile, freins, pression des pneus, contrôle général du véhicule)
 
 Corrections suivantes :
- - Bugfix synchronisation si équipement non sauvegardé (save auto)
+ - Bugfix synchronisation si équipement non sauvegardé (save automatique dorénavant)
 
 
 # 2022-07-25

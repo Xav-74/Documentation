@@ -60,7 +60,7 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
 
--   **Widget personnalisé** : cochez la case pour afficher le widget personnalisé du plugin sur le dashboard. Dans le cas contraire, vous obtiendrez une tuile brute avec l'ensemble des commandes.
+-   **Widget personnalisé** : sélectionnez le widget personnalisé du plugin à afficher sur le dashboard (flat design ou legacy). Si vous choisissez "Aucun", vous obtiendrez une tuile brute avec l'ensemble des commandes.
 
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
@@ -101,10 +101,12 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Statut porte conducteur arrière**
 -   **Statut porte passager avant**
 -   **Statut porte passager arrière**
+-   **Statut toutes les portes**
 -   **Statut fenêtre conducteur avant**
 -   **Statut fenêtre conducteur arrière**
 -   **Statut fenêtre passager avant**
 -   **Statut fenêtre passager arrière**
+-   **Statut toutes les fenêtres**
 -   **Statut coffre**
 -   **Statut capot moteur**
 -   **Statut toit ouvrant**
@@ -150,10 +152,16 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 # Dashboard
 
-Le plugin inclut un widget personnalisé qui permet d'afficher l'ensemble des informations du véhicule.
+Le plugin inclut 2 widgets personnalisés qui permettent d'afficher l'ensemble des informations du véhicule.
 
+![Widget Legacy](../images/Widget_myBMW.png)
 
-![Widget](../images/Widget_myBMW.png)
+![Widget Flat design](../images/Widget_myBMW_flatdesign.png)
+
+Pour ce dernier, vous pouvez le personnaliser en utilisant les paramètres optionnels suivants :
+- all_info_display : show / hide → pour afficher / masquer les tuiles « Toutes les … ». Par défaut ou si vide = show
+- doors_windows_display : text / icon → pour afficher l’états des portes sous forme de texte ou icones. Par défaut ou si vide = text
+- color_icon_closed : green → pour afficher l’état des portes / fenêtres en couleur verte. Par défaut, ou si vide = white ou black en fonction du thème du core
 
 
 # Rafraichissement
@@ -183,6 +191,6 @@ Les prochaines versions verront arriver les features suivantes :
 
 > **Tip**
 >
->Vous pouvez faire votre demande par en créant une demande "enhancement" [GitHub](https://github.com/Xav-74/myBMW/issues/new).
+>Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/myBMW/issues/new).
 >
 >N'hésitez pas non plus à venir échanger sur ce plugin sur le forum Jeedom !
