@@ -12,6 +12,23 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-09-25
+
+Ajout des fonctions suivantes :
+ - Ajout de la présence du véhicule au domicile
+ - Ajout de la distance entre le véhicule et le domicile
+ - Prise en compte des messages concernant les plaquettes de freins et l'usure des pneumatiques
+ - Suppression des 2 commandes « unité de distance » et « unité de carburant » (non utilisées)
+ - Nouvel affichage du tableau des commandes de l'équipement (compatibilité core Jeedom v4.3)
+ 
+
+Corrections suivantes :
+ - Suppression du « ou » dans le titre des messages services si pas de date
+ - Correction de la couleur bleue des icones font-awesome du widget flatdesign
+ - Correction de l'API pour la récupération des "status event" (suppression du checkauth)
+ - Mise à jour de la documentation
+ 
+
 # 2022-09-02
 
 Ajout des fonctions suivantes :

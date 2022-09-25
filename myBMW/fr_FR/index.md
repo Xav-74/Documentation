@@ -62,6 +62,8 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 
 -   **Widget personnalisé** : sélectionnez le widget personnalisé du plugin à afficher sur le dashboard (flat design ou legacy). Si vous choisissez "Aucun", vous obtiendrez une tuile brute avec l'ensemble des commandes.
 
+-   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude. N'oubliez ensuite de renseigner la distance maximale entre votre domicile et le véhicule pour la gestion de la présence. 
+
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
 
@@ -95,8 +97,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Année**
 -   **Type** : électrique, thermique ou hybride
 -   **Kilométrage** : kilométrage total du véhicule
--   **Unité de distance** (Kms,...)
--   **Unité de craburant** (Litres,...)
+-   **Verrouillage** : remonte l'état de verrouillage du véhicule
 -   **Statut porte conducteur avant**
 -   **Statut porte conducteur arrière**
 -   **Statut porte passager avant**
@@ -120,13 +121,14 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
 -   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
 -   **Statut Verrouiller**
--   **Statut Déverrouiller**
 -   **Statut Ventiler**
 -   **Statut Stop Ventiler**
 -   **Statut Appel de phares**
 -   **Statut Klaxonner**
 -   **Statut Rechercher**
 -   **Statut Envoi POI**
+-   **Présence domicile** : indique si votre véhicule est situé à votre domicile (1 = présent, 0 = absent) en fonction de la distance maximale renseignée
+-   **Distance domicile** : indique la distance en m ou km entre le véhicule 
 
 
 ## Action
