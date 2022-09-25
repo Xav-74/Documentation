@@ -128,7 +128,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Statut Rechercher**
 -   **Statut Envoi POI**
 -   **Présence domicile** : indique si votre véhicule est situé à votre domicile (1 = présent, 0 = absent) en fonction de la distance maximale renseignée
--   **Distance domicile** : indique la distance en m ou km entre le véhicule 
+-   **Distance domicile** : indique la distance (en m ou km) entre le véhicule et votre domicile
 
 
 ## Action
