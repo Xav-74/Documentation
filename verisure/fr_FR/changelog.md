@@ -12,6 +12,13 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2022-10-18
+
+Ajout des fonctions suivantes :
+ - Nouvel affichage du tableau des commandes de l'équipement (compatibilité core Jeedom v4.3)
+ - Refonte affichage de la page "Equipement"
+
+
 # 2022-04-24
 
 Ajout des fonctions suivantes :
