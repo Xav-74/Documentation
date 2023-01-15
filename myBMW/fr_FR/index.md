@@ -111,6 +111,14 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Statut coffre**
 -   **Statut capot moteur**
 -   **Statut toit ouvrant**
+-   **Pression pneu avant gauche**
+-   **Consigne de gonflage pneu avant gauche**
+-   **Pression pneu avant droit**
+-   **Consigne de gonflage pneu avant droit**
+-   **Pression pneu arrière gauche**
+-   **Consigne de gonflage pneu arrière gauche**
+-   **Pression pneu arrière droit**
+-   **Consigne de gonflage pneu arrière droit**
 -   **Etat de la charge** (uniquement sur véhicule électrique ou hybride)
 -   **Etat de la prise** (uniquement sur véhicule électrique ou hybride)
 -   **Charge restante** (uniquement sur véhicule électrique ou hybride)
