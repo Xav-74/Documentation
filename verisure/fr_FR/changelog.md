@@ -12,9 +12,9 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2023-04-05
+# 2023-04-11
 
-Correctifs suite aux modifications des API Verisure (Authentification MFA et requêtes - Migration REST API vers GraphQL). Attention, il s'agit donc d'une mise à jour **majeure**. Il vous faudra donc vous authentifier de nouveau pour chaque alarme créée (type 1 & 2).
+Correctifs suite aux modifications des API Verisure (Authentification MFA et requêtes - Migration REST API vers GraphQL). Attention, il s'agit donc d'une mise à jour **majeure**. Il vous faudra vous authentifier de nouveau pour chaque alarme créée (type 1 & 2).
 
 Ajout des fonctions suivanbtes :
  - Prise en charge de la nouvelle génération d'alarme (via le type 1 pour le moment) 
