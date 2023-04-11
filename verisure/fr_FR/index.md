@@ -11,11 +11,16 @@ pluginId: verisure
 # Présentation 
 
 Ce plugin Jeedom vous permet d'interagir avec votre alarme Verisure Europe (Securitas Direct) au même titre que l'application officielle "My Verisure".
-Il est compatible avec 2 générations de matériels Verisure :
+Il est compatible avec 3 générations de matériels Verisure :
 
 
 ![Alarme Verisure type 1](../images/alarm_verisure.png)
 ![Alarme Verisure type 2](../images/alarm_verisure_2.png)
+![Alarme Verisure type 3](../images/alarm_verisure_3.png)
+
+> **Tip**
+>
+> Pour les alarmes de dernière générations, il faut choisir le **type 1**. 
 
 
 **NOTE : CE PLUGIN N'EST EN AUCUN CAS ASSOCIÉ OU LIÉ AUX SOCIÉTÉS DU GROUPE SECURITAS DIRECT - VERISURE.**
@@ -76,7 +81,9 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 -   **Pays** (alarme type 1): choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
 
 
-Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des smartplugs installés à votre domicile (ID, nom et type).
+Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des smartplugs installés à votre domicile (ID, nom et type).
+
+**Attention** : il est fortement conseillé de créer, dans votre espace Verisure, un utilisateur dédié pour Jeedom avec les droits "administrateur". Le plugin gère l'authentiifcation multifacteur (MFA) pour les alarmes de type 1. C'est également le cas pour les alarmes de type 2 mais il est conseillé de désactiver cette option pour le moment car le refresh du token est très contraignant. En cas de problème de connexion, le boutton **Suppression Token** permet de supprimer les cookies enregistrés et de repartir sur une authentification initiale.
 
 > **Tip**
 >
