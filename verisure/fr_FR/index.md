@@ -20,7 +20,7 @@ Il est compatible avec 3 générations de matériels Verisure :
 
 > **Tip**
 >
-> Pour les alarmes de dernière générations, il faut choisir le **type 1**. 
+> Pour les alarmes de dernière génération, il faut choisir le **type 1**. 
 
 
 **NOTE : CE PLUGIN N'EST EN AUCUN CAS ASSOCIÉ OU LIÉ AUX SOCIÉTÉS DU GROUPE SECURITAS DIRECT - VERISURE.**
