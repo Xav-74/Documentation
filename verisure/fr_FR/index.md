@@ -81,7 +81,7 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 -   **Pays** (alarme type 1): choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
 
 
-Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des smartplugs installés à votre domicile (ID, nom et type).
+Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des devices installés à votre domicile (ID, nom et type).
 
 **Attention** : il est fortement conseillé de créer, dans votre espace Verisure, un utilisateur dédié pour Jeedom avec les droits "administrateur". Le plugin gère l'authentiifcation multifacteur (MFA) pour les alarmes de type 1. C'est également le cas pour les alarmes de type 2 mais il est conseillé de désactiver cette option pour le moment car le refresh du token est très contraignant. En cas de problème de connexion, le boutton **Suppression Token** permet de supprimer les cookies enregistrés et de repartir sur une authentification initiale.
 
@@ -211,7 +211,7 @@ Le plugin inclut un dashboard qui permet de :
 -   Désactiver l'alarme (alarme type 1 & 2)
 -   Rafraichir le statut de l'alarme (alarme type 1 & 2)
 -   Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 uniquement pour le moment)
--   Afficher les informations de certains smartplugs comme la température, l'humidité, ou l'état d'ouverture (!!! UNIQUEMENT alarme type 2 !!!)
+-   Afficher les informations de certains devices comme la température, l'humidité, ou l'état d'ouverture (!!! UNIQUEMENT alarme type 2 !!!)
 -   Afficher le niveau de la qualité du réseau 3G/4G de l'alarme (alarme type 1)
     - icone 5 barres : aucune requête en erreur sur les 25 dernières
 	- icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières
