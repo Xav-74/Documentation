@@ -12,6 +12,15 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-05-22
+
+Optimisation du code et des logs
+
+Corrections suivantes :
+ - Alarme type 1 : Correction d'un bug de la fonction GetPictures suite à la modification des API
+ - Alarme type 2 : Bascule automatique sur le serveur secondaire si le primaire est down mais accepte quand même le login
+
+
 # 2023-04-11
 
 Correctifs suite aux modifications des API Verisure (Authentification MFA et requêtes - Migration REST API vers GraphQL). Attention, il s'agit donc d'une mise à jour **majeure**. Il vous faudra vous authentifier de nouveau pour chaque alarme créée (type 1 & 2).
