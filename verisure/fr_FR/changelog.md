@@ -12,6 +12,15 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-05-29
+
+Ajout des fonctions suivanbtes :
+ - Toggle pour la visibilité des mots de passe
+
+Corrections suivantes :
+ - Alarme type 2 : création des commandes infos "Humidité" pour les détecteurs de fumée
+
+
 # 2023-05-22
 
 Optimisation du code et des logs
