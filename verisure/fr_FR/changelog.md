@@ -12,6 +12,12 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-09-11
+
+Corrections suivantes :
+ - Affichage du widget sur un smartphone / tablette en mode desktop
+
+
 # 2023-05-29
 
 Ajout des fonctions suivanbtes :
