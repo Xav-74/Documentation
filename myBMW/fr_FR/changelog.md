@@ -12,6 +12,26 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-10-04
+
+Ajout des fonctions suivantes :
+ - Prise en charge des nouvelles API BMW et Mini v3.3.1
+ - Refonte du widget avec un retour à un design plus traditionnel / conventionnel pour ne pas surcharger inutilement le dashboard, et centré uniquement sur les infos / actions importantes
+ - Ajout d’un panel beaucoup plus complet avec notamment des graphs sur le kilométrage, le volume de carburant et la batterie. Pour cela vous devez cocher l’option « panel » dans la configuration du plugin et activer l’historisation des commandes « kilométrage », « carburant » et/ou « batterie ». Le panel est personnalisable depuis la page de configuration de l'équipement (icone / texte état ouverture portes fenêtres, couleurs,…)
+ - Ajout de l'historique de charges sur le mois en cours avec la puissance consommée et le coût approximatif si paramétré dans l'app BMW ou Mini
+ - Ajout des informations sur la charge dans les données brutes
+ - Ajout des boutons start / stop recharge pour les véhicules électriques
+ - Possibilité d’afficher le password sur l’équipement
+ - Début de compatibilité Jeedom v4.4
+
+Corrections suivantes :
+ - Correction de l’affichage du widget sur un smartphone / tablette en mode desktop (enfin sic!)
+ - Ajout de logs supplémentaires en cas de debug lors du refresh du token
+ - Passage du volume de carburant restant de litres à % suite à la modification des API
+ - Optimisation de l'affichage des messages de contrôles ou services (si description vide)
+ - Correction de la fonction "VehicleFinder" suite à la modification des API. Utilisation de la dernière position connue du véhicule car il est désormais nécessaire d'envoyer les coordonnées GPS du demandeur de la localisation du véhicule. La position n'est renvoyée qui si le véhicule se situe dans un rayon inférieur à 1.5km
+
+
 # 2023-01-15
 
 Ajout des fonctions suivantes :
