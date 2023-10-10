@@ -12,6 +12,16 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-10-10
+
+Ajout des fonctions suivantes :
+ - Prise en compte du thème Legacy pour l'affichage du widget et du panel (vCore Jeedom < 4.4)
+
+Corrections suivantes :
+ - Retour arrière sur le passage du volume de carburant restant de litres à % suite à la modification des API. Les 2 options sont désormais possibles et dépendent du véhicule
+ - Correction de la commande « sessions de charge » qui renvoyait un json invalide si le véhicule n’était pas de type électrique ou hybride
+
+
 # 2023-10-04
 
 Ajout des fonctions suivantes :
