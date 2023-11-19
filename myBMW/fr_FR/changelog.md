@@ -12,6 +12,14 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-11-19
+
+Ajout des fonctions suivantes :
+ - Compatibilité Jeedom v4.4 Debian 12 et PHP 8.x
+ - Prise en charge des nouvelles API BMW et Mini v3.9.0
+ - Ajout d'un bouton pour la création automatique d'un post sur le Community Jeedom (vCore Jeedom 4.4 mini)
+
+
 # 2023-10-10
 
 Ajout des fonctions suivantes :

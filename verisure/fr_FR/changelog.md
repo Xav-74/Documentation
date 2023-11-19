@@ -12,6 +12,13 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-11-19
+
+Ajout des fonctions suivantes :
+ - Compatibilité Jeedom v4.4 Debian 12 et PHP 8.x
+ - Ajout d'un bouton pour la création automatique d'un post sur le Community Jeedom (vCore Jeedom 4.4 mini)
+
+
 # 2023-09-11
 
 Corrections suivantes :
