@@ -12,6 +12,13 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2023-11-30
+
+Corrections suivantes :
+ - Gestion de l'erreur "429 - Rate limit is exceeded"
+ - Affichage du panel même si l'équipement n'est pas visible 
+
+
 # 2023-11-19
 
 Ajout des fonctions suivantes :
