@@ -12,6 +12,13 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-01-07
+
+Ajout des fonctions suivantes :
+ - Compatibilité officielle des alarmes type 3
+ - Fin de support pour les versions de Jeedom 3.x. La version minimale du core nécessaire au bon fonctionnement du plugin est la version 4.0
+
+
 # 2023-11-19
 
 Ajout des fonctions suivantes :
