@@ -34,7 +34,7 @@ Corrections suivantes :
 
 # 2023-05-29
 
-Ajout des fonctions suivanbtes :
+Ajout des fonctions suivantes :
  - Toggle pour la visibilité des mots de passe
 
 Corrections suivantes :
@@ -54,7 +54,7 @@ Corrections suivantes :
 
 Correctifs suite aux modifications des API Verisure (Authentification MFA et requêtes - Migration REST API vers GraphQL). Attention, il s'agit donc d'une mise à jour **majeure**. Il vous faudra vous authentifier de nouveau pour chaque alarme créée (type 1 & 2).
 
-Ajout des fonctions suivanbtes :
+Ajout des fonctions suivantes :
  - Prise en charge de la nouvelle génération d'alarme (via le type 1 pour le moment) 
  - Refonte des widgets (compatibilité core Jeedom v4.4)
 
