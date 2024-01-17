@@ -12,6 +12,12 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-01-17
+
+Corrections suivantes :
+ - Alarme type 1 & 3 : Correctif suite aux modifications des API Verisure et l'apparition de l'erreur "Required request header 'x-installationNumber' not present"
+
+
 # 2024-01-07
 
 Ajout des fonctions suivantes :
