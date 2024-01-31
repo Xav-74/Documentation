@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-01-31
+
+Corrections suivantes :
+ - Correction des km restants pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
+ 
+
 # 2023-11-30
 
 Corrections suivantes :
