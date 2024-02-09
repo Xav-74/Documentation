@@ -12,6 +12,16 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-02-09
+
+Ajout des fonctions suivantes :
+ - Ajout de l'image du véhicule dans les vignettes de la page du plugin
+
+Corrections suivantes :
+ - Mise à jour du bouton pour la création automatique d'un post sur le Community Jeedom (vCore Jeedom 4.4 mini)
+ - Update des screenshots du plugin
+ 
+
 # 2024-01-31
 
 Corrections suivantes :
