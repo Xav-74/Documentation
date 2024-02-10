@@ -5,8 +5,6 @@ lang: fr_FR
 pluginId: verisure
 ---
 
-# Plugin Verisure pour Jeedom
-
 # Présentation 
 
 Ce plugin Jeedom vous permet d'interagir avec votre alarme Verisure Europe (Securitas Direct) au même titre que l'application officielle "My Verisure".
