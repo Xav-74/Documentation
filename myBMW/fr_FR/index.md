@@ -204,7 +204,7 @@ Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la con
 Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichir les statuts de véhicule.
 
 
-# Roadmap
+# Roadmap & support
 
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API BMW Connected Drive.
 
