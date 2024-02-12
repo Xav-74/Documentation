@@ -18,7 +18,7 @@ Par conséquent, le développeur n'approuve ni ne tolère aucune utilisation ina
 > **Tip**
 >
 > La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.0**
-> Le plugin a été d'ors et déjà compatible avec la **version 4.4** de Jeedom ainsi que les **versions Debian 11 & 12**
+> Le plugin est d'ors et déjà compatible avec la **version 4.4** de Jeedom ainsi que les **versions Debian 11 & 12**
 
 
 # Principe 
@@ -235,7 +235,7 @@ Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la con
 Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichir le statut de l'alarme.
 
 
-# Roadmap
+# Roadmap & support
 
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Versiure.
 
@@ -248,4 +248,10 @@ Les prochaines versions verront arriver les features suivantes :
 >
 >Vous pouvez faire votre demande par en créant une demande "enhancement" [GitHub](https://github.com/Xav-74/verisure/issues/new).
 >
->N'hésitez pas non plus à venir échanger sur ce plugin sur le forum Jeedom !
+>N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
+
+
+En cas de dysfonctionnement du plugin, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations principales et utiles de Jeedom et du plugin sont automatiquement ajoutés. N'hésitez pas pas à copier les logs (mode debug) pour une résolution plus rapide !
+
+
+![Community](../images/community.png)
