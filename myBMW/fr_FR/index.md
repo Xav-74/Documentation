@@ -57,9 +57,13 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
 
--   **Widget personnalisé** : sélectionnez le widget personnalisé du plugin à afficher sur le dashboard (flat design ou legacy). Si vous choisissez "Aucun", vous obtiendrez une tuile brute avec l'ensemble des commandes.
+-   **Affichage état portes / fenêtres** : vous avez le choix entre 2 options pour l'affichage de l'état des portes et des fenêtres sur le panel : le mode texte ou le mode icône.
 
--   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude. N'oubliez ensuite de renseigner la distance maximale entre votre domicile et le véhicule pour la gestion de la présence. 
+-   **Couleur des icônes portes / fenêtres** : si vous avez choisi le mode icône, vous pouvez également décider de la couleur des icônes (vert ou noir & blanc).
+
+-   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude.
+
+-   **Distance max (en m)** : indiquez la distance maximale en mètre entre votre domicile et le véhicule pour que celui-ci soit considéré comme présent à votre domicile. 
 
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
@@ -118,14 +122,20 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Consigne de gonflage pneu arrière droit**
 -   **Etat de la charge** (uniquement sur véhicule électrique ou hybride)
 -   **Etat de la prise** (uniquement sur véhicule électrique ou hybride)
+-   **Heure de fin de charge** (uniquement sur véhicule électrique ou hybride)
 -   **Charge restante** (uniquement sur véhicule électrique ou hybride)
--   **Km restant** (moteur électrique, hybride et/ou thermique)
+-   **Km restant (électrique)** (moteur électrique et/ou hybride)
 -   **Carburant restant** (uniquement sur véhicule thermique ou hybride)
+-   **Km restant (thermique)** (moteur thermique)
 -   **Messages** : remonte les messages affichés dans le véhicule (contrôle et services)
+-   **Sessions de charges** : remonte les statistiques de charges électriques des batteries sur le mois en cours (uniquement sur véhicule électrique ou hybride)
+-   **Charge électrique totale** : donne la charge électrique totale utilisée sur le mois en cours (uniquement sur véhicule électrique ou hybride)
 -   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
 -   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
 -   **Statut Verrouiller**
+-   **Statut Charger**
+-   **Statut Stop charger**
 -   **Statut Ventiler**
 -   **Statut Stop Ventiler**
 -   **Statut Appel de phares**
@@ -144,9 +154,13 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 -   **Déverrouiller** : permet de déverrouiller la voiture à distance
 
+-   **Charger** : permet de démarrer la charge du véhicule
+
+-   **Stop charger** : permet de stopper la charge du véhicule
+
 -   **Ventiler (Start)** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
 
--   **Ventiler (Stop)** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
+-   **Ventiler (Stop)** : permet de stopper le système de ventilation à la température réglée dans le véhicule
 
 -   **Appel de phares** : déclenche un appel de phare
 
@@ -159,20 +173,24 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 # Dashboard
 
-Le plugin inclut 2 widgets personnalisés qui permettent d'afficher l'ensemble des informations du véhicule.
+Le plugin inclut un widget personnalisé qui permet d'afficher l'ensemble des informations essentielles du véhicule.
 
-![Widget Legacy](../images/Widget_myBMW.png)
+![Widget myBMW](../images/Widget_myBMW.png)
 
-![Widget Flat design](../images/Widget_myBMW_flatdesign.png)
 
-Pour ce dernier, vous pouvez le personnaliser en utilisant les paramètres optionnels suivants :
-- all_info_display : show / hide → pour afficher / masquer les tuiles « Toutes les … ». Par défaut ou si vide = show
-- doors_windows_display : text / icon → pour afficher l’états des portes sous forme de texte ou icones. Par défaut ou si vide = text
-- color_icon_closed : green → pour afficher l’état des portes / fenêtres en couleur verte. Par défaut, ou si vide = white ou black en fonction du thème du core
+# Panel
+
+Si vous avez coché l'option **Afficher le panneau desktop** dans la page de configuration du plugin, vous pourrez afficher un panel dédié à votre véhicule et regroupant l'ensemble des informations disponibles dans ce plugin. Il est accessible via le menu **Accueil \ My BMW**
+
+![Panel myBMW](../images/Panel_myBMW_1.png)
+![Panel myBMW](../images/Panel_myBMW_2.png)
+
+> **Tip**
+>
+> Pour que les graphiques s'affichent, n'oubliez de cocher l'option **Historiser** des 3 commandes suivantes : Kilométrage, Charge restante et Carburant restant.
 
 
 # Rafraichissement
-
 
 ## Automatique
 
@@ -192,7 +210,6 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 
 Les prochaines versions verront arriver les features suivantes :
 
--   Ajout des fonctions de démarrage et d'arrêt de la charge des véhicules électriques de la marque
 -   ...
 -   Traduction du plugin en anglais
 
@@ -200,4 +217,10 @@ Les prochaines versions verront arriver les features suivantes :
 >
 >Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/myBMW/issues/new).
 >
->N'hésitez pas non plus à venir échanger sur ce plugin sur le forum Jeedom !
+>N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
+
+
+En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
+
+
+![Community](../images/community.png)
