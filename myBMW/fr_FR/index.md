@@ -7,7 +7,7 @@ pluginId: myBMW
 
 # Présentation 
 
-Ce plugin vous permet d'interagir avec votre voiture BMW ou Mini équipée des services Connected Drive, au même titre que l’application officielle “My BMW” ou "Mini".
+Ce plugin vous permet d'interagir avec votre véhicule **BMW** ou **Mini** équipée des services Connected Drive, au même titre que l’application officielle “My BMW” ou "Mini".
 
 
 # Principe 
