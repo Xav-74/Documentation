@@ -251,7 +251,7 @@ Les prochaines versions verront arriver les features suivantes :
 >N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
 
-En cas de dysfonctionnement du plugin, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations principales et utiles de Jeedom et du plugin sont automatiquement ajoutés. N'hésitez pas pas à copier les logs (mode debug) pour une résolution plus rapide !
+En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
 
 
 ![Community](../images/community.png)
