@@ -23,8 +23,7 @@ Par conséquent, le développeur n'approuve ni ne tolère aucune utilisation ina
 
 # Principe 
 
-Ce plugin interagit avec les API Verisure au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
- 
+Ce plugin interagit avec les API Verisure au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**. 
 Il faut également détenir un abonnement aux services Verisure. En effet, ce plugin ne dialogue avec la base de votre alarme qu'au travers de leurs infrastructures cloud. Il n'interagit pas directement avec la base, ni avec les devices associés. Si votre abonnement a été résilié, ce plugin ne fonctionnera pas.
 
 
@@ -36,7 +35,6 @@ Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il
 >
 > Pour faciliter une demande d'aide à distance, il est conseillé de régler les logs en **mode debug**. 
 
-
 ![Configuration](../images/Config_verisure.png)
 
 
@@ -44,34 +42,21 @@ Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il
 
 La configuration des équipements Alarme est accessible à partir du menu Plugin > Sécurité.
 
-
 ![Ajout alarme](../images/Plugin_verisure.png)
-
 
 Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajoutée vous vous retrouvez avec :
 
 -   **Nom de l’équipement** : nom de votre alarme
-
 -   **Objet parent** : indique l’objet parent auquel appartient l’équipement
-
 -   **Catégorie** : la catégorie de l’équipement (sécurité en général pour une alarme)
-
 -   **Activer** : permet de rendre votre équipement actif
-
 -   **Visible** : rend votre équipement visible sur le dashboard
-
 -   **Type d'alarme** : choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne, ...) / type 2 = Europe du Nord (Belgique, UK, ...) / type 3 = nouvelle génération (depuis 2022))
-
 -   **Numéro d'installation** (alarme type 1 & 3) : indiquez votre numéro d'installation Verisure. **Attention ! Ce numéro doit être rigoureusement identique à celui affiché sur votre application My Verisure. Si votre numéro d'installation commence par un 0 mais que celui-ci n'est pas présent dans l'application, supprimez-le !**
-
 -   **Identifiant** (alarme type 1 2 & 3) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
-
 -   **Mot de passe** (alarme type 1 2 & 3) : indiquez votre mot de passe
-
 -   **Code Alarme** (alarme type 2) : indiquez le code PIN de votre alarme (4 ou 6 digits)
-
 -   **Pays** (alarme type 1 & 3): choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
-
 
 Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des devices installés à votre domicile (ID, nom et type).
 
@@ -80,9 +65,7 @@ Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récup
 > **Tip**
 >
 > N'oubliez pas de **sauvegarder** vos informations !
->
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
-
 
 ![Equipement](../images/Eqpt_verisure.png)
 
@@ -91,14 +74,12 @@ Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récup
 
 Vous avez la possibilité de consulter le journal d'activité de votre alarme en cliquant sur le bouton **Journal d'activité**. Ce rapport reprend les derniers évènements survenus sur votre centrale (alertes intrusion, SOS, activation / désactivation, coupure d'électricité).
 
-
 ![Journal](../images/journal_verisure.png)
 
 
 # Notifications Verisure
 
 Les API Verisure ne permettent pas les remontées d'informations et notifications automatiques directes, telles que l'activation/désactivation depuis un badge ou une télécommande ou encore le déclenchement de l'alarme.
-
 Cet onglet décrit en détail comment paramétrer Jeedom (scénarios) pour palier à ce manque pour :
 -   les **notifications Mail** pour l'activation/désactivation de l'alarme au travers du plugin [Mail Listener](https://www.jeedom.com/market/index.php?v=d&p=market&author=Lunarok&&name=maillistener) de Lunarok !
 -   les **notifications SMS** pour l'activation/désactivation de l'alarme au travers du plugin [SMS](https://www.jeedom.com/market/index.php?v=d&p=market_display&id=16) de Jeedom SAS !
@@ -114,18 +95,15 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Etat Activation** : permet de connaitre l'état d'activation de l'alarme
 	- **0** : désarmée
 	- **1** : armée
-
 -   **Etat Alarme** : permet de connaitre l'état de l'alarme
 	- **0** : état normal
 	- **1** : alarme déclenchée
-
 -   **Mode Alarme** : permet de connaitre le mode d'activation de l'alarme
 	- **Mode total** : l'alarme est activée en mode total (alarme type 1 2 & 3)
 	- **Mode nuit** : l'alarme est activée en mode nuit (alarme type 1)
 	- **Mode jour** : l'alarme est activée en mode jour (alarme type 1)
 	- **Mode extérieur** : l'alarme est activée en mode extérieur (alarme type 1)
 	- **Mode partiel** : l'alarme est activée en mode partiel (alarme type 2 & 3)
-
 -   **Qualité réseau** : permet d'estimer la qualité du réseau 3G/4G des alarmes type 1 & 3 (basée sur le résultat des 25 dernières requêtes)
 
 **Attention** : dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
@@ -134,25 +112,17 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 ## Action
 
 -   **Mode Total** : active l'alarme en mode total (alarme type 1 2 & 3)
-
 -   **Mode Nuit** : active l'alarme en mode nuit (alarme type 1)
-
 -   **Mode Jour** : active l'alarme en mode jour (alarme type 1)
-
 -   **Mode Extérieur** : active l'alarme en mode extérieur (alarme type 1)
-
 -   **Mode Partiel** : active l'alarme en mode partiel (alarme type 2 & 3)
-
 -   **Désactivation** : désactive de l'alarme, quel que soit le mode (alarme type 1 2 & 3)
-
 -   **Rafraichir** : met à jour du statut de l'Alarme (alarme type 1 2 & 3)
-
 -   **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 2 & 3)
 
 > **Tip**
 >
 > Lors d'une demande d'image, la photo est enregistrée et stockée dans le répertoire **/verisure/data/**. Pensez à vider le répertoire de temps à temps ! 
-
 
 ![Commandes](../images/Command_verisure.png)
 
@@ -214,7 +184,6 @@ Le plugin inclut un dashboard qui permet de :
 
 **Attention** : les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
 
-
 ![Dashboard type 1](../images/Dashboard_verisure.png)
 ![Dashboard type 2](../images/Dashboard_verisure_2.png)
 ![Dashboard type 3](../images/Dashboard_verisure_3.png)
@@ -226,7 +195,6 @@ Le plugin inclut un dashboard qui permet de :
 ## Automatique
 
 Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la configuration du plugin.
-
 **Attention** : cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par heure par Verisure sur leurs serveurs !
 
 
@@ -240,18 +208,14 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichi
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Versiure.
 
 Les prochaines versions verront arriver les features suivantes :
-
 -   Possibilité de personaliser le cron (5, 10, 15, 30...)
 -   Traduction du plugin en anglais
 
 > **Tip**
 >
 >Vous pouvez faire votre demande par en créant une demande "enhancement" [GitHub](https://github.com/Xav-74/verisure/issues/new).
->
 >N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
-
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
-
 
 ![Community](../images/community.png)
