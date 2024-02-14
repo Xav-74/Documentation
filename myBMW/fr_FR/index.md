@@ -9,6 +9,11 @@ pluginId: myBMW
 
 Ce plugin vous permet d'interagir avec votre véhicule **BMW** ou **Mini** équipé des services Connected Drive, au même titre que l’application officielle “My BMW” ou "Mini".
 
+> **Tip**
+>
+> La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.0**
+> Le plugin est d'ors et déjà compatible avec la **version 4.4** de Jeedom ainsi que les **versions Debian 11 & 12**
+
 
 # Principe 
 
