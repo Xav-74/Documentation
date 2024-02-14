@@ -13,7 +13,6 @@ Ce plugin vous permet d'interagir avec votre véhicule **BMW** ou **Mini** équi
 # Principe 
 
 Ce plugin interagit avec les API BMW Connected Drive au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
- 
 Il faut également détenir un abonnement en cours de validité aux services BMW Connected Drive pour votre véhicule ainsi qu'un compte utilisateur valide pour l'application "My BMW" ou "Mini".
 
 
@@ -25,7 +24,6 @@ Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il
 >
 > Pour faciliter une demande d'aide à distance, il est conseillé de régler les logs en **mode debug**. 
 
-
 ![Configuration](../images/Config_myBMW.png)
 
 
@@ -33,47 +31,30 @@ Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il
 
 La configuration des équipements MyBMW est accessible à partir du menu Plugin > Objets connectés.
 
-
 ![Ajout véhicule](../images/Plugin_myBMW.png)
-
 
 Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajouté vous vous retrouvez avec :
 
 -   **Nom de l’équipement** : nom de votre véhicule
-
 -   **Objet parent** : indique l’objet parent auquel appartient l’équipement
-
 -   **Catégorie** : la catégorie de l’équipement
-
 -   **Activer** : permet de rendre votre équipement actif
-
 -   **Visible** : rend votre équipement visible sur le dashboard
-
 -   **Identifiant** : indiquez votre identifiant My BMW que vous utilisez pour vous connecter sur l'application "My BMW" ou "Mini"
-
 -   **Mot de passe** : indiquez votre mot de passe
-
 -   **Marque** : indiquez la marque de votre véhicule (BMW ou Mini)
-
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
-
 -   **Affichage état portes / fenêtres** : vous avez le choix entre 2 options pour l'affichage de l'état des portes et des fenêtres sur le panel : le mode texte ou le mode icône.
-
 -   **Couleur des icônes portes / fenêtres** : si vous avez choisi le mode icône, vous pouvez également décider de la couleur des icônes (vert ou noir & blanc).
-
 -   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude.
-
 -   **Distance max (en m)** : indiquez la distance maximale en mètre entre votre domicile et le véhicule pour que celui-ci soit considéré comme présent à votre domicile. 
-
 
 Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
 
 > **Tip**
 >
 > N'oubliez pas de **sauvegarder** vos informations !
->
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
-
 
 ![Equipement](../images/Eqpt_myBMW.png)
 
@@ -149,25 +130,15 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 ## Action
 
 -   **Rafraichir** : met à jour l'ensemble des informations du véhicule 
-
 -   **Verrouiller** : permet de verrouiller la voiture à distance
-
 -   **Déverrouiller** : permet de déverrouiller la voiture à distance
-
 -   **Charger** : permet de démarrer la charge du véhicule
-
 -   **Stop charger** : permet de stopper la charge du véhicule
-
 -   **Ventiler (Start)** : permet de démarrer le système de ventilation à la température réglée dans le véhicule
-
 -   **Ventiler (Stop)** : permet de stopper le système de ventilation à la température réglée dans le véhicule
-
 -   **Appel de phares** : déclenche un appel de phare
-
 -   **Klaxonner** : déclenche un avertissement sonore
-
 -   **Rechercher** : localise le véhicule en temps réel et l'affiche sur une carte googlemaps
-
 -   **Envoi POI** : envoi d'un point d'intérêt (POI) dans le centre de messages du véhicule en saisissant le nom, la latitude et la longitude du lieu
 
 
@@ -195,7 +166,6 @@ Si vous avez coché l'option **Afficher le panneau desktop** dans la page de con
 ## Automatique
 
 Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la configuration du plugin.
-
 **Attention** : cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par BMW sur leurs serveurs !
 
 
@@ -209,18 +179,14 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichi
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API BMW Connected Drive.
 
 Les prochaines versions verront arriver les features suivantes :
-
 -   ...
 -   Traduction du plugin en anglais
 
 > **Tip**
 >
 >Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 >N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
-
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
-
 
 ![Community](../images/community.png)
