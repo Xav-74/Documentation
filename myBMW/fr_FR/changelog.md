@@ -12,6 +12,18 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-03-14
+
+Ajout des fonctions suivantes :
+ - Prise en charge des nouvelles API BMW et Mini v3.11.0
+ - Réduction du nombre d'appels aux serveurs BMW (notamment passage du cron30 au cronHourly (temporairement ou pas))
+ - Ajout de la requête API "lastTrips". Un nouveau graphique arrivera plus tard dans le panel
+
+Corrections suivantes :
+ - Historisation par défaut des 3 commandes nécessaires aux graph du panel lors de leur création
+ - Suppression de la requête "chargingStatistics" qui ne fonctionne plus à date
+
+
 # 2024-02-09
 
 Ajout des fonctions suivantes :
