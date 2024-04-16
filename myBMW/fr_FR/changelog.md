@@ -12,6 +12,20 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-04-16
+
+Ajout des fonctions suivantes :
+ - Légère modification du design du widget et du panel
+ - Panel : passage de l'affichage des sessions de charge du mode tableau au mode graphique
+ - Panel : ajout d'un graphique sur les statistiques de conduite (si disponible)
+ - Panel : ajout d'un graphique sur les trajets du mois en cours (si disponible)
+ - Retour arrière sur le cron : passage de 1 heure à 30 min (notamment pour la récupération des derniers trajets)
+
+Corrections suivantes :
+- Bugfix affichage des sessions de charge pour un véhicule thermique
+- Correction de l'URL des sessions de charge suite à la modification des API
+
+
 # 2024-03-14
 
 Ajout des fonctions suivantes :
