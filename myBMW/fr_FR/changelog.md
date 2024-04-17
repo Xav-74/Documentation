@@ -12,6 +12,18 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-04-17
+
+Ajout des fonctions suivantes :
+ - Ajout d'un boutton permettant la suppression manuelle du token de l'équipement
+ - Ajout de la requète OAuth2 settings
+ - Ajout de la fonction unset() pour les requêtes cURL (compatibilité PHP 8.x)
+
+Corrections suivantes :
+ - Correction de la synchronisation des véhicules suite à la modification des API (méthode SHA256)
+ - Bugfix affichage des tuiles pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
+
+
 # 2024-04-16
 
 Ajout des fonctions suivantes :
