@@ -12,6 +12,18 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-07-07
+
+Ajout des fonctions suivantes :
+ - Ajout des sessions de charge pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
+
+Corrections suivantes :
+ - Amélioration de l'affichage des posts vers le community
+ - Bugfix affichage des messages de services (modif. API)
+ - Bugfix requête chargingStatistics (modif API)
+ - Bugfix affichage panel et dashboard pour les véhicules de type "mild_hybrid" (API v2) ou "hybrid" (API v1)
+
+
 # 2024-04-17
 
 Ajout des fonctions suivantes :
