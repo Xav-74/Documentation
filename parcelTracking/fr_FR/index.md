@@ -24,12 +24,10 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 # Configuration
 
 1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API Parcelsapp
-2. Rendez-vous sur le site [Parcelsapp](https://parcelsapp.com/dashboard/#/login)
+2. Rendez-vous sur le site [www.parcelsapp.com](https://parcelsapp.com/dashboard/#/login)
 3. Créez un compte ou se connecter avec l'existant
 4. Allez sur votre dashboard et copiez la clé API
-5. Collez la clé API dans la configuration du plugin
-
-![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)
+5. Collez la clé API dans la configuration du plugin<br/><br/>![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)
 
 6. Renseignez la langue utilisée pour les retours API (français ou anglais) et les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
@@ -91,7 +89,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 # Dashboard
 
-Le plugin inclut 2 widgets personnalisés qui permettent d'afficher l'ensemble des informations des colis :
+Le plugin inclut 2 widgets personnalisés qui permettent d'afficher l'ensemble des informations des colis. Vous pouvez choisir soit :
 - un widget par colis
 
 ![widget](../images/widget.png)
@@ -114,7 +112,7 @@ Comme indiqué dans la page de configuration du plugin :
 
 ## Manuel
 
-Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichir les informations des colis.
+Vous pouvez à tout moment utiliser la commande **Rafraichir** afin d'actualiser les informations des colis.
 
 
 # Roadmap & support
