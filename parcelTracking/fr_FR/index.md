@@ -28,9 +28,7 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 3. Créez un compte ou se connecter avec l'existant
 4. Allez sur votre dashboard et copiez la clé API
 5. Collez la clé API dans la configuration du plugin
-
-<br/>![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)<br/><br/>
-
+<br/><br/>![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)<br/>
 6. Renseignez la langue utilisée pour les retours API (français ou anglais) et les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
  - Code postal par défaut ==> Ajout automatique du code postal du destinataire spécifié lors de la création de nouveaux suivis
