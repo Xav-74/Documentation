@@ -23,31 +23,31 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 
 # Configuration
 
-1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API Parcelsapp
-2. Rendez-vous sur le site [www.parcelsapp.com](https://parcelsapp.com/dashboard/#/login)
-3. Créez un compte ou se connecter avec l'existant
-4. Allez sur votre dashboard et copiez la clé API
+1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API Parcelsapp<br/>
+2. Rendez-vous sur le site [www.parcelsapp.com](https://parcelsapp.com/dashboard/#/login)<br/>
+3. Créez un compte ou se connecter avec l'existant<br/>
+4. Allez sur votre dashboard et copiez la clé API<br/>
 5. Collez la clé API dans la configuration du plugin<br/><br/>![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)
 
 6. Renseignez la langue utilisée pour les retours API (français ou anglais) et les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
  - Code postal par défaut ==> Ajout automatique du code postal du destinataire spécifié lors de la création de nouveaux suivis
- - Durée de conservation de l'équipement après livraison (en jours) ==> Suppression automatique de l'équipement X jours après sa livraison
+ - Durée de conservation de l'équipement après livraison (en jours) ==> Suppression automatique de l'équipement X jours après sa livraison<br/>
 
 7. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
  - Les 2 premières lignes concernent l'envoi des notifications via une commande action de type message 
    Option : vous pouvez personnaliser le message en utilisant les tags suivants : #nom#, #numColis#, #transporteur#, #statut#, #dernierEtat#, #date# et #heure#
  - Les 2 dernières lignes concernent l'envoi des notifications via un scénario
    Vous pouvez utiliser les tags suivants : #nom#, #objet#, #numColis#, #transporteur#, #statut#, #dernierEtat#, #date# et #heure#.
-   Ils fonctionnent ainsi ; nomdusuivi=#nom# où nomdusuivi est le nom du tag et #nom# la valeur du tag
+   Ils fonctionnent ainsi ; nomdusuivi=#nom# où nomdusuivi est le nom du tag et #nom# la valeur du tag<br/>
 
 8. Renseignez les paramètres du widget
   3 choix possibles :
   - Aucun widget (vous recevrez uniquement les notifications)
   - Un widget par colis
-  - Un widget unique pour l'ensemble des colis
+  - Un widget unique pour l'ensemble des colis<br/>
 
-9. Sauvegardez
+9. Sauvegardez<br/>
 
 ![Config parcelTracking](../images/config_parcelTracking.png)
 
