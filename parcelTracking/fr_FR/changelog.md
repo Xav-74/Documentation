@@ -12,6 +12,18 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-07-27
+
+Ajout des fonctions suivantes :
+ - Possibilité d'ajouter ou de supprimer des colis directement depuis les widgets (individuel ou global)
+ - Possibilité d'ajouter une clé API secondaire pour le suivi de 10 colis supplémentaires
+ - Ajout d'une information dans le centre de message Jeedom lorsque la limite des 10 colis est atteinte (uniquement lors de la synchronisation, et pas lors du refresh)
+
+Corrections suivantes :
+ - PHP Warning dans le log http.error lors de l'appel à la fonction buildList()
+ - Mise à jour des commandes des équipements lorsque le json "Shipments" est vide
+
+
 # 2024-07-16
 
 Première version du plugin Suivi Colis (parcelTracking)
