@@ -15,7 +15,7 @@ pluginId: parcelTracking
 # 2024-08-01
 
 Ajout des fonctions suivantes :
- - Suppression automatique des espaces si présents avant et après le trackinID
+ - Suppression automatique des espaces si présents avant et/ou après le trackingID
 
 Corrections suivantes :
  - Récupération des informations transporteur, origine et destination (différentes clés dans le json suivants les transporteurs)
