@@ -12,6 +12,18 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-08-23
+
+Ajout des fonctions suivantes :
+ - Traduction du plugin (anglais, allemand, espagnol, italien, portugais)
+
+Corrections suivantes :
+ - Passage des tags en anglais
+
+> [!WARNING]
+> Vous devez donc modifier le format de vos messages (notificaitions) et/ou de vos scénarios !
+
+
 # 2024-08-01
 
 Ajout des fonctions suivantes :
