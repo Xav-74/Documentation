@@ -21,7 +21,7 @@ Corrections suivantes :
  - Passage des tags en anglais
 
 > ATTENTION !!!
-> Vous devez donc modifier le format de vos messages (notificaitions) et/ou de vos scénarios !
+> Vous devez donc modifier le format de vos messages (notifications) et/ou de vos scénarios !
 
 
 # 2024-08-01
