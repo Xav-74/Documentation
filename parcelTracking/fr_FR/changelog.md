@@ -20,7 +20,7 @@ Ajout des fonctions suivantes :
 Corrections suivantes :
  - Passage des tags en anglais
 
-> [!WARNING]
+> ATTENTION !!!
 > Vous devez donc modifier le format de vos messages (notificaitions) et/ou de vos scénarios !
 
 
