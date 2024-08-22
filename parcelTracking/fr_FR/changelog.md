@@ -12,7 +12,7 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2024-08-23
+# 2024-08-22
 
 Ajout des fonctions suivantes :
  - Traduction du plugin (anglais, allemand, espagnol, italien, portugais)
