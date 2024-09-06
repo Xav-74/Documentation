@@ -12,6 +12,17 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-09-06
+
+Ajout des fonctions suivantes :
+ - Prise en charge des nouvelles API BMW et Mini (App mobile v4.7.2)
+
+Corrections suivantes :
+ - Bugfix requête sendPOI (modif API)
+ - Bugfix requête vehicleFinder (modif API)
+ - Bugfix requête lastTrip (prise en compte de l'info "NoTripsYet")
+
+
 # 2024-07-07
 
 Ajout des fonctions suivantes :
