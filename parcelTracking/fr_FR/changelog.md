@@ -12,7 +12,7 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2024-09-97
+# 2024-09-07
 
 Ajout des fonctions suivantes :
  - Passage des API parcelsapp à 17Track
