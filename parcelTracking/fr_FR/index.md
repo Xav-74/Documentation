@@ -7,8 +7,8 @@ pluginId: parcelTracking
 
 # Présentation
 
-Ce plugin vous permet de suivre vos colis en provenance des principaux transporteurs français et internationaux (La Poste, Mondial Relay, Relais Colis, Colis Privé, Aliexpress, Shein, Amazon, eBay, FedEx, UPS, ...) via l'API de [**Parcelsapp**](https://parcelsapp.com/fr).<br/>
-Le plan gratuit de Parcelsapp propose le suivi de 10 colis sur 30 jours glissants. Si vous le souhaitez, vous pouvez prendre un plan supérieur.
+Ce plugin vous permet de suivre vos colis en provenance des principaux transporteurs français et internationaux (La Poste, Mondial Relay, Relais Colis, Colis Privé, Aliexpress, Shein, Amazon, eBay, FedEx, UPS, ...) via l'API de [**17Track**](https://www.17track.net/en).<br/>
+Le plan gratuit de 17Track propose le suivi de 100 colis par mois (remise à 0 le 1er jour du mois). Si vous le souhaitez, vous pouvez prendre un plan supérieur payant.
 
 > **Tip**
 >
@@ -23,29 +23,30 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 
 # Configuration
 
-1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API Parcelsapp
-2. Rendez-vous sur le site [www.parcelsapp.com](https://parcelsapp.com/dashboard/#/login)
-3. Créez un compte ou se connecter avec l'existant
-4. Allez sur votre dashboard et copiez la clé API
+1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API 17Track
+2. Rendez-vous sur le site [www.17track.net](https://user.17track.net/en)
+3. Cliquez sur **No account** et créez un compte **Développer**, ou se connecter avec vos identifiants existants
+4. Une fois sur votre dashboard, allez dans le menu **Settings** et copiez la clé API
 5. Collez la clé API dans la configuration du plugin
-<br/><br/>![Dashboard parcelsapp](../images/dashboard_parcelsapp.png)<br/><br/>
-6. Vous pouvez également renseigner une clé API secondaire pour le suivi de 10 colis supplémentaires 
-7. Renseignez la langue utilisée pour les retours API (français ou anglais) et les paramètres optionnels du plugin :
+<br/><br/>![Dashboard 17Track](../images/dashboard_17Track.png)<br/><br/>
+
+6. Vous pouvez consulter le nombre de suivi restant sur votre quota en cliquant sur le bouton **Vérifier**
+7. Sélectionnez la langue utilisée pour les retours API. Attention, si vous choisissez une langue autre que par défaut, cela décomptera 2 suivis par colis sur votre quota
+8. Renseignez les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
- - Code postal par défaut ==> Ajout automatique du code postal du destinataire spécifié lors de la création de nouveaux suivis
  - Durée de conservation de l'équipement après livraison (en jours) ==> Suppression automatique de l'équipement X jours après sa livraison
-8. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
+9. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
  - Les 2 premières lignes concernent l'envoi des notifications via une commande action de type message 
-   Option : vous pouvez personnaliser le message en utilisant les tags suivants : #nom#, #numColis#, #transporteur#, #statut#, #dernierEtat#, #date# et #heure#
+   Option : vous pouvez personnaliser le message en utilisant les tags suivants : #name#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
  - Les 2 dernières lignes concernent l'envoi des notifications via un scénario
-   Vous pouvez utiliser les tags suivants : #nom#, #objet#, #numColis#, #transporteur#, #statut#, #dernierEtat#, #date# et #heure#.
-   Ils fonctionnent ainsi ; nomdusuivi=#nom# où nomdusuivi est le nom du tag et #nom# la valeur du tag
-9. Renseignez les paramètres du widget
+   Vous pouvez utiliser les tags suivants : #name#, #object#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
+   Ils fonctionnent ainsi : nomdusuivi=#name# où nomdusuivi est le nom du tag et #name# la valeur du tag
+10. Renseignez les paramètres du widget
   3 choix possibles :
   - Aucun widget (vous recevrez uniquement les notifications)
   - Un widget par colis
   - Un widget unique pour l'ensemble des colis
-10. Sauvegardez
+11. Sauvegardez
 
 <br/>![Config parcelTracking](../images/config_parcelTracking.png)<br/>
 
@@ -57,9 +58,14 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 # Utilisation
 1. Lancer le plugin qui se trouve dans la catégorie **Organisation** du menu **Plugins**
 2. Ajouter un colis, comme n'importe quel équipement sous Jeedom
-3. Indiquer le nom de votre colis puis renseigner le numéro de suivi, la clé API à utiliser (par défaut la principale), son pays et code postal de destination, sauf si les informations ont déjà été pré-remplies dans la configuration du plugin
-5. Sauvegarder
-6. Si vous ne souhaitez pas attendre l'actualisation automatique, vous pouvez la forcer en cliquant sur le bouton **Synchronisation**. Attention, lors de la synchronisation, aucune notification n'est envoyée.
+3. Indiquer le nom de votre colis puis renseigner le numéro de suivi, le transporteur si vous le connaissez et le paramètre additionnel nécessaire au suivi s'il est obligatoire. La liste des transporteurs provient directement de 17Track et sera mise à jour régulièrement. Si un paramètre additionnel est nécessaire pour le transporteur sélectionné, une note apparaitra pour vous le signaler et vous donner son format attendu 
+4. Sauvegarder puis lancez un **enregistrement** afin que le colis soit pris en compte par les API 17Track et assurez-vous du succès de cette action (notification verte)
+
+> **Tip**
+>
+>Si, à l'issue du premier enregistrement **réussi**, vous devez modifier le transporteur et/ou le paramètre additionnel, vous pouvez le faire gràce aux boutons de mise à jour. Attention, il arrive parfois qu'à l'issue d'une mise à jour de l'un des 2 paramètres, les informations de suivi ne remontent pas immédiatement. Patientez 1 à 2 heures. Passé ce délai, il est préférable de supprimer le colis, et de le recréer **avec l'ensemble des paramètres à jour dès le premier enregistrement**
+
+<br/>![Config parcelTracking](../images/eqt_parcelTracking.png)<br/>
 
 
 # Commandes
@@ -68,7 +74,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 > **Tip**
 >
->Si la commande renvoie "not available", c'est que l'information correspondante n'est pas présente sur le suivi du colis.
+>Si la commande renvoie "indisponible", c'est que l'information correspondante n'est pas présente sur le suivi du colis.
 
 ## Info
 
@@ -77,6 +83,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 - **Origine** : pays d'origine du colis
 - **Destination** : pays de destinatiuon du colis
 - **Etats** : liste de toutes les étapes de la livraison
+- **Dernier évènement** : date et heure du dernier évènement envoyé par le transporteur. Utilisé pour l'envoi des notifications
 - **Dernier état** : dernier état envoyé par le transporteur. Utilisé pour l'envoi des notifications
 - **Date de livraison** : uniquement disponible lorsque le colis a été livré
 
@@ -117,10 +124,10 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin d'actualiser
 
 # Roadmap & support
 
-Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Parcelsapp.
+Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API 17Track.
 
 Les prochaines versions verront arriver les features suivantes :
-- Traduction du plugin en anglais
+- Mise en place d'un WebHook pour une réception des données en temps réel
 - ...
 
 > **Tip**

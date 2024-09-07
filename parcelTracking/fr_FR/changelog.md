@@ -12,6 +12,15 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-09-97
+
+Ajout des fonctions suivantes :
+ - Passage des API parcelsapp à 17Track
+
+> ATTENTION !!!
+> Il s'agit d'une modification majeure du plugin. Vous devez donc configurer de nouveau celui-ci (notamment intégrer une clé API 17Track) puis recréer l'ensemble de vos colis. Toute la procédure est détaillée dans la documentation. Le gros avantage de cette nouvelle version est que le nombre de suivi passe à 100 colis par mois (la remise à jour du quota a lieu chaque 1er du mois) !
+
+
 # 2024-08-22
 
 Ajout des fonctions suivantes :
