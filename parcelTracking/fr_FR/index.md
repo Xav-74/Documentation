@@ -25,7 +25,7 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 
 1. Une fois installé et activé, sur la page de configuration, vous devez indiquer Clé API 17Track
 2. Rendez-vous sur le site [www.17track.net](https://user.17track.net/en)
-3. Cliquez sur **No account** et créez un compte **Développer**, ou se connecter avec vos identifiants existants
+3. Cliquez sur **No account** et créez un compte **Développeur**, ou se connecter avec vos identifiants existants
 4. Une fois sur votre dashboard, allez dans le menu **Settings** et copiez la clé API
 5. Collez la clé API dans la configuration du plugin
 <br/><br/>![Dashboard 17Track](../images/dashboard_17Track.png)<br/><br/>
