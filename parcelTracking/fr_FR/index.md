@@ -30,23 +30,27 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 5. Collez la clé API dans la configuration du plugin
 <br/><br/>![Dashboard 17Track](../images/dashboard_17Track.png)<br/><br/>
 
-6. Vous pouvez consulter le nombre de suivi restant sur votre quota en cliquant sur le bouton **Vérifier**
-7. Sélectionnez la langue utilisée pour les retours API. Attention, si vous choisissez une langue autre que par défaut, cela décomptera 2 suivis par colis sur votre quota
-8. Renseignez les paramètres optionnels du plugin :
+6. Complétez également la partie Webhook comme ceci : (<jeedom-host> est l'adresse externe de votre box)
+<br/><br/>![Dashboard 17Track](../images/webhook_17Track.png)<br/><br/>
+
+7. Vous pouvez consulter le nombre de suivi restant sur votre quota en cliquant sur le bouton **Vérifier**
+8. Sélectionnez la langue utilisée pour les retours API. Attention, si vous choisissez une langue autre que par défaut, cela décomptera 2 suivis par colis sur votre quota
+9. Renseignez les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
  - Durée de conservation de l'équipement après livraison (en jours) ==> Suppression automatique de l'équipement X jours après sa livraison
-9. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
+10. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
  - Les 2 premières lignes concernent l'envoi des notifications via une commande action de type message 
    Option : vous pouvez personnaliser le message en utilisant les tags suivants : #name#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
+   Vous pouvez tester le bon fonctionnement avec l'envoi d'une notification de test
  - Les 2 dernières lignes concernent l'envoi des notifications via un scénario
    Vous pouvez utiliser les tags suivants : #name#, #object#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
    Ils fonctionnent ainsi : nomdusuivi=#name# où nomdusuivi est le nom du tag et #name# la valeur du tag
-10. Renseignez les paramètres du widget
+11. Renseignez les paramètres du widget
   3 choix possibles :
   - Aucun widget (vous recevrez uniquement les notifications)
   - Un widget par colis
   - Un widget unique pour l'ensemble des colis
-11. Sauvegardez
+12. Sauvegardez
 
 <br/>![Config parcelTracking](../images/config_parcelTracking.png)<br/>
 
@@ -113,8 +117,9 @@ Dans les 2 cas, vous avez la possibilité de supprimer les colis (icône <img sr
 ## Automatique
 
 Comme indiqué dans la page de configuration du plugin :
-- un CRON est automatiquement créé sur une base de 1 heure pour le rafraichissement des informations des colis
-- un second CRON est automatiquement créé sur base quotidienne (à 00h00) pour la suppression automatique des colis
+- un CRON est automatiquement créé sur une base quotidienne (à 00h00) pour la suppression automatique des colis
+
+Concernant l'actualisation des colis, le webhook récupère en temps réel les informations transmises par 17Track.
 
 
 ## Manuel

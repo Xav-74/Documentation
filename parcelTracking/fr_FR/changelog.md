@@ -12,6 +12,16 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-09-28
+
+Ajout des fonctions suivantes :
+ - Implémentation d'un webhook récupèrant en temps réel les informations transmises par 17Track. Le cron Hourly est par conséquence désactivé
+ - Ajout d'un bouton permettant l'envoi d'une notification de test sur la page de configuration du plugin
+
+> ATTENTION !!!
+> Il est impératif d'aller configurer les paramètres du webhook sur votre dashboard 17Track sans quoi vous ne recevrez plus aucune information sur vos colis !
+
+
 # 2024-09-07
 
 Ajout des fonctions suivantes :
