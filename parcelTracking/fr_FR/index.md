@@ -30,8 +30,8 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 5. Collez la clé API dans la configuration du plugin
 <br/><br/>![Dashboard 17Track](../images/dashboard_17Track.png)<br/><br/>
 
-6. Complétez également la partie Webhook comme ceci : (<jeedom-host> est l'adresse externe de votre box)
-<br/><br/>![Dashboard 17Track](../images/webhook_17Track.png)<br/><br/>
+6. Complétez également la partie Webhook comme ceci : ("jeedom-host" est l'adresse externe de votre box)
+<br/><br/>![Webhook 17Track](../images/webhook_17Track.png)<br/><br/>
 
 7. Vous pouvez consulter le nombre de suivi restant sur votre quota en cliquant sur le bouton **Vérifier**
 8. Sélectionnez la langue utilisée pour les retours API. Attention, si vous choisissez une langue autre que par défaut, cela décomptera 2 suivis par colis sur votre quota
