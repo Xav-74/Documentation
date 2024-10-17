@@ -12,6 +12,16 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-10-17
+
+Ajout des fonctions suivantes :
+ - Ajout des champs "transporteur" et "paramètre additionnel" dans la modale permettant d'ajouter un colis depuis le widget / dashboard
+
+Corrections suivantes :
+ - Les dates et heures sont maintenant affichées dans la timezone configurée dans votre Jeedom (widget unique / widget global)
+ - Prise en compte des descriptions traduites par 17Track lorsque vous avez paramétré une langue spécifique
+ 
+
 # 2024-09-28
 
 Ajout des fonctions suivantes :
