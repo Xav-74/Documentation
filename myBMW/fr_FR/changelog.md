@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-10-22
+
+Corrections suivantes :
+ - Bugfix commandes du panel (sendPOI & vehicleFinder)
+
+
 # 2024-09-06
 
 Ajout des fonctions suivantes :
