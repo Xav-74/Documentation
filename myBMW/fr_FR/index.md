@@ -69,7 +69,6 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 La première connexion nécessite la résolution d'un captcha. Les connexions suivantes (qui utiliseront le refresh du token) ne nécessiteront pas de captcha.
 Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation.
 
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -96,22 +95,28 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
             const responseElement = document.getElementById('captchaResponse');
             if (hCaptchaResponse) {
                 // Replace form and display the response
-                const highlightDiv = document.createElement('div');
-                highlightDiv.className = 'highlight';
+                const hcaptchaDiv = document.createElement('div');
+                hcaptchaDiv.style.display = 'flex';
+                hcaptchaDiv.style.justifyContent = 'center';
+                hcaptchaDiv.style.alignItems = 'center';
                 responseElement.innerHTML = '';
-                responseElement.appendChild(highlightDiv);
+                responseElement.appendChild(hcaptchaDiv);
                 const hcaptchaPre = document.createElement('pre');
+                hcaptchaPre.style.width = '75%';
+                hcaptchaPre.style.height = '100%';
                 hcaptchaPre.style.wordBreak = 'break-all';
                 hcaptchaPre.style.whiteSpace = 'pre-wrap';
+                hcaptchaPre.style.textAlign = 'center';
+                hcaptchaPre.style.borderRadius = '4px';
+                hcaptchaPre.style.padding = '10px';
                 hcaptchaPre.textContent = hCaptchaResponse;
-                highlightDiv.appendChild(hcaptchaPre);
+                hcaptchaDiv.appendChild(hcaptchaPre);
                 // Add a button to copy the data to clipboard
                 const copyButtonDiv = document.createElement('div');
                 copyButtonDiv.style.textAlign = 'center';
                 responseElement.appendChild(copyButtonDiv);
                 const copyButton = document.createElement('button');
                 copyButton.textContent = 'Copy to Clipboard';
-                copyButton.className = 'btn btn-neutral btn-small';
                 copyButtonDiv.appendChild(copyButton);
                 // Add event listener to button for copying the data to clipboard
                 copyButton.addEventListener('click', function() {
