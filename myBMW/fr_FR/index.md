@@ -69,6 +69,8 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 La première connexion nécessite la résolution d'un captcha. Les connexions suivantes (qui utiliseront le refresh du token) ne nécessiteront pas de captcha.
 Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation.
 
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
