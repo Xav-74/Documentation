@@ -108,7 +108,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
                 hcaptchaPre.style.height = '100%';
                 hcaptchaPre.style.wordBreak = 'break-all';
                 hcaptchaPre.style.whiteSpace = 'pre-wrap';
-                hcaptchaDiv.style.border = '1px solid #ccc';
+                hcaptchaPre.style.border = '1px solid #ccc';
                 hcaptchaPre.style.borderRadius = '4px';
                 hcaptchaPre.style.padding = '10px';
                 hcaptchaPre.textContent = hCaptchaResponse;
