@@ -64,12 +64,17 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 ![Equipement](../images/Eqpt_myBMW.png)
 
 
+# Captcha
+
+La première connexion nécessite la résolution d'un captcha. Les connexions suivantes (qui utiliseront le refresh du token) ne nécessiteront pas de captcha.
+Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation.
+
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form with hCaptcha</title>
 </head>
-
 <body>
     <p></p>
     <div id="captchaResponse">
@@ -90,10 +95,37 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
             const hCaptchaResponse = document.querySelector('[name="h-captcha-response"]').value;
             const responseElement = document.getElementById('captchaResponse');
             if (hCaptchaResponse) {
-                content = '<div class="highlight"><pre style="word-break: break-all; white-space: pre-wrap;">'
-                content += hCaptchaResponse
-                content += '</pre></div>';
-                responseElement.innerHTML = content;
+                // Replace form and display the response
+                const highlightDiv = document.createElement('div');
+                highlightDiv.className = 'highlight';
+                responseElement.innerHTML = '';
+                responseElement.appendChild(highlightDiv);
+                const hcaptchaPre = document.createElement('pre');
+                hcaptchaPre.style.wordBreak = 'break-all';
+                hcaptchaPre.style.whiteSpace = 'pre-wrap';
+                hcaptchaPre.textContent = hCaptchaResponse;
+                highlightDiv.appendChild(hcaptchaPre);
+                // Add a button to copy the data to clipboard
+                const copyButtonDiv = document.createElement('div');
+                copyButtonDiv.style.textAlign = 'center';
+                responseElement.appendChild(copyButtonDiv);
+                const copyButton = document.createElement('button');
+                copyButton.textContent = 'Copy to Clipboard';
+                copyButton.className = 'btn btn-neutral btn-small';
+                copyButtonDiv.appendChild(copyButton);
+                // Add event listener to button for copying the data to clipboard
+                copyButton.addEventListener('click', function() {
+                    const tempInput = document.createElement('textarea');
+                    tempInput.value = hCaptchaResponse;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                    alert('Copied.');
+                });
+            }
+            else {
+                responseElement.innerHTML = 'No hCaptcha response received.';
             }
         });
     </script>
