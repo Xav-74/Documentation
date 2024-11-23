@@ -64,6 +64,43 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 ![Equipement](../images/Eqpt_myBMW.png)
 
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with hCaptcha</title>
+</head>
+
+<body>
+    <p></p>
+    <div id="captchaResponse">
+        <div style="text-align: center;">
+            <form id="captcha_form" action="#" method="post">
+                <!-- hCaptcha widget -->
+                <div class="h-captcha" data-sitekey="ba8a9fac-6008-4054-89ba-976afef03086"></div><br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <!-- hCaptcha script -->
+            <script src="https://hcaptcha.com/1/api.js" async defer></script>
+        </div>
+    </div>
+    <p></p>
+    <script>
+        document.getElementById('captcha_form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+            const hCaptchaResponse = document.querySelector('[name="h-captcha-response"]').value;
+            const responseElement = document.getElementById('captchaResponse');
+            if (hCaptchaResponse) {
+                content = '<div class="highlight"><pre style="word-break: break-all; white-space: pre-wrap;">'
+                content += hCaptchaResponse
+                content += '</pre></div>';
+                responseElement.innerHTML = content;
+            }
+        });
+    </script>
+</body>
+</html>      
+
+
 # Données brutes
 
 Pour faciliter le debug en cas de problème, vous avez la possibilité de récupérer les données brutes de votre véhicule en cliquant sur le bouton **Données brutes**. Attention, avant de les copier sur le forum par exemple, pensez à masquer les informations sensibles comme le numéro de VIN par exemple !
