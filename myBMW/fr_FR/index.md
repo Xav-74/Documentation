@@ -81,7 +81,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
             <form id="captcha_form" action="#" method="post">
                 <!-- hCaptcha widget -->
                 <div class="h-captcha" data-sitekey="ba8a9fac-6008-4054-89ba-976afef03086"></div><br>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn">Submit</button>
             </form>
             <!-- hCaptcha script -->
             <script src="https://hcaptcha.com/1/api.js" async defer></script>
@@ -106,7 +106,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
                 hcaptchaPre.style.height = '100%';
                 hcaptchaPre.style.wordBreak = 'break-all';
                 hcaptchaPre.style.whiteSpace = 'pre-wrap';
-                hcaptchaPre.style.textAlign = 'center';
+                hcaptchaDiv.style.border = '1px solid #ccc';
                 hcaptchaPre.style.borderRadius = '4px';
                 hcaptchaPre.style.padding = '10px';
                 hcaptchaPre.textContent = hCaptchaResponse;
@@ -116,6 +116,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
                 copyButtonDiv.style.textAlign = 'center';
                 responseElement.appendChild(copyButtonDiv);
                 const copyButton = document.createElement('button');
+                copyButton.className = 'btn';
                 copyButton.textContent = 'Copy to Clipboard';
                 copyButtonDiv.appendChild(copyButton);
                 // Add event listener to button for copying the data to clipboard
