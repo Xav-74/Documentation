@@ -129,7 +129,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
                     tempInput.select();
                     document.execCommand('copy');
                     document.body.removeChild(tempInput);
-                    alert('Copied.');
+                    alert('Copied');
                 });
             }
             else {
