@@ -67,7 +67,7 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 # Captcha
 
 La première connexion nécessite la résolution d'un captcha. Les connexions suivantes (qui utiliseront le refresh du token) ne nécessiteront pas de captcha.
-Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation.
+Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation. En cas d'erreur lors de cette première connexion, il vous faudra patienter 30min environ avant de faire un nouvel essai, le temps que votre compte soit débloqué.
 
 
 <html lang="en">
@@ -82,7 +82,7 @@ Résolvez le captcha et copiez le "token" affiché dans la configuration de votr
         <div style="text-align: center;">
             <form id="captcha_form" action="#" method="post">
                 <!-- hCaptcha widget -->
-                <div class="h-captcha" data-sitekey="ba8a9fac-6008-4054-89ba-976afef03086"></div><br>
+                <div class="h-captcha" data-sitekey="7244955f-8f30-4445-adff-4fefe059f815"></div><br>
                 <button type="submit" class="btn">Submit</button>
             </form>
             <!-- hCaptcha script -->
