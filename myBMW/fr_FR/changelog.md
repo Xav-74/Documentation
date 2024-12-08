@@ -12,6 +12,16 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-12-08
+
+Ajout des fonctions suivantes :
+ - Prise en compte du captcha imposé par BMW lors de la première connexion (voir doc !!)
+ - Affichage des services disponibles en fonction de l'abonnement sur la page "Equipement"
+
+Corrections suivantes :
+ - Affichage de l'heure en complément de la date sur les graphiques
+
+
 # 2024-10-22
 
 Corrections suivantes :
