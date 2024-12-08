@@ -12,6 +12,13 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-12-08
+
+Corrections suivantes :
+ - Correction d'une erreur sur la requête "logout" 
+ - Optimisation du code por php 8.0
+
+
 # 2024-02-09
 
 Ajout des fonctions suivantes :
