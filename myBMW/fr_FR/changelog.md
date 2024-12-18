@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-12-18
+
+Corrections suivantes :
+ - Bugfix écrasement de l'historique des trajets si la requête retourne "TripHistoryNotActive" par erreur 
+
+
 # 2024-12-08
 
 Ajout des fonctions suivantes :
