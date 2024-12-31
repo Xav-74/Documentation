@@ -29,7 +29,7 @@ Corrections suivantes :
 
 Corrections suivantes :
  - Correction d'une erreur sur la requête "logout" 
- - Optimisation du code por php 8.0
+ - Optimisation du code pour php 8.0
 
 
 # 2024-02-09
