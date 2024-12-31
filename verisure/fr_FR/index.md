@@ -159,12 +159,19 @@ Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est 
 >Attention, les états ne remontent pas en temps réel (impossible à l'heure actuel à cause de Versiure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas éxecuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.** 
 
 
+## Devices alarme type 3
+
+Pour les alarmes de type 3 (**et uniquement type 3 !**), le plugin va créer les commandes associées aux devices de l'alarme :
+-  **Serrure connectée**      --> état / ouverture / fermeture
+
+
 # Dashboard
 
 Le plugin inclut un dashboard qui permet de :
 -   Connaitre le statut de l'alarme (alarme type 1 2 & 3)
 -   Connaitre l'état de l'alarme (alarme type 1 2 & 3)
--   Connaitre le mode e l'alarme (alarme type 1 2 & 3)
+-   Connaitre le mode de l'alarme (alarme type 1 2 & 3)
+-   Connaitre létat de la serrure connectée (alarme type 3)
 -   Activer le mode total de l'alarme (alarme type 1 2 & 3)
 -   Activer le mode nuit de l'alarme (alarme type 1)
 -   Activer le mode jour de l'alarme (alarme type 1)
@@ -172,6 +179,7 @@ Le plugin inclut un dashboard qui permet de :
 -   Activer le mode partiel de l'alarme (alarme type 2 & 3)
 -   Désactiver l'alarme (alarme type 1 2 & 3)
 -   Rafraichir le statut de l'alarme (alarme type 1 2 & 3)
+-   Ouvrir / fermer la serrure connectée (alarme type 3)
 -   Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 2 & 3)
 -   Afficher les informations de certains devices comme la température, l'humidité, ou l'état d'ouverture (**!!! UNIQUEMENT alarme type 2 !!!**)
 -   Afficher le niveau de la qualité du réseau 3G/4G de l'alarme (alarme type 1 & 3)

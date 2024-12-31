@@ -12,6 +12,12 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2024-12-31
+
+Ajout des fonctions suivantes :
+ - Ajout des tags #url# et #location# pour les notifications et les scénarios
+
+
 # 2024-10-17
 
 Ajout des fonctions suivantes :
