@@ -193,6 +193,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Messages** : remonte les messages affichés dans le véhicule (contrôle et services)
 -   **Sessions de charges** : remonte les statistiques de charges électriques des batteries sur le mois en cours (uniquement sur véhicule électrique ou hybride)
 -   **Charge électrique totale** : donne la charge électrique totale utilisée sur le mois en cours (uniquement sur véhicule électrique ou hybride)
+-   **Coût électrique total** : donne le coût mensuel des charges électriques
 -   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
 -   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"

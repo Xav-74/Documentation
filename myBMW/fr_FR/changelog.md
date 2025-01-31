@@ -12,6 +12,18 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-01-31
+
+Ajout des fonctions suivantes :
+ - Ajout de la commande totalEnergyCost (coût total de charge électrique mensuel) 
+ - Réduction du nombre d'appels aux serveurs BMW en fonction des capacités du véhicule (charges et trajets)
+ - Panel : modification du graphique sur les statistiques de charge (ajout coût total)
+ - Panel & dashboard : l'affichage des graphs et boutons se fait dorénavant selon les capacités du véhicule
+
+Corrections suivantes :
+ - Panel : bugfix premier affichage avec icônes portes & fenêtres
+
+
 # 2024-12-18
 
 Corrections suivantes :
