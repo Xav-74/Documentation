@@ -12,6 +12,15 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-03-09
+
+Ajout des fonctions suivantes :
+ - Ajout de la commande info chargingTarget (objectif de recharge électrique en %) 
+
+Corrections suivantes :
+ - Panel : bugfix affichage état ouverture / fermeture capot
+
+
 # 2025-01-31
 
 Ajout des fonctions suivantes :
