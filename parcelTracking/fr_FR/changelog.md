@@ -12,6 +12,13 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-05-20
+
+Ajout des fonctions suivantes :
+ - Possibilité d'afficher simultanément les widgets uniques et le widget global
+ - Ajout du nom du colis dans le titre des notifications
+
+
 # 2024-12-31
 
 Ajout des fonctions suivantes :

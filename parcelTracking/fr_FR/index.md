@@ -107,7 +107,9 @@ Le plugin inclut 2 widgets personnalisés qui permettent d'afficher l'ensemble d
 
 ![widget global](../images/widget_global.png)
 
-Dans les 2 cas, vous avez la possibilité de supprimer les colis (icône <img src="../images/trash-solid.svg" width="15" height="15">) ou d'en ajouter un nouveau (icône <img src="../images/plus-solid.svg" width="15" height="15">) depuis les widgets directement.
+- les widgets ci-dessus en parallèle
+
+Dans tous les cas, vous avez la possibilité de supprimer les colis (icône <img src="../images/trash-solid.svg" width="15" height="15">) ou d'en ajouter un nouveau (icône <img src="../images/plus-solid.svg" width="15" height="15">) depuis les widgets directement.
 
 **Attention :** Le widget unique est visible sur la page des équipements du plugin. Il ne doit en aucun cas être supprimé. S'il l'est par erreur, il vous suffit de forcer une réinstallation du plugin (pas de perte des données) et celui-ci sera recréé.
 
