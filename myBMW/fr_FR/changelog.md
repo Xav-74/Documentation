@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-05-20
+
+Ajout des fonctions suivantes :
+ - Suppression du cron30 et ajout d'un cron personnalisable depuis la page de configuration du plugin 
+
+
 # 2025-03-09
 
 Ajout des fonctions suivantes :

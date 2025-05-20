@@ -23,7 +23,7 @@ Il faut également détenir un abonnement en cours de validité aux services BMW
 
 # Configuration du plugin
 
-Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il n’y a aucune configuration supplémentaire à ce niveau.
+Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, puis, si besoin, de configurer le cron personnalisé pour le rafraichissement des informations. Par défaut, celui-ci est sur la base de 30 min (voir chapitre 10).
 
 > **Tip**
 >
@@ -249,8 +249,8 @@ Si vous avez coché l'option **Afficher le panneau desktop** dans la page de con
 
 ## Automatique
 
-Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la configuration du plugin.
-**Attention** : cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par BMW sur leurs serveurs !
+Un CRON personnalisable est automatiquement créé (sur une base de 30 min par défaut) comme indiqué dans la configuration du plugin.
+**Attention** : vous pouvez modifier cette valeur de 30 min mais gare au nombre de requêtes autorisées par BMW sur leurs serveurs ! Je déconseille fortement de descendre en dessous de 15 min pour le moment. Votre adresse IP risque d'être bannie quelques heures ! Si vous êtes dans ce cas, désactivez cette tâche dans le moteur de tâches de Jeedom (menu Régalges / Système), patientez quelques heures puis resynchronisez et enfin réactivez la tâche. Cela devrait fonctionner.
 
 
 ## Manuel
