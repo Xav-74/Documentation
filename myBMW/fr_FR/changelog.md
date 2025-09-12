@@ -12,6 +12,22 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-09-12
+
+Ajout des fonctions suivantes :
+ - Possibilité de configurer l'objectif de recharge et la limite de courant de charge pour les véhicules électriques et hybrides rechargeables compatibles
+ - Ajout des commandes info correspondantes
+ - Génération d’un x_user_agent générique et spécifique à la machine pour éviter les erreurs 403 (Out of call volume quota)
+ - Ajout d'un refresh automatique pour une récupération immédiate des infos après une synchronisation du véhicule ou après utilisation d'un service distant le nécessitant 
+
+**ATTENTION** La prise en compte de ces nouvelles fonctionnalités nécessite une nouvelle synchronisation de tous vos véhicules (sans captcha)
+
+Corrections suivantes :
+ - Optimisation du code
+ - Page de configuration : bugfix de la fonction save auto avant une synchronisation ou une modification de paramètres
+ - Page de configuration : bugfix de la suppression automatique du captcha après une synchronisation
+
+
 # 2025-05-20
 
 Ajout des fonctions suivantes :

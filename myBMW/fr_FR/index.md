@@ -49,6 +49,7 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 -   **Mot de passe** : indiquez votre mot de passe
 -   **Marque** : indiquez la marque de votre véhicule (BMW ou Mini)
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
+-   **Paramètres de charge** : si votre véhicule électrique ou hybride rechargeable le permet, vous pouvez modifier l'objectif de recharge (en %) ainsi que la limite de courant de charge (en A).
 -   **Affichage état portes / fenêtres** : vous avez le choix entre 2 options pour l'affichage de l'état des portes et des fenêtres sur le panel : le mode texte ou le mode icône.
 -   **Couleur des icônes portes / fenêtres** : si vous avez choisi le mode icône, vous pouvez également décider de la couleur des icônes (vert ou noir & blanc).
 -   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude.
@@ -195,6 +196,8 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Charge électrique totale** : donne la charge électrique totale utilisée sur le mois en cours (uniquement sur véhicule électrique ou hybride)
 -   **Coût électrique total** : donne le coût mensuel des charges électriques
 -   **Objectif de recharge** : donne l'objectif de recharge électrique configuré pour le véhicule (en %)
+-   **Limite courant de charge** : donne la limite du courant de charge utilisé lorsque le véhicule est branché
+-   **Limitation du courant de charge** : donne l'information du statut de l'activation ou non d'une limite du courant de charge sur le véhicule
 -   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
 -   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
