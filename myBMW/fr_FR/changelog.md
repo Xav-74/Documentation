@@ -12,6 +12,15 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2025-11-09
+
+Ajout des fonctions suivantes :
+ - Bascule sur les **API officielles BMW**
+ - Mise en place du **stream MQTT** pour la récupération temps réel des informations
+
+ **ATTENTION** Il s'agit d'une mise à jour majeure du plugin qui nécessite une reconfiguration complète de celui-ci. Merci de bien lire la documentation et suivre toutes les étapes décrites une à une (notamment les actions à réaliser sur votre compte utilisateur BMW ou Mini)
+
+
 # 2025-09-12
 
 Ajout des fonctions suivantes :

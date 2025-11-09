@@ -11,19 +11,56 @@ Ce plugin vous permet d'interagir avec votre véhicule **BMW** ou **Mini** équi
 
 > **Tip**
 >
-> La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.0**
-> Le plugin est d'ors et déjà compatible avec la **version 4.4** de Jeedom ainsi que les **versions Debian 11 & 12**
+> La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.2**
+> Le plugin est d'ors et déjà compatible avec la **version 4.5** de Jeedom ainsi que les **versions Debian 11 & 12**
 
 
 # Principe 
 
-Ce plugin interagit avec les API BMW Connected Drive au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
-Il faut également détenir un abonnement en cours de validité aux services BMW Connected Drive pour votre véhicule ainsi qu'un compte utilisateur valide pour l'application "My BMW" ou "Mini".
+Ce plugin interagit avec les **API officielles BMW Connected Drive** au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
+Il faut également détenir un abonnement en cours de validité aux services BMW Connected Drive pour votre véhicule ainsi qu'un compte utilisateur **principal** valide pour l'application "My BMW" ou "Mini".
+
+
+# Configuration de votre compte utilisateur BMW ou Mini
+
+Avant de pouvoir utiliser le plugin, vous devez configurez votre compte utilisateur BMW. Veuillez suivre scrupuleusement les étapes suivantes :
+
+1. Connectez-vous sur le portail **BMW ConnectedDrive** (https://www.bmw.fr/fr-fr/mybmw/vehicle-overview) ou **Mini ConnectedDrive** (https://www.mini.fr/fr-fr/mymini/vehicle-overview)
+3. Cliquez sur l'icône **BMW CarData** 
+
+![CarData](../images/CarData_section.png)
+
+4. Cliquez sur le bouton **"Créer un client CarData"**
+5. Copiez **l'ID client** en lieu sûr !
+4. Attendez **30 secondes**
+6. Cliquez sur **"Demander l'accès au CarData API"**
+7. Attendez **30 secondes** (si le toggle ne repasse pas à "off" et que vous n'avez pas de message d'erreur, vous pouvez continuer, sinon vous devez recommencer cette étape)
+8. Cliquez sur **"CarData Streaming"**
+9. Attendez **30 secondes** (si le toggle ne repasse pas à "off" et que vous n'avez pas de message d'erreur, vous pouvez continuer, sinon vous devez recommencer cette étape)
+
+![CarData](../images/CarData_clientID.png)
+
+10. Allez à la section **CarData Stream**
+11. Vérifiez que l'état de la connexion est bien à **"ready"**
+
+![CarData](../images/CarData_stream.png)
+
+12. Cliquez sur le bouton **"Modifier la sélection des données"**
+13. Sélectionnez **"Toutes les catégories"** (Vehicle Status, Charging, Trip Data, etc.) puis cliquez à plusieurs reprise sur le bouton **Charger** pour afficher tous les attributs
+12. Sélectionnez **manuellement** les 244 attributs individuels ou appuyez sur F12 et entrez dans la **console développeur** et tapez : (pas de copié-collé possible)
+```
+document.querySelectorAll('label.chakra-checkbox:not([data-checked])').forEach(l => l.click());
+```
+14. Puis **sauvegardez** votre configuration
+15. Copiez **le username** en lieu sûr !
+
+**Il est important que tous les attributs soient cochés pour recevoir l'ensemble des données du véhicule.**
 
 
 # Configuration du plugin
 
-Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, puis, si besoin, de configurer le cron personnalisé pour le rafraichissement des informations. Par défaut, celui-ci est sur la base de 30 min (voir chapitre 10).
+Après téléchargement du plugin, il vous suffit d’activer celui-ci, puis de configurer le client ID et le username récupérés dans l'étape précédente. Laissez les autres champs vides sauf demande express du développeur.
+Attendez ensuite la fin de l'installation des dépendances et le démarrage du démon.
 
 > **Tip**
 >
@@ -45,17 +82,14 @@ Cliquez sur la commande Ajouter pour créer un nouveau véhicule. Une fois ajout
 -   **Catégorie** : la catégorie de l’équipement
 -   **Activer** : permet de rendre votre équipement actif
 -   **Visible** : rend votre équipement visible sur le dashboard
--   **Identifiant** : indiquez votre identifiant My BMW que vous utilisez pour vous connecter sur l'application "My BMW" ou "Mini"
--   **Mot de passe** : indiquez votre mot de passe
 -   **Marque** : indiquez la marque de votre véhicule (BMW ou Mini)
 -   **VIN** : indiquez le numéro VIN ou Vehicle Identification Number (Numéro d’identification du véhicule). Vous pouvez retrouver ce numéro en case E de votre carte grise. Ce numéro est composé de 17 caractères.
--   **Paramètres de charge** : si votre véhicule électrique ou hybride rechargeable le permet, vous pouvez modifier l'objectif de recharge (en %) ainsi que la limite de courant de charge (en A).
 -   **Affichage état portes / fenêtres** : vous avez le choix entre 2 options pour l'affichage de l'état des portes et des fenêtres sur le panel : le mode texte ou le mode icône.
 -   **Couleur des icônes portes / fenêtres** : si vous avez choisi le mode icône, vous pouvez également décider de la couleur des icônes (vert ou noir & blanc).
 -   **Domicile (présence)** : vous disposez de 3 possibilités pour indiquer les coordonnées GPS de votre domicile : soit en utilisant les coordonnées renseignées dans Jeedom, soit en utilisant les coordonnées actuelles du véhicule, soit en renseignant manuellement la latitude et la longitude.
 -   **Distance max (en m)** : indiquez la distance maximale en mètre entre votre domicile et le véhicule pour que celui-ci soit considéré comme présent à votre domicile. 
 
-Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupérer les informations de votre véhicule. Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule.
+Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre véhicule (Si celles-ci sont disponibles, vous obtiendrez le modèle, l'année, le type de motorisation ainsi qu'une image de votre véhicule). Une fenêtre pop-up s'ouvrira **(Attention au bloqueur de votre navigateur, désactivez le si nécessaire)** afin de vous authentifier avec les identifiants (email) et mot de passe de votre compte BMW. Vous disposez de 5 min pour cela et vous devriez obtenir un message **Connexion réussie** à l'issue.
 
 > **Tip**
 >
@@ -63,83 +97,6 @@ Il vous suffit ensuite de cliquer sur le bouton **Synchroniser** pour récupére
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
 
 ![Equipement](../images/Eqpt_myBMW.png)
-
-
-# Captcha
-
-La première connexion nécessite la résolution d'un captcha. Les connexions suivantes (qui utiliseront le refresh du token) ne nécessiteront pas de captcha.
-Résolvez le captcha et copiez le "token" affiché dans la configuration de votre véhicule puis lancez la synchronisation. En cas d'erreur lors de cette première connexion, il vous faudra patienter 30min environ avant de faire un nouvel essai, le temps que votre compte soit débloqué.
-
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form with hCaptcha</title>
-</head>
-<body>
-    <p></p>
-    <div id="captchaResponse">
-        <div style="text-align: center;">
-            <form id="captcha_form" action="#" method="post">
-                <!-- hCaptcha widget -->
-                <div class="h-captcha" data-sitekey="7244955f-8f30-4445-adff-4fefe059f815"></div><br>
-                <button type="submit" class="btn">Submit</button>
-            </form>
-            <!-- hCaptcha script -->
-            <script src="https://hcaptcha.com/1/api.js" async defer></script>
-        </div>
-    </div>
-    <p></p>
-    <script>
-        document.getElementById('captcha_form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            const hCaptchaResponse = document.querySelector('[name="h-captcha-response"]').value;
-            const responseElement = document.getElementById('captchaResponse');
-            if (hCaptchaResponse) {
-                // Replace form and display the response
-                const hcaptchaDiv = document.createElement('div');
-                hcaptchaDiv.style.display = 'flex';
-                hcaptchaDiv.style.justifyContent = 'center';
-                hcaptchaDiv.style.alignItems = 'center';
-                responseElement.innerHTML = '';
-                responseElement.appendChild(hcaptchaDiv);
-                const hcaptchaPre = document.createElement('pre');
-                hcaptchaPre.style.width = '75%';
-                hcaptchaPre.style.height = '100%';
-                hcaptchaPre.style.wordBreak = 'break-all';
-                hcaptchaPre.style.whiteSpace = 'pre-wrap';
-                hcaptchaPre.style.border = '1px solid #ccc';
-                hcaptchaPre.style.borderRadius = '4px';
-                hcaptchaPre.style.padding = '10px';
-                hcaptchaPre.textContent = hCaptchaResponse;
-                hcaptchaDiv.appendChild(hcaptchaPre);
-                // Add a button to copy the data to clipboard
-                const copyButtonDiv = document.createElement('div');
-                copyButtonDiv.style.textAlign = 'center';
-                responseElement.appendChild(copyButtonDiv);
-                const copyButton = document.createElement('button');
-                copyButton.className = 'btn';
-                copyButton.textContent = 'Copy to Clipboard';
-                copyButtonDiv.appendChild(copyButton);
-                // Add event listener to button for copying the data to clipboard
-                copyButton.addEventListener('click', function() {
-                    const tempInput = document.createElement('textarea');
-                    tempInput.value = hCaptchaResponse;
-                    document.body.appendChild(tempInput);
-                    tempInput.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(tempInput);
-                    alert('Copied');
-                });
-            }
-            else {
-                responseElement.innerHTML = 'No hCaptcha response received.';
-            }
-        });
-    </script>
-</body>
-</html>      
 
 
 # Données brutes
@@ -200,7 +157,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Limitation du courant de charge** : donne l'information du statut de l'activation ou non d'une limite du courant de charge sur le véhicule
 -   **Coordonnées GPS** : remonte la position du véhicule sour la forme "latitude,longitude"
 -   **Dernière mise à jour** : donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW
--   **Statut Déverrouiller** : renvoie le dernier statut recu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
+-   **Statut Déverrouiller** : renvoie le dernier statut reçu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR"
 -   **Statut Verrouiller**
 -   **Statut Charger**
 -   **Statut Stop charger**
@@ -228,6 +185,10 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 -   **Rechercher** : localise le véhicule en temps réel et l'affiche sur une carte googlemaps
 -   **Envoi POI** : envoi d'un point d'intérêt (POI) dans le centre de messages du véhicule en saisissant le nom, la latitude et la longitude du lieu
 
+> **ATTENTION**
+>
+> A date, seule la fonction **Rafraichir** est opérationnelle. Les autres actions seront de nouveau fonctionnelles lorsque les API BMW le permettront !
+
 
 # Dashboard
 
@@ -252,14 +213,16 @@ Si vous avez coché l'option **Afficher le panneau desktop** dans la page de con
 
 ## Automatique
 
-Un CRON personnalisable est automatiquement créé (sur une base de 30 min par défaut) comme indiqué dans la configuration du plugin.
-
-**Attention** : vous pouvez modifier cette valeur de 30 min mais gare au nombre de requêtes autorisées par BMW sur leurs serveurs ! Je déconseille fortement de descendre en dessous de 15 min pour le moment. Votre adresse IP risque d'être bannie quelques heures ! Si vous êtes dans ce cas, désactivez cette tâche dans le moteur de tâches de Jeedom (menu Régalges / Système), patientez quelques heures puis resynchronisez et enfin réactivez la tâche. Cela devrait fonctionner.
-
+Grâce au stream MQTT, vous recevez la majorité des informations de votre véhicule en temps réel (kilométrage, carburant, batterie, état de verrouillage du véhicule, des portes et fenêtres, localisation, ...) !
+Un CRON est également créé (sur une base de 60 minutes) pour récupérer les informations non streamables (messages de contrôle, de services, historique de charge).
 
 ## Manuel
 
-Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichir les statuts de véhicule.
+Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de récupérer les statuts de véhicule.
+
+>**Attention**
+>
+>BMW autorise seulement 50 requêtes par jours donc ne rafraichissez pas manuellement trop souvent (le CRON actuel utilise 24 requêtes par jour) au risque d'être bloqué jusqu'au lendemain.
 
 
 # Roadmap & support
@@ -267,14 +230,15 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichi
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API BMW Connected Drive.
 
 Les prochaines versions verront arriver les features suivantes :
--   ...
+-   Ajout de nouvelles fonctionnalités en fonction des possibilités offertes par les API
 -   Traduction du plugin en anglais
+-   ...
 
 > **Tip**
 >
 >Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/myBMW/issues/new).
 >N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
-En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
+En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs myBMW, myBMW_daemon, myBMW_update (mode debug) pour une résolution plus rapide !
 
 ![Community](../images/community.png)
