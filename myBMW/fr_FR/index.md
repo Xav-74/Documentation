@@ -25,7 +25,7 @@ Il faut également détenir un abonnement en cours de validité aux services BMW
 
 Avant de pouvoir utiliser le plugin, vous devez configurez votre compte utilisateur BMW. Veuillez suivre scrupuleusement les étapes suivantes :
 
-1. Connectez-vous sur le portail **BMW ConnectedDrive** (https://www.bmw.fr/fr-fr/mybmw/vehicle-overview) ou **Mini ConnectedDrive** (https://www.mini.fr/fr-fr/mymini/vehicle-overview)
+1. Connectez-vous sur le portail **[BMW ConnectedDrive](https://www.bmw.fr/fr-fr/mybmw/vehicle-overview)** ou **[Mini ConnectedDrive](https://www.mini.fr/fr-fr/mymini/vehicle-overview)**
 3. Cliquez sur l'icône **BMW CarData** 
 
 ![CarData](../images/CarData_section.png)
