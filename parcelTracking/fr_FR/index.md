@@ -35,22 +35,23 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 
 7. Vous pouvez consulter le nombre de suivi restant sur votre quota en cliquant sur le bouton **Vérifier**
 8. Sélectionnez la langue utilisée pour les retours API. Attention, si vous choisissez une langue autre que par défaut, cela décomptera 2 suivis par colis sur votre quota
-9. Renseignez les paramètres optionnels du plugin :
+9. Vous pouvez mettre à jour la liste des transporteurs et la liste des paramètres additionnels. Par défaut elles seront mises à jour chaque jour lors du cron journalier.
+10. Renseignez les paramètres optionnels du plugin :
  - Objet parent par défaut ==> Ajout automatique de l'objet spécifié lors de la création de nouveaux suivis
  - Durée de conservation de l'équipement après livraison (en jours) ==> Suppression automatique de l'équipement X jours après sa livraison
-10. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
+11. Renseignez les paramètres de notifications si vous souhaitez être informés à chaque changement de statut
  - Les 2 premières lignes concernent l'envoi des notifications via une commande action de type message 
    Option : vous pouvez personnaliser le message en utilisant les tags suivants : #name#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
    Vous pouvez tester le bon fonctionnement avec l'envoi d'une notification de test
  - Les 2 dernières lignes concernent l'envoi des notifications via un scénario
    Vous pouvez utiliser les tags suivants : #name#, #object#, #trackingId#, #carrier#, #status#, #lastState#, #date# et #time#
    Ils fonctionnent ainsi : nomdusuivi=#name# où nomdusuivi est le nom du tag et #name# la valeur du tag
-11. Renseignez les paramètres du widget
+12. Renseignez les paramètres du widget
   3 choix possibles :
   - Aucun widget (vous recevrez uniquement les notifications)
   - Un widget par colis
   - Un widget unique pour l'ensemble des colis
-12. Sauvegardez
+13. Sauvegardez
 
 <br/>![Config parcelTracking](../images/config_parcelTracking.png)<br/>
 

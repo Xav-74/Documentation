@@ -12,14 +12,20 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-02-15
+
+Ajout des fonctions suivantes :
+ - Mise à jour de la liste des transporteurs et des paramètres additionnels automatique (via bouton ou via cron journalier)
+ 
+
 # 2025-11-10
 
 Ajout des fonctions suivantes :
  - Mise à jour de la liste des transporteurs et des paramètres additionnels
- - Ajout d'un champ "Recherche" pour filtrer les transporteurs dans la liste de choix (par nom, par pays, ...)
+ - Ajout d'un champ "Recherche" pour filtrer les transporteurs dans la liste de choix (par nom, par pays,...)
 
 Corrections suivantes :
- - Correction de PHP warning lors de l'affichage du widget global dans certains cas (`states` vide par ex.)
+ - Correction de PHP warning lors de l'affichage du widget global dans certains cas ("states" vide par ex.)
 
 
 # 2025-05-20
