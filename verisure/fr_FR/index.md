@@ -29,7 +29,7 @@ Il faut également détenir un abonnement aux services Verisure. En effet, ce pl
 
 # Configuration du plugin
 
-Après téléchargement du plugin, il vous suffit juste d’activer celui-ci, il n’y a aucune configuration supplémentaire à ce niveau.
+Après téléchargement du plugin, il vous suffit juste d’activer celui-ci. Si vous disposez d'une alarme de type 1 ou 3, vous avez la possibilité d'activer (et désactiver) un cron personnalisé pour rafraichir les informations de votre alarme en fonction de l'historique des actions. Pensez à activer l'option dans la configuration de votre équipement.
 
 > **Tip**
 >
@@ -56,7 +56,11 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 -   **Identifiant** (alarme type 1 2 & 3) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
 -   **Mot de passe** (alarme type 1 2 & 3) : indiquez votre mot de passe
 -   **Code Alarme** (alarme type 2) : indiquez le code PIN de votre alarme (4 ou 6 digits)
--   **Pays** (alarme type 1 & 3): choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
+-   **Pays** (alarme type 1 & 3) : choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
+-   **Options** (alarme type 1 & 3) : en fonction du type de votre alarme, vous avez la possibilité de valider les options suivantes :
+    - **Rafraichissement via historique** (alarme type 1 & 3) : permet d'actualiser les statuts de l'alarme en fonction de l'historique des actions. Pensez à paramétrer et activer le cron dans la configuration du plugin
+	- **Présence alarme extérieure** (alarme type 3) : à cocher si vous disposez de détacteurs extérieurs et si le mode extérieur est activé sur votre alarme
+	- **Armement forcé** (alarme type 3) : permet de forcer l'activation de l'alarme même si une porte ou une fenêtre est restée ouverte. A vos risques et périls !
 
 Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des devices installés à votre domicile (ID, nom et type).
 

@@ -12,6 +12,21 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-02-22
+
+Ajout des fonctions suivantes :
+ - Prise en charge des détecteurs de mouvements extérieurs QP (type 3)
+ - Prise en charge du mode extérieur (type 3)
+ - Ajout refresh via historique (type 1 & 3)
+ - Prise en charge du "mode forcé" (type 3)
+ - Prise en charge des détecteurs d'eau (type 2)
+ 
+ Corrections suivantes :
+ - Bugfix serrure connectée (type 3)
+ - Bugfix login request (type 2)
+ - Bugfix affichage nom capteur widget (type 2)
+
+
 # 2024-12-31
 
 Ajout des fonctions suivantes :
