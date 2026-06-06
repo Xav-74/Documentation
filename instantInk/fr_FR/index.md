@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Plugin HP instantInk - Changelog
+title: Plugin HP instantInk - Documentation
 lang: fr_FR
 pluginId: instantInk
 ---
