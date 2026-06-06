@@ -29,9 +29,8 @@ Le plugin s'installe comme n'importe quel autre plugin sur Jeedom, via le Market
 5. Dans le panneau latéral : **Cookies → https://portal.hpsmart.com**
 6. Trouvez le cookie **shell-session-id** et copiez sa valeur complète
 7. Collez-la dans le champ correspondant et cliquez sur **Connexion**
-   Ce token est valable 90 jours. Jeedom vous avertira quand il faudra le renouveler manuellement
+   <br/>Ce token est valable 90 jours. Jeedom vous avertira quand il faudra le renouveler manuellement
 8. En cas de souci de connexion, vous avez la possibilité de supprimer les tokens préalablement récupérés via le bouton **Suppression tokens**
-
 9. Renseignez les paramètres optionnels du plugin :
  - Cron personnalisé (valeur conseillée : 1h minimum)
 10. Sauvegardez
@@ -100,8 +99,8 @@ Vous avez la possibilité de rafraichir les informations (icône <i class="fas f
 ## Automatique
 
 Comme indiqué dans la page de configuration du plugin :
-- un CRON est automatiquement créé sur une base quotidienne (à 00h00) pour la mise à jour de l'historique du forfait
-- un CRON personnalisé est automatiquement créé pour la récupération des informations du forfait et de l'imprimante (minimum 1h conseillé)
+- un **CRON quotidien** est automatiquement créé sur une base quotidienne (à 00h00) pour la mise à jour de l'historique du forfait
+- un **CRON personnalisé** est automatiquement créé pour la récupération des informations du forfait et de l'imprimante (minimum 1h conseillé)
 
 ## Manuel
 
