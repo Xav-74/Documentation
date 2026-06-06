@@ -20,6 +20,8 @@ Vous trouverez ici l'ensemble de la documentation des plugins et des widgets de 
 |----------|----------|----------|----------|
 | <img src="{{site.baseurl}}/parcelTracking/{{site.img}}/parcelTracking_icon.png" class="pluginLogo" width="100"/> | Suivi Colis | Ce plugin vous permet de suivre vos colis en provenance des principaux transporteurs français et internationaux (La Poste, Mondial Relay, Relais Colis, Colis Privé, Aliexpress, Shein, Amazon, eBay, FedEx, UPS, ...) via l'API Parcelsapp. Voir la documentation !<br/>Compatible V4.4 et Debian Bullseye (11) & Bookworm (12) | [Documentation]({{site.baseurl}}/parcelTracking/{{page.lang}})<br/>[Market]({{site.plugin}}4517)<br/>[Changelog]({{site.baseurl}}/parcelTracking/{{page.lang}}/changelog) |
 |----------|----------|----------|----------|
+| <img src="{{site.baseurl}}/instantInk/{{site.img}}/instantInk_icon.png" class="pluginLogo" width="100"/> | HP instantInk | Ce plugin vous permet de récupérer les informations de votre abonnement instantInk et de vos imprimantes HP. Voir la documentation !<br/>Compatible V4.4 et Debian Bullseye (11) & Bookworm (12) | [Documentation]({{site.baseurl}}/instantInk/{{page.lang}})<br/>[Market]({{site.plugin}}4653)<br/>[Changelog]({{site.baseurl}}/instantInk/{{page.lang}}/changelog) |
+|----------|----------|----------|----------|
 
 <br/>
 # Les widgets
