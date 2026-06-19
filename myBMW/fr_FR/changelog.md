@@ -12,6 +12,15 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-06-19
+
+Ajout des fonctions suivantes :
+ - Ajout d'un paramètre "Prix moyen du kWh" pour calculer le coût d'une recharge électrique, visible sur le graphique de l'historique de charge (Panel)
+ 
+Corrections suivantes :
+ - Panel : bugfix erreur javascript "Unexpected end of JSON input" lors de l'affichage de l'historique des charges électriques
+
+
 # 2026-05-31
 
 Mise à jour de l'icone dans le cadre d'une harmonisation de tous mes plugins
