@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-07-04
+
+Ajout des fonctions suivantes :
+ - Mise en place d'un cron personnalisable pour éviter les erreurs "500" des serveurs BMW si interrogation à heure fixe (xx:00). Par défaut ce cron est fixé toutes les 2 heures, 5 minutes après l'heure (xx:05) mais vous pouvez changer la minute précise en modifiant la première valeur du cron (5 */2 * * *)
+
+
 # 2026-06-19
 
 Ajout des fonctions suivantes :

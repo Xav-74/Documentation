@@ -214,7 +214,7 @@ Si vous avez coché l'option **Afficher le panneau desktop** dans la page de con
 ## Automatique
 
 Grâce au stream MQTT, vous recevez la majorité des informations de votre véhicule en temps réel (kilométrage, carburant, batterie, état de verrouillage du véhicule, des portes et fenêtres, localisation, ...) !
-Un CRON est également créé (sur une base de 60 minutes) pour récupérer les informations non streamables (messages de contrôle, de services, historique de charge).
+Un CRON personnalisable est également créé (sur une base de toutes les 2 heures, 5 minutes après l'heure) pour récupérer les informations non streamables (messages de contrôle, de services, historique de charge). Attention à ne pas trop augmenter cette féquence sous peine de dépasser les quotas de requêtes autorisés par BMW (50 / jour) !
 
 ## Manuel
 
