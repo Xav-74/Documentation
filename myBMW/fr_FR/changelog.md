@@ -12,6 +12,12 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-07-25
+
+Corrections suivantes :
+ - Mise à jour du catalogue Telematics avec les champs streamables uniquement (245 à date)
+
+
 # 2026-07-04
 
 Ajout des fonctions suivantes :
