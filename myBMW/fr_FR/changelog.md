@@ -12,6 +12,13 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-07-31
+
+Corrections suivantes :
+ - Bugfix affichage % de la batterie - Prise en charge du nouveau paramètre "vehicle.drivetrain.batteryManagement.header"
+ - Mise à jour du catalogue Telematics avec l'ajout du champ "Condition Based Service" (246 à date)
+
+
 # 2026-07-25
 
 Corrections suivantes :
