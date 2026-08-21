@@ -12,6 +12,16 @@ pluginId: verisure
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-08-11
+
+Nouveautés :
+ - Traduction du plugin dans 5 langues (EN, DE, ES, PT, IT)
+ - Passage des logs en anglais
+ - Mise à jour des widgets dans le cadre d'une harmonisation de tous mes plugins
+
+Attention : à partir de cette version, la version minimum nécessaire de Jeedom est la v4.4 et Debian 11 !
+
+
 # 2026-05-31
 
 Mise à jour de l'icone dans le cadre d'une harmonisation de tous mes plugins
