@@ -29,8 +29,8 @@ community: https://community.jeedom.com
 market: https://market.jeedom.com
 blog: https://blog.jeedom.com
 doc: https://doc.jeedom.com
-plugin: "https://market.jeedom.com/index.php?v=d&p=market_display&id="
-github_repo: https://github.com/Xav-74/Documentation
+plugin: "https://market.jeedom.com/index.php?v=d&p=market&author=Xav-74"
+github_repo: https://github.com/Xav-74/
 
 # --- Divers ---
 img: "images"
