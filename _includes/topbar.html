@@ -1,0 +1,30 @@
+<header class="topbar">
+  {% if page.layout == 'default' %}
+  <button class="iconbtn" id="burger" type="button" aria-label="Ouvrir le menu">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+  </button>
+  {% endif %}
+
+  <a class="topbar__brand" href="{{ '/' | relative_url }}">
+    <img src="{{ '/images/logo.png' | relative_url }}" alt="">
+    <span>
+      <b>Documentation</b>
+      <small>Plugins Jeedom · Xav-74</small>
+    </span>
+  </a>
+
+  <div class="topbar__spacer"></div>
+
+  <button class="searchbtn" id="search-open" type="button" aria-label="Rechercher">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <span>Rechercher…</span>
+    <kbd>Ctrl K</kbd>
+  </button>
+
+  <nav class="topbar__nav">
+    <a href="{{ '/' | relative_url }}">Accueil</a>
+    <a class="opt" href="{{ site.market }}" target="_blank" rel="noopener">Market</a>
+    <a class="opt" href="{{ site.community }}" target="_blank" rel="noopener">Community</a>
+    <a class="opt" href="{{ site.github_repo }}" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+</header>

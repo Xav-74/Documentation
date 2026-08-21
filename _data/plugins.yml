@@ -1,0 +1,48 @@
+# Liste des plugins — alimente l'accueil, la navigation et la recherche.
+# Pour ajouter un plugin : créer le dossier <id>/fr_FR/ (index.md + changelog.md)
+# et son icône dans <id>/images/, puis ajouter une entrée ici.
+
+- id: verisure
+  name: Alarme Verisure
+  tagline: Sécurité
+  icon: verisure_icon.png
+  marketId: 3997
+  tags: ["Jeedom 4.4+", "Debian 11 / 12", "Homebridge"]
+  description: >-
+    Interagissez avec votre alarme Verisure comme depuis l'application officielle
+    « My Verisure » : détail de l'installation, journal d'activité, activation
+    (total, jour, nuit, extérieur), désactivation et demande d'images.
+    Compatible avec le plugin Homebridge pour un pilotage depuis l'app Maison d'Apple et Siri.
+
+- id: myBMW
+  name: My BMW
+  tagline: Véhicule connecté
+  icon: myBMW_icon.png
+  marketId: 4278
+  tags: ["Jeedom 4.4+", "Debian 11 / 12", "BMW / Mini"]
+  description: >-
+    Pilotez votre BMW ou Mini équipée des services Connected Drive comme depuis
+    l'application officielle : détail du véhicule, localisation, verrouillage et
+    déverrouillage à distance, ventilation, appel de phares et klaxon.
+
+- id: parcelTracking
+  name: Suivi Colis
+  tagline: Livraisons
+  icon: parcelTracking_icon.png
+  marketId: 4517
+  tags: ["Jeedom 4.4+", "Debian 11 / 12", "API 17Track"]
+  description: >-
+    Suivez vos colis des principaux transporteurs français et internationaux
+    (La Poste, Mondial Relay, Relais Colis, Colis Privé, AliExpress, Shein,
+    Amazon, eBay, FedEx, UPS…) via l'API 17Track.
+
+- id: instantInk
+  name: HP instantInk
+  tagline: Impression
+  icon: instantInk_icon.png
+  marketId: 4653
+  tags: ["Jeedom 4.4+", "Debian 11 / 12", "HP"]
+  description: >-
+    Récupérez les informations de votre abonnement HP instantInk et l'état de vos
+    imprimantes : niveaux, pages imprimées, suivi de la consommation et de la
+    facturation de votre forfait.

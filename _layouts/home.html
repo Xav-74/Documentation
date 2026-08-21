@@ -1,0 +1,90 @@
+{% assign lang = page.lang | default: 'fr_FR' %}
+<!DOCTYPE html>
+<html lang="{{ lang | replace: '_', '-' }}">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+
+  {% include topbar.html %}
+
+  <div class="home">
+
+    <section class="hero">
+      <h1>{{ page.heading | default: "Documentation des plugins Jeedom" }}</h1>
+      <p>{{ page.subheading | default: site.description }}</p>
+      <div class="hero-actions">
+        <a class="btn btn--primary" href="#plugins">Voir les plugins</a>
+        <a class="btn" href="{{ site.community }}" target="_blank" rel="noopener">Support sur la Community</a>
+        <a class="btn" href="{{ site.github_repo }}" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    {% if content != blank %}
+    <article class="prose" style="margin-top:34px">{{ content }}</article>
+    {% endif %}
+
+    <div class="section-head" id="plugins">
+      <h2>Plugins</h2>
+      <span class="count">{{ site.data.plugins | size }}</span>
+    </div>
+
+    <div class="cards">
+      {% for p in site.data.plugins %}
+      <article class="card">
+        <div class="card__head">
+          <img src="{{ '/' | append: p.id | append: '/images/' | append: p.icon | relative_url }}" alt="">
+          <div>
+            <h3>{{ p.name }}</h3>
+            <div class="tagline">{{ p.tagline }}</div>
+          </div>
+        </div>
+        <p class="card__desc">{{ p.description }}</p>
+        <div class="card__meta">
+          {% for t in p.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+        </div>
+        <div class="card__links">
+          <a class="primary" href="{{ '/' | append: p.id | append: '/' | append: lang | append: '/' | relative_url }}">Documentation</a>
+          <a href="{{ '/' | append: p.id | append: '/' | append: lang | append: '/changelog' | relative_url }}">Changelog</a>
+          {% if p.marketId %}<a href="{{ site.plugin }}{{ p.marketId }}" target="_blank" rel="noopener">Market</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <div class="section-head" id="widgets">
+      <h2>Widgets</h2>
+      <span class="count">{{ site.data.widgets | size }}</span>
+    </div>
+
+    {% if site.data.widgets and site.data.widgets.size > 0 %}
+    <div class="cards">
+      {% for w in site.data.widgets %}
+      <article class="card">
+        <div class="card__head">
+          {% if w.icon %}<img src="{{ w.icon | relative_url }}" alt="">{% endif %}
+          <div>
+            <h3>{{ w.name }}</h3>
+            <div class="tagline">{{ w.tagline }}</div>
+          </div>
+        </div>
+        <p class="card__desc">{{ w.description }}</p>
+        <div class="card__links">
+          {% if w.url %}<a class="primary" href="{{ w.url | relative_url }}">Documentation</a>{% endif %}
+          {% if w.marketId %}<a href="{{ site.plugin }}{{ w.marketId }}" target="_blank" rel="noopener">Market</a>{% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="empty-note">Aucun widget publié pour le moment.</p>
+    {% endif %}
+
+  </div>
+
+  {% include footer.html %}
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+# Widgets — même principe que _data/plugins.yml
+# Exemple :
+# - id: monWidget
+#   name: Mon widget
+#   tagline: Affichage
+#   icon: /monWidget/images/icon.png
+#   url: /monWidget/fr_FR/
+#   marketId: 0000
+#   description: Description courte du widget.
