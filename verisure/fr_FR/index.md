@@ -5,7 +5,7 @@ lang: fr_FR
 pluginId: verisure
 ---
 
-## Présentation
+# Présentation
 
 Ce plugin Jeedom vous permet d'interagir avec votre alarme Verisure Europe (Securitas Direct) au même titre que l'application officielle "My Verisure".
 Il est compatible avec 3 générations de matériels Verisure.
@@ -20,12 +20,12 @@ Par conséquent, le développeur n'approuve ni ne tolère aucune utilisation ina
 > La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.4**
 > Le plugin est d'ors et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
 
-## Principe
+# Principe
 
 Ce plugin interagit avec les API Verisure au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
 Il faut également détenir un abonnement aux services Verisure. En effet, ce plugin ne dialogue avec la base de votre alarme qu'au travers de leurs infrastructures cloud. Il n'interagit pas directement avec la base, ni avec les devices associés. Si votre abonnement a été résilié, ce plugin ne fonctionnera pas.
 
-## Configuration du plugin
+# Configuration du plugin
 
 Après téléchargement du plugin, il vous suffit juste d’activer celui-ci. Si vous disposez d'une alarme de type 1 ou 3, vous avez la possibilité d'activer (et désactiver) un cron personnalisé pour rafraichir les informations de votre alarme en fonction de l'historique des actions. Pensez à activer l'option dans la configuration de votre équipement.
 
@@ -35,7 +35,7 @@ Après téléchargement du plugin, il vous suffit juste d’activer celui-ci. Si
 
 ![Configuration](../images/Config_verisure.png)
 
-## Ajout d'une alarme
+# Ajout d'une alarme
 
 La configuration des équipements Alarme est accessible à partir du menu Plugin > Sécurité.
 
@@ -70,13 +70,13 @@ Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récup
 
 ![Equipement](../images/Eqpt_verisure.png)
 
-## Journal d'activité
+# Journal d'activité
 
 Vous avez la possibilité de consulter le journal d'activité de votre alarme en cliquant sur le bouton **Journal d'activité**. Ce rapport reprend les derniers évènements survenus sur votre centrale (alertes intrusion, SOS, activation / désactivation, coupure d'électricité).
 
 ![Journal](../images/journal_verisure.png)
 
-## Notifications Verisure
+# Notifications Verisure
 
 Les API Verisure ne permettent pas les remontées d'informations et notifications automatiques directes, telles que l'activation/désactivation depuis un badge ou une télécommande ou encore le déclenchement de l'alarme.
 Cet onglet décrit en détail comment paramétrer Jeedom (scénarios) pour palier à ce manque pour :
@@ -84,11 +84,11 @@ Cet onglet décrit en détail comment paramétrer Jeedom (scénarios) pour palie
 - les **notifications Mail** pour l'activation/désactivation de l'alarme au travers du plugin [Mail Listener](https://www.jeedom.com/market/index.php?v=d&p=market&author=Lunarok&&name=maillistener) de Lunarok !
 - les **notifications SMS** pour l'activation/désactivation de l'alarme au travers du plugin [SMS](https://www.jeedom.com/market/index.php?v=d&p=market_display&id=16) de Jeedom SAS !
 
-## Commandes
+# Commandes
 
 Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
-### Info
+## Info
 
 - **Etat Activation** : permet de connaitre l'état d'activation de l'alarme
   - **0** : désarmée
@@ -106,7 +106,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 **Attention** : dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
 
-### Action
+## Action
 
 - **Mode Total** : active l'alarme en mode total (alarme type 1 2 & 3)
 - **Mode Nuit** : active l'alarme en mode nuit (alarme type 1)
@@ -123,7 +123,7 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 ![Commandes](../images/Command_verisure.png)
 
-### Compatibilité Homebridge
+## Compatibilité Homebridge
 
 Les commandes ont été créées de manière à être compatibles nativement avec le plugin [Homebridge](https://www.jeedom.com/market/index.php?v=d&p=market&author=Nebz&&name=Homebridge) de Nebz ! (Merci à lui pour son aide)
 
@@ -141,7 +141,7 @@ La correspondance des modes est la suivante :
 
 Les autres modes (Extérieur,...) ne sont pas pris en compte dans HomeKit.
 
-### Devices alarme type 2
+## Devices alarme type 2
 
 Pour les alarmes de type 2 (**et uniquement type 2 !**), le plugin va créer les commandes associées aux devices de l'alarme :
 
@@ -155,13 +155,13 @@ Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est 
 >
 >Attention, les états ne remontent pas en temps réel (impossible à l'heure actuel à cause de Versiure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas éxecuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.**
 
-### Devices alarme type 3
+## Devices alarme type 3
 
 Pour les alarmes de type 3 (**et uniquement type 3 !**), le plugin va créer les commandes associées aux devices de l'alarme :
 
 - **Serrure connectée**      --> état / ouverture / fermeture
 
-## Dashboard
+# Dashboard
 
 Le plugin inclut un dashboard qui permet de :
 
@@ -193,18 +193,18 @@ Le plugin inclut un dashboard qui permet de :
 ![Dashboard type 2](../images/Dashboard_verisure_2.png)
 ![Dashboard type 3](../images/Dashboard_verisure_3.png)
 
-## Rafraichissement
+# Rafraichissement
 
-### Automatique
+## Automatique
 
 Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la configuration du plugin.
 **Attention** : cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par heure par Verisure sur leurs serveurs !
 
-### Manuel
+## Manuel
 
 Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichir le statut de l'alarme.
 
-## Roadmap & support
+# Roadmap & support
 
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Versiure.
 
