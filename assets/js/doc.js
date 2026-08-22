@@ -79,7 +79,7 @@
       var first = b.querySelector('p strong');
       if (!first) return;
       var k = norm(first.textContent);
-      if (/tip|astuce|conseil|note|info|hinweis|nota|dica|sugerencia/.test(k)) b.classList.add('callout-tip');
+      if (/tip|astuce|conseil|consejo|note|info|hinweis|nota|dica|sugerencia|suggerimento/.test(k)) b.classList.add('callout-tip');
       else if (/attention|warning|avertis|prudence|achtung|atencion|attenzione|aviso|cuidado/.test(k)) b.classList.add('callout-warn');
       else if (/important|danger|critique|risque|wichtig|importante|perigo|pericolo|peligro/.test(k)) b.classList.add('callout-danger');
     });
