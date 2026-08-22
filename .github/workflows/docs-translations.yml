@@ -27,5 +27,7 @@ jobs:
           target_languages: "en_US,es_ES,de_DE,it_IT,pt_PT"
           documents_roots: >-
             verisure,
-            instantInk
+            instantInk,
+            myBMW,
+            parcelTracking
           memory_path: ${{ github.workspace }}/.translation_memory
