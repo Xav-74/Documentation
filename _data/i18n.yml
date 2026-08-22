@@ -1,0 +1,276 @@
+# =====================================================================
+# Toutes les chaînes de l'interface du site, par langue.
+# Pour ajouter une langue : recopier un bloc, le traduire, puis ajouter
+# le code de langue dans « langs » du _config.yml et créer le fichier
+# <code>/index.html sur le modèle des autres.
+# =====================================================================
+
+fr_FR:
+  name: Français
+  html_lang: fr
+  brand_title: Documentation
+  brand_subtitle: Plugins Jeedom · Xav-74
+  nav_home: Accueil
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Doc Jeedom
+  nav_repo: Dépôt GitHub
+  menu_open: Ouvrir le menu
+  language: Langue
+  search_placeholder: Rechercher dans la documentation…
+  search_button: Rechercher…
+  search_indexing: Indexation en cours…
+  search_none: Aucun résultat.
+  search_hint: Tapez pour rechercher dans toute la documentation.
+  side_plugins: Plugins
+  side_on_this_page: Sur cette page
+  doc_documentation: Documentation
+  doc_changelog: Changelog
+  doc_lede: Documentation du plugin
+  doc_market_sheet: fiche Market
+  doc_lede_changelog: Notes de version, ajouts et correctifs du plugin.
+  home_heading: Documentation des plugins Jeedom de Xav-74
+  home_subheading: >-
+    Guides d'installation, configuration détaillée et changelogs des plugins et
+    widgets développés pour la solution domotique Jeedom.
+  home_cta_plugins: Voir les plugins
+  home_cta_widgets: Voir les plugins
+  home_cta_support: Support sur la Community
+  home_plugins: Plugins
+  home_widgets: Widgets
+  home_no_widgets: Aucun widget publié pour le moment.
+  only_french: Documentation disponible en français uniquement
+  copy: Copier
+  copied: Copié !
+  latest: dernière version
+  error_title: Page introuvable
+  error_text: Cette page n'existe pas ou a été déplacée.
+  error_home: Retour à l'accueil
+  error_help: Demander de l'aide
+  footer_rights: Documentation des plugins Jeedom
+
+en_US:
+  name: English
+  html_lang: en
+  brand_title: Documentation
+  brand_subtitle: Jeedom plugins · Xav-74
+  nav_home: Home
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Jeedom docs
+  nav_repo: GitHub repository
+  menu_open: Open menu
+  language: Language
+  search_placeholder: Search the documentation…
+  search_button: Search…
+  search_indexing: Building the index…
+  search_none: No results.
+  search_hint: Start typing to search the whole documentation.
+  side_plugins: Plugins
+  side_on_this_page: On this page
+  doc_documentation: Documentation
+  doc_changelog: Changelog
+  doc_lede: Plugin documentation
+  doc_market_sheet: Market page
+  doc_lede_changelog: Release notes, additions and fixes for the plugin.
+  home_heading: Jeedom plugin documentation by Xav-74
+  home_subheading: >-
+    Installation guides, detailed configuration and changelogs for the plugins
+    and widgets built for the Jeedom home automation platform.
+  home_cta_plugins: Browse the plugins
+  home_cta_widgets: Browse the widgets
+  home_cta_support: Support on the Community
+  home_plugins: Plugins
+  home_widgets: Widgets
+  home_no_widgets: No widget published yet.
+  only_french: Documentation available in French only
+  copy: Copy
+  copied: Copied!
+  latest: latest release
+  error_title: Page not found
+  error_text: This page does not exist or has been moved.
+  error_home: Back to home
+  error_help: Ask for help
+  footer_rights: Jeedom plugin documentation
+
+de_DE:
+  name: Deutsch
+  html_lang: de
+  brand_title: Dokumentation
+  brand_subtitle: Jeedom-Plugins · Xav-74
+  nav_home: Startseite
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Jeedom-Doku
+  nav_repo: GitHub-Repository
+  menu_open: Menü öffnen
+  language: Sprache
+  search_placeholder: Dokumentation durchsuchen…
+  search_button: Suchen…
+  search_indexing: Index wird erstellt…
+  search_none: Keine Treffer.
+  search_hint: Tippen, um die gesamte Dokumentation zu durchsuchen.
+  side_plugins: Plugins
+  side_on_this_page: Auf dieser Seite
+  doc_documentation: Dokumentation
+  doc_changelog: Changelog
+  doc_lede: Plugin-Dokumentation
+  doc_market_sheet: Market-Seite
+  doc_lede_changelog: Versionshinweise, Neuerungen und Fehlerbehebungen des Plugins.
+  home_heading: Dokumentation der Jeedom-Plugins von Xav-74
+  home_subheading: >-
+    Installationsanleitungen, ausführliche Konfiguration und Changelogs der
+    Plugins und Widgets für die Hausautomatisierungslösung Jeedom.
+  home_cta_plugins: Plugins ansehen
+  home_cta_widgets: Widgets ansehen
+  home_cta_support: Support in der Community
+  home_plugins: Plugins
+  home_widgets: Widgets
+  home_no_widgets: Noch kein Widget veröffentlicht.
+  only_french: Dokumentation nur auf Französisch verfügbar
+  copy: Kopieren
+  copied: Kopiert!
+  latest: neueste Version
+  error_title: Seite nicht gefunden
+  error_text: Diese Seite existiert nicht oder wurde verschoben.
+  error_home: Zurück zur Startseite
+  error_help: Hilfe anfragen
+  footer_rights: Dokumentation der Jeedom-Plugins
+
+es_ES:
+  name: Español
+  html_lang: es
+  brand_title: Documentación
+  brand_subtitle: Plugins Jeedom · Xav-74
+  nav_home: Inicio
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Doc de Jeedom
+  nav_repo: Repositorio GitHub
+  menu_open: Abrir el menú
+  language: Idioma
+  search_placeholder: Buscar en la documentación…
+  search_button: Buscar…
+  search_indexing: Creando el índice…
+  search_none: Sin resultados.
+  search_hint: Escribe para buscar en toda la documentación.
+  side_plugins: Plugins
+  side_on_this_page: En esta página
+  doc_documentation: Documentación
+  doc_changelog: Changelog
+  doc_lede: Documentación del plugin
+  doc_market_sheet: ficha del Market
+  doc_lede_changelog: Notas de versión, novedades y correcciones del plugin.
+  home_heading: Documentación de los plugins Jeedom de Xav-74
+  home_subheading: >-
+    Guías de instalación, configuración detallada y changelogs de los plugins y
+    widgets desarrollados para la solución domótica Jeedom.
+  home_cta_plugins: Ver los plugins
+  home_cta_widgets: Ver los widgets
+  home_cta_support: Soporte en la Community
+  home_plugins: Plugins
+  home_widgets: Widgets
+  home_no_widgets: Todavía no hay ningún widget publicado.
+  only_french: Documentación disponible solo en francés
+  copy: Copiar
+  copied: ¡Copiado!
+  latest: última versión
+  error_title: Página no encontrada
+  error_text: Esta página no existe o se ha movido.
+  error_home: Volver al inicio
+  error_help: Pedir ayuda
+  footer_rights: Documentación de los plugins Jeedom
+
+it_IT:
+  name: Italiano
+  html_lang: it
+  brand_title: Documentazione
+  brand_subtitle: Plugin Jeedom · Xav-74
+  nav_home: Home
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Doc di Jeedom
+  nav_repo: Repository GitHub
+  menu_open: Apri il menu
+  language: Lingua
+  search_placeholder: Cerca nella documentazione…
+  search_button: Cerca…
+  search_indexing: Creazione dell'indice…
+  search_none: Nessun risultato.
+  search_hint: Digita per cercare in tutta la documentazione.
+  side_plugins: Plugin
+  side_on_this_page: In questa pagina
+  doc_documentation: Documentazione
+  doc_changelog: Changelog
+  doc_lede: Documentazione del plugin
+  doc_market_sheet: scheda Market
+  doc_lede_changelog: Note di rilascio, novità e correzioni del plugin.
+  home_heading: Documentazione dei plugin Jeedom di Xav-74
+  home_subheading: >-
+    Guide all'installazione, configurazione dettagliata e changelog dei plugin e
+    dei widget sviluppati per la soluzione domotica Jeedom.
+  home_cta_plugins: Vedi i plugin
+  home_cta_widgets: Vedi i widget
+  home_cta_support: Supporto sulla Community
+  home_plugins: Plugin
+  home_widgets: Widget
+  home_no_widgets: Nessun widget pubblicato al momento.
+  only_french: Documentazione disponibile solo in francese
+  copy: Copia
+  copied: Copiato!
+  latest: ultima versione
+  error_title: Pagina non trovata
+  error_text: Questa pagina non esiste o è stata spostata.
+  error_home: Torna alla home
+  error_help: Chiedere aiuto
+  footer_rights: Documentazione dei plugin Jeedom
+
+pt_PT:
+  name: Português
+  html_lang: pt
+  brand_title: Documentação
+  brand_subtitle: Plugins Jeedom · Xav-74
+  nav_home: Início
+  nav_market: Market
+  nav_community: Community
+  nav_github: GitHub
+  nav_doc: Doc do Jeedom
+  nav_repo: Repositório GitHub
+  menu_open: Abrir o menu
+  language: Idioma
+  search_placeholder: Pesquisar na documentação…
+  search_button: Pesquisar…
+  search_indexing: A criar o índice…
+  search_none: Sem resultados.
+  search_hint: Escreva para pesquisar em toda a documentação.
+  side_plugins: Plugins
+  side_on_this_page: Nesta página
+  doc_documentation: Documentação
+  doc_changelog: Changelog
+  doc_lede: Documentação do plugin
+  doc_market_sheet: ficha do Market
+  doc_lede_changelog: Notas de versão, novidades e correções do plugin.
+  home_heading: Documentação dos plugins Jeedom do Xav-74
+  home_subheading: >-
+    Guias de instalação, configuração detalhada e changelogs dos plugins e
+    widgets desenvolvidos para a solução domótica Jeedom.
+  home_cta_plugins: Ver os plugins
+  home_cta_widgets: Ver os widgets
+  home_cta_support: Apoio na Community
+  home_plugins: Plugins
+  home_widgets: Widgets
+  home_no_widgets: Ainda não há widgets publicados.
+  only_french: Documentação disponível apenas em francês
+  copy: Copiar
+  copied: Copiado!
+  latest: última versão
+  error_title: Página não encontrada
+  error_text: Esta página não existe ou foi movida.
+  error_home: Voltar ao início
+  error_help: Pedir ajuda
+  footer_rights: Documentação dos plugins Jeedom

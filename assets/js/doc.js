@@ -12,6 +12,9 @@
   function norm(s) {
     return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   }
+  var T = window.I18N || {};
+  function tr(k, fb) { return T[k] || fb; }
+
   function esc(s) {
     return (s || '').replace(/[&<>"]/g, function (c) {
       return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
@@ -57,7 +60,7 @@
         dated[0].classList.add('is-latest');
         var tag = d.createElement('span');
         tag.className = 'latest-tag';
-        tag.textContent = 'dernière version';
+        tag.textContent = tr('latest', 'dernière version');
         dated[0].insertAdjacentElement('afterend', tag);
       }
     }
@@ -76,9 +79,9 @@
       var first = b.querySelector('p strong');
       if (!first) return;
       var k = norm(first.textContent);
-      if (/tip|astuce|conseil|note|info/.test(k)) b.classList.add('callout-tip');
-      else if (/attention|warning|avertis|prudence/.test(k)) b.classList.add('callout-warn');
-      else if (/important|danger|critique|risque/.test(k)) b.classList.add('callout-danger');
+      if (/tip|astuce|conseil|note|info|hinweis|nota|dica|sugerencia/.test(k)) b.classList.add('callout-tip');
+      else if (/attention|warning|avertis|prudence|achtung|atencion|attenzione|aviso|cuidado/.test(k)) b.classList.add('callout-warn');
+      else if (/important|danger|critique|risque|wichtig|importante|perigo|pericolo|peligro/.test(k)) b.classList.add('callout-danger');
     });
 
     /* Blocs de code : bouton copier */
@@ -86,12 +89,12 @@
       var b = d.createElement('button');
       b.className = 'copybtn';
       b.type = 'button';
-      b.textContent = 'Copier';
+      b.textContent = tr('copy', 'Copier');
       b.addEventListener('click', function () {
         var txt = (pre.querySelector('code') || pre).innerText;
         navigator.clipboard.writeText(txt).then(function () {
-          b.textContent = 'Copié !';
-          setTimeout(function () { b.textContent = 'Copier'; }, 1600);
+          b.textContent = tr('copied', 'Copié !');
+          setTimeout(function () { b.textContent = tr('copy', 'Copier'); }, 1600);
         });
       });
       pre.appendChild(b);
@@ -213,7 +216,7 @@
     if (index || loading || !window.SEARCH_PAGES) return;
     loading = true;
     pages = window.SEARCH_PAGES;
-    results.innerHTML = '<li class="hint">Indexation en cours…</li>';
+    results.innerHTML = '<li class="hint">' + esc(tr('indexing', 'Indexation en cours…')) + '</li>';
     Promise.all(pages.map(function (p) {
       return fetch(p.url).then(function (r) { return r.text(); }).then(function (html) {
         var doc = new DOMParser().parseFromString(html, 'text/html');
@@ -250,7 +253,7 @@
   function search(q) {
     var nq = norm(q).trim();
     if (!nq) { render([], ''); return; }
-    if (!index) { results.innerHTML = '<li class="hint">Indexation en cours…</li>'; return; }
+    if (!index) { results.innerHTML = '<li class="hint">' + esc(tr('indexing', 'Indexation en cours…')) + '</li>'; return; }
     var terms = nq.split(/\s+/);
     var hits = [];
     index.forEach(function (e) {
@@ -282,14 +285,15 @@
   function render(hits, term) {
     cursor = -1;
     if (!hits.length) {
-      results.innerHTML = '<li class="hint">' +
-        (input.value.trim() ? 'Aucun résultat.' : 'Tapez pour rechercher dans toute la documentation.') + '</li>';
+      results.innerHTML = '<li class="hint">' + esc(input.value.trim()
+        ? tr('none', 'Aucun résultat.')
+        : tr('hint', 'Tapez pour rechercher dans toute la documentation.')) + '</li>';
       return;
     }
     results.innerHTML = hits.map(function (h) {
       var e = h.e;
       return '<li><a href="' + e.url + '">' +
-        '<div class="r-path">' + esc(e.plugin || 'Documentation') + (e.kind ? ' · ' + esc(e.kind) : '') + '</div>' +
+        '<div class="r-path">' + esc(e.plugin || tr('documentation', 'Documentation')) + (e.kind ? ' · ' + esc(e.kind) : '') + '</div>' +
         '<div class="r-title">' + esc(e.section) + '</div>' +
         '<div class="r-snip">' + snippet(e.text, term) + '</div></a></li>';
     }).join('');
@@ -317,6 +321,14 @@
     });
   }
 
+  /* Sélecteur de langue : refermer au clic extérieur */
+  var langmenu = $('.langmenu');
+  if (langmenu) {
+    d.addEventListener('click', function (e) {
+      if (!langmenu.contains(e.target)) langmenu.removeAttribute('open');
+    });
+  }
+
   d.addEventListener('keydown', function (e) {
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openSearch(); }
     else if (e.key === '/' && d.activeElement === d.body) { e.preventDefault(); openSearch(); }
@@ -324,19 +336,8 @@
       closeSearch();
       var lb2 = $('#lightbox'); if (lb2) lb2.classList.remove('is-open');
       closeNav();
+      if (langmenu) langmenu.removeAttribute('open');
     }
-  });
-  /* =========================================================
-     6. Sélecteur de langue
-     ========================================================= */
-  $$('.lang-switch').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var target = a.dataset.lang;
-      var m = window.location.pathname.match(/\/([a-z]{2}_[A-Z]{2})\//);
-      if (!m) return;
-      window.location.href = window.location.pathname.replace(m[1], target);
-    });
   });
 
 })();

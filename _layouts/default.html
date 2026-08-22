@@ -1,8 +1,11 @@
-{% assign lang = page.lang | default: 'fr_FR' %}
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[lang] | default: site.data.i18n[site.lang] %}
+{% if lang == 'fr_FR' %}{% assign home_url = '/' %}{% else %}{% assign home_url = '/' | append: lang | append: '/' %}{% endif %}
 {% assign plugin = site.data.plugins | where: "id", page.pluginId | first %}
+{% assign ptr = plugin.i18n[lang] %}
 {% if page.url contains 'changelog' %}{% assign kind = 'changelog' %}{% else %}{% assign kind = 'doc' %}{% endif %}
 <!DOCTYPE html>
-<html lang="{{ lang | replace: '_', '-' }}">
+<html lang="{{ t.html_lang }}">
 
 <head>
   {% include head.html %}
@@ -17,14 +20,16 @@
     <aside class="sidebar">
 
       <div class="side-block">
-        <p class="side-title">Plugins</p>
+        <p class="side-title">{{ t.side_plugins }}</p>
         <ul class="plugin-list">
           {% for p in site.data.plugins %}
+          {% if p.langs contains lang %}{% assign plang = lang %}{% else %}{% assign plang = 'fr_FR' %}{% endif %}
+          {% assign pt = p.i18n[lang] %}
           <li>
-            <a href="{{ '/' | append: p.id | append: '/' | append: lang | append: '/' | relative_url }}"
+            <a href="{{ '/' | append: p.id | append: '/' | append: plang | append: '/' | relative_url }}"
                class="{% if p.id == page.pluginId %}is-active{% endif %}">
               <img src="{{ '/' | append: p.id | append: '/images/' | append: p.icon | relative_url }}" alt="">
-              {{ p.name }}
+              {{ pt.name | default: p.name }}
             </a>
           </li>
           {% endfor %}
@@ -32,29 +37,16 @@
 
         {% if plugin %}
         <div class="subnav">
-          <a href="{{ '/' | append: plugin.id | append: '/' | append: lang | append: '/' | relative_url }}"
-             class="{% if kind == 'doc' %}is-active{% endif %}">Documentation</a>
-          <a href="{{ '/' | append: plugin.id | append: '/' | append: lang | append: '/changelog' | relative_url }}"
-             class="{% if kind == 'changelog' %}is-active{% endif %}">Changelog</a>
+          <a href="{{ '/' | append: plugin.id | append: '/' | append: page.lang | append: '/' | relative_url }}"
+             class="{% if kind == 'doc' %}is-active{% endif %}">{{ t.doc_documentation }}</a>
+          <a href="{{ '/' | append: plugin.id | append: '/' | append: page.lang | append: '/changelog' | relative_url }}"
+             class="{% if kind == 'changelog' %}is-active{% endif %}">{{ t.doc_changelog }}</a>
         </div>
         {% endif %}
       </div>
 
-      {% if site.langs.size >= 2 %}
       <div class="side-block">
-        <p class="side-title">Langue</p>
-        <div class="subnav">
-          {% for l in site.langs %}
-          <a href="#" class="lang-switch {% if l == lang %}is-active{% endif %}" data-lang="{{ l }}">
-            {% case l %}{% when 'fr_FR' %}Français{% when 'en_US' %}English{% else %}{{ l }}{% endcase %}
-          </a>
-          {% endfor %}
-        </div>
-      </div>
-      {% endif %}
-
-      <div class="side-block">
-        <p class="side-title">Sur cette page</p>
+        <p class="side-title">{{ t.side_on_this_page }}</p>
         <ul class="toc" id="toc"></ul>
       </div>
 
@@ -63,16 +55,16 @@
     <main class="content">
       <div class="page-head">
         <div class="crumbs">
-          <a href="{{ '/' | relative_url }}">Accueil</a>
-          {% if plugin %}<span>/</span>{{ plugin.name }}{% endif %}
-          <span>/</span>{% if kind == 'changelog' %}Changelog{% else %}Documentation{% endif %}
+          <a href="{{ home_url | relative_url }}">{{ t.nav_home }}</a>
+          {% if plugin %}<span>/</span>{{ ptr.name | default: plugin.name }}{% endif %}
+          <span>/</span>{% if kind == 'changelog' %}{{ t.doc_changelog }}{% else %}{{ t.doc_documentation }}{% endif %}
         </div>
-        <h1 class="doc-title">{{ plugin.name | default: page.title }}</h1>
+        <h1 class="doc-title">{{ ptr.name | default: plugin.name | default: page.title }}</h1>
         <p class="lede">
           {% if kind == 'changelog' %}
-            Notes de version, ajouts et correctifs du plugin.
+            {{ t.doc_lede_changelog }}
           {% else %}
-            Documentation du plugin{% if plugin.marketId %} — <a href="{{ site.plugin }}{{ plugin.marketId }}" target="_blank" rel="noopener">fiche Market</a>{% endif %}.
+            {{ t.doc_lede }}{% if plugin.marketId %} — <a href="{{ site.plugin }}{{ plugin.marketId }}" target="_blank" rel="noopener">{{ t.doc_market_sheet }}</a>{% endif %}.
           {% endif %}
         </p>
       </div>

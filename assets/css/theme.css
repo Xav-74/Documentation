@@ -182,6 +182,52 @@ img { max-width: 100%; height: auto; }
 }
 .iconbtn:hover { background: var(--surface-2); }
 
+/* Sélecteur de langue */
+.langmenu { position: relative; flex: none; }
+.langmenu > summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  height: 36px;
+  padding: 0 13px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text-soft);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.langmenu > summary::-webkit-details-marker { display: none; }
+.langmenu > summary:hover, .langmenu[open] > summary { border-color: var(--brand-500); color: var(--text); }
+.langmenu ul {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 8px);
+  min-width: 176px;
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  z-index: 60;
+}
+.langmenu li a {
+  display: block;
+  padding: 7px 12px;
+  border-radius: var(--radius-sm);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+.langmenu li a:hover { background: var(--surface-2); color: #fff; text-decoration: none; }
+.langmenu li a.is-current { color: var(--brand-300); font-weight: 600; background: var(--surface-2); }
+
+.badge--fr { color: var(--brand-300); border-color: var(--brand-500); }
+
 /* =========================================================
    Ossature
    ========================================================= */
@@ -548,7 +594,8 @@ img { max-width: 100%; height: auto; }
   letter-spacing: -.025em;
   color: #fff;
   font-weight: 700;
-  max-width: 22ch;
+  max-width: 27ch;
+  text-wrap: balance;
 }
 .hero p { margin: 0; max-width: 62ch; color: #d3e2f2; font-size: 16.5px; }
 .hero .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
@@ -566,7 +613,7 @@ img { max-width: 100%; height: auto; }
   color: var(--text);
 }
 .btn:hover { text-decoration: none; background: var(--surface-3); color: #fff; border-color: var(--brand-500); }
-.btn--primary { background: #fff; color: #14202e; border-color: #fff; }
+.btn--primary { background: #fff; color: #14202e; /*border-color: #fff;*/ }
 .btn--primary:hover { background: #e7f0fa; color: #14202e; border-color: #e7f0fa; }
 
 .section-head { margin: 54px 0 18px; display: flex; align-items: baseline; gap: 12px; }
@@ -746,6 +793,8 @@ img { max-width: 100%; height: auto; }
   .searchbtn { min-width: 44px; }
   .searchbtn span, .searchbtn kbd { display: none; }
   .searchbtn { justify-content: center; padding: 0; width: 38px; height: 38px; border-radius: var(--radius-sm); }
+  .langmenu > summary span { display: none; }
+  .langmenu > summary { padding: 0; width: 38px; height: 38px; justify-content: center; border-radius: var(--radius-sm); }
 }
 
 @media (max-width: 980px) {

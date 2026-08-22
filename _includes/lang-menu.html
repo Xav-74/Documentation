@@ -1,0 +1,26 @@
+<details class="langmenu">
+  <summary title="{{ t.language }}">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg>
+    <span>{{ t.name }}</span>
+  </summary>
+  <ul>
+    {% for l in site.langs %}
+      {% assign tl = site.data.i18n[l] %}
+      {% if l == 'fr_FR' %}{% assign href = '/' %}{% else %}{% assign href = '/' | append: l | append: '/' %}{% endif %}
+      {% assign fallback = false %}
+      {% if plugin %}
+        {% if plugin.langs contains l %}
+          {% assign href = '/' | append: plugin.id | append: '/' | append: l | append: '/' %}
+          {% if kind == 'changelog' %}{% assign href = href | append: 'changelog' %}{% endif %}
+        {% else %}
+          {% assign fallback = true %}
+        {% endif %}
+      {% endif %}
+      <li>
+        <a href="{{ href | relative_url }}" lang="{{ tl.html_lang }}"
+           {% if fallback %}title="{{ tl.only_french }}"{% endif %}
+           class="{% if l == lang %}is-current{% endif %}">{{ tl.name }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</details>

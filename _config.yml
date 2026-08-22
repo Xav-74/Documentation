@@ -3,7 +3,7 @@ title: "Documentation des plugins et widgets de Xav-74"
 description: "Documentation, guides de configuration et changelogs des plugins et widgets créés par Xav-74 pour la solution domotique Jeedom."
 author: "Xav-74"
 lang: fr_FR
-langs: [fr_FR]          # ajouter en_US ici réactive le sélecteur de langue
+langs: [fr_FR, en_US, de_DE, es_ES, it_IT, pt_PT]
 
 baseurl: "/Documentation"   # chemin du projet sur GitHub Pages
 url: "https://xav-74.github.io"

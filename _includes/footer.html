@@ -1,21 +1,21 @@
 <footer class="footer">
   <div class="footer__in">
-    <div>© {{ site.time | date: "%Y" }} Xav-74 — Documentation des plugins Jeedom</div>
+    <div>© {{ site.time | date: "%Y" }} Xav-74 — {{ t.footer_rights }}</div>
     <nav>
-      <a href="{{ '/' | relative_url }}">Accueil</a>
-      <a href="{{ site.github_repo }}" target="_blank" rel="noopener">Dépôt GitHub</a>
-      <a href="{{ site.community }}" target="_blank" rel="noopener">Community Jeedom</a>
-      <a href="{{ site.market }}" target="_blank" rel="noopener">Market</a>
-      <a href="{{ site.doc }}" target="_blank" rel="noopener">Doc Jeedom</a>
+      <a href="{{ home_url | relative_url }}">{{ t.nav_home }}</a>
+      <a href="{{ site.github_repo }}" target="_blank" rel="noopener">{{ t.nav_repo }}</a>
+      <a href="{{ site.community }}" target="_blank" rel="noopener">{{ t.nav_community }}</a>
+      <a href="{{ site.market }}" target="_blank" rel="noopener">{{ t.nav_market }}</a>
+      <a href="{{ site.doc }}" target="_blank" rel="noopener">{{ t.nav_doc }}</a>
     </nav>
   </div>
 </footer>
 
 <!-- Recherche -->
-<div class="overlay" id="search-overlay" role="dialog" aria-label="Recherche">
+<div class="overlay" id="search-overlay" role="dialog" aria-label="{{ t.search_button }}">
   <div class="searchbox">
     <input id="search-input" type="search" autocomplete="off" spellcheck="false"
-           placeholder="Rechercher dans la documentation…" aria-label="Rechercher">
+           placeholder="{{ t.search_placeholder }}" aria-label="{{ t.search_button }}">
     <ul class="results" id="search-results"></ul>
   </div>
 </div>
@@ -23,20 +23,33 @@
 <!-- Agrandissement des images -->
 <div class="lightbox" id="lightbox"><img src="" alt=""></div>
 
-<button class="totop" id="totop" type="button" aria-label="Haut de page">
+<button class="totop" id="totop" type="button" aria-label="{{ t.nav_home }}">
   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
 <script>
+window.I18N = {
+  indexing: {{ t.search_indexing | jsonify }},
+  none: {{ t.search_none | jsonify }},
+  hint: {{ t.search_hint | jsonify }},
+  copy: {{ t.copy | jsonify }},
+  copied: {{ t.copied | jsonify }},
+  latest: {{ t.latest | jsonify }},
+  documentation: {{ t.doc_documentation | jsonify }}
+};
+
+{% assign sp = site.pages | where_exp: "p", "p.pluginId" %}
+{% assign spl = sp | where: "lang", lang %}
+{% if spl.size == 0 %}{% assign spl = sp | where: "lang", "fr_FR" %}{% endif %}
 window.SEARCH_PAGES = [
-  {% assign sp = site.pages | where_exp: "p", "p.pluginId" %}
-  {% for p in sp %}
+  {% for p in spl %}
     {% assign pl = site.data.plugins | where: "id", p.pluginId | first %}
+    {% assign pt = pl.i18n[lang] %}
     {
       "url": {{ p.url | relative_url | jsonify }},
       "title": {{ p.title | jsonify }},
-      "plugin": {{ pl.name | default: p.pluginId | jsonify }},
-      "kind": {% if p.url contains 'changelog' %}"Changelog"{% else %}"Documentation"{% endif %}
+      "plugin": {{ pt.name | default: pl.name | default: p.pluginId | jsonify }},
+      "kind": {% if p.url contains 'changelog' %}{{ t.doc_changelog | jsonify }}{% else %}{{ t.doc_documentation | jsonify }}{% endif %}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];

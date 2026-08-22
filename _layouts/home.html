@@ -1,6 +1,8 @@
-{% assign lang = page.lang | default: 'fr_FR' %}
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.i18n[lang] | default: site.data.i18n[site.lang] %}
+{% if lang == 'fr_FR' %}{% assign home_url = '/' %}{% else %}{% assign home_url = '/' | append: lang | append: '/' %}{% endif %}
 <!DOCTYPE html>
-<html lang="{{ lang | replace: '_', '-' }}">
+<html lang="{{ t.html_lang }}">
 
 <head>
   {% include head.html %}
@@ -13,13 +15,13 @@
   <div class="home">
 
     <section class="hero">
-      <h1>{{ page.heading | default: "Documentation des plugins Jeedom" }}</h1>
-      <p>{{ page.subheading | default: site.description }}</p>
+      <h1>{{ page.heading | default: t.home_heading }}</h1>
+      <p>{{ page.subheading | default: t.home_subheading }}</p>
       <div class="hero-actions">
-        <a class="btn btn--primary" href="#plugins">Voir les plugins</a>
-        <a class="btn" href="#widgets">Voir les widgets</a>
-        <a class="btn" href="{{ site.community }}" target="_blank" rel="noopener">Support sur la Community</a>
-        <a class="btn" href="{{ site.github_repo }}" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn--primary" href="#plugins">{{ t.home_cta_plugins }}</a>
+        <a class="btn" href="#widgets">{{ t.home_cta_widgets }}</a>
+        <a class="btn" href="{{ site.community }}" target="_blank" rel="noopener">{{ t.home_cta_support }}</a>
+        <a class="btn" href="{{ site.github_repo }}" target="_blank" rel="noopener">{{ t.nav_github }}</a>
       </div>
     </section>
 
@@ -28,59 +30,63 @@
     {% endif %}
 
     <div class="section-head" id="plugins">
-      <h2>Plugins</h2>
+      <h2>{{ t.home_plugins }}</h2>
       <span class="count">{{ site.data.plugins | size }}</span>
     </div>
 
     <div class="cards">
       {% for p in site.data.plugins %}
+      {% assign pt = p.i18n[lang] %}
+      {% if p.langs contains lang %}{% assign plang = lang %}{% else %}{% assign plang = 'fr_FR' %}{% endif %}
       <article class="card">
         <div class="card__head">
           <img src="{{ '/' | append: p.id | append: '/images/' | append: p.icon | relative_url }}" alt="">
           <div>
-            <h3>{{ p.name }}</h3>
-            <div class="tagline">{{ p.tagline }}</div>
+            <h3>{{ pt.name | default: p.name }}</h3>
+            <div class="tagline">{{ pt.tagline | default: p.tagline }}</div>
           </div>
         </div>
-        <p class="card__desc">{{ p.description }}</p>
+        <p class="card__desc">{{ pt.description | default: p.description }}</p>
         <div class="card__meta">
-          {% for t in p.tags %}<span class="badge">{{ t }}</span>{% endfor %}
+          {% for tag in p.tags %}<span class="badge">{{ tag }}</span>{% endfor %}
+          {% unless p.langs contains lang %}<span class="badge badge--fr" title="{{ t.only_french }}">FR</span>{% endunless %}
         </div>
         <div class="card__links">
-          <a class="primary" href="{{ '/' | append: p.id | append: '/' | append: lang | append: '/' | relative_url }}">Documentation</a>
-          <a href="{{ '/' | append: p.id | append: '/' | append: lang | append: '/changelog' | relative_url }}">Changelog</a>
-          {% if p.marketId %}<a href="{{ site.plugin }}{{ p.marketId }}" target="_blank" rel="noopener">Market</a>{% endif %}
+          <a class="primary" href="{{ '/' | append: p.id | append: '/' | append: plang | append: '/' | relative_url }}">{{ t.doc_documentation }}</a>
+          <a href="{{ '/' | append: p.id | append: '/' | append: plang | append: '/changelog' | relative_url }}">{{ t.doc_changelog }}</a>
+          {% if p.marketId %}<a href="{{ site.plugin }}{{ p.marketId }}" target="_blank" rel="noopener">{{ t.nav_market }}</a>{% endif %}
         </div>
       </article>
       {% endfor %}
     </div>
 
     <div class="section-head" id="widgets">
-      <h2>Widgets</h2>
+      <h2>{{ t.home_widgets }}</h2>
       <span class="count">{{ site.data.widgets | size }}</span>
     </div>
 
     {% if site.data.widgets and site.data.widgets.size > 0 %}
     <div class="cards">
       {% for w in site.data.widgets %}
+      {% assign wt = w.i18n[lang] %}
       <article class="card">
         <div class="card__head">
           {% if w.icon %}<img src="{{ w.icon | relative_url }}" alt="">{% endif %}
           <div>
-            <h3>{{ w.name }}</h3>
-            <div class="tagline">{{ w.tagline }}</div>
+            <h3>{{ wt.name | default: w.name }}</h3>
+            <div class="tagline">{{ wt.tagline | default: w.tagline }}</div>
           </div>
         </div>
-        <p class="card__desc">{{ w.description }}</p>
+        <p class="card__desc">{{ wt.description | default: w.description }}</p>
         <div class="card__links">
-          {% if w.url %}<a class="primary" href="{{ w.url | relative_url }}">Documentation</a>{% endif %}
-          {% if w.marketId %}<a href="{{ site.plugin }}{{ w.marketId }}" target="_blank" rel="noopener">Market</a>{% endif %}
+          {% if w.url %}<a class="primary" href="{{ w.url | relative_url }}">{{ t.doc_documentation }}</a>{% endif %}
+          {% if w.marketId %}<a href="{{ site.plugin }}{{ w.marketId }}" target="_blank" rel="noopener">{{ t.nav_market }}</a>{% endif %}
         </div>
       </article>
       {% endfor %}
     </div>
     {% else %}
-    <p class="empty-note">Aucun widget publié pour le moment.</p>
+    <p class="empty-note">{{ t.home_no_widgets }}</p>
     {% endif %}
 
   </div>
