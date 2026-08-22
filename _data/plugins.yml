@@ -11,11 +11,11 @@
 # l'accueil ; il est facultatif, la version française sert de repli.
 
 - id: verisure
-  name: Alarme Verisure
+  name: Verisure
   tagline: Sécurité
   icon: verisure_icon.png
   marketId: 3997
-  langs: [fr_FR]
+  langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
   tags: ["Jeedom 4.4+", "Debian 11 / 12", "Homebridge"]
   description: >-
     Interagissez avec votre alarme Verisure comme depuis l'application officielle
@@ -24,7 +24,7 @@
     Compatible avec le plugin Homebridge pour un pilotage depuis l'app Maison d'Apple et Siri.
   i18n:
     en_US:
-      name: Verisure Alarm
+      name: Verisure
       tagline: Security
       description: >-
         Control your Verisure alarm just like the official “My Verisure” app:
@@ -32,7 +32,7 @@
         disarming and image requests. Works with the Homebridge plugin for control
         from Apple's Home app and Siri.
     de_DE:
-      name: Verisure-Alarmanlage
+      name: Verisure
       tagline: Sicherheit
       description: >-
         Steuern Sie Ihre Verisure-Alarmanlage wie mit der offiziellen App
@@ -40,7 +40,7 @@
         (total, Tag, Nacht, Außenbereich), Unscharfschaltung und Bildabruf.
         Kompatibel mit dem Homebridge-Plugin für die Bedienung über Apple Home und Siri.
     es_ES:
-      name: Alarma Verisure
+      name: Verisure
       tagline: Seguridad
       description: >-
         Controla tu alarma Verisure igual que desde la aplicación oficial
@@ -48,7 +48,7 @@
         (total, día, noche, exterior), desactivación y solicitud de imágenes.
         Compatible con el plugin Homebridge para el control desde la app Casa de Apple y Siri.
     it_IT:
-      name: Allarme Verisure
+      name: Verisure
       tagline: Sicurezza
       description: >-
         Gestisci il tuo allarme Verisure come dall'app ufficiale «My Verisure»:
@@ -56,7 +56,7 @@
         notte, perimetrale), disattivazione e richiesta immagini. Compatibile con
         il plugin Homebridge per il controllo da app Casa di Apple e Siri.
     pt_PT:
-      name: Alarme Verisure
+      name: Verisure
       tagline: Segurança
       description: >-
         Controle o seu alarme Verisure tal como na aplicação oficial
