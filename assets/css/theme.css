@@ -73,7 +73,7 @@ body::before {
   height: 420px;
   background: radial-gradient(900px 320px at 18% -60px, rgba(58, 90, 122, .28), transparent 70%);
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 a { color: var(--link); text-decoration: none; }
@@ -232,8 +232,6 @@ img { max-width: 100%; height: auto; }
    Ossature
    ========================================================= */
 .shell {
-  position: relative;
-  z-index: 1;
   display: grid;
   grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
   gap: 40px;
@@ -285,7 +283,14 @@ img { max-width: 100%; height: auto; }
   border: 1px solid transparent;
 }
 .plugin-list a:hover { background: var(--surface); color: var(--text); text-decoration: none; }
-.plugin-list a img { width: 22px; height: 22px; border-radius: 5px; flex: none; }
+.plugin-list a img {
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  flex: none;
+  object-fit: cover;
+  object-position: top center;   /* rogne la bande vide imposée par Jeedom */
+}
 .plugin-list a.is-active {
   background: var(--surface-2);
   border-color: var(--border);
@@ -565,7 +570,7 @@ img { max-width: 100%; height: auto; }
 /* =========================================================
    Accueil
    ========================================================= */
-.home { position: relative; z-index: 1; max-width: 1180px; margin: 0 auto; padding: 0 28px 90px; }
+.home { max-width: 1180px; margin: 0 auto; padding: 0 28px 90px; }
 
 .hero {
   margin: 44px 0 20px;
@@ -640,7 +645,14 @@ img { max-width: 100%; height: auto; }
 }
 .card:hover { transform: translateY(-3px); border-color: var(--brand-500); box-shadow: var(--shadow); }
 .card__head { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
-.card__head img { width: 46px; height: 46px; border-radius: 10px; flex: none; }
+.card__head img {
+  width: 46px;
+  height: 46px;
+  border-radius: 10px;
+  flex: none;
+  object-fit: cover;
+  object-position: top center;   /* rogne la bande vide imposée par Jeedom */
+}
 .card__head h3 { margin: 0; font-size: 17.5px; font-weight: 650; color: #fff; letter-spacing: -.01em; }
 .card__head .tagline { font-size: 12.5px; color: var(--text-muted); }
 .card__desc { margin: 0 0 16px; font-size: 14.5px; color: var(--text-soft); flex: 1; }
@@ -683,8 +695,6 @@ img { max-width: 100%; height: auto; }
   border-top: 1px solid var(--border-soft);
   background: var(--bg-alt);
   padding: 28px;
-  position: relative;
-  z-index: 1;
 }
 .footer__in {
   max-width: 1440px;
@@ -807,6 +817,7 @@ img { max-width: 100%; height: auto; }
     width: 320px;
     max-width: 88vw;
     height: calc(100vh - var(--topbar-h));
+    height: calc(100dvh - var(--topbar-h));
     padding: 22px 18px 60px;
     background: var(--bg-alt);
     border-right: 1px solid var(--border);
