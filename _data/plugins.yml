@@ -201,7 +201,7 @@
   tagline: Jardin
   icon: mammotion_icon.png
   marketId: 4674
-  langs: [fr_FR]
+  langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
   tags: ["Jeedom 4.4+", "Debian 11 / 12", "Luba / Yuka / Spino"]
   description: >-
     Pilotez vos robots Mammotion depuis Jeedom comme depuis l'application
