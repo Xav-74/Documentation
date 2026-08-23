@@ -195,3 +195,57 @@
         Obtenha os dados da sua subscrição HP instantInk e o estado das suas
         impressoras: níveis de tinta, páginas impressas e acompanhamento do consumo
         e da faturação do plano.
+
+- id: mammotion
+  name: Mammotion
+  tagline: Jardin
+  icon: mammotion_icon.png
+  marketId: 4674
+  langs: [fr_FR]
+  tags: ["Jeedom 4.4+", "Debian 11 / 12", "Luba / Yuka / Spino"]
+  description: >-
+    Pilotez vos robots Mammotion depuis Jeedom comme depuis l'application
+    officielle : tondeuses Luba et Yuka, robots de piscine Spino. Suivi de
+    l'état du robot et du niveau de batterie, position GPS, lancement et
+    interruption d'une tonte ou d'un nettoyage, retour à la base et choix des
+    zones de travail et des activités préprogrammées.
+  i18n:
+    en_US:
+      tagline: Garden
+      description: >-
+        Control your Mammotion robots from Jeedom just like the official app:
+        Luba and Yuka mowers, Spino pool cleaners. Robot status and battery
+        level, GPS position, starting and pausing a mowing or cleaning job,
+        return to base, and selection of work zones and pre-programmed tasks.
+    de_DE:
+      tagline: Garten
+      description: >-
+        Steuern Sie Ihre Mammotion-Roboter aus Jeedom heraus wie über die
+        offizielle App: Mähroboter Luba und Yuka, Poolroboter Spino. Status des
+        Roboters und Akkustand, GPS-Position, Starten und Unterbrechen eines
+        Mäh- oder Reinigungsvorgangs, Rückkehr zur Basis sowie Auswahl der
+        Arbeitsbereiche und der vorprogrammierten Aufgaben.
+    es_ES:
+      tagline: Jardín
+      description: >-
+        Controla tus robots Mammotion desde Jeedom igual que desde la aplicación
+        oficial: cortacéspedes Luba y Yuka, robots limpiafondos Spino. Estado
+        del robot y nivel de batería, posición GPS, inicio e interrupción de un
+        corte o una limpieza, regreso a la base y selección de las zonas de
+        trabajo y de las tareas preprogramadas.
+    it_IT:
+      tagline: Giardino
+      description: >-
+        Gestisci i tuoi robot Mammotion da Jeedom come dall'app ufficiale: robot
+        tosaerba Luba e Yuka, robot per piscina Spino. Stato del robot e livello
+        della batteria, posizione GPS, avvio e interruzione di un taglio o di
+        una pulizia, rientro alla base e scelta delle zone di lavoro e delle
+        attività preimpostate.
+    pt_PT:
+      tagline: Jardim
+      description: >-
+        Controle os seus robôs Mammotion a partir do Jeedom tal como na
+        aplicação oficial: corta-relvas Luba e Yuka, robôs de piscina Spino.
+        Estado do robô e nível de bateria, posição GPS, início e interrupção de
+        um corte ou de uma limpeza, regresso à base e escolha das zonas de
+        trabalho e das tarefas pré-programadas.
