@@ -14,8 +14,7 @@ Le plan gratuit de 17Track propose le suivi de 100 colis par mois (remise à 0 l
 > **Tip**
 >
 > La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.4**
->
-> Le plugin est d'ores et déjà compatible avec les **versions Debian 11 & 12**
+> Le plugin est d'ores et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
 
 # Installation
 
@@ -142,15 +141,9 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin d'actualiser
 
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API 17Track.
 
-Les prochaines versions verront arriver les features suivantes :
-
-- Mise en place d'un WebHook pour une réception des données en temps réel
-- ...
-
 > **Tip**
 >
 > Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/parcelTracking/issues/new).
->
 > N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs parcelTracking (mode debug) pour une résolution plus rapide !

@@ -11,9 +11,8 @@ Ce plugin vous permet d'interagir avec votre véhicule **BMW** ou **Mini** équi
 
 > **Tip**
 >
-> La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.2**
->
-> Le plugin est d'ores et déjà compatible avec la **version 4.5** de Jeedom ainsi que les **versions Debian 11 & 12**
+> La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.4**
+> Le plugin est d'ores et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
 
 # Principe
 
@@ -98,7 +97,6 @@ Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récup
 > **Tip**
 >
 > N'oubliez pas de **sauvegarder** vos informations !
->
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
 
 ![Equipement](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 | Commande | Description |
 |---|---|
-| **Marque** | |
-| **Modèle** | |
-| **Année** | |
+| **Marque** | la marque du véhicule (BMW ou Mini) |
+| **Modèle** | le modèle du véhicule |
+| **Année** | l'année du véhicule |
 | **Type** | électrique, thermique ou hybride |
 | **Kilométrage** | kilométrage total du véhicule |
 | **Verrouillage** | remonte l'état de verrouillage du véhicule |
-| **Statut porte conducteur avant** | |
-| **Statut porte conducteur arrière** | |
-| **Statut porte passager avant** | |
-| **Statut porte passager arrière** | |
-| **Statut toutes les portes** | |
-| **Statut fenêtre conducteur avant** | |
-| **Statut fenêtre conducteur arrière** | |
-| **Statut fenêtre passager avant** | |
-| **Statut fenêtre passager arrière** | |
-| **Statut toutes les fenêtres** | |
-| **Statut coffre** | |
-| **Statut capot moteur** | |
-| **Statut toit ouvrant** | |
-| **Pression pneu avant gauche** | |
-| **Consigne de gonflage pneu avant gauche** | |
-| **Pression pneu avant droit** | |
-| **Consigne de gonflage pneu avant droit** | |
-| **Pression pneu arrière gauche** | |
-| **Consigne de gonflage pneu arrière gauche** | |
-| **Pression pneu arrière droit** | |
-| **Consigne de gonflage pneu arrière droit** | |
-| **Etat de la charge** | uniquement sur véhicule électrique ou hybride |
-| **Etat de la prise** | uniquement sur véhicule électrique ou hybride |
-| **Heure de fin de charge** | uniquement sur véhicule électrique ou hybride |
-| **Charge restante** | uniquement sur véhicule électrique ou hybride |
-| **Km restant (électrique)** | moteur électrique et/ou hybride |
-| **Carburant restant** | uniquement sur véhicule thermique ou hybride |
-| **Km restant (thermique)** | moteur thermique |
+| **Statut porte conducteur avant** | l'état de la porte conducteur avant |
+| **Statut porte conducteur arrière** | l'état de la porte conducteur arrière |
+| **Statut porte passager avant** | l'état de la porte passager avant |
+| **Statut porte passager arrière** | l'état de la porte passager arrière |
+| **Statut toutes les portes** | l'état global des quatre portes |
+| **Statut fenêtre conducteur avant** | l'état de la fenêtre conducteur avant |
+| **Statut fenêtre conducteur arrière** | l'état de la fenêtre conducteur arrière |
+| **Statut fenêtre passager avant** | l'état de la fenêtre passager avant |
+| **Statut fenêtre passager arrière** | l'état de la fenêtre passager arrière |
+| **Statut toutes les fenêtres** | l'état global des quatre fenêtres |
+| **Statut coffre** | l'état du coffre |
+| **Statut capot moteur** | l'état du capot moteur |
+| **Statut toit ouvrant** | l'état du toit ouvrant |
+| **Pression pneu avant gauche** | la pression mesurée du pneu avant gauche |
+| **Consigne de gonflage pneu avant gauche** | la pression de gonflage recommandée pour le pneu avant gauche |
+| **Pression pneu avant droit** | la pression mesurée du pneu avant droit |
+| **Consigne de gonflage pneu avant droit** | la pression de gonflage recommandée pour le pneu avant droit |
+| **Pression pneu arrière gauche** | la pression mesurée du pneu arrière gauche |
+| **Consigne de gonflage pneu arrière gauche** | la pression de gonflage recommandée pour le pneu arrière gauche |
+| **Pression pneu arrière droit** | la pression mesurée du pneu arrière droit |
+| **Consigne de gonflage pneu arrière droit** | la pression de gonflage recommandée pour le pneu arrière droit |
+| **Etat de la charge** | l'état de la charge en cours (uniquement sur véhicule électrique ou hybride) |
+| **Etat de la prise** | l'état de branchement du câble de charge (uniquement sur véhicule électrique ou hybride) |
+| **Heure de fin de charge** | l'heure de fin de charge estimée (uniquement sur véhicule électrique ou hybride) |
+| **Charge restante** | le niveau de charge restant de la batterie (uniquement sur véhicule électrique ou hybride) |
+| **Km restant (électrique)** | l'autonomie restante en électrique (moteur électrique et/ou hybride) |
+| **Carburant restant** | le niveau de carburant restant dans le réservoir (uniquement sur véhicule thermique ou hybride) |
+| **Km restant (thermique)** | l'autonomie restante en thermique (moteur thermique) |
 | **Messages** | remonte les messages affichés dans le véhicule (contrôle et services) |
 | **Sessions de charges** | remonte les statistiques de charges électriques des batteries sur le mois en cours (uniquement sur véhicule électrique ou hybride) |
 | **Charge électrique totale** | donne la charge électrique totale utilisée sur le mois en cours (uniquement sur véhicule électrique ou hybride) |
@@ -163,15 +161,15 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 | **Coordonnées GPS** | remonte la position du véhicule sous la forme "latitude,longitude" |
 | **Dernière mise à jour** | donne la date et l'heure de la dernière connexion entre la voiture et les serveurs BMW |
 | **Statut Déverrouiller** | renvoie le dernier statut reçu lors d'une demande de déverrouillage. Si l'action a correctement été effectuée, le statut passe à de "PENDING" à "EXECUTED". Sinon renvoie "ERROR" |
-| **Statut Verrouiller** | |
-| **Statut Charger** | |
-| **Statut Stop charger** | |
-| **Statut Ventiler** | |
-| **Statut Stop Ventiler** | |
-| **Statut Appel de phares** | |
-| **Statut Klaxonner** | |
-| **Statut Rechercher** | |
-| **Statut Envoi POI** | |
+| **Statut Verrouiller** | le dernier statut reçu lors d'une demande de verrouillage (mêmes valeurs que **Statut Déverrouiller**) |
+| **Statut Charger** | le dernier statut reçu lors d'une demande de démarrage de la charge |
+| **Statut Stop charger** | le dernier statut reçu lors d'une demande d'arrêt de la charge |
+| **Statut Ventiler** | le dernier statut reçu lors d'une demande de démarrage de la ventilation |
+| **Statut Stop Ventiler** | le dernier statut reçu lors d'une demande d'arrêt de la ventilation |
+| **Statut Appel de phares** | le dernier statut reçu lors d'une demande d'appel de phares |
+| **Statut Klaxonner** | le dernier statut reçu lors d'une demande de klaxon |
+| **Statut Rechercher** | le dernier statut reçu lors d'une demande de localisation |
+| **Statut Envoi POI** | le dernier statut reçu lors d'un envoi de point d'intérêt |
 | **Présence domicile** | indique si votre véhicule est situé à votre domicile (1 = présent, 0 = absent) en fonction de la distance maximale renseignée |
 | **Distance domicile** | indique la distance (en m ou km) entre le véhicule et votre domicile |
 
@@ -233,16 +231,9 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de récupér
 
 Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API BMW Connected Drive.
 
-Les prochaines versions verront arriver les features suivantes :
-
-- Ajout de nouvelles fonctionnalités en fonction des possibilités offertes par les API
-- Traduction du plugin en anglais
-- ...
-
 > **Tip**
 >
 > Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 > N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs myBMW, myBMW_daemon, myBMW_update (mode debug) pour une résolution plus rapide !

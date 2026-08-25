@@ -22,7 +22,6 @@ Il est compatible avec 3 générations de matériels Verisure.
 > **Tip**
 >
 > La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.4**
->
 > Le plugin est d'ores et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
 
 # Principe
@@ -65,9 +64,11 @@ Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajout�
 
 **Options** (alarme type 1 & 3) : en fonction du type de votre alarme, vous avez la possibilité de valider les options suivantes :
 
-- **Rafraichissement via historique** (alarme type 1 & 3) : permet d'actualiser les statuts de l'alarme en fonction de l'historique des actions. Pensez à paramétrer et activer le cron dans la configuration du plugin
-- **Présence alarme extérieure** (alarme type 3) : à cocher si vous disposez de détecteurs extérieurs et si le mode extérieur est activé sur votre alarme
-- **Armement forcé** (alarme type 3) : permet de forcer l'activation de l'alarme même si une porte ou une fenêtre est restée ouverte. A vos risques et périls !
+| Option | Description |
+|---|---|
+| **Rafraichissement via historique**<br/>(alarme type 1 & 3) | permet d'actualiser les statuts de l'alarme en fonction de l'historique des actions. Pensez à paramétrer et activer le cron dans la configuration du plugin |
+| **Présence alarme extérieure**<br/>(alarme type 3) | à cocher si vous disposez de détecteurs extérieurs et si le mode extérieur est activé sur votre alarme |
+| **Armement forcé**<br/>(alarme type 3) | permet de forcer l'activation de l'alarme même si une porte ou une fenêtre est restée ouverte. A vos risques et périls ! |
 
 Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des devices installés à votre domicile (ID, nom et type).
 
@@ -80,7 +81,6 @@ Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récup
 > **Tip**
 >
 > N'oubliez pas de **sauvegarder** vos informations !
->
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
 
 ![Equipement](../images/Eqpt_verisure.png)
@@ -105,19 +105,12 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 
 ## Info
 
-- **Etat Activation** : permet de connaitre l'état d'activation de l'alarme
-  - **0** : désarmée
-  - **1** : armée
-- **Etat Alarme** : permet de connaitre l'état de l'alarme
-  - **0** : état normal
-  - **1** : alarme déclenchée
-- **Mode Alarme** : permet de connaitre le mode d'activation de l'alarme
-  - **Mode total** : l'alarme est activée en mode total (alarme type 1 2 & 3)
-  - **Mode nuit** : l'alarme est activée en mode nuit (alarme type 1)
-  - **Mode jour** : l'alarme est activée en mode jour (alarme type 1)
-  - **Mode extérieur** : l'alarme est activée en mode extérieur (alarme type 1)
-  - **Mode partiel** : l'alarme est activée en mode partiel (alarme type 2 & 3)
-- **Qualité réseau** : permet d'estimer la qualité du réseau 3G/4G des alarmes type 1 & 3 (basée sur le résultat des 25 dernières requêtes)
+| Commande | Description |
+|---|---|
+| **Etat Activation** | permet de connaitre l'état d'activation de l'alarme<br/>**0** : désarmée<br/>**1** : armée |
+| **Etat Alarme** | permet de connaitre l'état de l'alarme<br/>**0** : état normal<br/>**1** : alarme déclenchée |
+| **Mode Alarme** | permet de connaitre le mode d'activation de l'alarme<br/>**Mode total** : l'alarme est activée en mode total (alarme type 1 2 & 3)<br/>**Mode nuit** : l'alarme est activée en mode nuit (alarme type 1)<br/>**Mode jour** : l'alarme est activée en mode jour (alarme type 1)<br/>**Mode extérieur** : l'alarme est activée en mode extérieur (alarme type 1)<br/>**Mode partiel** : l'alarme est activée en mode partiel (alarme type 2 & 3) |
+| **Qualité réseau** | permet d'estimer la qualité du réseau 3G/4G des alarmes type 1 & 3 (basée sur le résultat des 25 dernières requêtes)<br/>icone 5 barres : aucune requête en erreur sur les 25 dernières<br/>icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières<br/>icone 3 barres : de 3 à 7 requêtes en erreur sur les 25 dernières<br/>icone 2 barres : de 8 à 17 requêtes en erreur sur les 25 dernières<br/>icone 1 barre : de 18 à 24 requêtes en erreur sur les 25 dernières<br/>icone 0 barre : 25 requêtes en erreur sur les 25 dernières |
 
 > **Attention**
 >
@@ -135,6 +128,12 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
 | **Désactivation** | désactive de l'alarme, quel que soit le mode (alarme type 1 2 & 3) |
 | **Rafraichir** | met à jour du statut de l'Alarme (alarme type 1 2 & 3) |
 | **Demande Images** | déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 2 & 3) |
+
+> **Attention**
+>
+> Les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
+
+<!-- -->
 
 > **Tip**
 >
@@ -188,33 +187,7 @@ Pour les alarmes de type 3 (**et uniquement type 3 !**), le plugin va créer les
 
 # Dashboard
 
-Le plugin inclut un dashboard qui permet de :
-
-- Connaitre le statut de l'alarme (alarme type 1 2 & 3)
-- Connaitre l'état de l'alarme (alarme type 1 2 & 3)
-- Connaitre le mode de l'alarme (alarme type 1 2 & 3)
-- Connaitre l'état de la serrure connectée (alarme type 3)
-- Activer le mode total de l'alarme (alarme type 1 2 & 3)
-- Activer le mode nuit de l'alarme (alarme type 1)
-- Activer le mode jour de l'alarme (alarme type 1)
-- Activer le mode extérieur de l'alarme (alarme type 1)
-- Activer le mode partiel de l'alarme (alarme type 2 & 3)
-- Désactiver l'alarme (alarme type 1 2 & 3)
-- Rafraichir le statut de l'alarme (alarme type 1 2 & 3)
-- Ouvrir / fermer la serrure connectée (alarme type 3)
-- Demander la prise d'une photo depuis un capteur de mouvement compatible (alarme type 1 2 & 3)
-- Afficher les informations de certains devices comme la température, l'humidité, ou l'état d'ouverture (**!!! UNIQUEMENT alarme type 2 !!!**)
-- Afficher le niveau de la qualité du réseau 3G/4G de l'alarme (alarme type 1 & 3)
-  - icone 5 barres : aucune requête en erreur sur les 25 dernières
-  - icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières
-  - icone 3 barres : de 3 à 7 requêtes en erreur sur les 25 dernières
-  - icone 2 barres : de 8 à 17 requêtes en erreur sur les 25 dernières
-  - icone 1 barre : de 18 à 24 requêtes en erreur sur les 25 dernières
-  - icone 0 barre : 25 requêtes en erreur sur les 25 dernières
-
-> **Attention**
->
-> Les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
+Le plugin inclut un widget spécifique à chaque type d'alarme.
 
 ![Dashboard type 1](../images/Dashboard_verisure.png)
 
@@ -243,7 +216,6 @@ Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibili
 > **Tip**
 >
 > Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/verisure/issues/new).
->
 > N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
