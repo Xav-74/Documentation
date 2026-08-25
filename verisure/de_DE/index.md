@@ -22,7 +22,6 @@ Es ist mit drei Generationen von Verisure-Geräten kompatibel.
 > **Tipp**
 >
 > Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.4**
->
 > Das Plugin ist bereits mit der **Version 4.6** von Jeedom sowie den **Debian-12-Versionen** kompatibel.
 
 # Prinzip
@@ -65,9 +64,11 @@ Klicken Sie auf die Schaltfläche „Hinzufügen“, um einen neuen Alarm zu ers
 
 **Optionen** (Alarmtyp 1 & 3): Je nach Art Ihres Alarms haben Sie die Möglichkeit, die folgenden Optionen zu aktivieren:
 
-- **Aktualisierung über den Verlauf** (Alarmtyp 1 & 3): Ermöglicht die Aktualisierung des Alarmstatus auf Grundlage des Aktionsverlaufs. Denken Sie daran, den Cron-Job in der Plugin-Konfiguration einzurichten und zu aktivieren.
-- **Außenalarm** (Alarmtyp 3): Bitte ankreuzen, wenn Sie über Außensensoren verfügen und der Außenmodus an Ihrer Alarmanlage aktiviert ist
-- **Zwangsaktivierung** (Alarmtyp 3): Ermöglicht die erzwungene Aktivierung des Alarms, auch wenn eine Tür oder ein Fenster offen geblieben ist. Auf eigene Gefahr!
+| Option | Beschreibung |
+|---|---|
+| **Aktualisierung über den Verlauf**<br/>(Alarmtyp 1 & 3) | ermöglicht die Aktualisierung des Alarmstatus auf Grundlage des Aktionsverlaufs. Denken Sie daran, den Cron-Job in der Plugin-Konfiguration einzurichten und zu aktivieren |
+| **Außenalarm**<br/>(Alarm Typ 3) | bitte ankreuzen, wenn Sie über Außensensoren verfügen und der Außenmodus an Ihrer Alarmanlage aktiviert ist |
+| **Zwangsaktivierung**<br/>(Alarmtyp 3) | ermöglicht die erzwungene Aktivierung des Alarms, auch wenn eine Tür oder ein Fenster offen geblieben ist. Auf eigene Gefahr! |
 
 Klicken Sie anschließend einfach auf die Schaltfläche **Authentifizierung**, um die Informationen zu Ihrer Alarmanlage abzurufen. Wenn alles reibungslos verläuft, erhalten Sie eine Übersicht über alle in Ihrem Haushalt installierten Geräte (ID, Name und Typ).
 
@@ -80,7 +81,6 @@ Klicken Sie anschließend einfach auf die Schaltfläche **Authentifizierung**, u
 > **Tipp**
 >
 > Vergessen Sie nicht, Ihre Daten **zu speichern**!
->
 > Beim Speichern werden neue Befehle auf dem Gerät erstellt.
 
 ![Ausstattung](../images/Eqpt_verisure.png)
@@ -105,19 +105,12 @@ Derzeit gibt es mehrere Befehle, die im Folgenden beschrieben werden.
 
 ## Info
 
-- **Aktivierungsstatus**: Zeigt den Aktivierungsstatus des Alarms an
-  - **0**: deaktiviert
-  - **1**: Armee
-- **Alarmstatus**: Zeigt den Status des Alarms an
-  - **0**: Normalzustand
-  - **1**: Alarm ausgelöst
-- **Alarmmodus**: Zeigt an, in welchem Modus der Alarm aktiviert ist
-  - **Vollmodus**: Der Alarm ist im Vollmodus aktiviert (Alarmtyp 1, 2 und 3)
-  - **Nachtmodus**: Der Alarm ist im Nachtmodus aktiviert (Alarmtyp 1)
-  - **Tagmodus**: Die Alarmanlage ist im Tagmodus aktiviert (Alarmtyp 1)
-  - **Außenmodus**: Der Alarm ist im Außenmodus aktiviert (Alarm Typ 1)
-  - **Teilalarm**: Der Alarm ist im Teilalarmmodus aktiviert (Alarmtyp 2 und 3)
-- **Netzqualität**: Ermöglicht die Einschätzung der 3G/4G-Netzqualität für Alarme vom Typ 1 und 3 (basierend auf den Ergebnissen der letzten 25 Abfragen)
+| Befehl | Beschreibung |
+|---|---|
+| **Aktivierungsstatus** | Zeigt den Aktivierungsstatus des Alarms an<br/>**0**: deaktiviert<br/>**1**: aktiviert |
+| **Alarmstatus** | gibt Auskunft über den Alarmstatus<br/>**0**: Normalzustand<br/>**1**: Alarm ausgelöst |
+| **Alarmmodus** | gibt Auskunft über den Aktivierungsmodus des Alarms<br/>**Vollmodus**: Der Alarm ist im Vollmodus aktiviert (Alarmtyp 1, 2 und 3)<br/>**Nachtmodus**: Der Alarm ist im Nachtmodus aktiviert (Alarmtyp 1)<br/>**Tagesmodus**: Die Alarmanlage ist im Tagesmodus aktiviert (Alarmtyp 1)<br/>**Außenmodus**: Die Alarmanlage ist im Außenmodus aktiviert (Alarmtyp 1)<br/>**Teilmodus**: Die Alarmanlage ist im Teilmodus aktiviert (Alarmtyp 2 und 3) |
+| **Netzqualität** | ermöglicht eine Einschätzung der 3G/4G-Netzqualität für Alarme vom Typ 1 und 3 (basierend auf dem Ergebnis der letzten 25 Anfragen)<br/>Symbol mit 5 Balken: keine fehlerhaften Anfragen unter den letzten 25<br/>Symbol mit 4 Balken: 1 bis 2 fehlerhafte Anfragen unter den letzten 25<br/>Symbol mit 3 Balken: 3 bis 7 fehlerhafte Anfragen unter den letzten 25<br/>Symbol mit 2 Balken: 8 bis 17 fehlerhafte Anfragen unter den letzten 25<br/>Symbol mit 1 Balken: 18 bis 24 fehlerhafte Anfragen unter den letzten 25 <br/>Symbol mit 0 Balken: 25 fehlerhafte Anfragen unter den letzten 25 |
 
 > **Achtung**
 >
@@ -135,6 +128,12 @@ Derzeit gibt es mehrere Befehle, die im Folgenden beschrieben werden.
 | **Deaktivierung** | Deaktiviert den Alarm unabhängig vom Modus (Alarmtyp 1, 2 und 3) |
 | **Aktualisieren** | aktualisiert den Alarmstatus (Alarmtyp 1, 2 und 3) |
 | **Bildanforderung** | löst die Aufnahme eines Fotos durch einen kompatiblen Bewegungsmelder aus und zeigt es auf dem Bildschirm an (Alarmtyp 1, 2 und 3) |
+
+> **Achtung**
+>
+> Es kann manchmal mehrere Sekunden dauern, bis Befehle ausgeführt werden (zwischen 15 und 25 Sekunden, bei Fotoanfragen sogar mehr als eine Minute). Dies hängt von der Qualität der 3G- oder 4G-Verbindung der Basisstation Ihrer Alarmanlage ab. Haben Sie also bitte etwas Geduld!
+
+<!-- -->
 
 > **Tipp**
 >
@@ -188,33 +187,7 @@ Bei Alarmen vom Typ 3 (**und ausschließlich vom Typ 3!**) erstellt das Plugin d
 
 # Dashboard
 
-Das Plugin enthält ein Dashboard, mit dem Sie:
-
-- Alarmstatus abfragen (Alarmtyp 1, 2 und 3)
-- Alarmstatus abfragen (Alarmtyp 1, 2 und 3)
-- Den Alarmmodus kennen (Alarmtyp 1, 2 und 3)
-- Den Status des vernetzten Schlosses abfragen (Alarm Typ 3)
-- Gesamtalarmmodus aktivieren (Alarmtyp 1, 2 und 3)
-- Nachtmodus der Alarmanlage aktivieren (Alarmtyp 1)
-- Tagesmodus der Alarmanlage aktivieren (Alarmtyp 1)
-- Den Außenalarmmodus aktivieren (Alarm Typ 1)
-- Teilalarmmodus aktivieren (Alarmtyp 2 und 3)
-- Alarm deaktivieren (Alarmtyp 1, 2 und 3)
-- Alarmstatus aktualisieren (Alarmtyp 1, 2 und 3)
-- Das vernetzte Schloss öffnen/schließen (Alarm Typ 3)
-- Anforderung einer Fotoaufnahme über einen kompatiblen Bewegungsmelder (Alarmtyp 1, 2 und 3)
-- Anzeige von Informationen zu bestimmten Geräten wie Temperatur, Luftfeuchtigkeit oder Öffnungsstatus (**!!! NUR Alarmtyp 2 !!!**)
-- Anzeige der 3G/4G-Netzqualität des Alarms (Alarmtyp 1 & 3)
-  - Symbol mit 5 Balken: Keine fehlerhaften Anfragen in den letzten 25
-  - Symbol mit 4 Balken: 1 bis 2 fehlerhafte Anfragen bei den letzten 25
-  - Symbol mit 3 Balken: 3 bis 7 fehlerhafte Anfragen bei den letzten 25
-  - Symbol mit 2 Balken: 8 bis 17 fehlerhafte Anfragen bei den letzten 25
-  - Symbol mit einem Balken: 18 bis 24 fehlerhafte Anfragen bei den letzten 25
-  - Symbol „0 Balken“: 25 fehlerhafte Anfragen von den letzten 25
-
-> **Achtung**
->
-> Es kann manchmal mehrere Sekunden dauern, bis Befehle ausgeführt werden (zwischen 15 und 25 Sekunden, bei Fotoanfragen sogar mehr als eine Minute). Dies hängt von der Qualität der 3G- oder 4G-Verbindung der Basisstation Ihrer Alarmanlage ab. Haben Sie also bitte etwas Geduld!
+Das Plugin enthält für jeden Alarmtyp ein eigenes Widget.
 
 ![Dashboard Typ 1](../images/Dashboard_verisure.png)
 
@@ -243,7 +216,6 @@ Dieses Plugin wird im Laufe der Zeit entsprechend Ihren Anforderungen und den M�
 > **Tipp**
 >
 > Sie können Ihren Verbesserungsvorschlag einreichen, indem Sie auf [GitHub](https://github.com/Xav-74/verisure/issues/new) ein „Enhancement“-Issue erstellen.
->
 > Zögern Sie auch nicht, sich in der Jeedom-Community über dieses Plugin auszutauschen!
 
 Im Falle einer Störung können Sie direkt von der Startseite des Plugins aus ein Thema in der Community erstellen. Die relevanten Informationen zu Jeedom und dem Plugin werden automatisch hinzugefügt. Zögern Sie nicht, auch die Verisure-Protokolle (Debug-Modus) zu kopieren, um eine schnellere Lösung zu erreichen!

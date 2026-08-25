@@ -11,9 +11,8 @@ Mit diesem Plugin können Sie mit Ihrem **BMW**- oder **Mini**-Fahrzeug interagi
 
 > **Tipp**
 >
-> Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.2**
->
-> Das Plugin ist bereits mit der **Version 4.5** von Jeedom sowie den **Versionen Debian 11 und 12** kompatibel.
+> Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.4**
+> Das Plugin ist bereits mit der **Version 4.6** von Jeedom sowie den **Debian-12-Versionen** kompatibel.
 
 # Prinzip
 
@@ -98,7 +97,6 @@ Klicken Sie anschließend einfach auf die Schaltfläche **Authentifizierung**, u
 > **Tipp**
 >
 > Vergessen Sie nicht, Ihre Daten **zu speichern**!
->
 > Beim Speichern werden neue Befehle auf dem Gerät erstellt.
 
 ![Ausstattung](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ Derzeit gibt es mehrere Befehle, die im Folgenden beschrieben werden.
 
 | Befehl | Beschreibung |
 |---|---|
-| **Marke** | |
-| **Modell** | |
-| **Jahr** | |
+| **Marke** | die Fahrzeugmarke (BMW oder Mini) |
+| **Modell** | Fahrzeugmodell |
+| **Baujahr** | Baujahr des Fahrzeugs |
 | **Typ** | elektrisch, thermisch oder hybrid |
 | **Kilometerstand** | Gesamtkilometerstand des Fahrzeugs |
 | **Verriegelung** | Ruft den Verriegelungsstatus des Fahrzeugs ab |
-| **Status der vorderen Fahrertür** | |
-| **Status der hinteren Fahrertür** | |
-| **Status der Beifahrertür** | |
-| **Status der hinteren Beifahrertür** | |
-| **Status aller Türen** | |
-| **Status des vorderen Fahrerfensters** | |
-| **Status des hinteren Fahrerfensters** | |
-| **Status des Beifahrerfensters** | |
-| **Status des hinteren Beifahrerfensters** | |
-| **Status aller Fenster** | |
-| **Tresorstatus** | |
-| **Status Motorhaube** | |
-| **Status Schiebedach** | |
-| **Reifendruck vorne links** | |
-| **Reifendruckangabe für den linken Vorderreifen** | |
-| **Reifendruck vorne rechts** | |
-| **Reifendruckangabe für den rechten Vorderreifen** | |
-| **Reifendruck hinten links** | |
-| **Reifendruckangabe für den linken Hinterreifen** | |
-| **Reifendruck hinten rechts** | |
-| **Reifendruckangabe für den rechten Hinterreifen** | |
-| **Ladezustand** | nur bei Elektro- oder Hybridfahrzeugen |
-| **Steckdosenstatus** | nur bei Elektro- oder Hybridfahrzeugen |
-| **Ladeende** | nur bei Elektro- oder Hybridfahrzeugen |
-| **Verbleibende Ladung** | nur bei Elektro- oder Hybridfahrzeugen |
-| **Verbleibende Reichweite (elektrisch)** | Elektromotor und/oder Hybridantrieb |
-| **Verbleibender Kraftstoff** | nur bei Fahrzeugen mit Verbrennungsmotor oder Hybridantrieb |
-| **Verbleibende Reichweite (Verbrennungsmotor)** | Verbrennungsmotor |
+| **Status der vorderen Fahrertür** | der Status der vorderen Fahrertür |
+| **Status der hinteren Fahrertür** | Der Status der hinteren Fahrertür |
+| **Status der Beifahrertür** | Der Zustand der Beifahrertür |
+| **Status der hinteren Beifahrertür** | der Zustand der hinteren Beifahrertür |
+| **Status aller Türen** | Gesamtstatus der vier Türen |
+| **Status des vorderen Fahrerfensters** | Der Zustand des vorderen Fahrerfensters |
+| **Status des hinteren Fahrerfensters** | Der Status des hinteren Fahrerfensters |
+| **Status des Beifahrerfensters** | der Status des Beifahrerfensters |
+| **Status des hinteren Beifahrerfensters** | Der Status des hinteren Beifahrerfensters |
+| **Status aller Fenster** | der Gesamtstatus der vier Fenster |
+| **Treibwerksstatus** | der Zustand des Treibwerks |
+| **Status Motorhaube** | der Zustand der Motorhaube |
+| **Status des Schiebedachs** | der Zustand des Schiebedachs |
+| **Reifendruck vorne links** | der gemessene Reifendruck des linken Vorderreifens |
+| **Reifendruckangabe für den linken Vorderreifen** | der empfohlene Reifendruck für den linken Vorderreifen |
+| **Reifendruck vorne rechts** | der gemessene Reifendruck des rechten Vorderreifens |
+| **Reifendruckangabe für den rechten Vorderreifen** | Der empfohlene Reifendruck für den rechten Vorderreifen |
+| **Reifendruck hinten links** | der gemessene Reifendruck des linken Hinterreifens |
+| **Reifendruckanweisung für den linken Hinterreifen** | Der empfohlene Reifendruck für den linken Hinterreifen |
+| **Reifendruck hinten rechts** | der gemessene Reifendruck des rechten Hinterreifens |
+| **Reifendruckangabe für den rechten Hinterreifen** | Der empfohlene Reifendruck für den rechten Hinterreifen |
+| **Ladezustand** | der aktuelle Ladezustand (nur bei Elektro- oder Hybridfahrzeugen) |
+| **Steckerstatus** | Anschlussstatus des Ladekabels (nur bei Elektro- oder Hybridfahrzeugen) |
+| **Ladeende** | die voraussichtliche Ladeendzeit (nur bei Elektro- oder Hybridfahrzeugen) |
+| **Verbleibende Ladung** | der verbleibende Ladezustand der batterie (nur bei Elektro- oder Hybridfahrzeugen) |
+| **Verbleibende km (Elektroantrieb)** | verbleibende Reichweite im Elektroantrieb (Elektromotor und/oder Hybridantrieb) |
+| **Verbleibende Kraftstoffmenge** | die verbleibende Kraftstoffmenge im Tank (nur bei Fahrzeugen mit Verbrennungsmotor oder Hybridantrieb) |
+| **Verbleibende Kilometer (Verbrennungsmotor)** | verbleibende Reichweite im Verbrennungsmodus (Verbrennungsmotor) |
 | **Meldungen** | zeigt die im Fahrzeug angezeigten Meldungen an (Steuerung und Dienste) |
 | **Ladevorgänge** | zeigt die Statistiken zum Ladeverhalten der Batterien im laufenden Monat an (nur bei Elektro- oder Hybridfahrzeugen) |
 | **Gesamtstromverbrauch** | gibt den Gesamtstromverbrauch im laufenden Monat an (gilt nur für Elektro- oder Hybridfahrzeuge) |
@@ -163,15 +161,15 @@ Derzeit gibt es mehrere Befehle, die im Folgenden beschrieben werden.
 | **GPS-Koordinaten** | gibt die Position des Fahrzeugs im Format „Breitengrad, Längengrad“ an |
 | **Letzte Aktualisierung** | gibt Datum und Uhrzeit der letzten Verbindung zwischen dem Fahrzeug und den BMW-Servern an |
 | **Status „Entsperren“** | gibt den zuletzt bei einer Entsperranfrage empfangenen Status zurück. Wenn die Aktion erfolgreich ausgeführt wurde, ändert sich der Status von „PENDING“ zu „EXECUTED“. Andernfalls wird „ERROR“ zurückgegeben |
-| **Status: Sperren** | |
-| **Status: Laden** | |
-| **Status: Ladung gestoppt** | |
-| **Status aufschlüsseln** | |
-| **Status „Lüftung stoppen“** | |
-| **Status „Lichthupen“** | |
-| **Status „Hupen“** | |
-| **Status suchen** | |
-| **Status der POI-Übermittlung** | |
+| **Status „Sperren“** | der zuletzt bei einer Sperranfrage empfangene Status (gleiche Werte wie bei **Status „Entsperren“**) |
+| **Ladestatus** | der zuletzt bei einer Anfrage zum Start des Ladevorgangs empfangene Status |
+| **Status „Ladevorgang gestoppt“** | der zuletzt bei einer Anfrage zum Stoppen des Ladevorgangs empfangene Status |
+| **Lüftungsstatus** | der zuletzt bei einer Anfrage zum Start der Lüftung empfangene Status |
+| **Status „Lüftung stoppen“** | der zuletzt bei einer Anforderung zum Stoppen der Lüftung empfangene Status |
+| **Status „Lichthupen“** | der zuletzt bei einer Lichthupenanfrage empfangene Status |
+| **Hupstatus** | der zuletzt bei einer Hupanfrage empfangene Status |
+| **Status suchen** | der zuletzt bei einer Standortabfrage empfangene Status |
+| **Status der POI-Übertragung** | der zuletzt empfangene Status bei der Übertragung eines Sonderziels |
 | **Anwesenheit zu Hause** | gibt an, ob sich Ihr Fahrzeug an Ihrem Wohnort befindet (1 = vorhanden, 0 = nicht vorhanden), basierend auf der angegebenen maximalen Entfernung |
 | **Entfernung zum Wohnort** | gibt die Entfernung (in m oder km) zwischen dem Fahrzeug und Ihrem Wohnort an |
 
@@ -233,16 +231,9 @@ Sie können jederzeit den Befehl **Aktualisieren** verwenden, um den Fahrzeugsta
 
 Dieses Plugin wird im Laufe der Zeit entsprechend Ihren Anforderungen und den Möglichkeiten der BMW Connected Drive-APIs weiterentwickelt.
 
-In den nächsten Versionen werden folgende Funktionen eingeführt:
-
-- Hinzufügen neuer Funktionen entsprechend den Möglichkeiten der APIs
-- Übersetzung des Plugins ins Englische
-- ...
-
 > **Tipp**
 >
 > Sie können Ihren Verbesserungsvorschlag einreichen, indem Sie auf [GitHub](https://github.com/Xav-74/myBMW/issues/new) ein „Enhancement“-Issue erstellen.
->
 > Zögern Sie auch nicht, sich in der Jeedom-Community über dieses Plugin auszutauschen!
 
 Im Falle einer Störung können Sie direkt von der Hauptseite des Plugins aus ein Thema in der Community erstellen. Die relevanten Informationen zu Jeedom und dem Plugin werden automatisch hinzugefügt. Zögern Sie auch nicht, die Logs von myBMW, myBMW_daemon und myBMW_update (Debug-Modus) zu kopieren, um eine schnellere Lösung zu ermöglichen!

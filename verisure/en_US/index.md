@@ -22,7 +22,6 @@ It is compatible with three generations of Verisure devices.
 > **Tip**
 >
 > The **minimum version of Jeedom** required for the plugin to work properly is **version 4.4**
->
 > The plugin is already compatible with **version 4.6** of Jeedom as well as **Debian 12**
 
 # Principle
@@ -65,9 +64,11 @@ Click the Add command to create a new alarm. Once added, you'll see:
 
 **Options** (Alarm Types 1 & 3): Depending on your alarm type, you can select the following options:
 
-- **Refresh via History** (Alarm Types 1 & 3): Allows you to update alarm statuses based on the history of actions. Be sure to set up and enable the cron job in the plugin's configuration.
-- **Outdoor Alarm** (Type 3 alarm): Check this box if you have outdoor detectors and if outdoor mode is enabled on your alarm
-- **Forced Arming** (Type 3 alarm): allows you to force the alarm to activate even if a door or window has been left open. Use at your own risk!
+| Option | Description |
+|---|---|
+| **Refresh via history**<BR/>(alarm types 1 & 3) | allows you to update alarm statuses based on the history of actions. Be sure to set up and enable the cron job in the plugin's configuration |
+| **Outdoor Alarm**<BR/>(Type 3 alarm) | Check this box if you have outdoor sensors and if outdoor mode is enabled on your alarm |
+| **Forced Arming**<BR/>(Type 3 alarm) | allows you to force the alarm to activate even if a port or window has been left open. Use at your own risk! |
 
 Then simply click the **Authentication** button to retrieve your alarm system's information. If everything goes well, you'll see a table listing all the devices installed in your home (ID, name, and type).
 
@@ -80,7 +81,6 @@ Then simply click the **Authentication** button to retrieve your alarm system's 
 > **Tip**
 >
 > Don't forget to **save** your information!
->
 > When you save, new commands will be created on the device.
 
 ![Equipment](../images/Eqpt_verisure.png)
@@ -105,19 +105,12 @@ There are currently several commands, which are described below.
 
 ## Info
 
-- **Activation Status**: allows you to check the alarm's activation status
-  - **0**: disarmed
-  - **1**: armed
-- **Alarm Status**: shows the status of the alarm
-  - **0**: normal status
-  - **1**: Alarm triggered
-- **Alarm Mode**: shows how the alarm is activated
-  - **Full Mode**: The alarm is activated in full mode (alarm types 1, 2, and 3)
-  - **Night Mode**: The alarm is activated in night mode (type 1 alarm)
-  - **Day Mode**: The alarm is activated in Day Mode (type 1 alarm)
-  - **Away Mode**: The alarm is activated in Away Mode (type 1 alarm)
-  - **Partial mode**: The alarm is activated in partial mode (alarm types 2 & 3)
-- **Network Quality**: Estimates the quality of the 3G/4G network for type 1 & 3 alarms (based on the results of the last 25 requests)
+| Command | Description |
+|---|---|
+| **Activation Status** | shows the alarm's activation status<br/>**0**: disarmed<br/>**1**: armed |
+| **Alarm Status** | shows the alarm status<br/>**0**: normal status<br/>**1**: alarm triggered |
+| **Alarm Mode** | shows the alarm activation mode<BR/>**Full Mode**: the alarm is activated in full mode (alarm types 1, 2, and 3)<BR/>**Night Mode**: the alarm is activated in night mode (alarm type 1)<BR/>**Day Mode**: the alarm is activated in day mode (alarm type 1)<BR/>**Outdoor Mode**: the alarm is activated in outdoor mode (alarm type 1)<BR/>**Partial Mode**: the alarm is activated in partial mode (alarm types 2 & 3) |
+| **Network Quality** | Estimates the 3G/4G network quality for type 1 & 3 alarms (based on the results of the last 25 requests)<BR/>5-bar icon: no failed requests among the last 25<br/>4-bar icon: 1 to 2 failed requests among the last 25<br/>3-bar icon: 3 to 7 failed requests among the last 25<br/>2-bar icon: 8 to 17 failed requests among the last 25<br/>1-bar icon: 18 to 24 failed requests out of the last 25<br/>0-bar icon: 25 failed requests out of the last 25 |
 
 > **Please note**
 >
@@ -135,6 +128,12 @@ There are currently several commands, which are described below.
 | **Deactivation** | deactivates the alarm, regardless of the mode (alarm types 1, 2, and 3) |
 | **Refresh** | updates the alarm status (alarm types 1, 2, and 3) |
 | **Request Images** | triggers a photo to be taken by a compatible motion detector and displays it on the screen (alarm types 1, 2, and 3) |
+
+> **Please note**
+>
+> Commands may sometimes take several seconds to complete (between 15 and 25 seconds, or even more than a minute for photo requests). This depends on the quality of the 3G or 4G connection at your alarm base station. So please be patient!
+
+<!-- -->
 
 > **Tip**
 >
@@ -188,33 +187,7 @@ For Type 3 alarms (**and only Type 3!**), the plugin will create the commands as
 
 # Dashboard
 
-The plugin includes a dashboard that allows you to:
-
-- Check the alarm status (type 1, 2, and 3 alarms)
-- Check the alarm status (type 1, 2, and 3 alarms)
-- Check the alarm mode (type 1, 2, and 3 alarms)
-- Check the status of the connected lock (type 3 alarm)
-- Enable full alarm mode (alarm types 1, 2, and 3)
-- Enable night mode for the alarm (type 1 alarm)
-- Enable the alarm's day mode (type 1 alarm)
-- Activate the outdoor alarm mode (type 1 alarm)
-- Enable partial alarm mode (alarm types 2 & 3)
-- Disable the alarm (alarm types 1, 2, and 3)
-- Refresh the alarm status (alarm types 1, 2, and 3)
-- Open/close the smart lock (type 3 alarm)
-- Request a photo to be taken by a compatible motion sensor (Alarm Types 1, 2, & 3)
-- Display information about certain devices, such as temperature, humidity, or whether a door or window is open (**!!! ONLY type 2 alarms !!!**)
-- Display the 3G/4G network quality level for the alarm (alarm types 1 & 3)
-  - 5-bar icon: no errors in the last 25 queries
-  - 4-bar icon: 1 to 2 failed requests out of the last 25
-  - 3-bar icon: 3 to 7 failed requests out of the last 25
-  - 2-bar icon: 8 to 17 failed requests out of the last 25
-  - 1-bar icon: 18 to 24 failed requests out of the last 25
-  - 0-bar icon: 25 failed requests out of the last 25
-
-> **Please note**
->
-> Commands may sometimes take several seconds to complete (between 15 and 25 seconds, or even more than a minute for photo requests). This depends on the quality of the 3G or 4G connection at your alarm base station. So please be patient!
+The plugin includes a widget specific to each type of alarm.
 
 ![Dashboard Type 1](../images/Dashboard_verisure.png)
 
@@ -243,7 +216,6 @@ This plugin will evolve over time based on your requests and the capabilities of
 > **Tip**
 >
 > You can submit a request for an enhancement by creating an "enhancement" issue on [GitHub](https://github.com/Xav-74/verisure/issues/new).
->
 > Feel free to join the discussion about this plugin on the Jeedom Community!
 
 If a problem occurs, you can create a thread directly on the Community from the plugin’s main page. Relevant information from Jeedom and the plugin is automatically included. Feel free to copy the Verisure logs (debug mode) as well to help resolve the issue more quickly!

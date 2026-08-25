@@ -12,8 +12,7 @@ This plugin allows you to retrieve information about your InstantInk subscriptio
 > **Tip**
 >
 > The **minimum version of Jeedom** required for the plugin to work properly is **version 4.4**
->
-> The plugin is compatible with **Debian versions 11 & 12**
+> The plugin is already compatible with **version 4.6** of Jeedom as well as **Debian 12**
 
 # Installation
 
@@ -113,14 +112,9 @@ You can use the **Refresh** or **Get History** commands at any time to update th
 
 This plugin will evolve over time based on your requests and the capabilities of the instantInk APIs.
 
-The following features will be included in upcoming versions:
-
-- ...
-
 > **Tip**
 >
 > You can submit a feature request by creating an "enhancement" issue on [GitHub](https://github.com/Xav-74/instantInk/issues/new).
->
 > Feel free to join the discussion about this plugin on the Jeedom Community!
 
 If a problem occurs, you can create a thread directly in the Community from the plugin’s main page. Relevant information from Jeedom and the plugin is automatically included. Feel free to copy the instantInk logs (debug mode) as well for faster troubleshooting!

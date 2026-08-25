@@ -11,7 +11,16 @@ Mit diesem Plugin können Sie Ihre Mähroboter (Luba, Yuka) und Poolroboter (Spi
 
 Die Datenübertragung erfolgt **automatisch und in Echtzeit**: Der Plugin-Daemon hält eine permanente Verbindung zur Mammotion-Cloud (MQTT) aufrecht und übermittelt jede Statusänderung an Jeedom.
 
-> **Warnung**: Dieses Plugin basiert auf der inoffiziellen Bibliothek [PyMammotion](https://github.com/mikey0000/PyMammotion). Die Nutzungsbedingungen von Mammotion verbieten den inoffiziellen Zugriff auf deren API: Die Verwendung dieses Plugins erfolgt auf eigene Gefahr (theoretisches Risiko einer Kontosperrung).
+> **Haftungsausschluss**
+>
+>Dieses Plugin basiert auf der inoffiziellen Bibliothek [PyMammotion](https://github.com/mikey0000/PyMammotion). Die Nutzungsbedingungen von Mammotion verbieten den inoffiziellen Zugriff auf deren API: Die Verwendung dieses Plugins erfolgt auf eigene Gefahr (theoretisches Risiko einer Kontosperrung).
+
+<!-- -->
+
+> **Tipp**
+>
+> Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.4**
+> Das Plugin ist bereits mit der **Version 4.6** von Jeedom sowie den **Debian-12-Versionen** kompatibel.
 
 # Einrichtung des Plugins
 
@@ -97,3 +106,14 @@ Die Unterstützung für Schwimmbadroboter ist in Version 1 eingeschränkter: Sta
 **Der Befehl „GPS-Koordinaten“ ist leer**: Dies ist nach einem Neustart des Daemons normal. Der Roboter übermittelt seine Geolokalisierungsdaten (RTK-Basisstation oder integriertes GNSS-Fix für Vision-/LiDAR-Modelle) nur in bestimmten Berichten, in der Regel wenn er aktiv ist. Der Befehl wird bei der nächsten Aktivität des Roboters ausgefüllt. Das Plugin zieht einen leeren Wert degenerierten Koordinaten (nahe dem Punkt 0,0 auf dem Globus) vor.
 
 **Die Daten werden nicht in Echtzeit übertragen**: Der Roboter sendet nur dann Daten, wenn er aktiv ist oder sich sein Status ändert. Der Cron-Job sorgt zudem für eine regelmäßige Aktualisierung.
+
+# Roadmap & Support
+
+Dieses Plugin wird im Laufe der Zeit entsprechend Ihren Anforderungen und den Möglichkeiten der Mammotion-APIs weiterentwickelt.
+
+> **Tipp**
+>
+> Sie können Ihren Verbesserungsvorschlag einreichen, indem Sie auf [GitHub](https://github.com/Xav-74/mammotion/issues/new) ein „Enhancement“-Issue erstellen.
+> Zögern Sie auch nicht, sich in der Jeedom-Community über dieses Plugin auszutauschen!
+
+Im Falle einer Störung können Sie direkt von der Hauptseite des Plugins aus ein Thema in der Community erstellen. Die relevanten Informationen zu Jeedom und dem Plugin werden automatisch hinzugefügt. Zögern Sie auch nicht, die Mammotion-Protokolle (Debug-Modus) zu kopieren, um eine schnellere Lösung zu erreichen!

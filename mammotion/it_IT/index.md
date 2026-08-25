@@ -11,7 +11,16 @@ Questo plugin consente di controllare i vostri robot tosaerba (Luba, Yuka) e i r
 
 La trasmissione dei dati è **automatica e in tempo reale**: il daemon del plugin mantiene una connessione permanente al cloud Mammotion (MQTT) e invia ogni cambiamento di stato a Jeedom.
 
-> **Avviso**: questo plugin si basa sulla libreria non ufficiale [PyMammotion](https://github.com/mikey0000/PyMammotion). Le condizioni d'uso di Mammotion vietano l'accesso non ufficiale alla loro API: l'utilizzo di questo plugin è a proprio rischio e pericolo (rischio teorico di bannaggio dell'account).
+> **Avviso**
+>
+>Questo plugin si basa sulla libreria non ufficiale [PyMammotion](https://github.com/mikey0000/PyMammotion). Le condizioni d'uso di Mammotion vietano l'accesso non ufficiale alla loro API: l'utilizzo di questo plugin è a proprio rischio e pericolo (rischio teorico di blocco dell'account).
+
+<!-- -->
+
+> **Suggerimento**
+>
+> La **versione minima di Jeedom** necessaria per il corretto funzionamento del plugin è la **versione 4.4**
+> Il plugin è già compatibile con la **versione 4.6** di Jeedom e con le **versioni Debian 12**
 
 # Configurazione del plugin
 
@@ -97,3 +106,14 @@ Il supporto per i robot da piscina è più limitato nella versione v1: segnalazi
 **Il campo "Coordinate GPS" è vuoto**: è normale dopo il riavvio del demone. Il robot trasmette le proprie coordinate di geolocalizzazione (base RTK o GNSS integrato per i modelli con visione/LiDAR) solo in alcuni report, generalmente quando è attivo. Il campo verrà compilato alla successiva attività del robot. Il plugin preferisce un valore vuoto a coordinate degenerate (vicine al punto 0,0 del globo).
 
 **I dati non vengono aggiornati in tempo reale**: il robot pubblica solo quando è attivo o quando il suo stato cambia. Il cron, inoltre, impone un aggiornamento periodico.
+
+# Piano d'azione e assistenza
+
+Questo plugin si evolverà nel tempo in base alle vostre richieste e alle possibilità offerte dalle API di Mammotion.
+
+> **Suggerimento**
+>
+> È possibile inviare una richiesta di miglioramento creando un ticket "enhancement" su [GitHub](https://github.com/Xav-74/mammotion/issues/new).
+> Non esitate a partecipare alla discussione su questo plugin nella Community Jeedom!
+
+In caso di malfunzionamento, è possibile creare direttamente un thread nella Community dalla pagina principale del plugin. Le informazioni utili relative a Jeedom e al plugin vengono aggiunte automaticamente. Non esitate a copiare anche i log di Mammotion (modalità debug) per una risoluzione più rapida!

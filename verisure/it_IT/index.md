@@ -22,7 +22,6 @@ Questo plugin Jeedom ti permette di interagire con il tuo sistema di allarme Ver
 > **Suggerimento**
 >
 > La **versione minima di Jeedom** necessaria per il corretto funzionamento del plugin è la **versione 4.4**
->
 > Il plugin è già compatibile con la **versione 4.6** di Jeedom e con le **versioni Debian 12**
 
 # Principio
@@ -65,9 +64,11 @@ Fare clic sul comando Aggiungi per creare un nuovo allarme. Una volta aggiunto, 
 
 **Opzioni** (allarme di tipo 1 e 3): a seconda del tipo di allarme, è possibile selezionare le seguenti opzioni:
 
-- **Aggiornamento tramite cronologia** (allarmi di tipo 1 e 3): consente di aggiornare lo stato degli allarmi in base alla cronologia delle azioni. Ricordarsi di impostare e attivare il cron nella configurazione del plugin
-- **Allarme di presenza esterno** (allarme di tipo 3): da selezionare se si dispone di rilevatori esterni e se la modalità esterna è attivata sul proprio sistema di allarme
-- **Attivazione forzata** (allarme di tipo 3): consente di attivare forzatamente l'allarme anche se una porta o una finestra è rimasta aperta. A proprio rischio e pericolo!
+| Opzione | Descrizione |
+|---|---|
+| **Aggiornamento tramite cronologia**<br/>(allarmi di tipo 1 e 3) | consente di aggiornare lo stato degli allarmi in base alla cronologia delle azioni. Ricordarsi di impostare e attivare il cron nella configurazione del plugin |
+| **Allarme di presenza esterno**<br/>(allarme di tipo 3) | da spuntare se si dispone di rilevatori esterni e se la modalità esterna è attivata sul proprio allarme |
+| **Attivazione forzata**<br/>(allarme di tipo 3) | consente di forzare l'attivazione dell'allarme anche se una porta o una finestra è rimasta aperta. A proprio rischio e pericolo! |
 
 A questo punto basta cliccare sul pulsante **Autenticazione** per recuperare le informazioni relative al proprio sistema di allarme. Se tutto va a buon fine, verrà visualizzata una tabella che riporta tutti i dispositivi installati nella propria abitazione (ID, nome e tipo).
 
@@ -80,7 +81,6 @@ A questo punto basta cliccare sul pulsante **Autenticazione** per recuperare le 
 > **Suggerimento**
 >
 > Non dimenticate di **salvare** le vostre informazioni!
->
 > Durante il salvataggio, verranno creati nuovi comandi sull'apparecchio.
 
 ![Apparecchiature](../images/Eqpt_verisure.png)
@@ -105,19 +105,12 @@ Attualmente esistono diversi comandi, descritti di seguito.
 
 ## Informazioni
 
-- **Stato di attivazione**: consente di verificare lo stato di attivazione dell'allarme
-  - **0**: disattivata
-  - **1**: esercito
-- **Stato allarme**: consente di conoscere lo stato dell'allarme
-  - **0**: stato normale
-  - **1**: allarme attivato
-- **Modalità Allarme**: consente di verificare la modalità di attivazione dell'allarme
-  - **Modalità totale**: l'allarme è attivato in modalità totale (allarmi di tipo 1, 2 e 3)
-  - **Modalità notturna**: l'allarme è attivato in modalità notturna (allarme di tipo 1)
-  - **Modalità giorno**: l'allarme è attivato in modalità giorno (allarme di tipo 1)
-  - **Modalità esterno**: l'allarme è attivato in modalità esterno (allarme di tipo 1)
-  - **Modalità parziale**: l'allarme è attivato in modalità parziale (allarme di tipo 2 e 3)
-- **Qualità della rete**: consente di valutare la qualità della rete 3G/4G degli allarmi di tipo 1 e 3 (in base al risultato delle ultime 25 richieste)
+| Comando | Descrizione |
+|---|---|
+| **Stato di attivazione** | consente di conoscere lo stato di attivazione dell'allarme<br/>**0**: disattivato<br/>**1**: attivato |
+| **Stato allarme** | consente di conoscere lo stato dell'allarme<br/>**0**: stato normale<br/>**1**: allarme attivato |
+| **Modalità allarme** | consente di conoscere la modalità di attivazione dell'allarme<br/>**Modalità totale**: l'allarme è attivato in modalità totale (allarme di tipo 1, 2 e 3)<br/>**Modalità notturna**: l'allarme è attivato in modalità notturna (allarme di tipo 1)<br/>**Modalità diurna**: l'allarme è attivato in modalità giorno (allarme di tipo 1)<br/>**Modalità esterna**: l'allarme è attivato in modalità esterna (allarme di tipo 1)<br/>**Modalità parziale**: l'allarme è attivato in modalità parziale (allarme di tipo 2 e 3) |
+| **Qualità della rete** | consente di valutare la qualità della rete 3G/4G per gli allarmi di tipo 1 e 3 (in base al risultato delle ultime 25 richieste)<br/>icona a 5 barre: nessuna richiesta con errore tra le ultime 25<br/>icona a 4 barre: da 1 a 2 richieste con errore tra le ultime 25<br/>icona a 3 barre: da 3 a 7 richieste con errore tra le ultime 25<br/>icona a 2 barre: da 8 a 17 richieste con errore tra le ultime 25<br/>icona a 1 barra: da 18 a 24 richieste con errore sulle ultime 25<br/>icona 0 barre: 25 richieste con errore sulle ultime 25 |
 
 > **Attenzione**
 >
@@ -135,6 +128,12 @@ Attualmente esistono diversi comandi, descritti di seguito.
 | **Disattivazione** | disattiva l'allarme, indipendentemente dalla modalità (allarme di tipo 1, 2 e 3) |
 | **Aggiorna** | aggiorna lo stato dell'allarme (allarmi di tipo 1, 2 e 3) |
 | **Richiesta immagini** | attiva lo scatto di una foto da un rilevatore di movimento compatibile e la visualizza sullo schermo (allarmi di tipo 1, 2 e 3) |
+
+> **Attenzione**
+>
+> A volte i comandi possono richiedere diversi secondi per essere eseguiti (tra i 15 e i 25 secondi, o anche più di un minuto per le richieste di foto). Ciò dipende dalla qualità della connessione 3G o 4G della centrale del vostro allarme. Quindi abbiate pazienza!
+
+<!-- -->
 
 > **Suggerimento**
 >
@@ -188,33 +187,7 @@ Per gli allarmi di tipo 3 (**e solo di tipo 3!**), il plugin creerà i comandi a
 
 # Pannello di controllo
 
-Il plugin include una dashboard che consente di:
-
-- Verifica dello stato dell'allarme (allarmi di tipo 1, 2 e 3)
-- Verificare lo stato dell'allarme (allarme di tipo 1, 2 e 3)
-- Conoscere la modalità dell'allarme (allarme di tipo 1, 2 e 3)
-- Verifica dello stato della serratura connessa (allarme di tipo 3)
-- Attivare la modalità "totale" dell'allarme (allarmi di tipo 1, 2 e 3)
-- Attivare la modalità notturna dell'allarme (allarme di tipo 1)
-- Attivare la modalità giorno dell'allarme (allarme di tipo 1)
-- Attivare la modalità esterna dell'allarme (allarme di tipo 1)
-- Attivare la modalità parziale dell'allarme (allarme di tipo 2 e 3)
-- Disattivare l'allarme (allarmi di tipo 1, 2 e 3)
-- Aggiornamento dello stato dell'allarme (allarmi di tipo 1, 2 e 3)
-- Aprire/chiudere la serratura connessa (allarme di tipo 3)
-- Richiedere lo scatto di una foto da un sensore di movimento compatibile (allarme di tipo 1, 2 e 3)
-- Visualizzare le informazioni relative ad alcuni dispositivi, quali la temperatura, l'umidità o lo stato di apertura (**!!! SOLO allarme di tipo 2 !!!**)
-- Visualizza il livello di qualità della rete 3G/4G dell'allarme (allarmi di tipo 1 e 3)
-  - icona con 5 barre: nessuna richiesta con errore nelle ultime 25
-  - icona con 4 barre: da 1 a 2 richieste errate sulle ultime 25
-  - icona con 3 barre: da 3 a 7 richieste con errore sulle ultime 25
-  - icona con 2 barre: da 8 a 17 richieste con errore sulle ultime 25
-  - icona con 1 barra: da 18 a 24 richieste con errore sulle ultime 25
-  - icona 0 barre: 25 richieste con errore sulle ultime 25
-
-> **Attenzione**
->
-> A volte i comandi possono richiedere diversi secondi per essere eseguiti (tra i 15 e i 25 secondi, o anche più di un minuto per le richieste di foto). Ciò dipende dalla qualità della connessione 3G o 4G della centrale del vostro allarme. Quindi abbiate pazienza!
+Il plugin include un widget specifico per ogni tipo di allarme.
 
 ![Pannello di controllo tipo 1](../images/Dashboard_verisure.png)
 
@@ -243,7 +216,6 @@ Questo plugin si evolverà nel tempo in base alle vostre richieste e alle possib
 > **Suggerimento**
 >
 > È possibile inviare una richiesta di miglioramento creando un ticket "enhancement" su [GitHub](https://github.com/Xav-74/verisure/issues/new).
->
 > Non esitate a partecipare alla discussione su questo plugin nella Community Jeedom!
 
 In caso di malfunzionamento, è possibile creare direttamente un thread nella Community dalla pagina principale del plugin. Le informazioni utili relative a Jeedom e al plugin vengono aggiunte automaticamente. Non esitate a copiare anche i log di Verisure (modalità debug) per una risoluzione più rapida!

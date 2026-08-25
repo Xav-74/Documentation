@@ -11,7 +11,16 @@ Este plugin permite controlar os seus robôs cortadores de relva (Luba, Yuka) e 
 
 A transmissão de dados é **automática e em tempo real**: o daemon do plugin mantém uma ligação permanente à nuvem Mammotion (MQTT) e envia cada alteração de estado para o Jeedom.
 
-> **Aviso**: este plugin baseia-se na biblioteca não oficial [PyMammotion](https://github.com/mikey0000/PyMammotion). Os termos de utilização da Mammotion proíbem o acesso não oficial à sua API: utilize este plugin por sua conta e risco (risco teórico de bloqueio da conta).
+> **Aviso**
+>
+>Este plugin baseia-se na biblioteca não oficial [PyMammotion](https://github.com/mikey0000/PyMammotion). As condições de utilização da Mammotion proíbem o acesso não oficial à sua API: utilize este plugin por sua conta e risco (risco teórico de bloqueio da conta).
+
+<!-- -->
+
+> **Dica**
+>
+> A **versão mínima do Jeedom** necessária para o bom funcionamento do plugin é a **versão 4.4**
+> O plugin já é compatível com a **versão 4.6** do Jeedom, bem como com as **versões Debian 12**
 
 # Configuração do plugin
 
@@ -97,3 +106,14 @@ O suporte aos robôs de piscina é mais limitado na v1: informação de estado (
 **O comando «Coordenadas GPS» está vazio**: isto é normal após o reinício do daemon. O robô só transmite a sua referência de geolocalização (base RTK ou GNSS integrado para os modelos com visão/LiDAR) em determinados relatórios, geralmente quando está ativo. O comando é preenchido assim que o robô voltar a estar ativo. O plugin prefere um valor vazio a coordenadas degeneradas (próximas do ponto 0,0 do globo).
 
 **Os dados não são transmitidos em tempo real**: o robô só publica quando está ativo ou quando o seu estado muda. Além disso, o cron força uma atualização periódica.
+
+# Plano de desenvolvimento e suporte
+
+Este plugin irá evoluir ao longo do tempo, de acordo com os vossos pedidos e com as possibilidades das APIs da Mammotion.
+
+> **Dica**
+>
+> Pode enviar o seu pedido de melhoria criando um «issue» de «melhoria» no [GitHub](https://github.com/Xav-74/mammotion/issues/new).
+> Não hesite também em vir trocar ideias sobre este plugin na Comunidade Jeedom!
+
+Em caso de avaria, pode criar diretamente um tópico na Comunidade a partir da página principal do plugin. As informações úteis do Jeedom e do plugin são adicionadas automaticamente. Não hesite também em copiar os registos do Mammotion (modo de depuração) para uma resolução mais rápida!
