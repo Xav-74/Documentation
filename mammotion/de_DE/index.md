@@ -31,7 +31,9 @@ Nach dem Herunterladen des Plugins:
 - Geben Sie die **E-Mail-Adresse** und das **Passwort** Ihres Mammotion-Kontos ein
 - Starten Sie den Daemon
 
-> **Tipp**: Die Mammotion-Cloud lässt nur eine Sitzung pro Konto zu. Erstellen Sie ein **zweites Konto** speziell für Jeedom und weisen Sie diesem Ihre Roboter über die offizielle App zu, da sonst die mobile App bei jedem Start des Daemons (und umgekehrt) die Verbindung verliert.
+> **Tipp**
+>
+>Die Mammotion-Cloud lässt nur eine Sitzung pro Konto zu. Erstellen Sie ein **zweites Konto** speziell für Jeedom und weisen Sie diesem Ihre Roboter über die offizielle App zu, da sonst die mobile App bei jedem Start des Daemons (und umgekehrt) die Verbindung verliert.
 
 ## Einstellungen
 

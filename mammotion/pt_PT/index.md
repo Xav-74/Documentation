@@ -31,7 +31,9 @@ Após descarregar o plugin:
 - Introduza o **e-mail** e a **palavra-passe** da sua conta Mammotion
 - Inicie o serviço
 
-> **Dica**: a nuvem Mammotion só permite uma sessão por conta. Crie uma **conta secundária** dedicada ao Jeedom e partilhe os seus robôs com ela a partir da aplicação oficial; caso contrário, a aplicação móvel será desligada sempre que o daemon for iniciado (e vice-versa).
+> **Dica**
+>
+>A nuvem Mammotion só permite uma sessão por conta. Crie uma **conta secundária** dedicada ao Jeedom e partilhe os seus robôs com ela a partir da aplicação oficial; caso contrário, a aplicação móvel será desligada sempre que o daemon for iniciado (e vice-versa).
 
 ## Parâmetros
 

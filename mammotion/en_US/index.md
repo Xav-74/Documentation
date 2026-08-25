@@ -31,7 +31,9 @@ After downloading the plugin:
 - Enter your Mammotion account **email** and **password**
 - Start the daemon
 
-> **Tip**: The Mammotion cloud allows only one session per account. Create a **secondary account** dedicated to Jeedom and share your robots with it from the official app; otherwise, the mobile app will be disconnected every time the daemon restarts (and vice versa).
+> **Tip**
+>
+>The Mammotion cloud allows only one session per account. Create a **secondary account** dedicated to Jeedom and share your robots with it from the official app; otherwise, the mobile app will be disconnected every time the daemon restarts (and vice versa).
 
 ## Settings
 

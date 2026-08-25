@@ -31,7 +31,9 @@ Una vez descargado el complemento:
 - Introduce el **correo electrónico** y la **contraseña** de tu cuenta de Mammotion
 - Inicia el demonio
 
-> **Consejo**: la nube de Mammotion solo permite una sesión por cuenta. Crea una **cuenta secundaria** dedicada a Jeedom y compártele tus robots desde la aplicación oficial; de lo contrario, la aplicación móvil se desconectará cada vez que se inicie el demonio (y viceversa).
+> **Consejo**
+>
+>La nube de Mammotion solo permite una sesión por cuenta. Crea una **cuenta secundaria** dedicada a Jeedom y compártele tus robots desde la aplicación oficial; de lo contrario, la aplicación móvil se desconectará cada vez que se inicie el demonio (y viceversa).
 
 ## Configuración
 
