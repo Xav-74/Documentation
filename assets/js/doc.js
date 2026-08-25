@@ -80,7 +80,7 @@
       if (!first) return;
       var k = norm(first.textContent);
       if (/tip|astuce|conseil|consejo|note|info|hinweis|nota|dica|sugerencia|suggerimento/.test(k)) b.classList.add('callout-tip');
-      else if (/attention|atencion|atencao|attenzione|warning|warnung|achtung|vorsicht|avertis|avvert|advertencia|prudence|precaucion|precaucao|aviso|cuidado|caution/.test(k)) b.classList.add('callout-warn');
+      else if (/attention|atencion|atencao|attenzione|warning|disclaimer|warnung|achtung|vorsicht|Haftungsausschluss|avertis|avvert|advertencia|prudence|precaucion|precaucao|aviso|avviso|cuidado|caution/.test(k)) b.classList.add('callout-warn');
       else if (/important|danger|critique|risque|wichtig|importante|perigo|pericolo|peligro/.test(k)) b.classList.add('callout-danger');
     });
 
