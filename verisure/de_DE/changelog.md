@@ -5,7 +5,7 @@ lang: de_DE
 pluginId: verisure
 ---
 
-# Bitte unbedingt lesen!
+# Wichtig zu lesen
 
 **Nachfolgend finden Sie die Hinweise, Ergänzungen und Korrekturen zu den einzelnen Versionen des Plugins**
 

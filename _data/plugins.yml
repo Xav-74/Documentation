@@ -66,7 +66,7 @@
 
 - id: myBMW
   name: My BMW
-  tagline: Véhicule connecté
+  tagline: Objets connectés
   icon: myBMW_icon.png
   marketId: 4278
   langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
@@ -77,31 +77,31 @@
     déverrouillage à distance, ventilation, appel de phares et klaxon.
   i18n:
     en_US:
-      tagline: Connected car
+      tagline: Connected objects
       description: >-
         Control your BMW or Mini equipped with Connected Drive services just like
         the official app: vehicle details, location, remote locking and unlocking,
         climate control, light flash and horn.
     de_DE:
-      tagline: Vernetztes Fahrzeug
+      tagline: Verbundene Objekte
       description: >-
         Steuern Sie Ihren BMW oder Mini mit Connected-Drive-Diensten wie über die
         offizielle App: Fahrzeugdetails, Standort, Ver- und Entriegeln aus der Ferne,
         Belüftung, Lichthupe und Hupe.
     es_ES:
-      tagline: Vehículo conectado
+      tagline: Objetos conectados
       description: >-
         Controla tu BMW o Mini con servicios Connected Drive igual que desde la
         aplicación oficial: detalle del vehículo, localización, bloqueo y desbloqueo
         a distancia, ventilación, ráfagas de luces y claxon.
     it_IT:
-      tagline: Veicolo connesso
+      tagline: Dispositivi connessi
       description: >-
         Gestisci la tua BMW o Mini dotata dei servizi Connected Drive come dall'app
         ufficiale: dettagli del veicolo, posizione, blocco e sblocco a distanza,
         ventilazione, lampeggio fari e clacson.
     pt_PT:
-      tagline: Veículo ligado
+      tagline:  Objetos conectados
       description: >-
         Controle o seu BMW ou Mini equipado com os serviços Connected Drive tal como
         na aplicação oficial: detalhe do veículo, localização, bloqueio e desbloqueio
@@ -109,7 +109,7 @@
 
 - id: parcelTracking
   name: Suivi Colis
-  tagline: Livraisons
+  tagline: Organisation
   icon: parcelTracking_icon.png
   marketId: 4517
   langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
@@ -121,35 +121,35 @@
   i18n:
     en_US:
       name: Parcel Tracking
-      tagline: Deliveries
+      tagline: Organization
       description: >-
         Track your parcels from the main French and international carriers
         (La Poste, Mondial Relay, Relais Colis, Colis Privé, AliExpress, Shein,
         Amazon, eBay, FedEx, UPS…) through the 17Track API.
     de_DE:
       name: Paketverfolgung
-      tagline: Lieferungen
+      tagline: Organisation
       description: >-
         Verfolgen Sie Ihre Pakete der wichtigsten französischen und internationalen
         Versanddienstleister (La Poste, Mondial Relay, Relais Colis, Colis Privé,
         AliExpress, Shein, Amazon, eBay, FedEx, UPS…) über die 17Track-API.
     es_ES:
       name: Seguimiento de paquetes
-      tagline: Entregas
+      tagline: Organización
       description: >-
         Sigue tus paquetes de los principales transportistas franceses e
         internacionales (La Poste, Mondial Relay, Relais Colis, Colis Privé,
         AliExpress, Shein, Amazon, eBay, FedEx, UPS…) a través de la API de 17Track.
     it_IT:
       name: Tracciamento pacchi
-      tagline: Consegne
+      tagline: Organizzazione
       description: >-
         Segui i tuoi pacchi dei principali corrieri francesi e internazionali
         (La Poste, Mondial Relay, Relais Colis, Colis Privé, AliExpress, Shein,
         Amazon, eBay, FedEx, UPS…) tramite l'API 17Track.
     pt_PT:
       name: Seguimento de encomendas
-      tagline: Entregas
+      tagline: Organização
       description: >-
         Acompanhe as suas encomendas das principais transportadoras francesas e
         internacionais (La Poste, Mondial Relay, Relais Colis, Colis Privé,
@@ -157,7 +157,7 @@
 
 - id: instantInk
   name: HP instantInk
-  tagline: Impression
+  tagline: Objets connectés
   icon: instantInk_icon.png
   marketId: 4653
   langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
@@ -168,29 +168,29 @@
     facturation de votre forfait.
   i18n:
     en_US:
-      tagline: Printing
+      tagline: Connected objects
       description: >-
         Retrieve your HP instantInk subscription details and the status of your
         printers: ink levels, printed pages, usage tracking and plan billing.
     de_DE:
-      tagline: Druck
+      tagline: Verbundene Objekte
       description: >-
         Rufen Sie die Daten Ihres HP-instantInk-Abonnements und den Status Ihrer
         Drucker ab: Füllstände, gedruckte Seiten, Verbrauchs- und Abrechnungsverfolgung.
     es_ES:
-      tagline: Impresión
+      tagline: Objetos conectados
       description: >-
         Consulta los datos de tu suscripción HP instantInk y el estado de tus
         impresoras: niveles de tinta, páginas impresas y seguimiento del consumo
         y la facturación de tu plan.
     it_IT:
-      tagline: Stampa
+      tagline: Dispositivi connessi
       description: >-
         Recupera i dati del tuo abbonamento HP instantInk e lo stato delle tue
         stampanti: livelli d'inchiostro, pagine stampate, monitoraggio dei consumi
         e della fatturazione del piano.
     pt_PT:
-      tagline: Impressão
+      tagline: Objetos conectados
       description: >-
         Obtenha os dados da sua subscrição HP instantInk e o estado das suas
         impressoras: níveis de tinta, páginas impressas e acompanhamento do consumo
@@ -211,14 +211,14 @@
     zones de travail et des activités préprogrammées.
   i18n:
     en_US:
-      tagline: Garden
+      tagline: Connected objects
       description: >-
         Control your Mammotion robots from Jeedom just like the official app:
         Luba and Yuka mowers, Spino pool cleaners. Robot status and battery
         level, GPS position, starting and pausing a mowing or cleaning job,
         return to base, and selection of work zones and pre-programmed tasks.
     de_DE:
-      tagline: Garten
+      tagline: Verbundene Objekte
       description: >-
         Steuern Sie Ihre Mammotion-Roboter aus Jeedom heraus wie über die
         offizielle App: Mähroboter Luba und Yuka, Poolroboter Spino. Status des
@@ -226,7 +226,7 @@
         Mäh- oder Reinigungsvorgangs, Rückkehr zur Basis sowie Auswahl der
         Arbeitsbereiche und der vorprogrammierten Aufgaben.
     es_ES:
-      tagline: Jardín
+      tagline: Objetos conectados
       description: >-
         Controla tus robots Mammotion desde Jeedom igual que desde la aplicación
         oficial: cortacéspedes Luba y Yuka, robots limpiafondos Spino. Estado
@@ -234,7 +234,7 @@
         corte o una limpieza, regreso a la base y selección de las zonas de
         trabajo y de las tareas preprogramadas.
     it_IT:
-      tagline: Giardino
+      tagline: Dispositivi connessi
       description: >-
         Gestisci i tuoi robot Mammotion da Jeedom come dall'app ufficiale: robot
         tosaerba Luba e Yuka, robot per piscina Spino. Stato del robot e livello
@@ -242,7 +242,7 @@
         una pulizia, rientro alla base e scelta delle zone di lavoro e delle
         attività preimpostate.
     pt_PT:
-      tagline: Jardim
+      tagline: Objetos conectados
       description: >-
         Controle os seus robôs Mammotion a partir do Jeedom tal como na
         aplicação oficial: corta-relvas Luba e Yuka, robôs de piscina Spino.

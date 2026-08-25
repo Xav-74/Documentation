@@ -10,19 +10,25 @@ pluginId: verisure
 Ce plugin Jeedom vous permet d'interagir avec votre alarme Verisure Europe (Securitas Direct) au même titre que l'application officielle "My Verisure".
 Il est compatible avec 3 générations de matériels Verisure.
 
-**NOTE : CE PLUGIN N'EST EN AUCUN CAS ASSOCIÉ OU LIÉ AUX SOCIÉTÉS DU GROUPE SECURITAS DIRECT - VERISURE.**
+> **Important**
+>
+> **CE PLUGIN N'EST EN AUCUN CAS ASSOCIÉ OU LIÉ AUX SOCIÉTÉS DU GROUPE SECURITAS DIRECT - VERISURE.**
+>
+> L'usage de ce plugin est destiné à des fins strictement personnelles et privées.
+> Par conséquent, le développeur n'approuve ni ne tolère aucune utilisation inappropriée, et n'assume aucune responsabilité légale pour la fonctionnalité ou la sécurité de vos alarmes et appareils.
 
-L'usage de ce plugin est destiné à des fins strictement personnelles et privées.
-Par conséquent, le développeur n'approuve ni ne tolère aucune utilisation inappropriée, et n'assume aucune responsabilité légale pour la fonctionnalité ou la sécurité de vos alarmes et appareils.
+<!-- -->
 
 > **Tip**
 >
 > La **version minimale de Jeedom** nécessaire au bon fonctionnement du plugin est la **version 4.4**
-> Le plugin est d'ors et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
+>
+> Le plugin est d'ores et déjà compatible avec la **version 4.6** de Jeedom ainsi que les **versions Debian 12**
 
 # Principe
 
 Ce plugin interagit avec les API Verisure au travers du cloud, par conséquent **ce plugin nécessite une connexion Internet**.
+
 Il faut également détenir un abonnement aux services Verisure. En effet, ce plugin ne dialogue avec la base de votre alarme qu'au travers de leurs infrastructures cloud. Il n'interagit pas directement avec la base, ni avec les devices associés. Si votre abonnement a été résilié, ce plugin ne fonctionnera pas.
 
 # Configuration du plugin
@@ -43,29 +49,38 @@ La configuration des équipements Alarme est accessible à partir du menu Plugin
 
 Cliquez sur la commande Ajouter pour créer une nouvelle alarme. Une fois ajoutée vous vous retrouvez avec :
 
-- **Nom de l’équipement** : nom de votre alarme
-- **Objet parent** : indique l’objet parent auquel appartient l’équipement
-- **Catégorie** : la catégorie de l’équipement (sécurité en général pour une alarme)
-- **Activer** : permet de rendre votre équipement actif
-- **Visible** : rend votre équipement visible sur le dashboard
-- **Type d'alarme** : choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne, ...) / type 2 = Europe du Nord (Belgique, UK, ...) / type 3 = nouvelle génération (depuis 2022))
-- **Numéro d'installation** (alarme type 1 & 3) : indiquez votre numéro d'installation Verisure. **Attention ! Ce numéro doit être rigoureusement identique à celui affiché sur votre application My Verisure. Si votre numéro d'installation commence par un 0 mais que celui-ci n'est pas présent dans l'application, supprimez-le !**
-- **Identifiant** (alarme type 1 2 & 3) : indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com)
-- **Mot de passe** (alarme type 1 2 & 3) : indiquez votre mot de passe
-- **Code Alarme** (alarme type 2) : indiquez le code PIN de votre alarme (4 ou 6 digits)
-- **Pays** (alarme type 1 & 3) : choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède)
-- **Options** (alarme type 1 & 3) : en fonction du type de votre alarme, vous avez la possibilité de valider les options suivantes :
-  - **Rafraichissement via historique** (alarme type 1 & 3) : permet d'actualiser les statuts de l'alarme en fonction de l'historique des actions. Pensez à paramétrer et activer le cron dans la configuration du plugin
-    - **Présence alarme extérieure** (alarme type 3) : à cocher si vous disposez de détacteurs extérieurs et si le mode extérieur est activé sur votre alarme
-    - **Armement forcé** (alarme type 3) : permet de forcer l'activation de l'alarme même si une porte ou une fenêtre est restée ouverte. A vos risques et périls !
+| Champ | Description |
+|---|---|
+| **Nom de l’équipement** | nom de votre alarme |
+| **Objet parent** | indique l’objet parent auquel appartient l’équipement |
+| **Catégorie** | la catégorie de l’équipement (sécurité en général pour une alarme) |
+| **Activer** | permet de rendre votre équipement actif |
+| **Visible** | rend votre équipement visible sur le dashboard |
+| **Type d'alarme** | choix du type de votre alarme (type 1 = Europe du Sud (France, Espagne, ...) / type 2 = Europe du Nord (Belgique, UK, ...) / type 3 = nouvelle génération (depuis 2022)) |
+| **Numéro d'installation**<br/>(alarme type 1 & 3) | indiquez votre numéro d'installation Verisure. **Attention ! Ce numéro doit être rigoureusement identique à celui affiché sur votre application My Verisure. Si votre numéro d'installation commence par un 0 mais que celui-ci n'est pas présent dans l'application, supprimez-le !** |
+| **Identifiant**<br/>(alarme type 1 2 & 3) | indiquez votre identifiant Verisure que vous utilisez pour vous connecter sur le site [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) ou [https://mypages.verisure.com/](https://mypages.verisure.com) |
+| **Mot de passe**<br/>(alarme type 1 2 & 3) | indiquez votre mot de passe |
+| **Code Alarme**<br/>(alarme type 2) | indiquez le code PIN de votre alarme (4 ou 6 digits) |
+| **Pays**<br/>(alarme type 1 & 3) | choisissez le pays dans lequel est installée votre alarme (pays supportés à ce jour : France, Espagne, Grande Bretagne, Italie, Portugal). Pour les alarmes type 2, la sélection du pays est automatique (pays supportés à ce jour : Belgique, Pays-Bas, Allemagne, Grande Bretagne, Danemark, Finlande, Norvège, Suède) |
+
+**Options** (alarme type 1 & 3) : en fonction du type de votre alarme, vous avez la possibilité de valider les options suivantes :
+
+- **Rafraichissement via historique** (alarme type 1 & 3) : permet d'actualiser les statuts de l'alarme en fonction de l'historique des actions. Pensez à paramétrer et activer le cron dans la configuration du plugin
+- **Présence alarme extérieure** (alarme type 3) : à cocher si vous disposez de détecteurs extérieurs et si le mode extérieur est activé sur votre alarme
+- **Armement forcé** (alarme type 3) : permet de forcer l'activation de l'alarme même si une porte ou une fenêtre est restée ouverte. A vos risques et périls !
 
 Il vous suffit ensuite de cliquer sur le bouton **Authentification** pour récupérer les informations de votre alarme. Si tout se passe bien, vous obtiendrez un tableau reprenant l'ensemble des devices installés à votre domicile (ID, nom et type).
 
-**Attention** : il est fortement conseillé de créer, dans votre espace Verisure, un utilisateur dédié pour Jeedom avec les droits "administrateur". Le plugin gère l'authentiifcation multifacteur (MFA) pour les alarmes de type 1. C'est également le cas pour les alarmes de type 2 mais il est conseillé de désactiver cette option pour le moment car le refresh du token est très contraignant. En cas de problème de connexion, le boutton **Suppression Token** permet de supprimer les cookies enregistrés et de repartir sur une authentification initiale.
+> **Attention**
+>
+> Il est fortement conseillé de créer, dans votre espace Verisure, un utilisateur dédié pour Jeedom avec les droits "administrateur". Le plugin gère l'authentification multifacteur (MFA) pour les alarmes de type 1. C'est également le cas pour les alarmes de type 2 mais il est conseillé de désactiver cette option pour le moment car le refresh du token est très contraignant. En cas de problème de connexion, le bouton **Suppression Token** permet de supprimer les cookies enregistrés et de repartir sur une authentification initiale.
+
+<!-- -->
 
 > **Tip**
 >
 > N'oubliez pas de **sauvegarder** vos informations !
+>
 > Lors de la sauvegarde, de nouvelles commandes vont se créer sur l'équipement.
 
 ![Equipement](../images/Eqpt_verisure.png)
@@ -104,18 +119,22 @@ Il existe actuellement plusieurs commandes qui sont décrites ci-dessous.
   - **Mode partiel** : l'alarme est activée en mode partiel (alarme type 2 & 3)
 - **Qualité réseau** : permet d'estimer la qualité du réseau 3G/4G des alarmes type 1 & 3 (basée sur le résultat des 25 dernières requêtes)
 
-**Attention** : dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
+> **Attention**
+>
+> Dans cette version, l'évènement lié au déclenchement de l'alarme n'est pas encore pris en compte !
 
 ## Action
 
-- **Mode Total** : active l'alarme en mode total (alarme type 1 2 & 3)
-- **Mode Nuit** : active l'alarme en mode nuit (alarme type 1)
-- **Mode Jour** : active l'alarme en mode jour (alarme type 1)
-- **Mode Extérieur** : active l'alarme en mode extérieur (alarme type 1)
-- **Mode Partiel** : active l'alarme en mode partiel (alarme type 2 & 3)
-- **Désactivation** : désactive de l'alarme, quel que soit le mode (alarme type 1 2 & 3)
-- **Rafraichir** : met à jour du statut de l'Alarme (alarme type 1 2 & 3)
-- **Demande Images** : déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 2 & 3)
+| Commande | Description |
+|---|---|
+| **Mode Total** | active l'alarme en mode total (alarme type 1 2 & 3) |
+| **Mode Nuit** | active l'alarme en mode nuit (alarme type 1) |
+| **Mode Jour** | active l'alarme en mode jour (alarme type 1) |
+| **Mode Extérieur** | active l'alarme en mode extérieur (alarme type 1) |
+| **Mode Partiel** | active l'alarme en mode partiel (alarme type 2 & 3) |
+| **Désactivation** | désactive de l'alarme, quel que soit le mode (alarme type 1 2 & 3) |
+| **Rafraichir** | met à jour du statut de l'Alarme (alarme type 1 2 & 3) |
+| **Demande Images** | déclenche la prise d'une photo depuis un détecteur de mouvement compatible et l'affiche à l'écran (alarme type 1 2 & 3) |
 
 > **Tip**
 >
@@ -134,10 +153,12 @@ Dans HomeKit, la fonction alarme est gérée suivant 4 modes : “Désactivée�
 
 La correspondance des modes est la suivante :
 
-- **Domicile**  --> Mode Jour / Mode Partiel
-- **A distance** --> Mode Total
-- **Nuit**   --> Mode Nuit
-- **Désactivée** --> Désactivation
+| HomeKit | Plugin Verisure |
+|---|---|
+| **Domicile** | Mode Jour / Mode Partiel |
+| **A distance** | Mode Total |
+| **Nuit** | Mode Nuit |
+| **Désactivée** | Désactivation |
 
 Les autres modes (Extérieur,...) ne sont pas pris en compte dans HomeKit.
 
@@ -145,21 +166,25 @@ Les autres modes (Extérieur,...) ne sont pas pris en compte dans HomeKit.
 
 Pour les alarmes de type 2 (**et uniquement type 2 !**), le plugin va créer les commandes associées aux devices de l'alarme :
 
-- **Prise connectée**      --> état / on / off
-- **Capteurs compatibles** --> température / humidité
-- **Capteur d'ouverture**  --> état (ouvert / fermé)
+| Device | Commandes créées |
+|---|---|
+| **Prise connectée** | état / on / off |
+| **Capteurs compatibles** | température / humidité |
+| **Capteur d'ouverture** | état (ouvert / fermé) |
 
-Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est de créer ensuite un virtuel pour chaque capteur. Vous pourrez ainsi récupérer les informations d'ouverture / fermeture / température / humidité des différents capteurs ou encore piloter à distance les prises connectées Versiure depuis Jeedom.
+Par défaut, les commandes ne sont pas affichées sur le widget. L'objectif est de créer ensuite un virtuel pour chaque capteur. Vous pourrez ainsi récupérer les informations d'ouverture / fermeture / température / humidité des différents capteurs ou encore piloter à distance les prises connectées Verisure depuis Jeedom.
 
-> **Tip**
+> **Attention**
 >
->Attention, les états ne remontent pas en temps réel (impossible à l'heure actuel à cause de Versiure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas éxecuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.**
+> Les états ne remontent pas en temps réel (impossible à l'heure actuelle à cause de Verisure). Il vous faudra faire un refresh du statut de l'alarme via un scénario pour les actualiser ou attendre le cron30. Une personnalisation du cron (5, 10, 15, 30...) arrivera dans un second temps. **Attention toutefois à ne pas exécuter trop de requêtes vers les serveurs Verisure sous peine de blacklistage.**
 
 ## Devices alarme type 3
 
 Pour les alarmes de type 3 (**et uniquement type 3 !**), le plugin va créer les commandes associées aux devices de l'alarme :
 
-- **Serrure connectée**      --> état / ouverture / fermeture
+| Device | Commandes créées |
+|---|---|
+| **Serrure connectée** | état / ouverture / fermeture |
 
 # Dashboard
 
@@ -168,7 +193,7 @@ Le plugin inclut un dashboard qui permet de :
 - Connaitre le statut de l'alarme (alarme type 1 2 & 3)
 - Connaitre l'état de l'alarme (alarme type 1 2 & 3)
 - Connaitre le mode de l'alarme (alarme type 1 2 & 3)
-- Connaitre létat de la serrure connectée (alarme type 3)
+- Connaitre l'état de la serrure connectée (alarme type 3)
 - Activer le mode total de l'alarme (alarme type 1 2 & 3)
 - Activer le mode nuit de l'alarme (alarme type 1)
 - Activer le mode jour de l'alarme (alarme type 1)
@@ -181,16 +206,20 @@ Le plugin inclut un dashboard qui permet de :
 - Afficher les informations de certains devices comme la température, l'humidité, ou l'état d'ouverture (**!!! UNIQUEMENT alarme type 2 !!!**)
 - Afficher le niveau de la qualité du réseau 3G/4G de l'alarme (alarme type 1 & 3)
   - icone 5 barres : aucune requête en erreur sur les 25 dernières
-    - icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières
-    - icone 3 barres : de 3 à 7 requêtes en erreur sur les 25 dernières
-    - icone 2 barres : de 8 à 17 requêtes en erreur sur les 25 dernières
-    - icone 1 barre : de 18 à 24 requêtes en erreur sur les 25 dernières
-    - icone 0 barre : 25 requêtes en erreur sur les 25 dernières
+  - icone 4 barres : de 1 à 2 requêtes en erreur sur les 25 dernières
+  - icone 3 barres : de 3 à 7 requêtes en erreur sur les 25 dernières
+  - icone 2 barres : de 8 à 17 requêtes en erreur sur les 25 dernières
+  - icone 1 barre : de 18 à 24 requêtes en erreur sur les 25 dernières
+  - icone 0 barre : 25 requêtes en erreur sur les 25 dernières
 
-**Attention** : les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
+> **Attention**
+>
+> Les commandes peuvent parfois mettre plusieurs secondes à se réaliser (entre 15s et 25s, voire plus d'une minute pour les demandes de photos). Cela est lié à la qualité de connexion 3G ou 4G de la base de votre alarme. Alors soyez patient !
 
 ![Dashboard type 1](../images/Dashboard_verisure.png)
+
 ![Dashboard type 2](../images/Dashboard_verisure_2.png)
+
 ![Dashboard type 3](../images/Dashboard_verisure_3.png)
 
 # Rafraichissement
@@ -198,7 +227,10 @@ Le plugin inclut un dashboard qui permet de :
 ## Automatique
 
 Un CRON est automatiquement créé sur base de 30 min comme indiqué dans la configuration du plugin.
-**Attention** : cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par heure par Verisure sur leurs serveurs !
+
+> **Attention**
+>
+> Cette valeur de 30 min pourra être amenée à évoluer en fonction du retour et des demandes des utilisateurs ainsi que du nombre de requêtes autorisées par heure par Verisure sur leurs serveurs !
 
 ## Manuel
 
@@ -206,12 +238,13 @@ Vous pouvez à tout moment utiliser la commande **Rafraichir** afin de rafraichi
 
 # Roadmap & support
 
-Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Versiure.
+Ce plugin évoluera au fil du temps en fonction de vos demandes et des possibilités des API Verisure.
 
 > **Tip**
 >
->Vous pouvez faire votre demande par en créant une demande "enhancement" [GitHub](https://github.com/Xav-74/verisure/issues/new).
->N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
+> Vous pouvez faire votre demande d'amélioration en créant une issue "enhancement" sur [GitHub](https://github.com/Xav-74/verisure/issues/new).
+>
+> N'hésitez pas non plus à venir échanger sur ce plugin sur le Community Jeedom !
 
 En cas de dysfonctionnement, vous pouvez créer directement un sujet sur le Community depuis la page principale du plugin. Les informations utiles de Jeedom et du plugin sont automatiquement ajoutées. N'hésitez pas également à copier les logs verisure (mode debug) pour une résolution plus rapide !
 

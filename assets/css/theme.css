@@ -486,6 +486,10 @@ img { max-width: 100%; height: auto; }
   border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
+.prose thead th:first-child,
+.prose tbody td:first-child { min-width: 11rem; }
+.prose tbody td:first-child { color: var(--text); }
+
 .prose tbody td {
   padding: 11px 14px;
   border-bottom: 1px solid var(--border-soft);
