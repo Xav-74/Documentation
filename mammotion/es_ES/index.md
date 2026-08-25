@@ -11,7 +11,16 @@ Este complemento te permite controlar tus robots cortacésped (Luba, Yuka) y rob
 
 La transmisión de datos es **automática y en tiempo real**: el servicio en segundo plano del complemento mantiene una conexión permanente con la nube de Mammotion (MQTT) y envía cada cambio de estado a Jeedom.
 
-> **Advertencia**: este complemento se basa en la biblioteca no oficial [PyMammotion](https://github.com/mikey0000/PyMammotion). Las condiciones de uso de Mammotion prohíben el acceso no oficial a su API: utiliza este complemento bajo tu propia responsabilidad (existe un riesgo teórico de que se bloquee tu cuenta).
+> **Advertencia**
+>
+>Este complemento se basa en la biblioteca no oficial [PyMammotion](https://github.com/mikey0000/PyMammotion). Las condiciones de uso de Mammotion prohíben el acceso no oficial a su API: utiliza este complemento bajo tu propia responsabilidad (existe un riesgo teórico de que se bloquee tu cuenta).
+
+<!-- -->
+
+> **Consejo**
+>
+> La **versión mínima de Jeedom** necesaria para que el complemento funcione correctamente es la **versión 4.4**
+> El complemento ya es compatible con la **versión 4.6** de Jeedom, así como con las **versiones de Debian 12**
 
 # Configuración del complemento
 
@@ -97,3 +106,14 @@ La compatibilidad con los robots de piscina es más limitada en la versión 1: i
 **El campo «Coordenadas GPS» está vacío**: esto es normal tras reiniciar el demonio. El robot solo transmite su referencia de geolocalización (base RTK o fijación GNSS integrada para los modelos con visión/LiDAR) en determinados informes, normalmente cuando está activo. El campo se rellenará en cuanto el robot vuelva a estar activo. El complemento prefiere un valor vacío a unas coordenadas degeneradas (cercanas al punto 0,0 del globo terráqueo).
 
 **Los datos no se transmiten en tiempo real**: el robot solo publica cuando está activo o cuando cambia su estado. Además, el cron fuerza una actualización periódica.
+
+# Hoja de ruta y asistencia técnica
+
+Este complemento irá evolucionando con el tiempo en función de vuestras peticiones y de las posibilidades que ofrezcan las API de Mammotion.
+
+> **Consejo**
+>
+> Puedes enviar tu solicitud de mejora creando una incidencia de «mejora» en [GitHub](https://github.com/Xav-74/mammotion/issues/new).
+> ¡No dudes en venir a compartir tus opiniones sobre este complemento en la comunidad de Jeedom!
+
+En caso de fallo, puedes crear directamente un tema en la Comunidad desde la página principal del complemento. La información relevante de Jeedom y del complemento se añade automáticamente. ¡No dudes tampoco en copiar los registros de Mammotion (modo depuración) para una resolución más rápida!

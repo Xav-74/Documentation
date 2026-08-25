@@ -11,9 +11,8 @@ This plugin lets you interact with your **BMW** or **Mini** vehicle equipped wit
 
 > **Tip**
 >
-> The **minimum version of Jeedom** required for the plugin to work properly is **version 4.2**
->
-> The plugin is already compatible with **version 4.5** of Jeedom as well as **Debian versions 11 and 12**
+> The **minimum version of Jeedom** required for the plugin to work properly is **version 4.4**
+> The plugin is already compatible with **version 4.6** of Jeedom as well as **Debian 12**
 
 # Principle
 
@@ -98,7 +97,6 @@ Then simply click the **Authentication** button to retrieve your vehicle's infor
 > **Tip**
 >
 > Don't forget to **save** your information!
->
 > When you save, new commands will be created on the device.
 
 ![Equipment](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ There are currently several commands, which are described below.
 
 | Command | Description |
 |---|---|
-| **Brand** | |
-| **Model** | |
-| **Year** | |
+| **Brand** | the vehicle's brand (BMW or Mini) |
+| **Model** | vehicle model |
+| **Year** | vehicle year |
 | **Type** | electric, thermal, or hybrid |
 | **Mileage** | total vehicle mileage |
 | **Locking** | retrieves the vehicle's lock status |
-| **Front Port Status** | |
-| **Rear Port Status** | |
-| **Front Port Status** | |
-| **Rear Port Status** | |
-| **Status of all doors** | |
-| **Front Driver's Window Status** | |
-| **Rear Driver's Window Status** | |
-| **Front Passenger Window Status** | |
-| **Rear Passenger Window Status** | |
-| **Status of all windows** | |
-| **Safe status** | |
-| **Engine hood status** | |
-| **Sunroof status** | |
-| **Left front tire pressure** | |
-| **Recommended tire pressure for the left front tire** | |
-| **Front right tire pressure** | |
-| **Front Right Tire Inflation Guidelines** | |
-| **Left rear tire pressure** | |
-| **Left Rear Tire Inflation Guidelines** | |
-| **Right rear tire pressure** | |
-| **Recommended tire pressure for the right rear tire** | |
-| **Charge status** | only on electric or hybrid vehicles |
-| **Socket status** | only on electric or hybrid vehicles |
-| **Charge End Time** | only for electric or hybrid vehicles |
-| **Remaining charge** | only on electric or hybrid vehicles |
-| **Remaining range (electric)** | electric and/or hybrid engine |
-| **Remaining fuel** | only on gasoline or hybrid vehicles |
-| **Remaining range (internal combustion)** | internal combustion engine |
+| **Front Driver's Door Status** | the status of the front driver's door |
+| **Rear Driver's Port Status** | the status of the rear driver's port |
+| **Front Passenger Port Status** | the status of the front passenger port |
+| **Rear Passenger Port Status** | the status of the rear passenger port |
+| **Status of all doors** | the overall status of the four doors |
+| **Front Driver's Window Status** | the status of the front driver's window |
+| **Rear Driver's Window Status** | the status of the rear driver's window |
+| **Front Passenger Window Status** | the status of the front passenger window |
+| **Rear Passenger Window Status** | the status of the rear passenger window |
+| **Status of all windows** | the overall status of the four windows |
+| **Trunk Status** | the condition of the trunk |
+| **Engine Hood Status** | the status of the engine hood |
+| **Sunroof Status** | the status of the sunroof |
+| **Front left tire pressure** | the measured pressure of the front left tire |
+| **Front Left Tire Inflation Guidelines** | the recommended inflation pressure for the front left tire |
+| **Front Right Tire Pressure** | the measured pressure of the front right tire |
+| **Front Right Tire Inflation Guidelines** | the recommended inflation pressure for the front right tire |
+| **Left rear tire pressure** | the measured pressure of the left rear tire |
+| **Left Rear Tire Inflation Guidelines** | the recommended inflation pressure for the left rear tire |
+| **Right Rear Tire Pressure** | the measured pressure of the right rear tire |
+| **Right Rear Tire Inflation Guidelines** | Recommended inflation pressure for the right rear tire |
+| **Charging Status** | the current charging status (only for electric or hybrid vehicles) |
+| **Socket Status** | the connection status of the charging cable (only on electric or hybrid vehicles) |
+| **Charge completion time** | the estimated charge completion time (for electric or hybrid vehicles only) |
+| **Remaining Charge** | the remaining battery charge level (only on electric or hybrid vehicles) |
+| **Remaining km (electric)** | remaining electric range (electric and/or hybrid motor) |
+| **Remaining Fuel** | the amount of fuel remaining in the tank (only on gasoline or hybrid vehicles) |
+| **Remaining km (internal combustion)** | remaining range on internal combustion power (internal combustion engine) |
 | **Messages** | displays the messages shown in the vehicle (controls and services) |
 | **Charging Sessions** | displays statistics on battery charging for the current month (for electric or hybrid vehicles only) |
 | **Total electrical charge** | shows the total electrical charge used during the current month (for electric or hybrid vehicles only) |
@@ -163,15 +161,15 @@ There are currently several commands, which are described below.
 | **GPS coordinates** | returns the vehicle's location in the format "latitude,longitude" |
 | **Last Update** | shows the date and time of the last connection between the car and the BMW servers |
 | **Unlock Status** | returns the last status received during an unlock request. If the action was successfully completed, the status changes from "PENDING" to "EXECUTED." Otherwise, it returns "ERROR" |
-| **Lock Status** | |
-| **Loading Status** | |
-| **Stop Charging Status** | |
-| **Ventilation Status** | |
-| **Ventilation Stop Status** | |
-| **Headlight Flashing Status** | |
-| **Klaxonner Status** | |
-| **Search Status** | |
-| **POI Shipping Status** | |
+| **Lock Status** | the last status received during a lock request (same values as **Unlock Status**) |
+| **Charging Status** | the last status received when a charge start request was made |
+| **Stop Charging Status** | the last status received when a request to stop charging was made |
+| **Ventilation Status** | the last status received when a request to start ventilation was made |
+| **Ventilation Stop Status** | the last status received when a request to stop ventilation was made |
+| **Headlight Flash Status** | the last status received during a headlight flash request |
+| **Horn Status** | the last status received during a horn request |
+| **Status Search** | the last status received during a location request |
+| **POI Send Status** | the last status received when sending a point of interest |
 | **At Home** | indicates whether your vehicle is at your home (1 = present, 0 = absent) based on the maximum distance specified |
 | **Distance from home** | indicates the distance (in meters or kilometers) between the vehicle and your home |
 
@@ -233,16 +231,9 @@ You can use the **Refresh** command at any time to retrieve vehicle statuses.
 
 This plugin will evolve over time based on your requests and the capabilities of the BMW Connected Drive APIs.
 
-The following features will be included in upcoming versions:
-
-- Adding new features based on the capabilities offered by the APIs
-- English translation of the plugin
-- ...
-
 > **Tip**
 >
 > You can submit a request for an enhancement by creating an "enhancement" issue on [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 > Feel free to join the discussion about this plugin on the Jeedom Community!
 
 If a problem occurs, you can create a thread directly on the Community from the plugin's main page. Relevant information from Jeedom and the plugin is automatically included. Feel free to copy the myBMW, myBMW_daemon, and myBMW_update (debug mode) logs to help resolve the issue more quickly!

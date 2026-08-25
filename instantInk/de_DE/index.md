@@ -12,8 +12,7 @@ Mit diesem Plugin können Sie die Informationen zu Ihrem InstantInk-Abonnement u
 > **Tipp**
 >
 > Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.4**
->
-> Das Plugin ist kompatibel mit den **Debian-Versionen 11 und 12**
+> Das Plugin ist bereits mit der **Version 4.6** von Jeedom sowie den **Debian-12-Versionen** kompatibel.
 
 # Installation
 
@@ -113,14 +112,9 @@ Sie können jederzeit den Befehl **Aktualisieren** oder den Befehl **Verlauf abr
 
 Dieses Plugin wird im Laufe der Zeit entsprechend Ihren Anforderungen und den Möglichkeiten der instantInk-APIs weiterentwickelt.
 
-In den nächsten Versionen werden folgende Funktionen eingeführt:
-
-- ...
-
 > **Tipp**
 >
 > Sie können Ihren Verbesserungsvorschlag einreichen, indem Sie auf [GitHub](https://github.com/Xav-74/instantInk/issues/new) ein „Enhancement“-Issue erstellen.
->
 > Zögern Sie auch nicht, sich in der Jeedom-Community über dieses Plugin auszutauschen!
 
 Im Falle einer Fehlfunktion können Sie direkt von der Hauptseite des Plugins aus ein Thema in der Community erstellen. Die relevanten Informationen zu Jeedom und dem Plugin werden automatisch hinzugefügt. Zögern Sie nicht, auch die InstantInk-Protokolle (Debug-Modus) zu kopieren, um eine schnellere Lösung zu ermöglichen!

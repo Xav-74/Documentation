@@ -12,8 +12,7 @@ Questo plugin ti permette di recuperare le informazioni relative al tuo abboname
 > **Suggerimento**
 >
 > La **versione minima di Jeedom** necessaria per il corretto funzionamento del plugin è la **versione 4.4**
->
-> Il plugin è compatibile con le **versioni Debian 11 e 12**
+> Il plugin è già compatibile con la **versione 4.6** di Jeedom e con le **versioni Debian 12**
 
 # Installazione
 
@@ -113,14 +112,9 @@ Come indicato nella pagina di configurazione del plugin:
 
 Questo plugin si evolverà nel tempo in base alle vostre richieste e alle possibilità offerte dalle API di InstantInk.
 
-Le prossime versioni introdurranno le seguenti funzionalità:
-
-- ...
-
 > **Suggerimento**
 >
 > È possibile inviare una richiesta di miglioramento creando un ticket "enhancement" su [GitHub](https://github.com/Xav-74/instantInk/issues/new).
->
 > Non esitate a partecipare alla discussione su questo plugin nella Community Jeedom!
 
 In caso di malfunzionamento, è possibile creare direttamente un thread sulla Community dalla pagina principale del plugin. Le informazioni utili relative a Jeedom e al plugin vengono aggiunte automaticamente. Non esitate inoltre a copiare i log di instantInk (modalità debug) per una risoluzione più rapida!

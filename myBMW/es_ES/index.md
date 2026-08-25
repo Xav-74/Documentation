@@ -11,9 +11,8 @@ Este complemento te permite interactuar con tu vehículo **BMW** o **Mini** equi
 
 > **Consejo**
 >
-> La **versión mínima de Jeedom** necesaria para que el complemento funcione correctamente es la **versión 4.2**
->
-> El complemento ya es compatible con la **versión 4.5** de Jeedom, así como con las **versiones Debian 11 y 12**.
+> La **versión mínima de Jeedom** necesaria para que el complemento funcione correctamente es la **versión 4.4**
+> El complemento ya es compatible con la **versión 4.6** de Jeedom, así como con las **versiones de Debian 12**
 
 # Principio
 
@@ -98,7 +97,6 @@ A continuación, solo tienes que hacer clic en el botón **Autenticación** para
 > **Consejo**
 >
 > ¡No te olvides de **guardar** tus datos!
->
 > Al guardar, se crearán nuevos comandos en el equipo.
 
 ![Equipamiento](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ Actualmente existen varios comandos que se describen a continuación.
 
 | Control | Descripción |
 |---|---|
-| **Marca** | |
-| **Modelo** | |
-| **Año** | |
+| **Marca** | la marca del vehículo (BMW o Mini) |
+| **Modelo** | el modelo del vehículo |
+| **Año** | año del vehículo |
 | **Tipo** | eléctrico, térmico o híbrido |
 | **Kilometraje** | kilometraje total del vehículo |
 | **Bloqueo** | muestra el estado de bloqueo del vehículo |
-| **Estado de la puerta del conductor delantero** | |
-| **Estado de la puerta del conductor trasero** | |
-| **Estado de la puerta del acompañante** | |
-| **Estado de la puerta del acompañante trasero** | |
-| **Estado de todas las puertas** | |
-| **Estado de la ventanilla del conductor delantero** | |
-| **Estado de la ventanilla del conductor trasero** | |
-| **Estado de la ventanilla del acompañante** | |
-| **Estado de la ventanilla del acompañante** | |
-| **Estado de todas las ventanas** | |
-| **Estado de la caja fuerte** | |
-| **Estado de la cubierta del motor** | |
-| **Estado del techo corredizo** | |
-| **Presión del neumático delantero izquierdo** | |
-| **Instrucciones para el inflado del neumático delantero izquierdo** | |
-| **Presión del neumático delantero derecho** | |
-| **Instrucciones para el inflado del neumático delantero derecho** | |
-| **Presión del neumático trasero izquierdo** | |
-| **Instrucciones para inflar el neumático trasero izquierdo** | |
-| **Presión del neumático trasero derecho** | |
-| **Instrucciones para inflar el neumático trasero derecho** | |
-| **Estado de la carga** | solo en vehículos eléctricos o híbridos |
-| **Estado de la toma** | solo en vehículos eléctricos o híbridos |
-| **Hora de finalización de la recarga** | solo en vehículos eléctricos o híbridos |
-| **Carga restante** | solo en vehículos eléctricos o híbridos |
-| **Km restantes (eléctricos)** | motor eléctrico y/o híbrido |
-| **Combustible restante** | solo en vehículos de combustión o híbridos |
-| **Km restantes (motor térmico)** | motor térmico |
+| **Estado de la puerta del conductor delantera** | el estado de la puerta del conductor delantera |
+| **Estado de la puerta trasera del conductor** | el estado de la puerta trasera del conductor |
+| **Estado de la puerta del acompañante** | el estado de la puerta del acompañante |
+| **Estado de la puerta del acompañante trasero** | el estado de la puerta del acompañante trasero |
+| **Estado de todas las puertas** | el estado general de las cuatro puertas |
+| **Estado de la ventanilla del conductor delantero** | el estado de la ventanilla del conductor delantero |
+| **Estado de la ventanilla del conductor trasero** | el estado de la ventanilla del conductor trasero |
+| **Estado de la ventanilla del acompañante** | el estado de la ventanilla del acompañante |
+| **Estado de la ventanilla del acompañante trasero** | el estado de la ventanilla del acompañante trasero |
+| **Estado de todas las ventanas** | el estado general de las cuatro ventanas |
+| **Estado de la caja fuerte** | el estado de la caja fuerte |
+| **Estado del capó del motor** | el estado del capó del motor |
+| **Estado del techo elevable** | el estado del techo elevable |
+| **Presión del neumático delantero izquierdo** | la presión medida del neumático delantero izquierdo |
+| **Instrucciones de inflado del neumático delantero izquierdo** | la presión de inflado recomendada para el neumático delantero izquierdo |
+| **Presión del neumático delantero derecho** | la presión medida del neumático delantero derecho |
+| **Instrucciones de inflado del neumático delantero derecho** | la presión de inflado recomendada para el neumático delantero derecho |
+| **Presión del neumático trasero izquierdo** | la presión medida del neumático trasero izquierdo |
+| **Instrucciones de inflado del neumático trasero izquierdo** | la presión de inflado recomendada para el neumático trasero izquierdo |
+| **Presión del neumático trasero derecho** | presión medida del neumático trasero derecho |
+| **Instrucciones de inflado del neumático trasero derecho** | la presión de inflado recomendada para el neumático trasero derecho |
+| **Estado de la carga** | el estado actual de la carga (solo en vehículos eléctricos o híbridos) |
+| **Estado del enchufe** | el estado de conexión del cable de carga (solo en vehículos eléctricos o híbridos) |
+| **Hora de finalización de la recarga** | la hora estimada de finalización de la recarga (solo en vehículos eléctricos o híbridos) |
+| **Carga restante** | el nivel de carga restante de la batería (solo en vehículos eléctricos o híbridos) |
+| **Km restantes (eléctricos)** | autonomía restante en modo eléctrico (motor eléctrico y/o híbrido) |
+| **Combustible restante** | el nivel de combustible que queda en el depósito (solo en vehículos de combustión o híbridos) |
+| **Km restantes (motor térmico)** | autonomía restante en modo térmico (motor térmico) |
 | **Mensajes** | muestra los mensajes que aparecen en el vehículo (control y servicios) |
 | **Sesiones de carga** | muestra las estadísticas de carga eléctrica de las baterías durante el mes en curso (solo en vehículos eléctricos o híbridos) |
 | **Carga eléctrica total** | indica la carga eléctrica total consumida durante el mes en curso (solo en vehículos eléctricos o híbridos) |
@@ -163,15 +161,15 @@ Actualmente existen varios comandos que se describen a continuación.
 | **Coordenadas GPS** | indica la posición del vehículo en formato «latitud, longitud» |
 | **Última actualización** | indica la fecha y la hora de la última conexión entre el coche y los servidores de BMW |
 | **Estado de desbloqueo** | devuelve el último estado recibido tras una solicitud de desbloqueo. Si la acción se ha realizado correctamente, el estado pasa de «PENDING» a «EXECUTED». De lo contrario, devuelve «ERROR» |
-| **Estado: Bloqueado** | |
-| **Estado: Cargando** | |
-| **Estado: Carga detenida** | |
-| **Estado Ventilar** | |
-| **Estado «Detener ventilación»** | |
-| **Estado: Luz de cruce** | |
-| **Estado de la sirena** | |
-| **Estado Buscar** | |
-| **Estado del envío del POI** | |
+| **Estado de bloqueo** | el último estado recibido tras una solicitud de bloqueo (los mismos valores que **Estado de desbloqueo**) |
+| **Estado de carga** | el último estado recibido al solicitar el inicio de la carga |
+| **Estado «Detener carga»** | el último estado recibido tras una solicitud de detención de la carga |
+| **Estado de la ventilación** | el último estado recibido al solicitar el inicio de la ventilación |
+| **Estado «Detener ventilación»** | el último estado recibido tras una solicitud de parada de la ventilación |
+| **Estado de la señal de luces largas** | el último estado recibido tras una solicitud de señal de luces largas |
+| **Estado de la bocina** | el último estado recibido al solicitar el sonido de la bocina |
+| **Estado de búsqueda** | el último estado recibido tras una solicitud de localización |
+| **Estado del envío de puntos de interés** | el último estado recibido al enviar un punto de interés |
 | **Presencia en el domicilio** | indica si tu vehículo se encuentra en tu domicilio (1 = presente, 0 = ausente) en función de la distancia máxima indicada |
 | **Distancia a casa** | indica la distancia (en metros o kilómetros) entre el vehículo y tu domicilio |
 
@@ -233,16 +231,9 @@ Puede utilizar en cualquier momento el comando **Actualizar** para obtener el es
 
 Este complemento irá evolucionando con el tiempo en función de vuestras peticiones y de las posibilidades que ofrezcan las API de BMW Connected Drive.
 
-Las próximas versiones incluirán las siguientes funciones:
-
-- Incorporación de nuevas funcionalidades en función de las posibilidades que ofrecen las API
-- Traducción del complemento al inglés
-- ...
-
 > **Consejo**
 >
 > Puedes enviar tu solicitud de mejora creando una incidencia de «mejora» en [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 > ¡No dudes en venir a compartir tus opiniones sobre este complemento en la comunidad de Jeedom!
 
 En caso de fallo, puedes crear directamente un tema en la Comunidad desde la página principal del complemento. La información útil de Jeedom y del complemento se añade automáticamente. ¡No dudes tampoco en copiar los registros de myBMW, myBMW_daemon y myBMW_update (modo de depuración) para una resolución más rápida!

@@ -14,8 +14,7 @@ Der kostenlose Tarif von 17Track umfasst die Sendungsverfolgung von 100 Paketen 
 > **Tipp**
 >
 > Die **Mindestversion von Jeedom**, die für den ordnungsgemäßen Betrieb des Plugins erforderlich ist, ist **Version 4.4**
->
-> Das Plugin ist bereits mit den **Versionen Debian 11 und 12** kompatibel.
+> Das Plugin ist bereits mit der **Version 4.6** von Jeedom sowie den **Debian-12-Versionen** kompatibel.
 
 # Installation
 
@@ -142,15 +141,9 @@ Sie können jederzeit den Befehl **Aktualisieren** verwenden, um die Paketinform
 
 Dieses Plugin wird im Laufe der Zeit entsprechend Ihren Anforderungen und den Möglichkeiten der 17Track-APIs weiterentwickelt.
 
-In den nächsten Versionen werden folgende Funktionen eingeführt:
-
-- Einrichtung eines Webhooks für den Empfang von Daten in Echtzeit
-- ...
-
 > **Tipp**
 >
 > Sie können Ihren Verbesserungsvorschlag einreichen, indem Sie auf [GitHub](https://github.com/Xav-74/parcelTracking/issues/new) ein „Enhancement“-Issue erstellen.
->
 > Zögern Sie auch nicht, sich in der Jeedom-Community über dieses Plugin auszutauschen!
 
 Im Falle einer Störung können Sie direkt von der Hauptseite des Plugins aus ein Thema in der Community erstellen. Die relevanten Informationen zu Jeedom und dem Plugin werden automatisch hinzugefügt. Zögern Sie auch nicht, die parcelTracking-Protokolle (Debug-Modus) zu kopieren, um eine schnellere Lösung zu ermöglichen!

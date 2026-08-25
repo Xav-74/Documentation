@@ -11,9 +11,8 @@ Este plugin permite-lhe interagir com o seu veículo **BMW** ou **Mini** equipad
 
 > **Dica**
 >
-> A **versão mínima do Jeedom** necessária para o bom funcionamento do plugin é a **versão 4.2**
->
-> O plugin já é compatível com a **versão 4.5** do Jeedom, bem como com as **versões Debian 11 e 12**
+> A **versão mínima do Jeedom** necessária para o bom funcionamento do plugin é a **versão 4.4**
+> O plugin já é compatível com a **versão 4.6** do Jeedom, bem como com as **versões Debian 12**
 
 # Princípio
 
@@ -98,7 +97,6 @@ Em seguida, basta clicar no botão **Autenticação** para obter as informaçõe
 > **Dica**
 >
 > Não se esqueça de **guardar** as suas informações!
->
 > Ao guardar, serão criados novos comandos no equipamento.
 
 ![Equipamento](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ Existem atualmente vários comandos, que são descritos abaixo.
 
 | Comando | Descrição |
 |---|---|
-| **Marca** | |
-| **Modelo** | |
-| **Ano** | |
+| **Marca** | a marca do veículo (BMW ou Mini) |
+| **Modelo** | o modelo do veículo |
+| **Ano** | ano do veículo |
 | **Tipo** | elétrico, térmico ou híbrido |
 | **Quilometragem** | quilometragem total do veículo |
 | **Bloqueio** | apresenta o estado de bloqueio do veículo |
-| **Estado da porta do condutor dianteira** | |
-| **Estado da porta do condutor traseira** | |
-| **Estado da porta do passageiro da frente** | |
-| **Estado da porta do passageiro traseiro** | |
-| **Estado de todas as portas** | |
-| **Estado da janela do condutor da frente** | |
-| **Estado da janela do condutor traseiro** | |
-| **Estado da janela do passageiro da frente** | |
-| **Estado da janela do passageiro traseiro** | |
-| **Estado de todas as janelas** | |
-| **Estado do cofre** | |
-| **Estado da tampa do motor** | |
-| **Estado do teto de abrir** | |
-| **Pressão do pneu dianteiro esquerdo** | |
-| **Instruções para o enchimento do pneu dianteiro esquerdo** | |
-| **Pressão do pneu dianteiro direito** | |
-| **Instruções para o enchimento do pneu dianteiro direito** | |
-| **Pressão do pneu traseiro esquerdo** | |
-| **Instruções para o enchimento do pneu traseiro esquerdo** | |
-| **Pressão do pneu traseiro direito** | |
-| **Instruções para o enchimento do pneu traseiro direito** | |
-| **Estado da carga** | apenas em veículos elétricos ou híbridos |
-| **Estado da tomada** | apenas em veículos elétricos ou híbridos |
-| **Hora de fim do carregamento** | apenas em veículos elétricos ou híbridos |
-| **Carga restante** | apenas em veículos elétricos ou híbridos |
-| **Quilómetros restantes (em modo elétrico)** | motor elétrico e/ou híbrido |
-| **Combustível restante** | apenas em veículos a combustão ou híbridos |
-| **Quilómetros restantes (motor térmico)** | motor térmico |
+| **Estado da porta do condutor à frente** | o estado da porta do condutor à frente |
+| **Estado da porta do condutor traseira** | o estado da porta do condutor traseira |
+| **Estado da porta do passageiro da frente** | o estado da porta do passageiro da frente |
+| **Estado da porta do passageiro traseiro** | o estado da porta do passageiro traseiro |
+| **Estado de todas as portas** | o estado geral das quatro portas |
+| **Estado da janela do condutor à frente** | o estado da janela do condutor à frente |
+| **Estado da janela do condutor traseiro** | o estado da janela do condutor traseiro |
+| **Estado da janela do passageiro da frente** | o estado da janela do passageiro da frente |
+| **Estado da janela do passageiro traseiro** | o estado da janela do passageiro traseiro |
+| **Estado de todas as janelas** | o estado global das quatro janelas |
+| **Estado do cofre** | o estado do cofre |
+| **Estado do capô do motor** | o estado do capô do motor |
+| **Estado do teto de abrir** | o estado do teto de abrir |
+| **Pressão do pneu dianteiro esquerdo** | a pressão medida no pneu dianteiro esquerdo |
+| **Instruções de enchimento do pneu dianteiro esquerdo** | a pressão de enchimento recomendada para o pneu dianteiro esquerdo |
+| **Pressão do pneu dianteiro direito** | a pressão medida no pneu dianteiro direito |
+| **Instruções de enchimento do pneu dianteiro direito** | a pressão de enchimento recomendada para o pneu dianteiro direito |
+| **Pressão do pneu traseiro esquerdo** | a pressão medida no pneu traseiro esquerdo |
+| **Instruções para o enchimento do pneu traseiro esquerdo** | a pressão de enchimento recomendada para o pneu traseiro esquerdo |
+| **Pressão do pneu traseiro direito** | a pressão medida no pneu traseiro direito |
+| **Instruções de enchimento do pneu traseiro direito** | a pressão de enchimento recomendada para o pneu traseiro direito |
+| **Estado da carga** | o estado da carga em curso (apenas em veículos elétricos ou híbridos) |
+| **Estado da tomada** | o estado de ligação do cabo de carregamento (apenas em veículos elétricos ou híbridos) |
+| **Hora de fim do carregamento** | a hora estimada para o fim do carregamento (apenas em veículos elétricos ou híbridos) |
+| **Carga restante** | o nível de carga restante da bateria (apenas em veículos elétricos ou híbridos) |
+| **Quilómetros restantes (em modo elétrico)** | autonomia restante em modo elétrico (motor elétrico e/ou híbrido) |
+| **Combustível restante** | o nível de combustível restante no depósito (apenas em veículos a combustão ou híbridos) |
+| **Quilómetros restantes (motor térmico)** | autonomia restante do motor térmico |
 | **Mensagens** | apresenta as mensagens exibidas no veículo (controlo e serviços) |
 | **Sessões de carregamento** | apresenta as estatísticas de carregamento das baterias no mês em curso (apenas em veículos elétricos ou híbridos) |
 | **Carga elétrica total** | indica a carga elétrica total utilizada no mês em curso (apenas em veículos elétricos ou híbridos) |
@@ -163,15 +161,15 @@ Existem atualmente vários comandos, que são descritos abaixo.
 | **Coordenadas GPS** | indica a posição do veículo no formato «latitude,longitude» |
 | **Última atualização** | indica a data e a hora da última ligação entre o automóvel e os servidores da BMW |
 | **Estado de desbloqueio** | devolve o último estado recebido durante um pedido de desbloqueio. Se a ação tiver sido realizada com sucesso, o estado passa de «PENDING» para «EXECUTED». Caso contrário, devolve «ERROR» |
-| **Estado: Bloquear** | |
-| **Estado: A carregar** | |
-| **Estado: Parar carregamento** | |
-| **Estado: Ventilar** | |
-| **Estado «Parar ventilação»** | |
-| **Estado: Pisca-pisca** | |
-| **Estado do Klaxonner** | |
-| **Pesquisar estado** | |
-| **Estado do envio do POI** | |
+| **Estado de bloqueio** | o último estado recebido durante um pedido de bloqueio (os mesmos valores que **Estado de desbloqueio**) |
+| **Estado de carregamento** | o último estado recebido durante um pedido de início do carregamento |
+| **Estado «Parar carregamento»** | o último estado recebido aquando de um pedido para interromper o carregamento |
+| **Estado da ventilação** | o último estado recebido aquando de um pedido de arranque da ventilação |
+| **Estado «Parar Ventilação»** | o último estado recebido aquando de um pedido de paragem da ventilação |
+| **Estado do sinal de faróis** | o último estado recebido durante um pedido de sinal de faróis |
+| **Estado da buzina** | o último estado recebido durante um pedido de buzina |
+| **Estado da pesquisa** | o último estado recebido durante um pedido de localização |
+| **Estado do envio de POI** | o último estado recebido durante o envio de um ponto de interesse |
 | **Presença em casa** | indica se o seu veículo se encontra na sua residência (1 = presente, 0 = ausente) com base na distância máxima indicada |
 | **Distância até casa** | indica a distância (em m ou km) entre o veículo e a sua casa |
 
@@ -233,16 +231,9 @@ Pode utilizar a qualquer momento o comando **Atualizar** para obter o estado dos
 
 Este plugin irá evoluir ao longo do tempo, de acordo com os vossos pedidos e com as possibilidades das APIs do BMW Connected Drive.
 
-As próximas versões incluirão as seguintes funcionalidades:
-
-- Adição de novas funcionalidades com base nas possibilidades oferecidas pelas API
-- Tradução do plugin para inglês
-- ...
-
 > **Dica**
 >
 > Pode enviar o seu pedido de melhoria criando um «issue» de «melhoria» no [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 > Não hesite também em vir trocar ideias sobre este plugin na Comunidade Jeedom!
 
 Em caso de avaria, pode criar diretamente um tópico na Comunidade a partir da página principal do plugin. As informações úteis do Jeedom e do plugin são adicionadas automaticamente. Não hesite também em copiar os registos myBMW, myBMW_daemon e myBMW_update (modo de depuração) para uma resolução mais rápida!

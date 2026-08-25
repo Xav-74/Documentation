@@ -11,7 +11,16 @@ This plugin lets you control your **Mammotion** brand robotic lawn mowers (Luba,
 
 Data is transmitted **automatically and in real time**: the plugin’s daemon maintains a constant connection to the Mammotion cloud (MQTT) and pushes every status change to Jeedom.
 
-> **Warning**: This plugin relies on the unofficial [PyMammotion](https://github.com/mikey0000/PyMammotion) library. Mammotion's terms of use prohibit unofficial access to their API: use this plugin at your own risk (theoretical risk of account suspension).
+> **Disclaimer**
+>
+>This plugin relies on the unofficial [PyMammotion](https://github.com/mikey0000/PyMammotion) library. Mammotion’s terms of use prohibit unofficial access to their API: use this plugin at your own risk (theoretical risk of account suspension).
+
+<!-- -->
+
+> **Tip**
+>
+> The **minimum version of Jeedom** required for the plugin to work properly is **version 4.4**
+> The plugin is already compatible with **version 4.6** of Jeedom as well as **Debian 12**
 
 # Plugin Configuration
 
@@ -97,3 +106,14 @@ Support for pool robots is more limited in v1: status updates (online, battery, 
 **The GPS Coordinates command is empty**: this is normal after restarting the daemon. The robot only transmits its geolocation reference (RTK base station or onboard GNSS fix for vision/LiDAR models) in certain reports, typically when it is active. The command will be populated the next time the robot is active. The plugin prefers an empty value to degenerate coordinates (close to the 0,0 point on the globe).
 
 **Data is not updated in real time**: the bot only posts when it is active or when its status changes. The cron job also forces periodic refreshes.
+
+# Roadmap & Support
+
+This plugin will evolve over time based on your requests and the capabilities of the Mammotion APIs.
+
+> **Tip**
+>
+> You can submit a feature request by creating an "enhancement" issue on [GitHub](https://github.com/Xav-74/mammotion/issues/new).
+> Feel free to join the discussion about this plugin on the Jeedom Community!
+
+If a problem occurs, you can create a thread directly on the Community from the plugin’s main page. Relevant information from Jeedom and the plugin is automatically included. Feel free to copy the mammotion logs (debug mode) as well to help resolve the issue more quickly!

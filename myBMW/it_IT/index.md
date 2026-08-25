@@ -11,9 +11,8 @@ Questo plugin ti permette di interagire con la tua **BMW** o **Mini** dotata dei
 
 > **Suggerimento**
 >
-> La **versione minima di Jeedom** necessaria per il corretto funzionamento del plugin è la **versione 4.2**
->
-> Il plugin è già compatibile con la **versione 4.5** di Jeedom e con le **versioni Debian 11 e 12**
+> La **versione minima di Jeedom** necessaria per il corretto funzionamento del plugin è la **versione 4.4**
+> Il plugin è già compatibile con la **versione 4.6** di Jeedom e con le **versioni Debian 12**
 
 # Principio
 
@@ -98,7 +97,6 @@ A questo punto è sufficiente cliccare sul pulsante **Autenticazione** per recup
 > **Suggerimento**
 >
 > Non dimenticate di **salvare** le vostre informazioni!
->
 > Durante il salvataggio, verranno creati nuovi comandi sull'apparecchio.
 
 ![Apparecchiature](../images/Eqpt_myBMW.png)
@@ -119,40 +117,40 @@ Attualmente esistono diversi comandi, descritti di seguito.
 
 | Comando | Descrizione |
 |---|---|
-| **Marca** | |
-| **Modello** | |
-| **Anno** | |
+| **Marca** | la marca del veicolo (BMW o Mini) |
+| **Modello** | il modello del veicolo |
+| **Anno** | anno di immatricolazione del veicolo |
 | **Tipo** | elettrico, termico o ibrido |
 | **Chilometraggio** | chilometraggio totale del veicolo |
 | **Blocco** | riporta lo stato di blocco del veicolo |
-| **Stato della porta del conducente anteriore** | |
-| **Stato della portiera del conducente posteriore** | |
-| **Stato della portiera del passeggero anteriore** | |
-| **Stato della portiera del passeggero posteriore** | |
-| **Stato di tutte le porte** | |
-| **Stato finestrino lato guidatore** | |
-| **Stato finestrino lato passeggero posteriore** | |
-| **Stato finestrino passeggero anteriore** | |
-| **Stato finestrino passeggero posteriore** | |
-| **Stato di tutte le finestre** | |
-| **Stato del caveau** | |
-| **Stato del cofano motore** | |
-| **Stato tetto apribile** | |
-| **Pressione pneumatico anteriore sinistro** | |
-| **Istruzioni per il gonfiaggio dello pneumatico anteriore sinistro** | |
-| **Pressione dello pneumatico anteriore destro** | |
-| **Istruzioni per il gonfiaggio dello pneumatico anteriore destro** | |
-| **Pressione dello pneumatico posteriore sinistro** | |
-| **Istruzioni per il gonfiaggio dello pneumatico posteriore sinistro** | |
-| **Pressione dello pneumatico posteriore destro** | |
-| **Istruzioni per il gonfiaggio dello pneumatico posteriore destro** | |
-| **Stato di carica** | solo su veicoli elettrici o ibridi |
-| **Stato della presa** | solo su veicoli elettrici o ibridi |
-| **Ora di fine ricarica** | solo su veicoli elettrici o ibridi |
-| **Carica residua** | solo su veicoli elettrici o ibridi |
-| **Chilometri rimanenti (in modalità elettrica)** | motore elettrico e/o ibrido |
-| **Carburante residuo** | solo su veicoli termici o ibridi |
-| **Chilometri rimanenti (motore termico)** | motore termico |
+| **Stato della portiera anteriore del conducente** | lo stato della portiera anteriore del conducente |
+| **Stato della portiera posteriore del conducente** | lo stato della portiera posteriore del conducente |
+| **Stato della portiera del passeggero anteriore** | lo stato della portiera del passeggero anteriore |
+| **Stato della portiera posteriore lato passeggero** | lo stato della portiera posteriore lato passeggero |
+| **Stato di tutte le porte** | lo stato complessivo delle quattro porte |
+| **Stato finestrino anteriore lato guidatore** | lo stato del finestrino anteriore lato guidatore |
+| **Stato del finestrino posteriore lato guidatore** | lo stato del finestrino posteriore lato guidatore |
+| **Stato finestrino passeggero anteriore** | lo stato del finestrino passeggero anteriore |
+| **Stato finestrino passeggero posteriore** | lo stato del finestrino passeggero posteriore |
+| **Stato di tutte le finestre** | lo stato complessivo delle quattro finestre |
+| **Stato della cassaforte** | lo stato della cassaforte |
+| **Stato del cofano motore** | lo stato del cofano motore |
+| **Stato del tetto apribile** | lo stato del tetto apribile |
+| **Pressione dello pneumatico anteriore sinistro** | pressione misurata dello pneumatico anteriore sinistro |
+| **Istruzioni per il gonfiaggio dello pneumatico anteriore sinistro** | la pressione di gonfiaggio consigliata per lo pneumatico anteriore sinistro |
+| **Pressione dello pneumatico anteriore destro** | la pressione misurata dello pneumatico anteriore destro |
+| **Istruzioni per il gonfiaggio dello pneumatico anteriore destro** | la pressione di gonfiaggio consigliata per lo pneumatico anteriore destro |
+| **Pressione dello pneumatico posteriore sinistro** | pressione misurata dello pneumatico posteriore sinistro |
+| **Istruzioni per il gonfiaggio dello pneumatico posteriore sinistro** | la pressione di gonfiaggio consigliata per lo pneumatico posteriore sinistro |
+| **Pressione dello pneumatico posteriore destro** | pressione misurata dello pneumatico posteriore destro |
+| **Istruzioni per il gonfiaggio dello pneumatico posteriore destro** | la pressione di gonfiaggio consigliata per lo pneumatico posteriore destro |
+| **Stato di ricarica** | lo stato della ricarica in corso (solo su veicoli elettrici o ibridi) |
+| **Stato della presa** | lo stato di collegamento del cavo di ricarica (solo su veicoli elettrici o ibridi) |
+| **Ora di fine ricarica** | l'ora stimata di fine ricarica (solo per veicoli elettrici o ibridi) |
+| **Carica residua** | il livello di carica residua della batteria (solo su veicoli elettrici o ibridi) |
+| **Chilometri rimanenti (in modalità elettrica)** | autonomia residua in modalità elettrica (motore elettrico e/o ibrido) |
+| **Carburante residuo** | il livello di carburante residuo nel serbatoio (solo su veicoli termici o ibridi) |
+| **Chilometri rimanenti (motore termico)** | autonomia residua in modalità termica (motore termico) |
 | **Messaggi** | visualizza i messaggi visualizzati a bordo del veicolo (controllo e servizi) |
 | **Cicli di ricarica** | riporta le statistiche relative alla ricarica delle batterie nel mese in corso (solo per veicoli elettrici o ibridi) |
 | **Carica elettrica totale** | indica la carica elettrica totale utilizzata nel mese in corso (solo per veicoli elettrici o ibridi) |
@@ -163,15 +161,15 @@ Attualmente esistono diversi comandi, descritti di seguito.
 | **Coordinate GPS** | riporta la posizione del veicolo nel formato "latitudine, longitudine" |
 | **Ultimo aggiornamento** | indica la data e l'ora dell'ultima connessione tra l'auto e i server BMW |
 | **Stato sblocco** | restituisce l'ultimo stato ricevuto in seguito a una richiesta di sblocco. Se l'azione è stata eseguita correttamente, lo stato passa da "PENDING" a "EXECUTED". In caso contrario, restituisce "ERROR" |
-| **Stato: Bloccato** | |
-| **Stato Caricamento** | |
-| **Stato "Stop charger"** | |
-| **Stato Ventilazione** | |
-| **Stato "Stop Ventilazione"** | |
-| **Stato "Luci abbaglianti"** | |
-| **Stato Klaxonner** | |
-| **Stato Ricerca** | |
-| **Stato invio POI** | |
+| **Stato Blocco** | l'ultimo stato ricevuto in seguito a una richiesta di blocco (stessi valori di **Stato Sblocco**) |
+| **Stato ricarica** | l'ultimo stato ricevuto in seguito a una richiesta di avvio della ricarica |
+| **Stato "Stop charger"** | l'ultimo stato ricevuto in seguito a una richiesta di interruzione della ricarica |
+| **Stato ventilazione** | l'ultimo stato ricevuto in seguito a una richiesta di avvio della ventilazione |
+| **Stato "Stop Ventilazione"** | l'ultimo stato ricevuto in seguito a una richiesta di arresto della ventilazione |
+| **Stato "Lampeggio dei fari"** | l'ultimo stato ricevuto in seguito a una richiesta di lampeggio dei fari |
+| **Stato del clacson** | l'ultimo stato ricevuto in seguito a una richiesta di clacson |
+| **Stato Ricerca** | l'ultimo stato ricevuto in seguito a una richiesta di localizzazione |
+| **Stato invio POI** | l'ultimo stato ricevuto durante l'invio di un punto di interesse |
 | **Presenza a domicilio** | indica se il veicolo si trova a domicilio (1 = presente, 0 = assente) in base alla distanza massima specificata |
 | **Distanza da casa** | indica la distanza (in m o km) tra il veicolo e la propria abitazione |
 
@@ -233,16 +231,9 @@ Viene inoltre creato un CRON personalizzabile (con cadenza ogni 2 ore, 5 minuti 
 
 Questo plugin si evolverà nel tempo in base alle vostre richieste e alle possibilità offerte dalle API di BMW Connected Drive.
 
-Le prossime versioni introdurranno le seguenti funzionalità:
-
-- Aggiunta di nuove funzionalità in base alle possibilità offerte dalle API
-- Traduzione del plugin in inglese
-- ...
-
 > **Suggerimento**
 >
 > È possibile inviare una richiesta di miglioramento creando un ticket "enhancement" su [GitHub](https://github.com/Xav-74/myBMW/issues/new).
->
 > Non esitate a partecipare alla discussione su questo plugin nella Community Jeedom!
 
 In caso di malfunzionamento, è possibile creare direttamente un thread nella Community dalla pagina principale del plugin. Le informazioni utili relative a Jeedom e al plugin vengono aggiunte automaticamente. Non esitate a copiare anche i log myBMW, myBMW_daemon, myBMW_update (modalità debug) per una risoluzione più rapida!
