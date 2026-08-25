@@ -12,18 +12,18 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2026-05-31
+# 2026-05-31 [s]
 
 Mise à jour de l'icone dans le cadre d'une harmonisation de tous mes plugins
 
 
-# 2026-02-15
+# 2026-02-15 [s]
 
 Ajout des fonctions suivantes :
  - Mise à jour de la liste des transporteurs et des paramètres additionnels automatique (via bouton ou via cron journalier)
  
 
-# 2025-11-10
+# 2025-11-10 [s]
 
 Ajout des fonctions suivantes :
  - Mise à jour de la liste des transporteurs et des paramètres additionnels
@@ -33,20 +33,20 @@ Corrections suivantes :
  - Correction de PHP warning lors de l'affichage du widget global dans certains cas ("states" vide par ex.)
 
 
-# 2025-05-20
+# 2025-05-20 [s]
 
 Ajout des fonctions suivantes :
  - Possibilité d'afficher simultanément les widgets uniques et le widget global
  - Ajout du nom du colis dans le titre des notifications
 
 
-# 2024-12-31
+# 2024-12-31 [s]
 
 Ajout des fonctions suivantes :
  - Ajout des tags #url# et #location# pour les notifications et les scénarios
 
 
-# 2024-10-17
+# 2024-10-17 [s]
 
 Ajout des fonctions suivantes :
  - Ajout des champs "transporteur" et "paramètre additionnel" dans la modale permettant d'ajouter un colis depuis le widget / dashboard
@@ -56,7 +56,7 @@ Corrections suivantes :
  - Prise en compte des descriptions traduites par 17Track lorsque vous avez paramétré une langue spécifique
  
 
-# 2024-09-28
+# 2024-09-28 [s]
 
 Ajout des fonctions suivantes :
  - Implémentation d'un webhook récupèrant en temps réel les informations transmises par 17Track. Le cron Hourly est par conséquence désactivé
@@ -66,7 +66,7 @@ Ajout des fonctions suivantes :
 > Il est impératif d'aller configurer les paramètres du webhook sur votre dashboard 17Track sans quoi vous ne recevrez plus aucune information sur vos colis !
 
 
-# 2024-09-07
+# 2024-09-07 [s]
 
 Ajout des fonctions suivantes :
  - Passage des API parcelsapp à 17Track
@@ -75,7 +75,7 @@ Ajout des fonctions suivantes :
 > Il s'agit d'une modification majeure du plugin. Vous devez donc configurer de nouveau celui-ci (notamment intégrer une clé API 17Track) puis recréer l'ensemble de vos colis. Toute la procédure est détaillée dans la documentation. Le gros avantage de cette nouvelle version est que le nombre de suivi passe à 100 colis par mois (la remise à jour du quota a lieu chaque 1er du mois) !
 
 
-# 2024-08-22
+# 2024-08-22 [s]
 
 Ajout des fonctions suivantes :
  - Traduction du plugin (anglais, allemand, espagnol, italien, portugais)
@@ -87,7 +87,7 @@ Corrections suivantes :
 > Vous devez donc modifier le format de vos messages (notifications) et/ou de vos scénarios !
 
 
-# 2024-08-01
+# 2024-08-01 [s]
 
 Ajout des fonctions suivantes :
  - Suppression automatique des espaces si présents avant et/ou après le trackingID
@@ -96,7 +96,7 @@ Corrections suivantes :
  - Récupération des informations transporteur, origine et destination (différentes clés dans le json suivants les transporteurs)
 
 
-# 2024-07-27
+# 2024-07-27 [s]
 
 Ajout des fonctions suivantes :
  - Possibilité d'ajouter ou de supprimer des colis directement depuis les widgets (individuel ou global)
@@ -108,7 +108,7 @@ Corrections suivantes :
  - Mise à jour des commandes des équipements lorsque le json "Shipments" est vide
 
 
-# 2024-07-16
+# 2024-07-16 [s]
 
 Première version du plugin Suivi Colis (parcelTracking)
  - Connexion au cloud Parcelsapp via API

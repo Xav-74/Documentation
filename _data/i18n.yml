@@ -43,6 +43,8 @@ fr_FR:
   only_french: Documentation disponible en français uniquement
   copy: Copier
   copied: Copié !
+  stable: Stable
+  beta: Beta
   latest: dernière version
   error_title: Page introuvable
   error_text: Cette page n'existe pas ou a été déplacée.
@@ -88,6 +90,8 @@ en_US:
   only_french: Documentation available in French only
   copy: Copy
   copied: Copied!
+  stable: Stable
+  beta: Beta
   latest: latest release
   error_title: Page not found
   error_text: This page does not exist or has been moved.
@@ -133,6 +137,8 @@ de_DE:
   only_french: Dokumentation nur auf Französisch verfügbar
   copy: Kopieren
   copied: Kopiert!
+  stable: Stabil
+  beta: Beta
   latest: neueste Version
   error_title: Seite nicht gefunden
   error_text: Diese Seite existiert nicht oder wurde verschoben.
@@ -178,6 +184,8 @@ es_ES:
   only_french: Documentación disponible solo en francés
   copy: Copiar
   copied: ¡Copiado!
+  stable: Estable
+  beta: Beta
   latest: última versión
   error_title: Página no encontrada
   error_text: Esta página no existe o se ha movido.
@@ -223,6 +231,8 @@ it_IT:
   only_french: Documentazione disponibile solo in francese
   copy: Copia
   copied: Copiato!
+  stable: Stabile
+  beta: Beta
   latest: ultima versione
   error_title: Pagina non trovata
   error_text: Questa pagina non esiste o è stata spostata.
@@ -268,6 +278,8 @@ pt_PT:
   only_french: Documentação disponível apenas em francês
   copy: Copiar
   copied: Copiado!
+  stable: Estável
+  beta: Beta
   latest: última versão
   error_title: Página não encontrada
   error_text: Esta página não existe ou foi movida.

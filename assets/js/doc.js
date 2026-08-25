@@ -51,17 +51,65 @@
       h.insertBefore(a, h.firstChild);
     });
 
-    /* Changelog : marquer la version la plus récente */
+    /* Changelog : badges de version */
     if (d.body.classList.contains('is-changelog')) {
-      var dated = $$('h1', prose).filter(function (h) {
+      var MARQUEUR = /\s*[\[(]\s*([^\])]{1,24}?)\s*[\])]\s*$/;
+
+      var famille = function (mot) {
+        var m = norm(mot);
+        if (m === 's' || /stab|estav/.test(m)) return 'stable';
+        if (m === 'b' || /beta|test|preview/.test(m) || m === 'rc') return 'beta';
+        return 'autre';
+      };
+
+      var poser = function (h, texte, classe) {
+        var tag = d.createElement('span');
+        tag.className = 'ver-tag ver-tag--' + classe;
+        tag.textContent = texte;
+        var apres = h.nextElementSibling;
+        if (apres && apres.classList && apres.classList.contains('ver-tag')) {
+          apres.insertAdjacentElement('afterend', tag);   // second badge à la suite
+        } else {
+          h.insertAdjacentElement('afterend', tag);
+        }
+      };
+
+      var datees = $$('h1', prose).filter(function (h) {
         return /^\s*\d{4}[-/.]\d{2}/.test(h.dataset.title || '');
       });
-      if (dated.length) {
-        dated[0].classList.add('is-latest');
-        var tag = d.createElement('span');
-        tag.className = 'latest-tag';
-        tag.textContent = tr('latest', 'dernière version');
-        dated[0].insertAdjacentElement('afterend', tag);
+
+      var marquee = false;
+      datees.forEach(function (h, rang) {
+        var m = (h.dataset.title || '').match(MARQUEUR);
+        if (!m) return;
+        marquee = true;
+        var mot = m[1].trim();
+        var fam = famille(mot);
+
+        // le marqueur disparaît du titre affiché et du sommaire
+        h.dataset.title = h.dataset.title.replace(MARQUEUR, '').trim();
+        var textes = Array.prototype.filter.call(h.childNodes, function (n) { return n.nodeType === 3; });
+        var dernier = textes[textes.length - 1];
+        if (dernier) dernier.nodeValue = dernier.nodeValue.replace(MARQUEUR, '');
+
+        // libellé : traduit pour [s] et [b], littéral sinon
+        var libelle = fam === 'stable' ? tr('stable', 'stable')
+                    : fam === 'beta'   ? tr('beta', 'beta')
+                    : mot;
+
+        // la stable est aussi la version la plus récente : tout passe au vert
+        var aJour = (fam === 'stable' && rang === 0);
+        var classe = aJour ? 'ajour' : fam;
+
+        h.classList.add('is-' + classe);
+        poser(h, libelle, classe);
+        if (aJour) poser(h, tr('latest', 'dernière version'), 'ajour');
+      });
+
+      // aucun marqueur dans le fichier : ancien comportement
+      if (!marquee && datees.length) {
+        datees[0].classList.add('is-latest');
+        poser(datees[0], tr('latest', 'dernière version'), 'latest');
       }
     }
 
@@ -80,7 +128,7 @@
       if (!first) return;
       var k = norm(first.textContent);
       if (/tip|astuce|conseil|consejo|note|info|hinweis|nota|dica|sugerencia|suggerimento/.test(k)) b.classList.add('callout-tip');
-      else if (/attention|atencion|atencao|attenzione|warning|disclaimer|warnung|achtung|vorsicht|haftungsausschluss|avertis|avvert|advertencia|prudence|precaucion|precaucao|aviso|avviso|cuidado|caution/.test(k)) b.classList.add('callout-warn');
+      else if (/attention|atencion|atencao|attenzione|warning|warnung|achtung|vorsicht|avertis|avvert|advertencia|prudence|precaucion|precaucao|aviso|cuidado|caution|disclaimer|haftungsausschluss|avviso|descargo|isencao/.test(k)) b.classList.add('callout-warn');
       else if (/important|danger|critique|risque|wichtig|importante|perigo|pericolo|peligro/.test(k)) b.classList.add('callout-danger');
     });
 

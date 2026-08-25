@@ -12,26 +12,26 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2026-07-31
+# 2026-07-31 [s]
 
 Corrections suivantes :
  - Bugfix affichage % de la batterie - Prise en charge du nouveau paramètre "vehicle.drivetrain.batteryManagement.header"
  - Mise à jour du catalogue Telematics avec l'ajout du champ "Condition Based Service" (246 à date)
 
 
-# 2026-07-25
+# 2026-07-25 [s]
 
 Corrections suivantes :
  - Mise à jour du catalogue Telematics avec les champs streamables uniquement (245 à date)
 
 
-# 2026-07-04
+# 2026-07-04 [s]
 
 Ajout des fonctions suivantes :
  - Mise en place d'un cron personnalisable pour éviter les erreurs "500" des serveurs BMW si interrogation à heure fixe (xx:00). Par défaut ce cron est fixé toutes les 2 heures, 5 minutes après l'heure (xx:05) mais vous pouvez changer la minute précise en modifiant la première valeur du cron (5 */2 * * *)
 
 
-# 2026-06-19
+# 2026-06-19 [s]
 
 Ajout des fonctions suivantes :
  - Ajout d'un paramètre "Prix moyen du kWh" pour calculer le coût d'une recharge électrique, visible sur le graphique de l'historique de charge (Panel)
@@ -40,12 +40,12 @@ Corrections suivantes :
  - Panel : bugfix erreur javascript "Unexpected end of JSON input" lors de l'affichage de l'historique des charges électriques
 
 
-# 2026-05-31
+# 2026-05-31 [s]
 
 Mise à jour de l'icone dans le cadre d'une harmonisation de tous mes plugins
 
 
-# 2025-11-09
+# 2025-11-09 [s]
 
 Ajout des fonctions suivantes :
  - Bascule sur les **API officielles BMW**
@@ -54,7 +54,7 @@ Ajout des fonctions suivantes :
  **ATTENTION** Il s'agit d'une mise à jour majeure du plugin qui nécessite une reconfiguration complète de celui-ci. Merci de bien lire la documentation et suivre toutes les étapes décrites une à une (notamment les actions à réaliser sur votre compte utilisateur BMW ou Mini)
 
 
-# 2025-09-12
+# 2025-09-12 [s]
 
 Ajout des fonctions suivantes :
  - Possibilité de configurer l'objectif de recharge et la limite de courant de charge pour les véhicules électriques et hybrides rechargeables compatibles
@@ -70,13 +70,13 @@ Corrections suivantes :
  - Page de configuration : bugfix de la suppression automatique du captcha après une synchronisation
 
 
-# 2025-05-20
+# 2025-05-20 [s]
 
 Ajout des fonctions suivantes :
  - Suppression du cron30 et ajout d'un cron personnalisable depuis la page de configuration du plugin 
 
 
-# 2025-03-09
+# 2025-03-09 [s]
 
 Ajout des fonctions suivantes :
  - Ajout de la commande info chargingTarget (objectif de recharge électrique en %) 
@@ -85,7 +85,7 @@ Corrections suivantes :
  - Panel : bugfix affichage état ouverture / fermeture capot
 
 
-# 2025-01-31
+# 2025-01-31 [s]
 
 Ajout des fonctions suivantes :
  - Ajout de la commande totalEnergyCost (coût total de charge électrique mensuel) 
@@ -97,13 +97,13 @@ Corrections suivantes :
  - Panel : bugfix premier affichage avec icônes portes & fenêtres
 
 
-# 2024-12-18
+# 2024-12-18 [s]
 
 Corrections suivantes :
  - Bugfix écrasement de l'historique des trajets si la requête retourne "TripHistoryNotActive" par erreur 
 
 
-# 2024-12-08
+# 2024-12-08 [s]
 
 Ajout des fonctions suivantes :
  - Prise en compte du captcha imposé par BMW lors de la première connexion (voir doc !!)
@@ -113,13 +113,13 @@ Corrections suivantes :
  - Affichage de l'heure en complément de la date sur les graphiques
 
 
-# 2024-10-22
+# 2024-10-22 [s]
 
 Corrections suivantes :
  - Bugfix commandes du panel (sendPOI & vehicleFinder)
 
 
-# 2024-09-06
+# 2024-09-06 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini (App mobile v4.7.2)
@@ -130,7 +130,7 @@ Corrections suivantes :
  - Bugfix requête lastTrip (prise en compte de l'info "NoTripsYet")
 
 
-# 2024-07-07
+# 2024-07-07 [s]
 
 Ajout des fonctions suivantes :
  - Ajout des sessions de charge pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
@@ -142,7 +142,7 @@ Corrections suivantes :
  - Bugfix affichage panel et dashboard pour les véhicules de type "mild_hybrid" (API v2) ou "hybrid" (API v1)
 
 
-# 2024-04-17
+# 2024-04-17 [s]
 
 Ajout des fonctions suivantes :
  - Ajout d'un boutton permettant la suppression manuelle du token de l'équipement
@@ -154,7 +154,7 @@ Corrections suivantes :
  - Bugfix affichage des tuiles pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
 
 
-# 2024-04-16
+# 2024-04-16 [s]
 
 Ajout des fonctions suivantes :
  - Légère modification du design du widget et du panel
@@ -168,7 +168,7 @@ Corrections suivantes :
 - Correction de l'URL des sessions de charge suite à la modification des API
 
 
-# 2024-03-14
+# 2024-03-14 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini v3.11.0
@@ -180,7 +180,7 @@ Corrections suivantes :
  - Suppression de la requête "chargingStatistics" qui ne fonctionne plus à date
 
 
-# 2024-02-09
+# 2024-02-09 [s]
 
 Ajout des fonctions suivantes :
  - Ajout de l'image du véhicule dans les vignettes de la page du plugin
@@ -190,20 +190,20 @@ Corrections suivantes :
  - Update des screenshots du plugin
  
 
-# 2024-01-31
+# 2024-01-31 [s]
 
 Corrections suivantes :
  - Correction des km restants pour les voitures électriques avec extender (type ELECTRIC_WITH_RANGE_EXTENDER)
  
 
-# 2023-11-30
+# 2023-11-30 [s]
 
 Corrections suivantes :
  - Gestion de l'erreur "429 - Rate limit is exceeded"
  - Affichage du panel même si l'équipement n'est pas visible 
 
 
-# 2023-11-19
+# 2023-11-19 [s]
 
 Ajout des fonctions suivantes :
  - Compatibilité Jeedom v4.4 Debian 12 et PHP 8.x
@@ -211,7 +211,7 @@ Ajout des fonctions suivantes :
  - Ajout d'un bouton pour la création automatique d'un post sur le Community Jeedom (vCore Jeedom 4.4 mini)
 
 
-# 2023-10-10
+# 2023-10-10 [s]
 
 Ajout des fonctions suivantes :
  - Prise en compte du thème Legacy pour l'affichage du widget et du panel (vCore Jeedom < 4.4)
@@ -221,7 +221,7 @@ Corrections suivantes :
  - Correction de la commande « sessions de charge » qui renvoyait un json invalide si le véhicule n’était pas de type électrique ou hybride
 
 
-# 2023-10-04
+# 2023-10-04 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini v3.3.1
@@ -241,7 +241,7 @@ Corrections suivantes :
  - Correction de la fonction "VehicleFinder" suite à la modification des API. Utilisation de la dernière position connue du véhicule car il est désormais nécessaire d'envoyer les coordonnées GPS du demandeur de la localisation du véhicule. La position n'est renvoyée qui si le véhicule se situe dans un rayon inférieur à 1.5km
 
 
-# 2023-01-15
+# 2023-01-15 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini v2.12
@@ -254,7 +254,7 @@ Corrections suivantes :
  - Mise à jour de la documentation
 
 
-# 2022-09-25
+# 2022-09-25 [s]
 
 Ajout des fonctions suivantes :
  - Ajout de la présence du véhicule au domicile
@@ -271,7 +271,7 @@ Corrections suivantes :
  - Mise à jour de la documentation
  
 
-# 2022-09-02
+# 2022-09-02 [s]
 
 Ajout des fonctions suivantes :
  - Ajout des nouvelles commandes infos « Toutes les portes » et « Toutes les fenêtres »
@@ -281,7 +281,7 @@ Corrections suivantes :
  - Modification du timeout sur le refresh du token pour éviter les erreurs de connexion
 
 
-# 2022-08-01
+# 2022-08-01 [s]
 
 Ajout des fonctions suivantes :
  - Ajout d'icônes pour la gestion des messages de contrôle du véhicule (huile, freins, pression des pneus, contrôle général du véhicule)
@@ -290,7 +290,7 @@ Corrections suivantes :
  - Bugfix synchronisation si équipement non sauvegardé (save automatique dorénavant)
 
 
-# 2022-07-25
+# 2022-07-25 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API BMW et Mini v2
@@ -300,7 +300,7 @@ Corrections suivantes :
  - Bugfix refresh token
 
 
-# 2022-06-12
+# 2022-06-12 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge des nouvelles API Mini
@@ -316,7 +316,7 @@ Corrections suivantes :
  - Correction du problème d’affichage des messages si ceux-ci contiennent un « ’ »
 
 
-# 2022-05-28
+# 2022-05-28 [s]
 
 Corrections suivantes :
  - Modification des API BMW Connected Drive (x-user-agent)
@@ -324,7 +324,7 @@ Corrections suivantes :
  - Conversion miles -> kms pour la distance totale
 
 
-# 2022-04-24
+# 2022-04-24 [s]
 
 Ajout des fonctions suivantes :
  - Prise en charge du mode "Secured" au niveau du widget (verrouillage)
@@ -332,7 +332,7 @@ Ajout des fonctions suivantes :
  - Prise en charge de l'affichage d’une info historisée en fond de tuile (core v4.2)
  
 
-# 2022-04-11
+# 2022-04-11 [s]
 
 Ajout des fonctions suivantes :
  - Ventilation : ajout des modes start / stop
@@ -347,7 +347,7 @@ Corrections suivantes :
  - optimisation du code
 
 
-# 2022-03-28
+# 2022-03-28 [s]
 
 Première version du plugin myBMW
  - Connexion au cloud BMW Connected Drive

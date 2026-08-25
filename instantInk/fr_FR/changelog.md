@@ -12,7 +12,7 @@ pluginId: instantInk
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2026-06-07
+# 2026-06-07 [b]
 
 Première version du plugin HP instantInk (instantInk)
  - Connexion au compte HP Smart via API (cloud)
