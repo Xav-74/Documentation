@@ -31,7 +31,7 @@ Après téléchargement du plugin :
 - Renseignez l'**email** et le **mot de passe** de votre compte Mammotion
 - Démarrez le démon
 
-> **Conseil**
+> **Tip**
 >
 >Le cloud Mammotion n'autorise qu'une seule session par compte. Créez un **compte secondaire** dédié à Jeedom et partagez-lui vos robots depuis l'application officielle, sinon l'application mobile sera déconnectée à chaque démarrage du démon (et inversement).
 
