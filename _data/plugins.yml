@@ -198,7 +198,7 @@
 
 - id: mammotion
   name: Mammotion
-  tagline: Jardin
+  tagline: Objets connectés
   icon: mammotion_icon.png
   marketId: 4674
   langs: [fr_FR, en_US, es_ES, de_DE, it_IT, pt_PT]
