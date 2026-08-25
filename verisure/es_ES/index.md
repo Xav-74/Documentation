@@ -10,19 +10,25 @@ pluginId: verisure
 Este complemento de Jeedom te permite interactuar con tu alarma de Verisure Europe (Securitas Direct) de la misma forma que la aplicación oficial «My Verisure».
 Es compatible con tres generaciones de dispositivos Verisure.
 
-**NOTA: ESTE COMPLEMENTO NO ESTÁ ASOCIADO NI VINCULADO EN ABSOLUTO A LAS EMPRESAS DEL GRUPO SECURITAS DIRECT - VERISURE.**
+> **Importante**
+>
+> **ESTE COMPLEMENTO NO ESTÁ ASOCIADO NI VINCULADO EN ABSOLUTO A LAS EMPRESAS DEL GRUPO SECURITAS DIRECT - VERISURE.**
+>
+> El uso de este complemento está destinado exclusivamente a fines personales y privados.
+> Por lo tanto, el desarrollador no aprueba ni tolera ningún uso inadecuado, y no asume ninguna responsabilidad legal por el funcionamiento o la seguridad de tus alarmas y dispositivos.
 
-El uso de este complemento está destinado exclusivamente a fines personales y privados.
-Por lo tanto, el desarrollador no aprueba ni tolera ningún uso inadecuado, y no asume ninguna responsabilidad legal por el funcionamiento o la seguridad de tus alarmas y dispositivos.
+<!-- -->
 
 > **Consejo**
 >
 > La **versión mínima de Jeedom** necesaria para que el complemento funcione correctamente es la **versión 4.4**
+>
 > El complemento ya es compatible con la **versión 4.6** de Jeedom, así como con las **versiones de Debian 12**
 
 # Principio
 
 Este complemento interactúa con las API de Verisure a través de la nube, por lo que **este complemento requiere una conexión a Internet**.
+
 También es necesario tener una suscripción a los servicios de Verisure. De hecho, este complemento solo se comunica con la central de tu alarma a través de sus infraestructuras en la nube. No interactúa directamente con la central ni con los dispositivos asociados. Si has dado de baja tu suscripción, este complemento no funcionará.
 
 # Configuración del complemento
@@ -43,29 +49,38 @@ Se puede acceder a la configuración de los dispositivos de alarma desde el men�
 
 Haz clic en el botón «Añadir» para crear una nueva alarma. Una vez añadida, tendrás lo siguiente:
 
-- **Nombre del dispositivo**: nombre de tu alarma
-- **Objeto principal**: indica el objeto principal al que pertenece el equipo
-- **Categoría**: la categoría del equipo (seguridad en general, en el caso de una alarma)
-- **Activar**: permite poner en marcha tu equipo
-- **Visible**: hace que tu equipo sea visible en el panel de control
-- **Tipo de alarma**: selección del tipo de alarma (tipo 1 = Europa del Sur (Francia, España, etc.) / tipo 2 = Europa del Norte (Bélgica, Reino Unido, etc.) / tipo 3 = nueva generación (desde 2022))
-- **Número de instalación** (alarmas de tipo 1 y 3): introduce tu número de instalación de Verisure. **¡Atención! Este número debe coincidir exactamente con el que aparece en tu aplicación My Verisure. Si tu número de instalación empieza por un 0, pero este no aparece en la aplicación, ¡elimínalo!**
-- **Identificador** (alarmas de tipo 1, 2 y 3): introduce tu identificador de Verisure, el mismo que utilizas para iniciar sesión en la página web [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) o [https://mypages.verisure.com/](https://mypages.verisure.com)
-- **Contraseña** (alarmas de tipo 1, 2 y 3): introduce tu contraseña
-- **Código de alarma** (alarma de tipo 2): introduce el código PIN de tu alarma (4 o 6 dígitos)
-- **País** (alarmas de tipo 1 y 3): elige el país en el que está instalada tu alarma (países compatibles actualmente: Francia, España, Gran Bretaña, Italia y Portugal). Para las alarmas de tipo 2, la selección del país es automática (países compatibles actualmente: Bélgica, Países Bajos, Alemania, Gran Bretaña, Dinamarca, Finlandia, Noruega y Suecia).
-- **Opciones** (alarmas de tipo 1 y 3): en función del tipo de alarma que tengas, puedes seleccionar las siguientes opciones:
-  - **Actualización mediante el historial** (alarmas de tipo 1 y 3): permite actualizar los estados de la alarma en función del historial de acciones. No olvides configurar y activar el cron en la configuración del complemento.
-    - **Alarma de presencia exterior** (alarma de tipo 3): márquelo si dispone de detectores exteriores y si el modo exterior está activado en su alarma
-    - **Armado forzado** (alarma de tipo 3): permite forzar la activación de la alarma aunque haya quedado abierta una puerta o una ventana. ¡Bajo tu propia responsabilidad!
+| Campo | Descripción |
+|---|---|
+| **Nombre del dispositivo** | nombre de tu alarma |
+| **Objeto principal** | indica el objeto principal al que pertenece el equipo |
+| **Categoría** | la categoría del equipo (seguridad en general, en el caso de una alarma) |
+| **Activar** | permite activar tu equipo |
+| **Visible** | hace que tu equipo sea visible en el panel de control |
+| **Tipo de alarma** | selección del tipo de alarma (tipo 1 = Europa del Sur (Francia, España, etc.) / tipo 2 = Europa del Norte (Bélgica, Reino Unido, etc.) / tipo 3 = nueva generación (desde 2022)) |
+| **Número de instalación**<br/>(alarmas de tipo 1 y 3) | Indica tu número de instalación de Verisure. **¡Atención! Este número debe coincidir exactamente con el que aparece en tu aplicación My Verisure. Si tu número de instalación empieza por un 0, pero este no aparece en la aplicación, ¡elimínalo!** |
+| **Identificador**<br/>(alarmas de tipo 1, 2 y 3) | Introduce tu nombre de usuario de Verisure, el que utilizas para iniciar sesión en la página web [https://customers.securitasdirect.fr](https://customers.securitasdirect.fr) o [https://mypages.verisure.com/](https://mypages.verisure.com) |
+| **Contraseña**<br/>(alarmas de tipo 1, 2 y 3) | introduce tu contraseña |
+| **Código de alarma**<br/>(alarma de tipo 2) | introduce el código PIN de tu alarma (4 o 6 dígitos) |
+| **País**<br/>(alarmas de tipo 1 y 3) | Selecciona el país en el que está instalada tu alarma (países compatibles actualmente: Francia, España, Reino Unido, Italia y Portugal). Para las alarmas de tipo 2, la selección del país es automática (países compatibles actualmente: Bélgica, Países Bajos, Alemania, Gran Bretaña, Dinamarca, Finlandia, Noruega y Suecia) |
+
+**Opciones** (alarmas de tipo 1 y 3): en función del tipo de alarma que tengas, puedes seleccionar las siguientes opciones:
+
+- **Actualización mediante el historial** (alarmas de tipo 1 y 3): permite actualizar los estados de la alarma en función del historial de acciones. No olvides configurar y activar el cron en la configuración del complemento.
+- **Alarma de presencia exterior** (alarma de tipo 3): márquelo si dispone de detectores exteriores y si el modo exterior está activado en su alarma
+- **Armado forzado** (alarma de tipo 3): permite forzar la activación de la alarma aunque haya quedado abierta una puerta o una ventana. ¡Bajo tu propia responsabilidad!
 
 A continuación, solo tienes que hacer clic en el botón **Autenticación** para recuperar la información de tu alarma. Si todo va bien, aparecerá una tabla con todos los dispositivos instalados en tu vivienda (ID, nombre y tipo).
 
-**Atención**: se recomienda encarecidamente crear, en tu espacio de Verisure, un usuario específico para Jeedom con derechos de «administrador». El complemento gestiona la autenticación multifactorial (MFA) para las alarmas de tipo 1. También es así para las alarmas de tipo 2, pero se recomienda desactivar esta opción por el momento, ya que la actualización del token resulta muy engorrosa. En caso de problemas de conexión, el botón **Eliminar token** permite borrar las cookies guardadas y volver a realizar una autenticación inicial.
+> **Atención**
+>
+> Se recomienda encarecidamente crear, en tu espacio de Verisure, un usuario específico para Jeedom con derechos de «administrador». El complemento gestiona la autenticación multifactorial (MFA) para las alarmas de tipo 1. Lo mismo ocurre con las alarmas de tipo 2, pero se recomienda desactivar esta opción por el momento, ya que la actualización del token resulta muy engorrosa. En caso de problemas de conexión, el botón **Eliminar token** permite borrar las cookies guardadas y volver a realizar una autenticación inicial.
+
+<!-- -->
 
 > **Consejo**
 >
 > ¡No te olvides de **guardar** tus datos!
+>
 > Al guardar, se crearán nuevos comandos en el equipo.
 
 ![Equipamiento](../images/Eqpt_verisure.png)
@@ -104,18 +119,22 @@ Actualmente existen varios comandos que se describen a continuación.
   - **Modo parcial**: la alarma está activada en modo parcial (alarmas de tipo 2 y 3)
 - **Calidad de la red**: permite estimar la calidad de la red 3G/4G de las alarmas de tipo 1 y 3 (basándose en el resultado de las últimas 25 consultas)
 
-**Atención**: ¡en esta versión aún no se tiene en cuenta el evento relacionado con la activación de la alarma!
+> **Atención**
+>
+> ¡En esta versión aún no se tiene en cuenta el evento relacionado con la activación de la alarma!
 
 ## Acción
 
-- **Modo Total**: activa la alarma en modo total (alarmas de tipo 1, 2 y 3)
-- **Modo nocturno**: activa la alarma en modo nocturno (alarma de tipo 1)
-- **Modo diurno**: activa la alarma en modo diurno (alarma de tipo 1)
-- **Modo exterior**: activa la alarma en modo exterior (alarma de tipo 1)
-- **Modo parcial**: activa la alarma en modo parcial (alarmas de tipo 2 y 3)
-- **Desactivación**: desactiva la alarma, independientemente del modo (alarma de tipo 1, 2 y 3)
-- **Actualizar**: actualiza el estado de la alarma (alarmas de tipo 1, 2 y 3)
-- **Solicitar imágenes**: activa la captura de una foto desde un detector de movimiento compatible y la muestra en la pantalla (alarmas de tipo 1, 2 y 3)
+| Control | Descripción |
+|---|---|
+| **Modo Total** | activa la alarma en modo total (alarmas de tipo 1, 2 y 3) |
+| **Modo nocturno** | activa la alarma en modo nocturno (alarma de tipo 1) |
+| **Modo diurno** | activa la alarma en modo diurno (alarma de tipo 1) |
+| **Modo exterior** | activa la alarma en modo exterior (alarma de tipo 1) |
+| **Modo parcial** | activa la alarma en modo parcial (alarmas de tipo 2 y 3) |
+| **Desactivación** | desactiva la alarma, independientemente del modo (alarma tipo 1, 2 y 3) |
+| **Actualizar** | actualiza el estado de la alarma (alarmas de tipo 1, 2 y 3) |
+| **Solicitud de imágenes** | activa la captura de una foto desde un detector de movimiento compatible y la muestra en pantalla (alarmas de tipo 1, 2 y 3) |
 
 > **Consejo**
 >
@@ -134,10 +153,12 @@ En HomeKit, la función de alarma se gestiona en cuatro modos: «Desactivada», 
 
 La correspondencia entre los modos es la siguiente:
 
-- **Hogar**  --> Modo Día / Modo Parcial
-- **A distancia** --> Modo Total
-- **Noche**   --> Modo nocturno
-- **Desactivada** --> Desactivación
+| HomeKit | Complemento de Verisure |
+|---|---|
+| **Hogar** | Modo Día / Modo Parcial |
+| **A distancia** | Modo Total |
+| **Noche** | Modo nocturno |
+| **Desactivada** | Desactivación |
 
 Los demás modos (Exterior,...) no se tienen en cuenta en HomeKit.
 
@@ -145,21 +166,25 @@ Los demás modos (Exterior,...) no se tienen en cuenta en HomeKit.
 
 Para las alarmas de tipo 2 (**¡y solo de tipo 2!**), el complemento creará los comandos asociados a los dispositivos de la alarma:
 
-- **Enchufe inteligente** --> estado / encendido / apagado
-- **Sensores compatibles** --> temperatura / humedad
-- **Sensor de apertura**  --> estado (abierto / cerrado)
+| Dispositivo | Comandos creados |
+|---|---|
+| **Enchufe inteligente** | estado / encendido / apagado |
+| **Sensores compatibles** | temperatura / humedad |
+| **Sensor de apertura** | estado (abierto/cerrado) |
 
-Por defecto, los controles no se muestran en el widget. El objetivo es crear a continuación un control virtual para cada sensor. De este modo, podrás obtener la información de apertura, cierre, temperatura y humedad de los distintos sensores, o incluso controlar a distancia los enchufes conectados de Versiure desde Jeedom.
+Por defecto, los controles no aparecen en el widget. El objetivo es crear a continuación un control virtual para cada sensor. De este modo, podrás obtener información sobre la apertura, el cierre, la temperatura y la humedad de los distintos sensores, o incluso controlar a distancia los enchufes conectados de Verisure desde Jeedom.
 
-> **Consejo**
+> **Atención**
 >
->Atención: los estados no se actualizan en tiempo real (por el momento es imposible debido a Versiure). Tendrás que actualizar el estado de la alarma mediante un escenario para que se actualicen o esperar al cron30. Más adelante se podrá personalizar el cron (5, 10, 15, 30...). **Sin embargo, ten cuidado de no enviar demasiadas solicitudes a los servidores de Verisure, ya que podrías acabar en la lista negra.**
+> Los estados no se actualizan en tiempo real (algo imposible por el momento debido a Verisure). Tendrás que actualizar el estado de la alarma mediante un escenario para que se actualicen o esperar al cron30. Más adelante se podrá personalizar el cron (5, 10, 15, 30...). **Sin embargo, ten cuidado de no enviar demasiadas solicitudes a los servidores de Verisure, ya que podrías acabar en la lista negra.**
 
 ## Dispositivos de alarma de tipo 3
 
 Para las alarmas de tipo 3 (**¡y solo de tipo 3!**), el complemento creará los comandos asociados a los dispositivos de la alarma:
 
-- **Cerradura conectada** --> estado / apertura / cierre
+| Dispositivo | Comandos creados |
+|---|---|
+| **Cerradura conectada** | estado / apertura / cierre |
 
 # Panel de control
 
@@ -181,16 +206,20 @@ El complemento incluye un panel de control que permite:
 - Mostrar información de determinados dispositivos, como la temperatura, la humedad o el estado de apertura (**!!! SOLO alarmas de tipo 2 !!!**)
 - Mostrar el nivel de calidad de la red 3G/4G de la alarma (alarmas de tipo 1 y 3)
   - icono de 5 barras: ninguna solicitud con error en las últimas 25
-    - icono de 4 barras: de 1 a 2 solicitudes con error de las últimas 25
-    - icono de 3 barras: de 3 a 7 solicitudes con error de las últimas 25
-    - icono de 2 barras: entre 8 y 17 solicitudes con error de las últimas 25
-    - icono de 1 barra: de 18 a 24 solicitudes con error de las últimas 25
-    - icono de 0 barras: 25 solicitudes con error de las últimas 25
+  - icono de 4 barras: de 1 a 2 solicitudes con error de las últimas 25
+  - icono de 3 barras: de 3 a 7 solicitudes con error de las últimas 25
+  - icono de 2 barras: entre 8 y 17 solicitudes con error de las últimas 25
+  - icono de 1 barra: de 18 a 24 solicitudes con error de las últimas 25
+  - icono de 0 barras: 25 solicitudes con error de las últimas 25
 
-**Atención**: en ocasiones, las órdenes pueden tardar varios segundos en ejecutarse (entre 15 y 25 segundos, o incluso más de un minuto en el caso de las solicitudes de fotos). Esto depende de la calidad de la conexión 3G o 4G de la central de tu alarma. ¡Así que ten paciencia!
+> **Atención**
+>
+> En ocasiones, las órdenes pueden tardar varios segundos en ejecutarse (entre 15 y 25 segundos, o incluso más de un minuto en el caso de las solicitudes de fotos). Esto depende de la calidad de la conexión 3G o 4G de la central de tu alarma. ¡Así que ten paciencia!
 
 ![Panel de control tipo 1](../images/Dashboard_verisure.png)
+
 ![Panel de control tipo 2](../images/Dashboard_verisure_2.png)
+
 ![Panel de control tipo 3](../images/Dashboard_verisure_3.png)
 
 # Actualización
@@ -198,7 +227,10 @@ El complemento incluye un panel de control que permite:
 ## Automático
 
 Se crea automáticamente una tarea CRON con una periodicidad de 30 minutos, tal y como se indica en la configuración del complemento.
-**Atención**: este valor de 30 minutos podría variar en función de los comentarios y las peticiones de los usuarios, así como del número de solicitudes autorizadas por hora por Verisure en sus servidores.
+
+> **Atención**
+>
+> Este valor de 30 minutos podría variar en función de los comentarios y las peticiones de los usuarios, así como del número de solicitudes autorizadas por hora por Verisure en sus servidores.
 
 ## Manual
 
@@ -206,12 +238,13 @@ Puede utilizar en cualquier momento el comando **Actualizar** para actualizar el
 
 # Hoja de ruta y asistencia técnica
 
-Este complemento irá evolucionando con el tiempo en función de vuestras peticiones y de las posibilidades que ofrezcan las API de Versiure.
+Este complemento irá evolucionando con el tiempo en función de vuestras peticiones y de las posibilidades que ofrezcan las API de Verisure.
 
 > **Consejo**
 >
->Puedes enviar tu solicitud creando una solicitud de «mejora» [GitHub](https://github.com/Xav-74/verisure/issues/new).
->¡No dudes en venir a compartir tus opiniones sobre este complemento en la comunidad de Jeedom!
+> Puedes enviar tu solicitud de mejora creando una incidencia de «mejora» en [GitHub](https://github.com/Xav-74/verisure/issues/new).
+>
+> ¡No dudes en venir a compartir tus opiniones sobre este complemento en la comunidad de Jeedom!
 
 En caso de fallo, puedes crear directamente un tema en la Comunidad desde la página principal del complemento. La información relevante de Jeedom y del complemento se añade automáticamente. ¡No dudes en copiar también los registros de Verisure (modo depuración) para una resolución más rápida!
 
