@@ -388,4 +388,29 @@
     }
   });
 
+  /* =========================================================
+     7. Thème clair / sombre
+     ========================================================= */
+  (function () {
+    var bouton = $('#theme-toggle');
+    if (!bouton) return;
+    var racine = d.documentElement;
+
+    var appliquer = function (mode) {
+      if (mode === 'light') racine.setAttribute('data-theme', 'light');
+      else racine.removeAttribute('data-theme');
+      bouton.setAttribute('aria-pressed', mode === 'light' ? 'true' : 'false');
+      var meta = $('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', mode === 'light' ? '#f5f8fc' : '#0c1118');
+    };
+
+    bouton.addEventListener('click', function () {
+      var mode = racine.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+      try { localStorage.setItem('theme', mode); } catch (e) {}
+      appliquer(mode);
+    });
+
+    appliquer(racine.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+  })();
+
 })();

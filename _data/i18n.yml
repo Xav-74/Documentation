@@ -17,6 +17,7 @@ fr_FR:
   nav_doc: Doc Jeedom
   nav_repo: Dépôt GitHub
   menu_open: Ouvrir le menu
+  theme: Thème clair / sombre
   language: Langue
   search_placeholder: Rechercher dans la documentation…
   search_button: Rechercher…
@@ -64,6 +65,7 @@ en_US:
   nav_doc: Jeedom docs
   nav_repo: GitHub repository
   menu_open: Open menu
+  theme: Light / dark theme
   language: Language
   search_placeholder: Search the documentation…
   search_button: Search…
@@ -111,6 +113,7 @@ de_DE:
   nav_doc: Jeedom-Doku
   nav_repo: GitHub-Repository
   menu_open: Menü öffnen
+  theme: Helles / dunkles Erscheinungsbild
   language: Sprache
   search_placeholder: Dokumentation durchsuchen…
   search_button: Suchen…
@@ -158,6 +161,7 @@ es_ES:
   nav_doc: Doc de Jeedom
   nav_repo: Repositorio GitHub
   menu_open: Abrir el menú
+  theme: Tema claro / oscuro
   language: Idioma
   search_placeholder: Buscar en la documentación…
   search_button: Buscar…
@@ -205,6 +209,7 @@ it_IT:
   nav_doc: Doc di Jeedom
   nav_repo: Repository GitHub
   menu_open: Apri il menu
+  theme: Tema chiaro / scuro
   language: Lingua
   search_placeholder: Cerca nella documentazione…
   search_button: Cerca…
@@ -252,6 +257,7 @@ pt_PT:
   nav_doc: Doc do Jeedom
   nav_repo: Repositório GitHub
   menu_open: Abrir o menu
+  theme: Tema claro / escuro
   language: Idioma
   search_placeholder: Pesquisar na documentação…
   search_button: Pesquisar…
