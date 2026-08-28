@@ -44,6 +44,8 @@
   --mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --heading: #ffffff;
+  --ok-soft: #a8e6c8;
+  --warn-soft: #f0d3a0;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .28);
 }
 
@@ -66,6 +68,8 @@
   --text-soft: #3a4a5e;
   --text-muted: #5d6e83;
   --heading: #101b28;
+  --ok-soft: #147a53;
+  --warn-soft: #94600f;
   --link: #2668b0;
   --link-hover: #174a86;
 
@@ -110,6 +114,9 @@
 :root[data-theme="light"] .ver-tag--beta { background: rgba(168, 106, 16, .1); }
 :root[data-theme="light"] .ver-tag--ajour { background: rgba(26, 127, 90, .1); }
 :root[data-theme="light"] .prose img { background: #fff; }
+:root[data-theme="light"] .is-changelog .prose h1.is-beta { border-color: rgba(168, 106, 16, .35); background: rgba(168, 106, 16, .06); }
+:root[data-theme="light"] .is-changelog .prose h1.is-ajour { border-color: rgba(26, 127, 90, .35); background: rgba(26, 127, 90, .06); }
+:root[data-theme="light"] .is-changelog .prose h1.is-stable { border-color: rgba(38, 104, 176, .3); background: rgba(38, 104, 176, .06); }
 :root[data-theme="light"] .results mark { background: rgba(38, 104, 176, .2); color: var(--heading); }
 
 * { box-sizing: border-box; }
@@ -642,9 +649,9 @@ img { max-width: 100%; height: auto; }
 .is-changelog .prose > h1:first-of-type { margin-top: 0; }
 .is-changelog .prose h1.is-stable { border-color: rgba(109, 165, 218, .45); color: var(--brand-300); }
 .is-changelog .prose h1.is-stable::before { background: var(--brand-400); box-shadow: 0 0 0 3px rgba(109, 165, 218, .2); }
-.is-changelog .prose h1.is-beta { border-color: rgba(217, 164, 65, .45); color: #f0d3a0; }
+.is-changelog .prose h1.is-beta { border-color: rgba(217, 164, 65, .45); color: var(--warn-soft); }
 .is-changelog .prose h1.is-beta::before { background: var(--warn); box-shadow: 0 0 0 3px rgba(217, 164, 65, .2); }
-.is-changelog .prose h1.is-ajour { border-color: rgba(86, 184, 146, .45); color: #a8e6c8; }
+.is-changelog .prose h1.is-ajour { border-color: rgba(86, 184, 146, .45); color: var(--ok-soft); }
 .is-changelog .prose h1.is-ajour::before { background: var(--ok); box-shadow: 0 0 0 3px rgba(86, 184, 146, .2); }
 .is-changelog .prose h1.is-latest::before,
 .is-changelog .prose h1.is-autre::before { background: var(--brand-400); box-shadow: 0 0 0 3px rgba(109, 165, 218, .18); }
