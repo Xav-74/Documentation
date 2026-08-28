@@ -920,11 +920,12 @@ img { max-width: 100%; height: auto; }
    ========================================================= */
 @media (max-width: 1180px) {
   .topbar__nav a.opt { display: none; }
-  .searchbtn { min-width: 44px; }
+  .searchbtn { min-width: 0; }
   .searchbtn span, .searchbtn kbd { display: none; }
   .searchbtn { justify-content: center; padding: 0; width: 38px; height: 38px; border-radius: var(--radius-sm); }
   .langmenu > summary span { display: none; }
   .langmenu > summary { padding: 0; width: 38px; height: 38px; justify-content: center; border-radius: var(--radius-sm); }
+  .themebtn { width: 38px; height: 38px; border-radius: var(--radius-sm); }
 }
 
 @media (max-width: 980px) {
