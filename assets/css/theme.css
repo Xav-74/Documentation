@@ -738,8 +738,8 @@ img { max-width: 100%; height: auto; }
   border-color: rgba(255, 255, 255, .55);
   color: #fff;
 }
-.hero .btn--primary { background: #101b28; border-color: #101b28; color: #fff; }
-.hero .btn--primary:hover { background: #0a1219; border-color: #0a1219; color: #fff; }
+.hero .btn--primary { background: #fff; border-color: #fff; color: #14202e; }
+.hero .btn--primary:hover { background: #e7f0fa; border-color: #e7f0fa; color: #14202e; }
 
 .section-head { margin: 54px 0 18px; display: flex; align-items: baseline; gap: 12px; }
 .section-head h2 { margin: 0; font-size: 22px; font-weight: 650; letter-spacing: -.02em; color: var(--heading); }
