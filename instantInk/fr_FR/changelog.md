@@ -12,6 +12,13 @@ pluginId: instantInk
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-08-28 [b]
+
+Corrections suivantes :
+ - Passage du log "expired shellSessionId" en mode ERROR pour notification dans le centre de message Jeedom
+ - Suppression préalable des tokens lors du refresh du shellSessionId
+
+
 # 2026-06-07 [b]
 
 Première version du plugin HP instantInk (instantInk)
