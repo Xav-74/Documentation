@@ -89,7 +89,6 @@
 /* le bandeau d'accueil conserve le dégradé de marque */
 :root[data-theme="light"] .hero { border-color: transparent; }
 :root[data-theme="light"] .hero h1 { color: #fff; }
-:root[data-theme="light"] .btn--primary { background: #fff; color: #14202e; border-color: #fff; }
 :root[data-theme="light"] .subnav a.is-active { color: #fff; }
 
 /* coloration syntaxique, variante claire */
@@ -726,6 +725,21 @@ img { max-width: 100%; height: auto; }
 .btn:hover { text-decoration: none; background: var(--surface-3); color: var(--heading); border-color: var(--brand-500); }
 .btn--primary { background: #fff; color: #14202e; /*border-color: #fff;*/ }
 .btn--primary:hover { background: #e7f0fa; color: #14202e; border-color: #e7f0fa; }
+
+/* Dans le bandeau, l'action principale est un plein sombre et les autres des contours */
+.hero .btn {
+  transition: background .2s ease, border-color .2s ease, color .2s ease;
+  background: transparent;
+  border-color: rgba(255, 255, 255, .3);
+  color: #e8f0f9;
+}
+.hero .btn:hover {
+  background: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .55);
+  color: #fff;
+}
+.hero .btn--primary { background: #101b28; border-color: #101b28; color: #fff; }
+.hero .btn--primary:hover { background: #0a1219; border-color: #0a1219; color: #fff; }
 
 .section-head { margin: 54px 0 18px; display: flex; align-items: baseline; gap: 12px; }
 .section-head h2 { margin: 0; font-size: 22px; font-weight: 650; letter-spacing: -.02em; color: var(--heading); }

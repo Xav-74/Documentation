@@ -413,4 +413,41 @@
     appliquer(racine.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
   })();
 
+  /* =========================================================
+     8. Bandeau : la mise en avant suit la section consultée
+     ========================================================= */
+  (function () {
+    var liens = $$('.hero-actions a[href^="#"]');
+    if (liens.length < 2) return;
+
+    var cibles = liens.map(function (a) { return d.getElementById(a.getAttribute('href').slice(1)); })
+                      .filter(Boolean);
+    if (!cibles.length) return;
+
+    var mettreEnAvant = function (id) {
+      liens.forEach(function (a) {
+        a.classList.toggle('btn--primary', a.getAttribute('href') === '#' + id);
+      });
+    };
+
+    liens.forEach(function (a) {
+      a.addEventListener('click', function () { mettreEnAvant(a.getAttribute('href').slice(1)); });
+    });
+
+    var suivre = function () {
+      // repère juste sous la barre du haut : une section devient courante dès qu'elle y arrive
+      var repere = window.scrollY + 120;
+      var courant = cibles[0].id;
+      cibles.forEach(function (c) {
+        if (c.getBoundingClientRect().top + window.scrollY <= repere) courant = c.id;
+      });
+      // page trop courte pour amener la dernière section en haut : on la considère atteinte
+      var bas = window.innerHeight + window.scrollY >= (d.documentElement.scrollHeight - 4);
+      if (bas) courant = cibles[cibles.length - 1].id;
+      mettreEnAvant(courant);
+    };
+    window.addEventListener('scroll', suivre, { passive: true });
+    suivre();
+  })();
+
 })();
