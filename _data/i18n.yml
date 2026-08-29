@@ -37,7 +37,7 @@ fr_FR:
     widgets développés pour la solution domotique Jeedom.
   home_cta_plugins: Voir les plugins
   home_cta_widgets: Voir les widgets
-  home_cta_support: Support sur la Community
+  home_cta_support: Community
   home_plugins: Plugins
   home_widgets: Widgets
   home_no_widgets: Aucun widget publié pour le moment.
@@ -85,7 +85,7 @@ en_US:
     and widgets built for the Jeedom home automation platform.
   home_cta_plugins: Browse the plugins
   home_cta_widgets: Browse the widgets
-  home_cta_support: Support on the Community
+  home_cta_support: Community
   home_plugins: Plugins
   home_widgets: Widgets
   home_no_widgets: No widget published yet.
@@ -133,7 +133,7 @@ de_DE:
     Plugins und Widgets für die Hausautomatisierungslösung Jeedom.
   home_cta_plugins: Plugins ansehen
   home_cta_widgets: Widgets ansehen
-  home_cta_support: Support in der Community
+  home_cta_support: Community
   home_plugins: Plugins
   home_widgets: Widgets
   home_no_widgets: Noch kein Widget veröffentlicht.
@@ -181,7 +181,7 @@ es_ES:
     widgets desarrollados para la solución domótica Jeedom.
   home_cta_plugins: Ver los plugins
   home_cta_widgets: Ver los widgets
-  home_cta_support: Soporte en la Community
+  home_cta_support: Community
   home_plugins: Plugins
   home_widgets: Widgets
   home_no_widgets: Todavía no hay ningún widget publicado.
@@ -229,7 +229,7 @@ it_IT:
     dei widget sviluppati per la soluzione domotica Jeedom.
   home_cta_plugins: Vedi i plugin
   home_cta_widgets: Vedi i widget
-  home_cta_support: Supporto sulla Community
+  home_cta_support: Community
   home_plugins: Plugin
   home_widgets: Widget
   home_no_widgets: Nessun widget pubblicato al momento.
@@ -277,7 +277,7 @@ pt_PT:
     widgets desenvolvidos para a solução domótica Jeedom.
   home_cta_plugins: Ver os plugins
   home_cta_widgets: Ver os widgets
-  home_cta_support: Apoio na Community
+  home_cta_support: Community
   home_plugins: Plugins
   home_widgets: Widgets
   home_no_widgets: Ainda não há widgets publicados.
