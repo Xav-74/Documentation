@@ -12,6 +12,16 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-09-01 [b]
+
+Ajout des fonctions suivantes :
+ - Optimisation du code : fusion des fonctions REST et MQTT dans une table de descripteurs unique
+
+Corrections suivantes :
+ - Bugfix MQTT - Prise en charge des nouveaux descripteurs "vehicle.body.chargingPort.status", "vehicle.drivetrain.electricEngine.kombiRemainingElectricRange" & "vehicle.drivetrain.electricEngine.charging.timeToFullyCharged"
+ - Mise à jour du catalogue Telematics (258 à date)
+
+
 # 2026-07-31 [s]
 
 Corrections suivantes :
