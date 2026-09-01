@@ -78,13 +78,24 @@
         return /^\s*\d{4}[-/.]\d{2}/.test(h.dataset.title || '');
       });
 
-      var marquee = false;
-      datees.forEach(function (h, rang) {
+      // 1er passage : on relève le marqueur de chaque titre daté et on repère
+      // la stable la plus récente, même si des betas la précèdent.
+      var releve = datees.map(function (h) {
         var m = (h.dataset.title || '').match(MARQUEUR);
-        if (!m) return;
+        return m ? { h: h, mot: m[1].trim(), fam: famille(m[1].trim()) } : null;
+      });
+      var rangAJour = -1;
+      for (var i = 0; i < releve.length; i++) {
+        if (releve[i] && releve[i].fam === 'stable') { rangAJour = i; break; }
+      }
+
+      var marquee = false;
+      releve.forEach(function (info, rang) {
+        if (!info) return;
+        var h = info.h;
         marquee = true;
-        var mot = m[1].trim();
-        var fam = famille(mot);
+        var mot = info.mot;
+        var fam = info.fam;
 
         // le marqueur disparaît du titre affiché et du sommaire
         h.dataset.title = h.dataset.title.replace(MARQUEUR, '').trim();
@@ -97,8 +108,9 @@
                     : fam === 'beta'   ? tr('beta', 'beta')
                     : mot;
 
-        // la stable est aussi la version la plus récente : tout passe au vert
-        var aJour = (fam === 'stable' && rang === 0);
+        // stable la plus récente du fichier : tout passe au vert, même si une
+        // ou plusieurs betas plus récentes la précèdent.
+        var aJour = (rang === rangAJour);
         var classe = aJour ? 'ajour' : fam;
 
         h.classList.add('is-' + classe);
