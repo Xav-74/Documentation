@@ -12,6 +12,13 @@ pluginId: myBMW
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-09-04 [s]
+
+Passage en stable de la version beta 2026-09-01
+
+Attention : à partir de cette version, la version minimum nécessaire de Jeedom est la v4.4 et Debian 11 !
+
+
 # 2026-09-01 [b]
 
 Ajout des fonctions suivantes :
