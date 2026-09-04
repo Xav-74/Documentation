@@ -27,6 +27,7 @@ Ajout des fonctions suivantes :
 Corrections suivantes :
  - Bugfix MQTT - Prise en charge des nouveaux descripteurs "vehicle.body.chargingPort.status", "vehicle.drivetrain.electricEngine.kombiRemainingElectricRange" & "vehicle.drivetrain.electricEngine.charging.timeToFullyCharged"
  - Mise à jour du catalogue Telematics (258 à date)
+ 
 Pour les utilisateurs qui ont créé le "container" après le 1er Juillet 2026, je vous invite à le supprimer (page équipement) et refaire une authentification complète pour prendre en compte ce nouveau catalogue
 
 
