@@ -12,6 +12,13 @@ pluginId: mammotion
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-09-08 [b]
+
+Nouveautés :
+- Refonte de la partie "Spino" avec prise en charge des commandes actions
+- Widget dédié pour les robots "Spino"
+
+
 # 2026-07-10 [b]
 
 Première version du plugin Mammotion (mammotion)
