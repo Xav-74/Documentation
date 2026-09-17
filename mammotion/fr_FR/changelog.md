@@ -12,6 +12,18 @@ pluginId: mammotion
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-09-17 [b]
+
+Nouveautés :
+- Ajout du mode hivernage
+- Ajout des historiques depuis les widgets
+- Zones et activités triées par ordre alphabétique
+
+Corrections :
+- Bugfix : modèle absent pour les Spino
+- Bugfix : erreur lors de la synchro pour les Spino (device_limits)
+
+
 # 2026-09-08 [b]
 
 Nouveautés :
