@@ -52,6 +52,8 @@ Lancez-le après le premier démarrage du démon, puis à chaque fois que vous a
 
 Le type de robot est détecté automatiquement (tondeuse ou piscine) et détermine les commandes créées ainsi que le widget affiché sur le dashboard. Les zones et les activités ne concernent que les tondeuses.
 
+La page de l'équipement et son widget affichent une photo correspondant au modèle détecté. Lorsque le modèle exact n'est pas disponible, c'est celle du modèle le plus proche qui est utilisée.
+
 # Commandes — Tondeuse (Luba, Yuka)
 
 ## Commandes info
@@ -85,6 +87,7 @@ Le type de robot est détecté automatiquement (tondeuse ou piscine) et détermi
 | Connexion | Type de connexion du robot (WIFI, 3G/4G, BLE) |
 | Dernier événement | Journal des événements (tonte démarrée, retour station, charge, mise à jour...). Historisé : consultez l'historique de la commande pour le journal complet |
 | Consigne hauteur de lame / Consigne vitesse | Dernière valeur réglée via les sliders, réutilisée au lancement d'une tonte |
+| Hivernage | Mode hivernage actif ou non (voir *Mode hivernage*) |
 | Dernière mise à jour | Horodatage de la dernière donnée reçue |
 
 ## Commandes action
@@ -102,6 +105,7 @@ Le type de robot est détecté automatiquement (tondeuse ou piscine) et détermi
 | Régler vitesse | Slider en m/s, par défaut 0.2 → 0.6 (non créée sur la gamme Yuka) |
 | Tondre une zone | Lance la tonte de la zone sélectionnée (liste alimentée par la synchronisation) |
 | Lancer une activité | Lance une activité programmée dans l'application (liste alimentée par la synchronisation) |
+| Basculer l'hivernage | Active le mode hivernage, ou le désactive s'il est déjà actif (voir *Mode hivernage*) |
 
 > **Tip**
 >
@@ -124,6 +128,7 @@ Un widget dédié est fourni pour le robot tondeuse, avec les 7 (Yuka) ou 9 (Lub
 | Signal Bluetooth | RSSI Bluetooth (dBm) |
 | Wifi connecté | Liaison Wifi établie |
 | Firmware | Version du firmware |
+| Hivernage | Mode hivernage actif ou non (voir *Mode hivernage*) |
 | Dernière mise à jour | Horodatage de la dernière donnée reçue |
 
 ## Commandes action
@@ -136,12 +141,42 @@ Un widget dédié est fourni pour le robot tondeuse, avec les 7 (Yuka) ou 9 (Lub
 | Nettoyage des parois | Parois uniquement (**WALL**) |
 | Nettoyage éco | Balayage de la surface (**ECO**) |
 | Arrêt et retour en charge | Interrompt le nettoyage en cours et renvoie le robot se recharger (bouton *recharge* de l'application) |
+| Basculer l'hivernage | Active le mode hivernage, ou le désactive s'il est déjà actif (voir *Mode hivernage*) |
 
 > **Tip**
 >
 > Les 4 modes correspondent exactement aux 4 boutons de l'écran d'accueil de l'application Mammotion. D'autres modes existent dans le protocole (ligne d'eau, personnalisé) mais ne sont pas encore disponibles.
 
 Un widget dédié est fourni pour le robot piscine, avec les 5 boutons de commande et les informations principales.
+
+# Mode hivernage
+
+Lorsqu'un robot est remisé pour la saison, il est éteint. Le **mode hivernage** met cet équipement en sommeil.
+
+Quand il est actif :
+
+- le **cron ignore l'équipement** : plus aucune demande de rafraîchissement ;
+- les **commandes de pilotage sont bloquées** et renvoient un message explicite, y compris depuis un scénario ;
+- l'**équipement reste visible** sur le dashboard et conserve son historique ;
+- le **démon continue de tourner** normalement pour vos autres robots.
+
+Ce réglage est **propre à chaque équipement** : vous pouvez hiverner votre robot piscine tout en continuant à tondre.
+
+## Comment l'activer
+
+Trois possibilités, qui agissent toutes sur le même réglage :
+
+- la case **Mode hivernage**, section *Hivernage* de la page de l'équipement ;
+- l'**icône de la barre de titre du widget** : un flocon lorsque le robot est en mode standard, un soleil lorsqu'il est en hivernage. Un clic bascule d'un mode à l'autre ;
+- la commande action **Basculer l'hivernage**, utilisable dans un scénario.
+
+La commande info **Hivernage** indique l'état courant. Elle est historisée, ce qui permet de retrouver les dates d'entrée et de sortie d'hivernage.
+
+> **Tip**
+>
+> La commande *Basculer l'hivernage* inverse l'état : appelée deux fois, elle revient au point de départ. Dans un scénario qui automatise la mise en hivernage, testez d'abord la commande info **Hivernage** et n'appelez la bascule que si elle vaut 0.
+
+À la sortie d'hivernage, les données remontent dès le prochain passage du cron, ou immédiatement si vous cliquez sur *Rafraichir*.
 
 # FAQ
 
@@ -152,6 +187,8 @@ Un widget dédié est fourni pour le robot piscine, avec les 5 boutons de comman
 **La commande Coordonnées GPS est vide** : c'est normal après un redémarrage du démon. Le robot ne transmet sa référence de géolocalisation (base RTK ou fix GNSS embarqué pour les modèles vision/LiDAR) que dans certains rapports, généralement lorsqu'il est actif. La commande se remplit dès la prochaine activité du robot. Le plugin préfère une valeur vide à des coordonnées dégénérées (proches du point 0,0 du globe).
 
 **Les données ne remontent pas en temps réel** : le robot ne publie que lorsqu'il est actif ou que son état change. Le cron force par ailleurs un rafraîchissement périodique.
+
+**Mon robot ne se met plus à jour et ses boutons refusent d'agir** : vérifiez l'icône de la barre de titre du widget. Un soleil signale que l'équipement est en **mode hivernage** : le cron l'ignore et ses commandes sont bloquées. Un clic sur l'icône le remet en mode standard.
 
 **Spino : le Mode de nettoyage affiche « Aucun »** : c'est le comportement normal au repos. Un Spino à l'arrêt ne déclare aucun mode actif dans ses messages d'état. Fiez-vous à la commande **Statut** pour savoir si le robot travaille.
 

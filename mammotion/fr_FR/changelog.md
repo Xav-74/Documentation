@@ -12,6 +12,15 @@ pluginId: mammotion
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-09-19 [b]
+
+Nouveautés :
+- Ajout des commandes "hibernation" et "set_hibernation" pour affichage sur le widget et utilisation dans un scénario
+
+Corrections :
+- Amélioration des images des robots 
+
+
 # 2026-09-17 [b]
 
 Nouveautés :
