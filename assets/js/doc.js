@@ -55,10 +55,10 @@
     if (d.body.classList.contains('is-changelog')) {
       var MARQUEUR = /\s*[\[(]\s*([^\])]{1,24}?)\s*[\])]\s*$/;
 
+      // Marqueurs sans lettre : jamais envoyés à DeepL, donc intacts dans les 6 langues.
       var famille = function (mot) {
-        var m = norm(mot);
-        if (m === 's' || /stab|estav/.test(m)) return 'stable';
-        if (m === 'b' || /beta|test|preview/.test(m) || m === 'rc') return 'beta';
+        if (mot === '+') return 'stable';
+        if (mot === '~') return 'beta';
         return 'autre';
       };
 
@@ -78,8 +78,7 @@
         return /^\s*\d{4}[-/.]\d{2}/.test(h.dataset.title || '');
       });
 
-      // 1er passage : on relève le marqueur de chaque titre daté et on repère
-      // la stable la plus récente, même si des betas la précèdent.
+      // relevé préalable : repère la stable la plus récente, betas au-dessus incluses
       var releve = datees.map(function (h) {
         var m = (h.dataset.title || '').match(MARQUEUR);
         return m ? { h: h, mot: m[1].trim(), fam: famille(m[1].trim()) } : null;
@@ -103,13 +102,10 @@
         var dernier = textes[textes.length - 1];
         if (dernier) dernier.nodeValue = dernier.nodeValue.replace(MARQUEUR, '');
 
-        // libellé : traduit pour [s] et [b], littéral sinon
         var libelle = fam === 'stable' ? tr('stable', 'stable')
                     : fam === 'beta'   ? tr('beta', 'beta')
                     : mot;
 
-        // stable la plus récente du fichier : tout passe au vert, même si une
-        // ou plusieurs betas plus récentes la précèdent.
         var aJour = (rang === rangAJour);
         var classe = aJour ? 'ajour' : fam;
 

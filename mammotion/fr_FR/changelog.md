@@ -12,7 +12,7 @@ pluginId: mammotion
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
-# 2026-09-19 [b]
+# 2026-09-19 [~]
 
 Nouveautés :
 - Ajout des commandes "hibernation" et "set_hibernation" pour affichage sur le widget et utilisation dans un scénario
@@ -21,7 +21,7 @@ Corrections :
 - Amélioration des images des robots 
 
 
-# 2026-09-17 [b]
+# 2026-09-17 [~]
 
 Nouveautés :
 - Ajout du mode hivernage
@@ -33,14 +33,14 @@ Corrections :
 - Bugfix : erreur lors de la synchro pour les Spino (device_limits)
 
 
-# 2026-09-08 [b]
+# 2026-09-08 [~]
 
 Nouveautés :
 - Refonte de la partie "Spino" avec prise en charge des commandes actions
 - Widget dédié pour les robots "Spino"
 
 
-# 2026-07-10 [b]
+# 2026-07-10 [~]
 
 Première version du plugin Mammotion (mammotion)
 - Support des robots tondeuses Luba / Yuka et robots piscine Spino (état)
