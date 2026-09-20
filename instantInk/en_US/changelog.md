@@ -12,7 +12,14 @@ pluginId: instantInk
 **Note**: If an update is not listed here, it is because it contains only minor changes of the type documentation updates or minor bug fixes.
 
 
-# 2026-06-07
+# August 28, 2026 [b]
+
+The following corrections:
+ - Setting the "expired shellSessionId" log entry to ERROR mode for notification in the Jeedom message center
+ - Pre-removal of tokens when refreshing the shellSessionId
+
+
+# June 7, 2026 [b]
 
 First version of the HP instantInk plugin (instantInk)
  - Sign in to your HP Smart account via API (cloud)

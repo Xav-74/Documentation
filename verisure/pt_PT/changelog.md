@@ -11,7 +11,7 @@ pluginId: verisure
 
 **Nota**: caso uma atualização não conste desta lista, isso significa que se trata apenas de alterações menores, como atualizações na documentação ou correções de pequenos erros.
 
-# 2026-08-11
+# 11 de agosto de 2026 [s]
 
 Novidades:
 
@@ -21,11 +21,11 @@ Novidades:
 
 Atenção: a partir desta versão, a versão mínima necessária do Jeedom é a v4.4 e o Debian 11!
 
-# 2026-05-31
+# 31 de maio de 2026 [s]
 
 Atualização do ícone no âmbito de uma harmonização de todos os meus plugins
 
-# 2026-02-22
+# 22/02/2026 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -41,27 +41,27 @@ Correções a seguir:
 - Correção de um erro na solicitação de início de sessão (tipo 2)
 - Correção de um erro na exibição do nome do sensor no widget (tipo 2)
 
-# 2024-12-31
+# 31 de dezembro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Inclusão de fechaduras conectadas nos alarmes de última geração (tipo 3)
 - Otimização do código (criação de comandos)
 
-# 2024-12-13
+# 13 de dezembro de 2024 [s]
 
 Correções a seguir:
 
 - Correção de um erro na solicitação «getPhotos» para os alarmes de última geração (tipo 3)
 
-# 2024-12-08
+# 8 de dezembro de 2024 [s]
 
 Correções a seguir:
 
 - Correção de um erro na solicitação «logout»
 - Otimização do código para o PHP 8.0
 
-# 2024-02-09
+# 9 de fevereiro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -72,33 +72,33 @@ Correções a seguir:
 - Atualização do botão para a criação automática de uma publicação na Comunidade Jeedom (vCore Jeedom 4.4 mini)
 - Atualização das capturas de ecrã do plugin
 
-# 2024-01-17
+# 17/01/2024 [s]
 
 Correções a seguir:
 
 - Alarme tipo 1 e 3: Correção na sequência das alterações às APIs da Verisure e do aparecimento do erro «Required request header 'x-installationNumber' not present»
 
-# 2024-01-07
+# 7 de janeiro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Compatibilidade oficial com alarmes do tipo 3
 - Fim do suporte às versões do Jeedom 3.x. A versão mínima do núcleo necessária para o bom funcionamento do plugin é a versão 4.0
 
-# 2023-11-19
+# 19/11/2023 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Compatibilidade do Jeedom v4.4 com o Debian 12 e o PHP 8.x
 - Adicionar um botão para a criação automática de uma publicação na Comunidade Jeedom (vCore Jeedom 4.4 mini)
 
-# 2023-09-11
+# 11 de setembro de 2023 [s]
 
 Correções a seguir:
 
 - Exibição do widget num smartphone/tablet no modo de ambiente de trabalho
 
-# 2023-05-29
+# 29 de maio de 2023 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -108,7 +108,7 @@ Correções a seguir:
 
 - Alarme de tipo 2: criação dos comandos de informação «Humidade» para os detetores de fumo
 
-# 2023-05-22
+# 22 de maio de 2023 [s]
 
 Otimização do código e dos registos
 
@@ -117,7 +117,7 @@ Correções a seguir:
 - Alerta tipo 1: Correção de um erro na função GetPictures na sequência da alteração das APIs
 - Alarme de tipo 2: Mudança automática para o servidor secundário se o primário estiver em baixo, mas continua a aceitar o início de sessão
 
-# 2023-04-11
+# 11 de abril de 2023 [s]
 
 Correções na sequência das alterações nas APIs da Verisure (autenticação MFA e pedidos — migração da API REST para GraphQL). Atenção: trata-se, portanto, de uma atualização **significativa**. Terá de se autenticar novamente para cada alarme criado (tipo 1 e 2).
 
@@ -126,14 +126,14 @@ Adicionadas as seguintes funcionalidades:
 - Compatibilidade com a nova geração de alarmes (através do tipo 1, por enquanto)
 - Reestruturação dos widgets (compatibilidade com o núcleo do Jeedom v4.4)
 
-# 2022-10-18
+# 18 de outubro de 2022 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Nova apresentação da tabela de comandos do equipamento (compatível com o núcleo do Jeedom v4.3)
 - Reestruturação da apresentação da página «Equipamento»
 
-# 2022-04-24
+# 24 de abril de 2022 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -144,13 +144,13 @@ Correções a seguir:
 - Correção automática da altura do widget caso existam vários alarmes no painel de controlo
 - Correção de um erro na função SetEqLogic()
 
-# 2022-02-02
+# 2 de fevereiro de 2022 [s]
 
 Correções a seguir:
 
 - Correção do erro de visualização do widget tipo 2 na versão 4.2, caso o utilizador conectado não seja administrador
 
-# 2022-01-31
+# 31 de janeiro de 2022 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -164,7 +164,7 @@ Correções a seguir:
 
 - Correção de erros presentes no registo http.error do Jeedom (se a variável SESSIONID estiver vazia)
 
-# 2021-07-07
+# 7 de julho de 2021 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -175,7 +175,7 @@ Correções a seguir:
 
 - Alterações e correções nos registos
 
-# 2021-01-06
+# 6 de janeiro de 2021 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -188,11 +188,11 @@ Correções a seguir:
 - Erro no fuso horário (UTC) do relatório de atividade dos alarmes do tipo 2 (agora baseado no fuso horário do Jeedom)
 - Correção de erros no registo hhtp_error durante a visualização do relatório de atividade das alarmes do tipo 1
 
-# 2020-11-06
+# 06/11/2020 [s]
 
 Correções na sequência das alterações nas APIs da Verisure (autenticação e parâmetros das solicitações)
 
-# 2020-10-13
+# 13 de outubro de 2020 [s]
 
 Adicionadas as seguintes funcionalidades:
 
@@ -205,30 +205,30 @@ Correções a seguir:
 - Erro de visualização do Homebridge nos modos «Noite» e «Dia» (Em casa)
 - Erro na exibição do relatório de atividade ao ativar o modo noturno através de um comando remoto
 
-# 2020-09-04
+# 4 de setembro de 2020 [s]
 
 Externalização da documentação do plugin
 
-# 2020-08-22
+# 22/08/2020 [s]
 
 Correções a seguir:
 
 - Alteração dos registos de «Erro» para «Aviso» para evitar sobrecarregar o centro de mensagens do Jeedom
 - Alterações e correções menores
 
-# 2020-06-30
+# 30 de junho de 2020 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Consideração dos modos mistos (Total + Exterior, Noite + Exterior, Dia + Exterior)
 
-# 2020-06-14
+# 14 de junho de 2020 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Implementação de um modelo para o painel de controlo móvel compatível com as versões v3 e v4 (Core2019 Light, Dark e Legacy)
 
-# 2020-06-11
+# 11 de junho de 2020 [s]
 
 Adicionadas as seguintes funcionalidades e correções:
 
@@ -238,14 +238,14 @@ Adicionadas as seguintes funcionalidades e correções:
 - Otimização global do código
 - Reestruturação dos registos do plugin
 
-# 2020-05-04
+# 4 de maio de 2020 [s]
 
 Adicionadas as seguintes funcionalidades:
 
 - Acesso ao registo de atividades da Verisure
 - Separador «Notificações Verisure» para a configuração de cenários de notificações por e-mail e SMS
   
-# 2020-04-15
+# 15 de abril de 2020 [s]
 
 Primeira versão do plugin Verisure
 

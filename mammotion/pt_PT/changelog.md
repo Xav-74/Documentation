@@ -12,3 +12,41 @@ pluginId: mammotion
 **Nota**: caso uma atualização não conste desta lista, isso significa que se trata apenas de alterações menores, como atualizações na documentação ou correções de pequenos erros.
 
 
+# 19 de setembro de 2026 [b]
+
+Novidades:
+- Adicionados os comandos «hibernation» e «set_hibernation» para exibição no widget e utilização num cenário
+
+Correções:
+- Melhoria da qualidade das imagens dos robôs
+
+
+# 17 de setembro de 2026 [b]
+
+Novidades:
+- Adicionar o modo de hibernação
+- Adicionar históricos a partir dos widgets
+- Áreas e atividades ordenadas por ordem alfabética
+
+Correções:
+- Correção de erro: modelo em falta para os Spino
+- Correção de erro: erro durante a sincronização dos Spino (device_limits)
+
+
+# 8 de setembro de 2026 [b]
+
+Novidades:
+- Reestruturação da secção «Spino» com suporte para comandos de ação
+- Widget específico para os robôs «Spino»
+
+
+# 10 de julho de 2026 [b]
+
+Primeira versão do plugin Mammotion (mammotion)
+- Suporte para os robôs cortadores de relva Luba / Yuka e os robôs para piscinas Spino (estado)
+- Detecção automática de equipamentos
+- Transmissão de dados em tempo real através da nuvem Mammotion (MQTT)
+- Recuperação das áreas de corte
+- Recuperação das atividades
+- Informações de controlo: bateria / carga / estado / velocidade / progresso / área / tipo de ligação / intensidade do sinal...
+- Comandos de ação: iniciar / pausar / retomar / cancelar / regressar e sair da estação / altura da lâmina / velocidade / corte por zona / corte por atividade
