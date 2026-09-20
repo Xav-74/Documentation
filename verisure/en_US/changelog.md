@@ -11,7 +11,7 @@ pluginId: verisure
 
 **Note**: If an update is not listed here, it is because it contains only minor changes of the type documentation updates or minor bug fixes.
 
-# August 11, 2026 [s]
+# 2026-08-11
 
 What's New:
 
@@ -21,11 +21,11 @@ What's New:
 
 Please note: Starting with this version, the minimum required version of Jeedom is v4.4, and Debian 11!
 
-# May 31, 2026 [s]
+# 2026-05-31
 
 Icon update as part of a standardization effort for all my plugins
 
-# February 22, 2026 [s]
+# 2026-02-22
 
 Added the following features:
 
@@ -41,27 +41,27 @@ The following corrections:
 - Bug fix for login request (type 2)
 - Bug fix for sensor name display in widget (type 2)
 
-# December 31, 2024 [s]
+# 2024-12-31
 
 Added the following features:
 
 - Support for smart locks in the latest generation of alarms (type 3)
 - Code optimization (creating commands)
 
-# December 13, 2024 [s]
+# 2024-12-13
 
 The following corrections:
 
 - Fixed a bug in the "getPhotos" request for the latest-generation alarms (type 3)
 
-# December 8, 2024 [s]
+# 2024-12-08
 
 The following corrections:
 
 - Fixed an error with the "logout" request
 - Code optimization for PHP 8.0
 
-# February 9, 2024 [s]
+# 2024-02-09
 
 Added the following features:
 
@@ -72,33 +72,33 @@ The following corrections:
 - Update to the button for automatically creating a post on the Jeedom Community (vCore Jeedom 4.4 mini)
 - Update to the plugin's screenshots
 
-# January 17, 2024 [s]
+# 2024-01-17
 
 The following corrections:
 
 - Alarm Types 1 & 3: Fix following changes to the Verisure APIs and the appearance of the error "Required request header 'x-installationNumber' not present"
 
-# January 7, 2024 [s]
+# 2024-01-07
 
 Added the following features:
 
 - Official compatibility with type 3 alarms
 - End of support for Jeedom 3.x versions. The minimum core version required for the plugin to function properly is 4.0.
 
-# November 19, 2023 [s]
+# 2023-11-19
 
 Added the following features:
 
 - Jeedom v4.4 Compatibility with Debian 12 and PHP 8.x
 - Added a button to automatically create a post on the Jeedom Community (vCore Jeedom 4.4 mini)
 
-# September 11, 2023 [s]
+# 2023-09-11
 
 The following corrections:
 
 - Displaying the widget on a smartphone or tablet in desktop mode
 
-# May 29, 2023 [s]
+# 2023-05-29
 
 Added the following features:
 
@@ -108,7 +108,7 @@ The following corrections:
 
 - Alarm Type 2: Creating "Humidity" information commands for smoke detectors
 
-# May 22, 2023 [s]
+# 2023-05-22
 
 Code and Log Optimization
 
@@ -117,7 +117,7 @@ The following corrections:
 - Type 1 Alert: Fixed a bug in the GetPictures function following changes to the APIs
 - Alarm Type 2: Automatically switches to the secondary server if the primary is down, but still accepts logins
 
-# April 11, 2023 [s]
+# 2023-04-11
 
 Fixes following changes to the Verisure APIs (MFA authentication and requests—migration from REST API to GraphQL). Please note that this is a **major** update. You will need to re-authenticate for each alarm created (types 1 & 2).
 
@@ -126,14 +126,14 @@ Added the following features:
 - Support for the new generation of alarms (via type 1 for now)
 - Widget redesign (Jeedom Core v4.4 compatibility)
 
-# October 18, 2022 [s]
+# 2022-10-18
 
 Added the following features:
 
 - New display for the equipment command table (compatible with Jeedom Core v4.3)
 - Redesign of the "Equipment" page
 
-# April 24, 2022 [s]
+# 2022-04-24
 
 Added the following features:
 
@@ -144,13 +144,13 @@ The following corrections:
 - Automatically adjusts the widget's height if there are multiple alarms on the dashboard
 - Fixed a bug in the SetEqLogic() function
 
-# February 2, 2022 [s]
+# 2022-02-02
 
 The following corrections:
 
 - Fixed a display bug with Type 2 widgets in v4.2 when the logged-in user is not an admin
 
-# January 31, 2022 [s]
+# 2022-01-31
 
 Added the following features:
 
@@ -164,7 +164,7 @@ The following corrections:
 
 - Fixed errors in Jeedom's http.error log (if the SESSIONID variable is empty)
 
-# July 7, 2021 [s]
+# 2021-07-07
 
 Added the following features:
 
@@ -175,7 +175,7 @@ The following corrections:
 
 - Changes and fixes to the logs
 
-# January 6, 2021 [s]
+# 2021-01-06
 
 Added the following features:
 
@@ -188,11 +188,11 @@ The following corrections:
 - Bug regarding the time zone (UTC) in the Type 2 alarm activity report (now based on the Jeedom time zone)
 - Fixed errors in the hhtp_error log when displaying the activity report for type 1 alarms
 
-# November 6, 2020 [s]
+# 2020-11-06
 
 Fixes following changes to the Verisure APIs (authentication and request parameters)
 
-# October 13, 2020 [s]
+# 2020-10-13
 
 Added the following features:
 
@@ -205,30 +205,30 @@ The following corrections:
 - Homebridge display bug in Night mode and Day mode (Home)
 - Display error in the activity report when activating night mode via a remote control
 
-# September 4, 2020 [s]
+# 2020-09-04
 
 Outsourcing of plugin documentation
 
-# August 22, 2020 [s]
+# 2020-08-22
 
 The following corrections:
 
 - Changing "Error" logs to "Warning" to avoid overloading the Jeedom message center
 - Minor changes and fixes
 
-# June 30, 2020 [s]
+# 2020-06-30
 
 Added the following features:
 
 - Support for mixed modes (Total + Outdoor, Night + Outdoor, Day + Outdoor)
 
-# June 14, 2020 [s]
+# 2020-06-14
 
 Added the following features:
 
 - Implementation of a template for the mobile dashboard compatible with v3 and v4 (Core2019 Light, Dark, and Legacy)
 
-# June 11, 2020 [s]
+# 2020-06-11
 
 The following features and fixes have been added:
 
@@ -238,14 +238,14 @@ The following features and fixes have been added:
 - Overall code optimization
 - Rewrite of the plugin's logs
 
-# May 4, 2020 [s]
+# 2020-05-04
 
 Added the following features:
 
 - Access to the Verisure Activity Log
 - "Verisure Notifications" tab for setting up email and SMS notification scenarios
   
-# April 15, 2020 [s]
+# 2020-04-15
 
 First version of the Verisure plugin
 
