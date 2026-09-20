@@ -46,41 +46,51 @@ Una vez descargado el complemento:
 
 # Creación de dispositivos
 
-Los dispositivos se crean **automáticamente**:
+La detección de los robots se realiza mediante el botón **Sincronizar** de la página del complemento. Este consulta la cuenta de Mammotion, crea los dispositivos que faltan, actualiza su modelo y su firmware y, a continuación, recupera la lista de zonas de corte y la lista de actividades.
 
-- Al iniciar el demonio, se recupera la lista de robots de la cuenta y se crean los dispositivos que faltan
-- El botón **Sincronizar** de la página del complemento fuerza una nueva detección, actualiza los estados y recupera la **lista de zonas** de corte y la lista de **actividades**.
+Ejecútalo tras el primer inicio del demonio y, a partir de entonces, cada vez que añadas un robot a tu cuenta o modifiques la configuración de tus robots, tus zonas y/o actividades desde la aplicación.
 
-# Controles
+El tipo de robot se detecta automáticamente (cortacésped o piscina) y determina los comandos creados, así como el widget que se muestra en el panel de control. Las zonas y las actividades solo se aplican a los cortacéspedes.
 
-## Instrucciones de uso (cortacésped)
+La página del dispositivo y su widget muestran una foto correspondiente al modelo detectado. Cuando no se dispone del modelo exacto, se utiliza la del modelo más parecido.
+
+# Mandos — Cortacésped (Luba, Yuka)
+
+## Información sobre controles
 
 | Control | Descripción |
 | -------- | ----------- |
 | En línea | Robot conectado a la nube |
 | Batería | Nivel de batería (%) |
+| Estado | Modo de funcionamiento (corte, carga, regreso a la estación, etc.) |
+| Velocidad | Velocidad de desplazamiento habitual (m/s) |
 | Cargando | Carga en curso |
-| Estado | Modo de funcionamiento (MODE_WORKING, MODE_CHARGING, ...) |
+| En la base | Robot colocado en su estación |
 | Avance | Avance de la tarea en curso (%) |
 | Superficie segada | Superficie segada en la sesión (m²) |
+| Zona actual | Nombre de la zona que se está segando |
 | Tiempo restante / transcurrido | Estimación en minutos de la tarea en curso |
 | Altura de la cuchilla | Altura de corte habitual (mm) |
 | Lamas activas | Rotación de las lamas |
 | Detección de lluvia | Sensor de lluvia activo |
 | Coordenadas GPS | Posición `latitud,longitud` (vacío hasta que el robot haya transmitido su referencia GNSS; véase la sección de preguntas frecuentes) |
 | Orientación | Rumbo del robot (°) |
-| Señal wifi | RSSI wifi (dBm) |
-| Desgaste de las cuchillas | Tiempo de uso de las cuchillas (h) |
+| Señal wifi / Bluetooth / móvil | RSSI de cada enlace (dBm) |
+| Tiempo de uso de las cuchillas | Desgaste acumulado de las cuchillas (h) |
+| Umbral de desgaste de las lamas | Umbral a partir del cual se recomienda su sustitución (h) |
+| Tiempo restante de vida útil de las lamas | Diferencia entre el umbral y el desgaste acumulado (h) |
 | Distancia total | Distancia recorrida desde la puesta en servicio (km) |
 | Tiempo total de trabajo | Tiempo acumulado de trabajo (h) |
 | Ciclos de la batería | Número de ciclos de la batería |
 | Firmware | Versión del firmware |
-| Errores | Códigos de error activos |
+| Errores | Códigos de error activos, acompañados de su descripción |
 | Conexión | Tipo de conexión del robot (Wi-Fi, 3G/4G, BLE) |
 | Último evento | Registro de eventos (inicio del corte, regreso a la base, carga, actualización...). Historial: consulta el historial del pedido para ver el registro completo |
+| Ajuste de la altura de la cuchilla / Ajuste de la velocidad | Último valor ajustado mediante los controles deslizantes, que se vuelve a utilizar al iniciar un corte |
+| Invernaje | Modo de invernaje activo o inactivo (véase *Modo de invernaje*) |
 | Última actualización | Fecha y hora de los últimos datos recibidos |
 
-## Comandos de acción (cortacésped)
+## Comandos de acción
 
 | Control | Descripción |
 | -------- | ----------- |
@@ -91,13 +101,82 @@ Los dispositivos se crean **automáticamente**:
 | Cancelar la tarea | Cancela la tarea en curso |
 | Volver a la estación | Devuelve el robot a su estación |
 | Salir de la estación | Hace que el robot salga de su estación |
-| Ajustar la altura de la lama | Deslizador de 25 a 70 mm (no disponible en la gama Yuka, como en Home Assistant) |
-| Ajustar velocidad | Control deslizante de 20 a 60 cm/s (no disponible en la gama Yuka) |
+| Ajustar la altura de la lama | Control deslizante en mm, por defecto 30 → 70 (no disponible en la gama Yuka) |
+| Ajustar velocidad | Control deslizante en m/s, por defecto 0,2 → 0,6 (no disponible en la gama Yuka) |
 | Cortar una zona | Inicia el corte de la zona seleccionada (lista generada mediante sincronización) |
+| Iniciar una actividad | Inicia una actividad programada en la aplicación (lista generada mediante la sincronización) |
+| Activar o desactivar el modo de invierno | Activa el modo de invierno o lo desactiva si ya está activo (véase *Modo de invierno*) |
 
-## Robot para piscinas (Spino)
+> **Consejo**
+>
+> Los límites de los dos controles deslizantes se ajustan automáticamente en función de las capacidades indicadas por tu modelo: los valores anteriores son solo valores de reserva.
 
-La compatibilidad con los robots de piscina es más limitada en la versión 1: información de estado (en línea, batería, estado, velocidad) y comandos básicos (iniciar / pausar / cancelar / volver).
+Se incluye un widget específico para el robot cortacésped, con los 7 (Yuka) o 9 (Luba) botones de control y la información principal.
+
+# Mandos — Robot para piscinas (Spino)
+
+## Información sobre controles
+
+| Control | Descripción |
+| -------- | ----------- |
+| En línea | Robot conectado a la nube |
+| Batería | Nivel de batería (%) |
+| Cargando | Carga en curso |
+| Estado | Estado del robot: En reposo, Preparación, A la espera de ser puesto en el agua, Limpieza en curso, Regreso a la estación, Cargando, Salida de la estación, Llamada en curso |
+| Modo de limpieza | Modo activo: Completo, Suelo, Paredes, Eco — o *Ninguno* cuando el robot no está limpiando (véase la sección de preguntas frecuentes) |
+| Señal wifi | RSSI wifi (dBm) |
+| Señal Bluetooth | RSSI de Bluetooth (dBm) |
+| Conectado a la red Wi-Fi | Conexión Wi-Fi establecida |
+| Firmware | Versión del firmware |
+| Invernaje | Modo de invernaje activo o inactivo (véase *Modo de invernaje*) |
+| Última actualización | Fecha y hora de los últimos datos recibidos |
+
+## Comandos de acción
+
+| Control | Descripción |
+| -------- | ----------- |
+| Actualizar | Forzar una actualización del estado |
+| Limpieza completa | Limpieza del fondo y las paredes (modo **ALL** de la aplicación) |
+| Limpieza del suelo | Solo fondo de la piscina (**FLOOR**) |
+| Limpieza de paredes | Solo paredes (**WALL**) |
+| Limpieza ecológica | Barrido de la superficie (**ECO**) |
+| Parada y vuelta a la base de recarga | Interrumpe la limpieza en curso y envía al robot a recargarse (botón *recarga* de la aplicación) |
+| Activar o desactivar el modo de invierno | Activa el modo de invierno o lo desactiva si ya está activo (véase *Modo de invierno*) |
+
+> **Consejo**
+>
+> Los 4 modos se corresponden exactamente con los 4 botones de la pantalla de inicio de la aplicación Mammotion. Existen otros modos en el protocolo (línea de agua, personalizado), pero aún no están disponibles.
+
+Se incluye un widget específico para el robot de piscina, con los 5 botones de control y la información principal.
+
+# Modo de hibernación
+
+Cuando se guarda un robot al final de la temporada, se apaga. El **modo de hibernación** pone este equipo en modo de reposo.
+
+Cuando está activo:
+
+- el **cron ignora el equipo**: ya no hay ninguna solicitud de actualización;
+- los **comandos de control están bloqueados** y devuelven un mensaje explícito, incluso desde un escenario;
+- el **equipo sigue siendo visible** en el panel de control y conserva su historial;
+- El **demonio sigue funcionando** con normalidad para el resto de tus robots.
+
+Este ajuste es **específico para cada equipo**: puedes preparar tu robot de piscina para el invierno sin dejar de cortar el césped.
+
+## Cómo activarla
+
+Tres opciones, todas ellas relacionadas con el mismo ajuste:
+
+- la casilla **Modo de hibernación**, en la sección *Hibernación* de la página del equipo;
+- el **icono de la barra de título del widget**: un copo de nieve cuando el robot está en modo estándar, un sol cuando está en modo de hibernación. Con un clic se cambia de un modo a otro;
+- la acción **Activar el modo de invierno**, que se puede utilizar en un escenario.
+
+El comando de información **Invernaje** indica el estado actual. Se registra en el historial, lo que permite consultar las fechas de inicio y fin del invernaje.
+
+> **Consejo**
+>
+> El comando *Activar/desactivar el modo de invierno* invierte el estado: si se ejecuta dos veces, vuelve al estado inicial. En un escenario que automatice el modo de invierno, comprueba primero el comando de información **Modo de invierno** y solo ejecuta el comando de activación/desactivación si su valor es 0.
+
+Al finalizar el modo de hibernación, los datos se actualizan en la siguiente ejecución de la tarea programada, o inmediatamente si haces clic en *Actualizar*.
 
 # Preguntas frecuentes
 
@@ -108,6 +187,12 @@ La compatibilidad con los robots de piscina es más limitada en la versión 1: i
 **El campo «Coordenadas GPS» está vacío**: esto es normal tras reiniciar el demonio. El robot solo transmite su referencia de geolocalización (base RTK o fijación GNSS integrada para los modelos con visión/LiDAR) en determinados informes, normalmente cuando está activo. El campo se rellenará en cuanto el robot vuelva a estar activo. El complemento prefiere un valor vacío a unas coordenadas degeneradas (cercanas al punto 0,0 del globo terráqueo).
 
 **Los datos no se transmiten en tiempo real**: el robot solo publica cuando está activo o cuando cambia su estado. Además, el cron fuerza una actualización periódica.
+
+**Mi robot ya no se actualiza y sus botones no responden**: comprueba el icono de la barra de título del widget. Un sol indica que el dispositivo está en **modo de hibernación**: el cron lo ignora y sus comandos están bloqueados. Al hacer clic en el icono, volverá al modo estándar.
+
+**Spino: el modo de limpieza muestra «Ninguno»**: este es el comportamiento normal en reposo. Un Spino en reposo no indica ningún modo activo en sus mensajes de estado. Consulta el comando **Estado** para saber si el robot está trabajando.
+
+**Spino: ¿por qué no hay un botón de «Pausa»?**: el protocolo del robot no lo incluye. Para interrumpir un ciclo, utiliza *Parar y volver a la base de recarga*.
 
 # Hoja de ruta y asistencia técnica
 

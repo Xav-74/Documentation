@@ -12,18 +12,18 @@ pluginId: parcelTracking
 **Nota**: se un aggiornamento non è elencato qui, significa che comporta solo modifiche minori, come aggiornamenti alla documentazione o correzioni di bug minori.
 
 
-# 2026-05-31
+# 2026-05-31 [+]
 
 Aggiornamento dell'icona nell'ambito di un processo di armonizzazione di tutti i miei plugin
 
 
-# 2026-02-15
+# 2026-02-15 [+]
 
 Aggiunte le seguenti funzioni:
  - Aggiornamento automatico dell'elenco dei corrieri e dei parametri aggiuntivi (tramite pulsante o tramite cron giornaliero)
  
 
-# 2025-11-10
+# 2025-11-10 [+]
 
 Aggiunte le seguenti funzioni:
  - Aggiornamento dell'elenco dei corrieri e delle impostazioni aggiuntive
@@ -33,20 +33,20 @@ Le seguenti correzioni:
  - Correzione di un avviso PHP durante la visualizzazione del widget globale in determinati casi (ad es. quando "states" è vuoto)
 
 
-# 2025-05-20
+# 2025-05-20 [+]
 
 Aggiunte le seguenti funzioni:
  - Possibilità di visualizzare contemporaneamente i singoli widget e il widget globale
  - Aggiunta del nome del pacco nel titolo delle notifiche
 
 
-# 2024-12-31
+# 2024-12-31 [+]
 
 Aggiunte le seguenti funzioni:
  - Aggiunta dei tag #url# e #location# per le notifiche e gli scenari
 
 
-# 2024-10-17
+# 2024-10-17 [+]
 
 Aggiunte le seguenti funzioni:
  - Aggiunta dei campi "corriere" e "parametro aggiuntivo" nella finestra pop-up che consente di aggiungere un pacco dal widget / dashboard
@@ -56,7 +56,7 @@ Le seguenti correzioni:
  - Integrazione delle descrizioni tradotte da 17Track quando è stata impostata una lingua specifica
  
 
-# 2024-09-28
+# 2024-09-28 [+]
 
 Aggiunte le seguenti funzioni:
  - Implementazione di un webhook che recupera in tempo reale le informazioni trasmesse da 17Track. Il cron Hourly viene quindi disattivato
@@ -66,7 +66,7 @@ Aggiunte le seguenti funzioni:
 > È indispensabile configurare le impostazioni del webhook sulla tua dashboard 17Track, altrimenti non riceverai più alcuna informazione sui tuoi pacchi!
 
 
-# 2024-09-07
+# 2024-09-07 [+]
 
 Aggiunte le seguenti funzioni:
  - Passaggio dalle API di ParcelsApp a 17Track
@@ -75,7 +75,7 @@ Aggiunte le seguenti funzioni:
 > Si tratta di una modifica importante al plugin. È quindi necessario configurarlo nuovamente (in particolare, inserire una chiave API 17Track) e poi ricreare tutti i vostri pacchi. L'intera procedura è descritta in dettaglio nella documentazione. Il grande vantaggio di questa nuova versione è che il numero di tracciamenti passa a 100 pacchi al mese (l'aggiornamento della quota avviene ogni primo del mese)!
 
 
-# 2024-08-22
+# 2024-08-22 [+]
 
 Aggiunte le seguenti funzioni:
  - Traduzione del plugin (inglese, tedesco, spagnolo, italiano, portoghese)
@@ -87,7 +87,7 @@ Le seguenti correzioni:
 > È quindi necessario modificare il formato dei messaggi (notifiche) e/o degli scenari!
 
 
-# 2024-08-01
+# 2024-08-01 [+]
 
 Aggiunte le seguenti funzioni:
  - Rimozione automatica degli spazi, se presenti prima e/o dopo il trackingID
@@ -96,7 +96,7 @@ Le seguenti correzioni:
  - Recupero delle informazioni relative al corriere, all'origine e alla destinazione (chiavi diverse nel file JSON a seconda dei corrieri)
 
 
-# 2024-07-27
+# 2024-07-27 [+]
 
 Aggiunte le seguenti funzioni:
  - Possibilità di aggiungere o eliminare pacchi direttamente dai widget (singoli o globali)
@@ -108,7 +108,7 @@ Le seguenti correzioni:
  - Aggiornamento dei comandi delle apparecchiature quando il JSON "Shipments" è vuoto
 
 
-# 2024-07-16
+# 2024-07-16 [+]
 
 Prima versione del plugin "Tracciamento pacchi" (parcelTracking)
  - Connessione al cloud di Parcelsapp tramite API
