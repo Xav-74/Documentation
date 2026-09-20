@@ -12,18 +12,18 @@ pluginId: parcelTracking
 **Nota**: caso uma atualização não conste desta lista, isso significa que se trata apenas de alterações menores, como atualizações na documentação ou correções de pequenos erros.
 
 
-# 2026-05-31
+# 31 de maio de 2026 [s]
 
 Atualização do ícone no âmbito de uma harmonização de todos os meus plugins
 
 
-# 2026-02-15
+# 15 de fevereiro de 2026 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Atualização automática da lista de transportadoras e dos parâmetros adicionais (através de um botão ou de uma tarefa cron diária)
  
 
-# 2025-11-10
+# 10 de novembro de 2025 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Atualização da lista de transportadoras e dos parâmetros adicionais
@@ -33,20 +33,20 @@ Correções a seguir:
  - Correção de um aviso do PHP ao apresentar o widget global em determinados casos (por exemplo, quando «states» está vazio)
 
 
-# 2025-05-20
+# 20 de maio de 2025 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Possibilidade de apresentar simultaneamente os widgets individuais e o widget global
  - Inclusão do nome da encomenda no título das notificações
 
 
-# 2024-12-31
+# 31 de dezembro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Adicionar as etiquetas #url# e #location# às notificações e aos cenários
 
 
-# 2024-10-17
+# 17 de outubro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Adicionados os campos «transportadora» e «parâmetro adicional» na janela modal que permite adicionar uma encomenda a partir do widget/painel de controlo
@@ -56,7 +56,7 @@ Correções a seguir:
  - Consideração das descrições traduzidas pelo 17Track quando tiver definido um idioma específico
  
 
-# 2024-09-28
+# 28 de setembro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Implementação de um webhook que recupera em tempo real as informações transmitidas pelo 17Track. O cron de execução horária foi, por conseguinte, desativado
@@ -66,7 +66,7 @@ Adicionadas as seguintes funcionalidades:
 > É imprescindível configurar os parâmetros do webhook no seu painel de controlo do 17Track; caso contrário, deixará de receber qualquer informação sobre as suas encomendas!
 
 
-# 2024-09-07
+# 7 de setembro de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Mudança das APIs da ParcelsApp para a 17Track
@@ -75,7 +75,7 @@ Adicionadas as seguintes funcionalidades:
 > Trata-se de uma alteração significativa no plugin. Por isso, terá de o configurar novamente (nomeadamente, integrar uma chave API da 17Track) e, em seguida, recriar todas as suas encomendas. Todo o procedimento está detalhado na documentação. A grande vantagem desta nova versão é que o número de envios monitorizados passa para 100 encomendas por mês (a atualização da quota ocorre no primeiro dia de cada mês)!
 
 
-# 2024-08-22
+# 22 de agosto de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Tradução do plugin (inglês, alemão, espanhol, italiano, português)
@@ -87,7 +87,7 @@ Correções a seguir:
 > Por isso, terá de alterar o formato das suas mensagens (notificações) e/ou dos seus cenários!
 
 
-# 2024-08-01
+# 01/08/2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Remoção automática de espaços, caso existam antes e/ou depois do trackingID
@@ -96,7 +96,7 @@ Correções a seguir:
  - Recuperação das informações relativas à transportadora, origem e destino (diferentes chaves no JSON, consoante as transportadoras)
 
 
-# 2024-07-27
+# 27 de julho de 2024 [s]
 
 Adicionadas as seguintes funcionalidades:
  - Possibilidade de adicionar ou eliminar pacotes diretamente a partir dos widgets (individuais ou globais)
@@ -108,7 +108,7 @@ Correções a seguir:
  - Atualização das encomendas dos equipamentos quando o JSON «Shipments» estiver vazio
 
 
-# 2024-07-16
+# 16 de julho de 2024 [s]
 
 Primeira versão do plugin «Acompanhamento de encomendas» (parcelTracking)
  - Ligação à nuvem da Parcelsapp através da API
