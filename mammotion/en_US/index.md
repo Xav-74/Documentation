@@ -46,51 +46,41 @@ After downloading the plugin:
 
 # Creating devices
 
-Robots are discovered using the **Synchronize** button on the plugin page. It queries the Mammotion account, creates any missing devices, updates their model and firmware, and then retrieves the list of mowing zones and the list of activities.
+Devices are created **automatically**:
 
-Run it after the daemon has started for the first time, and then every time you add a robot to your account or change the settings for your robots, zones, and/or activities in the app.
+- When the daemon starts, the list of robots in the account is retrieved, and any missing devices are created
+- The **Synchronize** button on the plugin page forces a new discovery, updates statuses, and retrieves the **list of mowing zones** and the list of **activities**.
 
-The robot type is detected automatically (lawn mower or pool) and determines the commands created as well as the widget displayed on the dashboard. Zones and activities apply only to lawn mowers.
+# Commands
 
-The device page and its widget display a photo corresponding to the detected model. When the exact model is not available, the photo of the closest matching model is used.
-
-# Commands — Lawn Mower (Luba, Yuka)
-
-## Info Controls
+## Info Controls (Lawn Mower)
 
 | Command | Description |
 | -------- | ----------- |
 | Online | Cloud-connected robot |
 | Battery | Battery level (%) |
-| Status | Mode (mowing, charging, returning to station, etc.) |
-| Speed | Current travel speed (m/s) |
 | Charging | Charging in progress |
-| On the base | Robot resting on its charging station |
+| Status | Operating mode (MODE_WORKING, MODE_CHARGING, ...) |
 | Progress | Progress of the current task (%) |
 | Mowed area | Mowed area per session (m²) |
-| Current Zone | Name of the zone currently being mowed |
 | Time remaining / elapsed | Estimated duration of the current task in minutes |
 | Blade height | Typical cutting height (mm) |
 | Active blades | Blade rotation |
 | Rain Detection | Active Rain Sensor |
 | GPS coordinates | Position `latitude,longitude` (empty until the robot has transmitted its GNSS reference; see FAQ) |
 | Orientation | Robot heading (°) |
-| Wi-Fi / Bluetooth / cellular signal | RSSI for each link (dBm) |
-| Blade service life | Cumulative blade wear (h) |
-| Blade wear threshold | Threshold beyond which replacement is recommended (h) |
-| Remaining blade life | Difference between threshold and cumulative wear (h) |
+| Wi-Fi Signal | Wi-Fi RSSI (dBm) |
+| Blade Wear | Blade Service Life (hours) |
 | Total distance | Distance traveled since commissioning (km) |
 | Total work time | Cumulative work time (h) |
 | Battery cycles | Number of battery cycles |
 | Firmware | Firmware version |
-| Errors | Active error codes, along with their descriptions |
+| Errors | Active error codes |
 | Connection | Robot connection type (Wi-Fi, 3G/4G, BLE) |
 | Latest event | Event log (mowing started, returned to dock, charging, update...). History: view the command history for the complete log |
-| Blade height setting / Speed setting | The last value set using the sliders is reused when a mowing session begins |
-| Winterization | Winterization mode active or off (see *Winterization Mode*) |
 | Last update | Timestamp of the last data received |
 
-## Action Commands
+## Action commands (lawn mower)
 
 | Command | Description |
 | -------- | ----------- |
@@ -101,82 +91,13 @@ The device page and its widget display a photo corresponding to the detected mod
 | Cancel Task | Cancels the current task |
 | Return to Station | Sends the robot back to its station |
 | Leave the station | Moves the robot out of its station |
-| Adjust blade height | Slider in mm, default 30 → 70 (not available on the Yuka line) |
-| Set speed | Slider in m/s, default 0.2 → 0.6 (not available on the Yuka series) |
+| Adjust slat height | Slider 25 → 70 mm (not available on the Yuka line, as in Home Assistant) |
+| Adjust speed | Slider 20 → 60 cm/s (not available on the Yuka line) |
 | Mow an area | Start mowing the selected area (list populated by synchronization) |
-| Start an activity | Start a scheduled activity in the app (list populated by synchronization) |
-| Toggle hibernation | Enables hibernation mode, or disables it if it is already active (see *Hibernation Mode*) |
 
-> **Tip**
->
-> The limits of the two sliders are automatically adjusted based on the capabilities reported by your model: the values above are only the fallback values.
+## Pool robot (Spino)
 
-A dedicated widget is provided for the robot lawn mower, featuring 7 (Yuka) or 9 (Luba) command buttons and key information.
-
-# Commands — Pool Robot (Spino)
-
-## Info Controls
-
-| Command | Description |
-| -------- | ----------- |
-| Online | Cloud-connected robot |
-| Battery | Battery level (%) |
-| Charging | Charging in progress |
-| Status | Robot status: Standby, Preparing, Waiting to be launched, Cleaning in progress, Returning to the dock, Charging, Leaving the dock, Recall in progress |
-| Cleaning mode | Active mode: Full, Floor, Walls, Eco — or *None* when the robot is not cleaning (see FAQ) |
-| Wi-Fi Signal | Wi-Fi RSSI (dBm) |
-| Bluetooth signal | Bluetooth RSSI (dBm) |
-| Connected to Wi-Fi | Wi-Fi connection established |
-| Firmware | Firmware version |
-| Winterization | Winterization mode active or off (see *Winterization Mode*) |
-| Last update | Timestamp of the last data received |
-
-## Action Commands
-
-| Command | Description |
-| -------- | ----------- |
-| Refresh | Force a status update |
-| Full Clean | Bottom and Side Cleaning (**ALL** mode in the app) |
-| Floor cleaning | Pool floor only (**FLOOR**) |
-| Wall cleaning | Walls only (**WALL**) |
-| Eco Cleaning | Surface Sweeping (**ECO**) |
-| Stop and Return to Charge | Pauses the current cleaning session and sends the robot back to recharge (the *recharge* button in the app) |
-| Toggle hibernation | Enables hibernation mode, or disables it if it is already active (see *Hibernation Mode*) |
-
-> **Tip**
->
-> The 4 modes correspond exactly to the 4 buttons on the Mammotion app's home screen. Other modes exist in the protocol (waterline, custom) but are not yet available.
-
-A dedicated widget is provided for the pool robot, featuring 5 command buttons and key information.
-
-# Winterization mode
-
-When a robot is stored for the season, it is turned off. The **winterization mode** puts the equipment into sleep mode.
-
-When it is active:
-
-- **cron ignores the device**: no more refresh requests;
-- **Control commands are blocked** and return an explicit message, even when triggered from a scenario;
-- the **device remains visible** on the dashboard and retains its history;
-- The **daemon continues to run** normally for your other robots.
-
-This setting is **specific to each device**: you can winterize your pool robot while it continues to clean.
-
-## How to enable it
-
-Three options, all of which affect the same setting:
-
-- the **Winter mode** checkbox in the *Winter mode* section of the device page;
-- the **icon in the widget's title bar**: a snowflake when the robot is in standard mode, a sun when it's in hibernation mode. Clicking switches between modes;
-- The **Switch to Winter Mode** command, which can be used in a scenario.
-
-The **Winterization** command displays the current status. It is logged, allowing you to retrieve the start and end dates of winterization.
-
-> **Tip**
->
-> The *Toggle Hibernation* command reverses the state: when called twice, it returns to its original state. In a scenario that automates hibernation, first check the **Hibernation** status using the info command, and only call the toggle command if the status is 0.
-
-After winter hibernation, the data will be updated the next time the cron job runs, or immediately if you click *Refresh*.
+Support for pool robots is more limited in v1: status updates (online, battery, status, speed) and basic commands (start / pause / cancel / return).
 
 # FAQ
 
@@ -187,12 +108,6 @@ After winter hibernation, the data will be updated the next time the cron job ru
 **The GPS Coordinates command is empty**: this is normal after restarting the daemon. The robot only transmits its geolocation reference (RTK base station or onboard GNSS fix for vision/LiDAR models) in certain reports, typically when it is active. The command will be populated the next time the robot is active. The plugin prefers an empty value to degenerate coordinates (close to the 0,0 point on the globe).
 
 **Data is not updated in real time**: the bot only posts when it is active or when its status changes. The cron job also forces periodic refreshes.
-
-**My robot is no longer updating, and its buttons aren't responding**: Check the icon in the widget's title bar. A sun icon indicates that the device is in **hibernation mode**: the cron job ignores it, and its commands are blocked. Clicking the icon will return it to standard mode.
-
-**Spino: The Cleaning Mode displays “None”**: This is normal behavior when the robot is idle. A Spino that is turned off does not report any active modes in its status messages. Use the **Status** command to check whether the robot is working.
-
-**Spino: Why isn't there a Pause button?**: The robot's protocol does not include one. To pause a cycle, use *Stop and Return to Charging*.
 
 # Roadmap & Support
 
