@@ -12,6 +12,14 @@ pluginId: mammotion
 **Nota**: caso uma atualização não conste desta lista, isso significa que se trata apenas de alterações menores, como atualizações na documentação ou correções de pequenos erros.
 
 
+# 2026-09-21 [+]
+
+Passagem da versão beta para a versão estável em 19 de setembro de 2026
+Primeira versão estável do plugin
+
+Atenção: a versão mínima necessária do Jeedom é a v4.4 e o Debian 11!
+
+
 # 2026-09-19 [~]
 
 Novidades:

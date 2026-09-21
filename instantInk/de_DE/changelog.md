@@ -12,6 +12,14 @@ pluginId: instantInk
 **Hinweis**: Wenn ein Update hier nicht aufgeführt ist, bedeutet dies, dass es sich lediglich um geringfügige Änderungen handelt, wie z. B. Anpassungen in der Dokumentation oder die Behebung kleinerer Fehler.
 
 
+# 2026-09-21 [+]
+
+Umstellung der Beta-Version auf die stabile Version am 28.08.2026
+Erste stabile Version des Plugins
+
+Achtung: Die erforderliche Mindestversion von Jeedom ist v4.4 und Debian 11!
+
+
 # 2026-08-28 [~]
 
 Folgende Korrekturen:
