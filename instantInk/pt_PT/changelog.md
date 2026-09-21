@@ -14,8 +14,7 @@ pluginId: instantInk
 
 # 2026-09-21 [+]
 
-Passagem da versão beta para a versão estável em 28 de agosto de 2026
-Primeira versão estável do plugin
+Passagem para a versão estável da versão beta 28/08/2026 - Primeira versão estável do plugin!
 
 Atenção: a versão mínima necessária do Jeedom é a v4.4 e o Debian 11!
 

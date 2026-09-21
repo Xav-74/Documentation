@@ -14,8 +14,7 @@ pluginId: mammotion
 
 # 2026-09-21 [+]
 
-Paso a la versión estable desde la beta 19 de septiembre de 2026
-Primera versión estable del complemento
+La versión beta pasa a ser estable 19/09/2026 - ¡Primera versión estable del complemento!
 
 Atención: ¡la versión mínima necesaria de Jeedom es la v4.4 y Debian 11!
 
