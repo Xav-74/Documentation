@@ -14,8 +14,7 @@ pluginId: mammotion
 
 # 2026-09-21 [+]
 
-Release of the stable version from beta on September 19, 2026
-First stable version of the plugin
+Release of the stable version from beta 2026-09-19 - First stable version of the plugin!
 
 Please note: The minimum required version of Jeedom is v4.4, and Debian 11 is required!
 
