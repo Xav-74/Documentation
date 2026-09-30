@@ -12,6 +12,17 @@ pluginId: mammotion
 **Hinweis**: Wenn ein Update hier nicht aufgeführt ist, bedeutet dies, dass es sich lediglich um geringfügige Änderungen handelt, wie z. B. Anpassungen in der Dokumentation oder die Behebung kleinerer Fehler.
 
 
+# 2026-09-29 [~]
+
+Neuheiten:
+- Update der pyMammotion-Bibliothek auf Version 0.10.0
+- [Spino] Hinzufügen eines Wake-Befehls
+
+Korrekturen:
+- Korrektur des Befehls „info online“, der dauerhaft auf 1 stand
+- [Spino] Fehlerbehebung beim Starten der Modi (das Plugin übermittelte den vorherigen Modus anstelle des angeforderten Modus)
+
+
 # 2026-09-21 [+]
 
 Umstellung auf die stabile Version 19.09.2026 – Erste stabile Version des Plugins!
