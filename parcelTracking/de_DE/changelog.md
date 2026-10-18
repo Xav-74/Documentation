@@ -18,7 +18,8 @@ Neuheiten:
  - Umstellung von der 17Track-Entwickler-API (jetzt kostenpflichtig) auf die 17Track-API für Privatkunden (Anmeldung per E-Mail/Passwort)
  - Automatische Aktualisierung der Sendungen alle 10 Minuten (cron10) als Ersatz für den Webhook
 
-> ACHTUNG!!!
+> **Achtung**
+>
 > Es handelt sich um eine wesentliche Änderung des Plugins. Sie können Ihr Entwicklerkonto auf 17track.net beibehalten, Ihre E-Mail-Adresse und Ihr Passwort in den Plugin-Einstellungen eingeben und anschließend alle Ihre Sendungen neu anlegen. Der Webhook und der API-Schlüssel werden nicht mehr verwendet. Es gibt kein monatliches Kontingent mehr: Ihr Konto kann bis zu 40 Sendungen gleichzeitig verfolgen, und jede archivierte Sendung gibt einen Platz frei.
 > Versanddienstleister, die eine zusätzliche Angabe erfordern (z. B. die Postleitzahl bei Mondial Relay oder Colis Privé), werden derzeit noch nicht unterstützt.
 
