@@ -12,6 +12,17 @@ pluginId: parcelTracking
 **Note**: If an update is not listed here, it is because it contains only minor changes of the type documentation updates or minor bug fixes.
 
 
+# 2026-10-18 [~]
+
+What's New:
+ - Switching from the 17Track developer API (now a paid service) to the 17Track consumer account API (login via email and password)
+ - Automatic package refresh every 10 minutes (cron10) to replace the webhook
+
+> WARNING!!!
+> This is a major update to the plugin. You can keep your developer account on 17track.net, enter your email and password in the plugin settings, and then recreate all your packages. The webhook and API key are no longer used. There is no longer a monthly quota: your account can track up to 40 packages at a time, and each archived package frees up a slot.
+> Carriers that require an additional parameter (such as a ZIP code for Mondial Relay or Colis Privé) are not yet supported.
+
+
 # 2026-05-31 [+]
 
 Icon update as part of a standardization effort for all my plugins
