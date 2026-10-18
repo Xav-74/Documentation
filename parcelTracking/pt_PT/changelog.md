@@ -12,6 +12,17 @@ pluginId: parcelTracking
 **Nota**: caso uma atualização não conste desta lista, isso significa que se trata apenas de alterações menores, como atualizações na documentação ou correções de pequenos erros.
 
 
+# 2026-10-18 [~]
+
+Novidades:
+ - Mudança da API para programadores da 17Track (agora paga) para a API da conta 17Track para o público em geral (início de sessão com e-mail/palavra-passe)
+ - Atualização automática das encomendas a cada 10 minutos (cron10) em substituição do webhook
+
+> ATENÇÃO!!!
+> Trata-se de uma alteração significativa no plugin. Pode manter a sua conta de programador no 17track.net, introduzir o seu e-mail e palavra-passe na configuração do plugin e, em seguida, recriar todas as suas encomendas. O webhook e a chave API já não são utilizados. Já não existe um limite mensal: a sua conta pode acompanhar até 40 encomendas em simultâneo, e cada encomenda arquivada liberta um lugar.
+> As transportadoras que exigem um parâmetro adicional (por exemplo, o código postal para a Mondial Relay ou a Colis Privé) ainda não são suportadas.
+
+
 # 2026-05-31 [+]
 
 Atualização do ícone no âmbito de uma harmonização de todos os meus plugins
