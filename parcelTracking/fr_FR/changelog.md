@@ -12,6 +12,17 @@ pluginId: parcelTracking
 **Remarque** : en cas de mise à jour non listée ici, c'est que celle-ci ne comporte que des changements mineurs du type documentation ou corrections de bugs mineurs.
 
 
+# 2026-10-18 [~]
+
+Nouveautés :
+ - Passage de l'API développeur 17Track (devenue payante) à l'API du compte 17Track grand public (connexion par email / mot de passe)
+ - Rafraîchissement automatique des colis toutes les 10 minutes (cron10) en remplacement du webhook
+
+> ATTENTION !!!
+> Il s'agit d'une modification majeure du plugin. Vous pouvez conserver votre compte développeur sur 17track.net, renseigner votre email et votre mot de passe dans la configuration du plugin, puis recréer l'ensemble de vos colis. Le webhook et la clé API ne sont plus utilisés. Il n'y a plus de quota mensuel : votre compte peut suivre jusqu'à 40 colis en même temps, et chaque colis archivé libère une place.
+> Les transporteurs nécessitant un paramètre additionnel (code postal par ex. pour Mondial Relay ou Colis Privé) ne sont pas encore gérés.
+
+
 # 2026-05-31 [+]
 
 Mise à jour de l'icone dans le cadre d'une harmonisation de tous mes plugins
