@@ -12,6 +12,17 @@ pluginId: myBMW
 **Hinweis**: Wenn ein Update hier nicht aufgeführt ist, bedeutet dies, dass es sich lediglich um geringfügige Änderungen handelt, wie z. B. Anpassungen in der Dokumentation oder die Behebung kleinerer Fehler.
 
 
+# 2026-10-20 [+]
+
+Korrekturen:
+ - Bugfix CU-400 – Verwendung ausschließlich von streamfähigen Deskriptoren (MQTT) im Container
+ - Aktualisierung des Telematik-Katalogs (derzeit 245 Einträge)
+
+> **Achtung**
+>
+> Sie müssen unbedingt Ihren aktuellen Container auf der Seite Ihres Fahrzeugs löschen und sich anschließend erneut anmelden, damit die Änderungen übernommen werden. Derzeit werden die Informationen unter „Services“ nicht mehr aktualisiert!
+
+
 # 2026-09-17 [+]
 
 Folgende Korrekturen:

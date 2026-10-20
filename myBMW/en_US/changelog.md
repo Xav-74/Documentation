@@ -12,6 +12,17 @@ pluginId: myBMW
 **Note**: If an update is not listed here, it is because it contains only minor changes of the type documentation updates or minor bug fixes.
 
 
+# 2026-10-20 [+]
+
+Corrections:
+ - CU-400 Bug Fix - Use only streamable descriptors (MQTT) in the container
+ - Telematics Catalog Update (245 to date)
+
+> **Please note**
+>
+> You must delete your current container on your vehicle's page and then log in again for the changes to take effect. For now, the "Services" information is no longer being updated!
+
+
 # 2026-09-17 [+]
 
 The following corrections:
