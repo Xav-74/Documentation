@@ -12,6 +12,17 @@ pluginId: myBMW
 **Nota**: si una actualización no aparece en esta lista, es porque solo incluye cambios menores, como modificaciones en la documentación o correcciones de errores menores.
 
 
+# 2026-10-20 [+]
+
+Correcciones:
+ - Corrección de errores CU-400: uso exclusivo de descriptores transmitibles (MQTT) en el contenedor
+ - Actualización del catálogo de Telematics (245 hasta la fecha)
+
+> **Atención**
+>
+> Es imprescindible que elimines tu contenedor actual en la página de tu vehículo y, a continuación, vuelvas a iniciar sesión para que se apliquen los cambios. Por el momento, la información de «Servicios» ya no se actualiza.
+
+
 # 2026-09-17 [+]
 
 Las siguientes correcciones:
